@@ -1,0 +1,25 @@
+/* CSS Document */
+	
+/*login table* text box */
+.textbox1 { 
+background: url(../images/user_name.png) no-repeat left 4px #FFF; 
+}
+
+.textbox2 { 
+background: url(../images/padlock.png) no-repeat left 4px #FFF; 
+}
+
+.textbox1, .textbox2{
+	height: 18px; 
+	width: 80px; 
+	border: 1px solid #848484;
+	border-radius:5px;
+	padding:3.5px; 
+	padding-left: 30px; 
+	}
+
+
+   
+
+
+  

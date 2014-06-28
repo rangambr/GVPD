@@ -1,0 +1,49 @@
+#slideshow {
+    position:relative;
+	width:600px;
+    height:447px;
+	/*margin-left:500px;*/ 
+}
+
+#slideshow IMG {
+	position: absolute;
+	top: 28px;
+	left: 6px;
+	z-index: 8;
+	opacity: 0.0;
+	width: 948px;
+	height: 400px;
+}
+
+#slideshow IMG.active {
+    z-index:10;
+    opacity:1.0;
+}
+
+#slideshow IMG.last-active {
+    z-index:9;
+}
+
+/* Horizontal slider */
+ #scroller {
+        position: relative;
+    }
+    #scroller .innerScrollArea {
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+    #scroller ul {
+        padding: 0;
+        margin: 0;
+        position: relative;
+    }
+    #scroller li {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        position: absolute;
+    }

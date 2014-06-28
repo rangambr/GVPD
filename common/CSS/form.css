@@ -1,0 +1,33 @@
+/* CSS Document */
+/*Form text boxes */
+#tbl{
+	border-radius:10 px;
+	}
+tr,td{
+	font-family: Helvatica;
+	font-size: small;
+	font-style: normal;
+	font-weight: bold;
+	color: #000000;
+	}
+th{
+	padding-left: 20px;
+	color: #275C0D;
+	font-size: 12px;
+}
+
+.inputs  { 
+padding: 5px;
+padding-left:10px; 
+border-radius: 3px; 
+border: 1px solid #CCC; 
+background-image: none; 
+width:250px; 
+} 
+
+input:focus { 
+	border-color: #34AB0A; 
+	border-style: solid; 
+	border-width: 2px; 
+	outline: 0; 
+} 
