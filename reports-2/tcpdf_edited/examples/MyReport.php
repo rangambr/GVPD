@@ -65,6 +65,29 @@ $html = <<<EOD
 <p style="color:#CC0000;">TO IMPROVE AND EXPAND TCPDF I NEED YOUR SUPPORT, PLEASE <a href="http://sourceforge.net/donate/index.php?group_id=128076">MAKE A DONATION!</a></p>
 EOD;
 
+
+require '../../../property/model/property.php';
+
+$property = new Property();
+				$allProperties = $property->getAllProperties();
+	
+	$output = "<table align='center' border='1'>";
+	$output .="<tr><th>Product ID</th>";
+	$output .="<th>Category</th>";
+	$output .="<th>Name</th>";
+	$output .="<th>Description</th></tr>";
+                while($row = mysql_fetch_array($properties)){ 
+                       $fname=$row['fname'];
+                        $output .= "<tr>";
+			$output .= "<td>".$row["username"]."</td>";
+			$output .= "<td>".$row["address1"]."</td>";
+			$output .= "<td>".$row["address2"]."</td>";
+			$output .= "<td>".$row["city"]."</td>";
+			$output .= "</tr>";
+                          }
+			
+$output .= "</table>";
+$html = $output;
 // Print text using writeHTMLCell()
 $pdf->writeHTMLCell(0, 0, '', '', $html, 0, 1, 0, true, '', true);
 
