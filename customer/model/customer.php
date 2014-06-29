@@ -9,7 +9,6 @@ class Customer{
         //KINT::dump($username,$fname,$lname,$address1,$address2,$city,$province,$email,$contact_no1,$contact_no2,$gender,$birthday);
         $sql="insert into customer (username,fname,lname,gender,birthday,address1,address2,city,province,email,contact_no_1,contact_no_2) values ('$username','$fname','$lname','$gender','$birthday','$address1','$address2','$city','$province','$email','$contact_no1','$contact_no2')";    
         $result = $db->query($sql);
-        //KINT::dump($result);
         return true; 
     }
     
@@ -20,7 +19,7 @@ class Customer{
         return $result;  
     }  
 	
-	//update customer profile function
+    //update customer profile function
     function updateCustomer($fname,$lname,$gender,$address1,$address2,$city,$provice,$birthday,$email,$contact_no1,$contact_no2,$username){
         $db=new Dbconnect();
         
@@ -29,8 +28,7 @@ class Customer{
         $result = $db->query($sql);
         //KINT::dump($result);
         return true;
-    }
-	
+    }	
 }
 ?>
      

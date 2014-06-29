@@ -1,7 +1,6 @@
 <?php
 require '../model/customer.php';
 require '../../home/model/user.php';
-require '../../common/kint/Kint.class.php';
 
 //Kint::dump($_SESSION['username']);
 $username=$_SESSION['username'];
@@ -13,7 +12,7 @@ $fname="ABC";
 while($row=mysql_fetch_array($result)){
 	$fname=$row['fname'];
 	//Kint::dump($fname);
-	$lname=$row['lastname'];
+	$lname=$row['lname'];
 	$gender = $row['gender'];
 	$address1 = $row["address1"];
 	$address2 = $row["address2"];

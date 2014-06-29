@@ -1,7 +1,6 @@
 <?php
 session_start();
 require_once '../controller/update_profile.php';
-require '../../common/kint/Kint.class.php';
 
 ?>
 <!doctype html>

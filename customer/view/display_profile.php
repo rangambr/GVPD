@@ -69,26 +69,19 @@ require_once '../../common/kint/Kint.class.php';
         </div>
         <div class="content">
             <div align="left" class="sidebar">
-                <h2>Hi Xxxxxx !</h2>
-                <ul>
-                    <li><a href="">Update your profile</a></li>
-                    <li><a href="">Manage username and password</a></li>
-
-                </ul>
+                <h2>Hi <?php echo ''.$_SESSION['username'] ?> !</h2>
+                
             </div>
 
             <div id="Tabs1">
-                <ul>
-                    <li><a href="#tabs-1">My Profile</a></li>
-                    <li><a href="#tabs-2">Change password</a></li>
-                    <li><a href="#tabs-3">Saved Properties</a></li>
-                </ul>
+                
                 <div id="tabs-1">
+                    <?php if(!empty($_REQUEST['er']) && $_REQUEST['er'] == "12"){ ?>
                     <div style="background-color: #CCFFCC; color: #275C0D; font-size: 14px; height: 30px; font-weight: normal;padding-top:10px" >
                         We've successfully updated your details!
                     </div>
                     <div>
-
+                    <?php } ?>
                     </div>
                     <form name="update_profile.php" method="post" action="">
                         <table align="center" width="500" style="border:1px groove #93AE13;">
@@ -110,7 +103,8 @@ require_once '../../common/kint/Kint.class.php';
                             </tr>
                             <tr>
                                 <th align="left">Gender :</th>
-                                <td><input type="radio" name="gender" value="Male" checked/>
+                                <td>
+                                    <input type="radio" name="gender" value="Male" checked/>
                                     <span style="color: #275C0D">Male</span> <span style="margin-left: 50px; color: #275C0D;">
                                         <input type="radio" name="gender" value="Female"/>Female</span></td>
                             </tr>

@@ -36,11 +36,20 @@ class User{
             return true;
         }
     }
-	//function: send email when registering a new user
-	function activation_email($to,$subject,$body){
-		mail($to,$subject,$body,'From: postmaster@localhost');
-		} 
-}
-?>
-     
-
+    
+    //activate or deactivate user
+    function activateUser($username,$isActive){
+        $db = new Dbconnect();
+        if($username != null){
+            $sql = "UPDATE user SET active = '$isActive' WHERE username = '$username'";
+            $db->query($sql);
+            return true;
+        }
+        return false;
+    }
+    
+    //function: send email when registering a new user
+    function activation_email($to,$subject,$body){
+	mail($to,$subject,$body,'From: postmaster@localhost');
+    }
+ }

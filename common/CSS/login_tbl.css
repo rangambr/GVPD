@@ -2,21 +2,27 @@
 	
 /*login table* text box */
 .textbox1 { 
-background: url(../images/user_name.png) no-repeat left 4px #FFF; 
+    background: url(../images/user_name.png) no-repeat left 4px #FFF; 
 }
 
 .textbox2 { 
-background: url(../images/padlock.png) no-repeat left 4px #FFF; 
+    background: url(../images/padlock.png) no-repeat left 4px #FFF; 
 }
 
 .textbox1, .textbox2{
-	height: 18px; 
-	width: 80px; 
-	border: 1px solid #848484;
-	border-radius:5px;
-	padding:3.5px; 
-	padding-left: 30px; 
-	}
+    height: 18px; 
+    width: 80px; 
+    border: 1px solid #848484;
+    border-radius:5px;
+    padding:3.5px; 
+    padding-left: 30px; 
+}
+.user_lgn_msg{
+    width: 100px;
+    height: 25px;
+    padding: 5px 2px 5px 12px;
+    color: darkcyan;
+}
 
 
    

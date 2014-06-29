@@ -137,50 +137,37 @@
                 <tr>
                     <td colspan="3">
                           <?php 
-                          if((!empty($_REQUEST['er'])) && ($_REQUEST['er']=="4")){ ?>
-                              <div class="msg msg-error">
-                                  <p><strong style="color: #FF0000">Invalid username or password! </strong></p>
-                          </div><?php } 
+                          if(!empty($_REQUEST['er'])){
+                            
+                            $error_code = $_REQUEST['er'];
+                            if($error_code == "4"){ ?>
+                                <div class="msg msg-error">
+                                    <p><strong style="color: #FF0000">Invalid username or password! </strong></p>
+                            </div><?php 
+                            }
+                            if($error_code == "8"){ ?>
+                                <div class="msg msg-error">
+                                    <p><strong style="color: #FF0000">Activation Required! </strong></p>
+                            </div><?php 
+                            } 
+                          }
                           ?>   
                     </td>
                 </tr>
       
-            <?php } ?> 
+                <?php } ?> 
             <tr>
-                <td colspan="3">
-                    <?php if(isset($_SESSION['username'])){ ?> 
-                        <!-- <div style="margin-right:50px; padding-bottom:150px;">
-                            <span>
-                            <a href="../../customer/view/user_profile.php">
-                            	<img src="../../common/images/us.png"/>
-                             	<?php /*?><?php echo ''.$_SESSION['username'];?><?php */?>
-                                </a> ,
-                             </span>
-                             <span id="logout_link">
-                             	<a style="display: inline; font-size: small;" href="../controller/logout.php">Logout</a> 
-                                </span>
-                         </div>-->
-						
-                        	<div align="center" style="font-size: 11pt; " ><p style="color:#000089">You've been registered successfully! Please check your email to activate your account.</p></div>
-                            
-<!--<div id="nav" style="margin-right: 100px; padding-bottom: 150px; color: #275C0D;">
-
-        <ul>
-            <li><a href="../../customer/view/user_profile.php"><?php echo ''.$_SESSION['username'];?></a>
-                <ul>
-                    <li><a href="../../customer/view/user_profile.php">My Profile</a></li>
-                    <li><a href="../../property/view/add_property.php">Add Property</a></li>
-                    <li><a href="../../property/view/search_property.php">Search Property</a></li>
-                    <li><a href="../controller/logout.php">Logout</a></li>			
-                </ul>
-            </li>
-        </ul>
- 
-<br class="clearboth"/>
-<span style="color: #275C0D"></span>
-                  </div>-->
-                  <?php } ?> 
-                </td>
+                
+            <?php
+            if(isset($_SESSION['username']) ){ ?> 
+                <td colspan="3" class="user_lgn_msg">
+                <?php echo 'Hi, <a href="../../customer/view/display_profile.php">'.$_SESSION['username'].'</a> ';?>
+                <a style="display: inline; font-size: small;" href="../controller/logout.php">
+                    Logout
+                </a> 
+               </td>      
+            <?php } ?> 
+               
             </tr>
             </form>
     </table>
