@@ -71,7 +71,7 @@ $(function() {
 					<th align="left">Gender :</th>
 					<td><input type="radio" name="gender" value="Male" checked/>
 					  <span style="color: #275C0D">Male</span> <span style="margin-left: 50px; color: #275C0D;">
-				  <input type="radio" name="gender" value="Female"/>Female</span></td>
+				  <input type="radio" name="gender" value="Female"/>Female</span> </td>
 				</tr>
 				<tr>
 					<th align="left">House Number/ Name :</th>
