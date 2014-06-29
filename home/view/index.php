@@ -94,44 +94,56 @@
 
 <table width="100%" border="0">
   <tr>
-    <td height="217" style="margin-left:30px; padding-left:30px;">
+    <td style="margin-left:30px; padding-left:30px;">
         <div align="center"><img src="../../common/images/tr_banner.png"/><br/>
           <span style="color: #275C0D; font-weight: bold; font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans', Verdana, sans-serif; font-style: italic; font-size: large;">We Make Your Dream Come True.</span>
         </div>
         
     </td>
     <td>
-        <table>
+        <table class="login_tbl">
             <form name="frm_login" method="post" action="../controller/login.php" onsubmit="return validateForm();"  >	
             
             <?php 
                 if(! isset($_SESSION['username'])){ ?>
-                	<tr>
-            			<td colspan="3"><a href="../../customer/view/register.php">Register</a></td>
-            		</tr>
-                    <tr>
-                        <td width="55" style="font-style: normal; font-weight: bold; color: #0F2701;"><span style="font-weight: bolder; color: rgba(15,39,1,1);">Username</span>:</td>
-                        <td width="82"><input name="username" class="textbox1" type="text" size="20" /></td>
-                        <td width="207"><input type="checkbox" name="checkbox" id="checkbox">
-                          <label for="checkbox" style="color: #0F2701">Remember me.</label></td>
-                    </tr>
+                <tr>
+                    <td colspan="3"><a href="../../customer/view/register.php">Register</a></td>
+            	</tr>
+                <tr>
+                    <td  style="font-style: normal; font-weight: bold; color: #0F2701;">
+                         <span style="font-weight: bolder; color: rgba(15,39,1,1);">Username</span>:
+                    </td>
+                    <td >
+                         <input name="username" class="textbox1" type="text" size="20" />
+                    </td>
+                    <td>
+                         <input type="checkbox" name="checkbox" id="checkbox">
+                         <label for="checkbox" style="color: #0F2701">Remember me.</label>
+                    </td>
+                </tr>
                     
-                    <tr>
-                      <td style="font-weight: bold; color: #0F2701;">Password:</td>
-                      <td><input name="password" class="textbox2" type="password" size="20" /></td>
-                      <td><input name="login" type="submit" value="Login" /><?php ?></td>
-                    </tr>
+                <tr>
+                    <td style="font-weight: bold; color: #0F2701;">
+                        Password:
+                    </td>
+                    <td>
+                        <input name="password" class="textbox2" type="password" size="20" />
+                    </td>
+                    <td class="lng_btn_td">
+                        <input name="login" type="submit" value="Login" class="myButton small_btn" /><?php ?>
+                    </td>
+                </tr>
                    
-                    <tr>
-                          <td colspan="3">
+                <tr>
+                    <td colspan="3">
                           <?php 
                           if((!empty($_REQUEST['er'])) && ($_REQUEST['er']=="4")){ ?>
                               <div class="msg msg-error">
                                   <p><strong style="color: #FF0000">Invalid username or password! </strong></p>
                           </div><?php } 
                           ?>   
-                      </td>
-                    </tr>
+                    </td>
+                </tr>
       
             <?php } ?> 
             <tr>
@@ -198,7 +210,7 @@
     	
         <table width="299" height="400" class="tbl_home">
 	<tr>
-		<th width="291" height="65" scope="col" >Quick Search</th>
+		<th width="291" height="65" scope="col" >Quick Find</th>
 	</tr>                     
 	<tr align="left">
 		<td width="291" height="37"><span style="font-weight: bold; font-style: normal;">City:</span><br/>
@@ -245,7 +257,11 @@
 		</td> 
 	</tr>
 	<tr>
-		<td height="125" align="center" colspan="2"><input name="q_search"class="myButton" type="submit" value="Search" /><br/><br/><a href="#" style="font-style: normal">Advanced Search</a></td>
+		<td height="125" align="center" colspan="2">
+                    <input name="q_search"class="myButton" type="submit" value="Search" />
+                    <br/><br/>
+                    <a href="#" style="font-style: normal">Advanced Search</a>
+                </td>
 	</tr>
 </table>
     </td>
@@ -264,7 +280,6 @@
 
 </div>
 
-<br /> <br />
 
 <div id="scroller" style="width: 900px; height: 500px; margin: 0 auto;">
     <div class="innerScrollArea">

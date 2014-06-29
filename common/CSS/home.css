@@ -14,9 +14,10 @@
  .tbl_home{
 	background-color: #9AC780;
 	align-content:center;
+        border-collapse: collapse;
 	}
 .tbl_home th{
-	background-color: #275C0D;
+	background-color: #335523;
 	font-style: normal;
 	font-weight: bold;
 	font-family: Helvetica;

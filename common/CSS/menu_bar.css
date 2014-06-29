@@ -15,9 +15,8 @@
   line-height: 1;
 }
 #cssmenu {
-	width: 1178px;
+	width: 100%;
 	align-content: center;
-	padding-left:78px;
 	padding-right: 0px;
 	left: 0px;
 	background-position: 0% 0%;
@@ -64,6 +63,7 @@
 #cssmenu li {
   float: left;
   border-right: 1px solid #b2c58b;
+  width: 12%;
 }
 #cssmenu li:hover {
   background: #9cb369 url(../images/pattern.png) top left repeat;

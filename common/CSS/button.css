@@ -40,3 +40,11 @@
 	position:relative;
 	top:1px;
 }
+.small_btn{
+    font-size: 10px !important;
+    
+}
+
+.lng_btn_td{
+    padding-left: 25px;
+}
