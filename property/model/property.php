@@ -1,6 +1,6 @@
 <?php
 //connect to db
-require_once '../../common/conn.php'; 
+require_once '../../common/conn.php';
 
 class Property{
     
