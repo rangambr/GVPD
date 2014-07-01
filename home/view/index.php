@@ -159,7 +159,7 @@
             <tr>
                 
             <?php
-            if(isset($_SESSION['username']) ){ ?> 
+            if(isset($_SESSION['username']) && $_SESSION['active'] == 1 ){ ?> 
                 <td colspan="3" class="user_lgn_msg">
                 <?php echo 'Hi, <a href="../../customer/view/display_profile.php">'.$_SESSION['username'].'</a> ';?>
                 <a style="display: inline; font-size: small;" href="../controller/logout.php">
