@@ -21,19 +21,116 @@ $(function() {
 	
 });
 
+function validate(){
+    if($("#txtfname").val() == ''){
+        alert('Please enter first name.');
+        $("#txtfname").focus();
+        return false;
+        }
+        if($("#txtlname").val() == ''){
+            alert('Please enter last name.');
+            $("#txtlname").focus();
+            return false;
+        }
+        if($("#gender_male").val() == '' && $("#gender_female").val() == ''){
+            alert('Please select your gender.');
+            $("#gender").focus();
+            return false;
+        }
+        if($("#txtaddress1").val() == ''){
+            alert('Please your house number.');
+            $("#txtaddress1").focus();
+            return false;
+        }
+        if($("#txtaddress2").val() == ''){
+            alert('Please your address.');
+            $("#txtaddress2").focus();
+            return false;
+        }
+         if($("#Datepicker1").val() == ''){
+            alert('Please your birthday.');
+            $("#Datepicker1").focus();
+            return false;
+        }
+        if($("#txtemail").val() == ''){
+            alert('Please your email address.');
+            $("#txtemail").focus();
+            return false;
+        }
+        if(! validateEmail($("#txtemail").val())){
+            alert('Please enter a valid email address.');
+            return false;
+        }
+        if($("#txttp1").val() == ''){
+            alert('Please your contact number.');
+            $("#txttp1").focus();
+            return false;
+        }
+        if($("#username").val() == ''){
+            alert('Please an username.');
+            $("#username").focus();
+            return false;
+        }
+        if($("#txtpass").val() == ''){
+            alert('Please pick a password.');
+            $("#txtpass").focus();
+            return false;
+        }
+        if($("#txtpass2").val() == ''){
+            alert('Please enter matching a password.');
+            $("#txtpass2").focus();
+            return false;
+        }
+        if(!validatePasswords()){
+            return false;
+        }
+        
+    }
+    
+    function validateEmail(email) { 
+        var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
+    }
+    
+    function validatePasswords(){
+         if($("#txtpass").val() != "" && $("#txtpass").val() == $("#txtpass2").val()) {
+            if($("#txtpass1").val().length < 6) {
+              alert("Error: Password must contain at least six characters!");
+              $("#txtpass1").focus();
+              return false;
+            }
+            if($("#txtpass1").val() == $("#username").val()) {
+              alert("Error: Password must be different from Username!");
+              $("#txtpass1").focus();
+              return false;
+            }
+            re = /[0-9]/;
+            if(!re.test($("#txtpass").val())) {
+              alert("Error: password must contain at least one number (0-9)!");
+              $("#txtpass1").focus();
+              return false;
+            }
+            re = /[a-z]/;
+            if(!re.test($("#txtpass").val())) {
+              alert("Error: password must contain at least one lowercase letter (a-z)!");
+              form.pwd1.focus();
+              return false;
+            }
+            re = /[A-Z]/;
+            if(!re.test($("#txtpass").val())) {
+              alert("Error: password must contain at least one uppercase letter (A-Z)!");
+              $("#txtpass1").focus();
+              return false;
+            }
+          } else {
+            alert("Error: Please check that you've entered and confirmed your password!");
+            $("#txtpass1").focus();
+            return false;
+          }
+          return true;
+      }
 </script>
 
-<!--<script type="text/javascript">
- function validate(){
- 	$password = document.getElementById("txtpass") ;
- 	$confpassword = document.getElementById("txtpass2") ;
-  if($password.value != $confpassword.value) {
- alert("Passwords do no match");
- return false;
- }
- 	return true;
-  }	
-</script>-->
 </head>
 
 <body  bgcolor="#EAF3CF">
@@ -54,7 +151,7 @@ $(function() {
 </div>
 
 <div class="content">
-  <form name="register.php" method="post" action="../controller/register.php">
+  <form name="register" method="post" action="../controller/register.php" onsubmit="return validate();">
   <table align="center" width="500" style="border:1px groove #93AE13;">
        	 <tr bgcolor="#005825">
          		<td colspan="2" align="center" bgcolor="#005825"><h1 style="color: #FFFFFF">User Registration</h1></td>
@@ -69,9 +166,9 @@ $(function() {
 				</tr>
 				<tr>
 					<th align="left">Gender :</th>
-					<td><input type="radio" name="gender" value="Male" checked/>
+                                        <td><input type="radio" id="gender_male" name="gender" value="Male" checked/>
 					  <span style="color: #275C0D">Male</span> <span style="margin-left: 50px; color: #275C0D;">
-				  <input type="radio" name="gender" value="Female"/>Female</span> </td>
+				  <input type="radio" name="gender" id="gender_female" value="Female"/>Female</span> </td>
 				</tr>
 				<tr>
 					<th align="left">House Number/ Name :</th>
@@ -116,7 +213,7 @@ $(function() {
 					<td><input name="txtpass2" type="password" id="txtpass2" placeholder="Re-enter your password" size="20" class="inputs" /></td>
 				</tr>
              	<tr>
-             		<td colspan="2" align="center" valign="middle"><input type="submit" value="Register" class="myButton" name="submit" onclick="validate()" /></td>
+             		<td colspan="2" align="center" valign="middle"><input type="submit" value="Register" class="myButton" name="submit"  /></td>
              </tr>
        </table>
   </form>
