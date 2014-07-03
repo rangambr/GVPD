@@ -18,39 +18,27 @@
 			height:380px;
 			padding:10px;
 			}
-		
-		
-		
-		.leftmenu ul li{
-			width:180px;
-			height:25px;
-			float:left;
-			list-style-type:none;
-			margin-top:5px
-			}
+		.left_box ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
 
-		.leftmenu ul li a{
-			font-family:Arial, Helvetica, sans-serif;
-			font-size:11px;
-			color:#FFF;
-			text-decoration:none;
-			vertical-align:top;
-			width:170px;
-			line-height:25px;
-			padding-left:15px;
-			float:left;
-			display:block;
-			}
-		.leftmenu ul li a:hover{
-			background-color:#999999;
-			width:150px;
-			color:#000000
-			}
-		.right_box{
-			float:right;
-			margin-right:400px;
-			width:500px;
-			}	
+.left_box a:link, a:visited {
+    display: block;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #9fa393;
+    width: 120px;
+    text-align: center;
+    padding: 4px;
+    text-decoration: none;
+}
+
+.left_box a:hover, a:active {
+    background-color: #D1D3CB;
+}
+	
     </style>
 </head>
 
@@ -161,14 +149,12 @@
 	<h3 style="color: #000089">User Management</h3>
     
 	<div class="left_box">
-    	<div class="left_menu">
-              <ul>
-                  <li><a href="#">Create new user</a></li>
-                  <li><a href="#">Update user</a></li>
-                  <li><a href="#">Search user</a></li>
-                  <li><a href="#">Delete user</a></li>
-              </ul>
-        </div>
+		<ul>
+            <li><a href="add_user.php">Create new user</a></li>
+            <li><a href="update_user.php">Update user</a></li>
+            <li><a href="#">Search user</a></li>
+            <li><a href="#">Delete user</a></li>
+        </ul>
     </div>
     
     <div class="right_box">
@@ -189,6 +175,48 @@
             </tr>
             <tr>
             	<td colspan="2" align="center"><input type="submit" value="submit"/></td>
+            </tr>
+            
+            <tr>
+            	<td colspan="2" align="center">
+                <?php 
+						
+                          if(!empty($_REQUEST['er'])){
+                            
+                            $error_code = $_REQUEST['er'];
+                            if($error_code == "1"){ ?>
+                            <table border="1">
+                                <tr>
+                                	<td colspan="2" align="center" >
+                                    	New record added!
+                                    </td>
+                                </tr>
+                                <tr>
+                                	<td align="left">
+                                    	User ID
+                                    </td>
+                                    <td align="left">
+                                    	User name
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                	<td align="left">
+                                    	 <?php echo $_POST[""]; ?>
+                                    </td>
+                                    <td align="left">
+                                    	<?php echo $_POST["txt_usrname"]; ?>
+                                    </td>
+                                 </tr>
+                                 
+                                 
+                                
+                            </table>
+                            
+                                <?php 
+                            } 
+                          }
+                          ?> 
+                </td>
             </tr>
         </table>
         </form>
