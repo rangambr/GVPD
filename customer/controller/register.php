@@ -26,8 +26,8 @@ if($isNewuser){
     $customer = new Customer();
     $customer->registerCustomer($username, $fname, $lname, $gender, $birthday, $address1, $address2, $city, $province, $email, $contact_no1, $contact_no2);
 
-    $_SESSION['username'] = $username;
-    $_SESSION['password'] = $password;
+    //$_SESSION['username'] = $username;
+    //$_SESSION['password'] = $password;
     
     $user->activation_email($email,"Activate your account","Hello ".$username.", \n\n You need to activate your account , Please use the link below: \n\n http://localhost/IMS/home/view/activate_user.php?ecode=$email_code&username=$username \n\n--Green Valley Property Development (PVT) Ltd--");
 	

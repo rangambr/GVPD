@@ -14,7 +14,7 @@
     $result = $obj->login($username,$password);
     // checks whether user exists
     $num=mysql_num_rows($result); 
-    
+    $_SESSION['active']=0;
     //if the user is not available redirect to the login page
     if($num==0){
         header("location:../view/index.php?er=4");  
@@ -34,7 +34,6 @@
             header("location:../view/index.php");
         }
         else{
-            $_SESSION['active']=0;
             header("location:../view/index.php?er=8");
         }
     }
