@@ -1,9 +1,9 @@
 <?php
-//connect to db
+//Check if the conn.php file has already been included,and if so,not include(require)it again.
 require_once '../../common/conn.php';
  
 class User{
-    //login to the system
+    //function for login to the system
     function login($username,$password){    
         $db=new Dbconnect();
         $sql="select * from user where username='$username' and 
@@ -11,7 +11,7 @@ class User{
         $result=$db->query($sql);
         return $result;  
     }
-    
+    //if the user already registered return true
     function isExistingUser($username){
         $db=new Dbconnect();
         $sql="select * from user where username='$username'";    
@@ -24,16 +24,17 @@ class User{
             return true;
         } 
     }
-            
+    //after the user has registered send him a email to his email account
     function registerUser($username,$password,$email_code,$type){
         $db=new Dbconnect();
         if($this->isExistingUser($username)){
-            return false;
+		  return false;
         }
         else{
-            $sql="insert into user (username,password,email_code,type) values ('$username','$password','$email_code','$type') ";    
-            $db->query($sql);
-            return true;
+		  $sql="insert into user (username,password,email_code,type)
+				 values ('$username','$password','$email_code','$type') ";    
+		  $db->query($sql);
+		  return true;
         }
     }
     

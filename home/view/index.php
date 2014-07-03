@@ -202,6 +202,7 @@
 	<tr align="left">
 		<td width="291" height="37"><span style="font-weight: bold; font-style: normal;">City:</span><br/>
 			<select >
+            	<option>--Select Here--</option>
 				<option>Kandy</option>
 				<option>Kurunegala</option>
 				<option>Kegalle</option>
@@ -213,6 +214,7 @@
 	<tr align="left">
 		<td height="25"><span style="font-size: small"><span style="font-style: normal">Property Type</span>:</span><br/>
 			<select>
+            	<option>--Select Here--</option>
 				<option>All</option>
 				<option>Lots & Lands</option>
 				<option>Estate & Plantation</option>
