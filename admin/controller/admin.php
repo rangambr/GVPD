@@ -9,6 +9,6 @@ $pass=md5($_POST["txt_pass"]);
 $admin=new Admin();
 //call function addAdmin
 $result=$admin->addAdmin($usrname,$pass);
-header("Location:../view/add_user.php?er=1");
+header("Location:../view/add_user.php");
 
 ?>

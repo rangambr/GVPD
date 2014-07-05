@@ -193,7 +193,6 @@ function validate(){
                     return false;
                 }
                 return true;
->>>>>>> 4a2508cfd55d064824dd7f3fb8c6a934754251bf
             }
 
             function validateEmail(email) {
@@ -207,7 +206,6 @@ function validate(){
                 var re = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
                 return re.test(str);
             }
-<<<<<<< HEAD
           } else {
             alert("Error: Please check that you've entered and confirmed your password!");
             $("#txtpass1").focus();
