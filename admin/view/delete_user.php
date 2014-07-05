@@ -158,7 +158,7 @@
     </div>
     
     <div class="right_box">
-    	<form name="frm_add_usr" method="post" action="../controller/add_admin.php">
+    	<form name="frm_add_usr" method="post" action="add_admin.php">
     	<table width="500px" bgcolor="#FCF4E9" cellpadding="5px">
         	<tr>
             	<td colspan="2" bgcolor="#9fa393">

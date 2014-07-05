@@ -53,7 +53,7 @@ function validate(){
             return false;
         }
         if($("#txtemail").val() == ''){
-            alert('Please your email address.');
+            alert('Please enter your email address.');
             $("#txtemail").focus();
             return false;
         }
@@ -61,7 +61,8 @@ function validate(){
             alert('Please enter a valid email address.');
             return false;
         }
-        if($("#txttp1").val() == ''){
+		
+        if($("#txttp1").val() == '' || $("#txttp1").val().length<=10){
             alert('Please your contact number.');
             $("#txttp1").focus();
             return false;
@@ -166,7 +167,7 @@ function validate(){
 				</tr>
 				<tr>
 					<th align="left">Gender :</th>
-                                        <td><input type="radio" id="gender_male" name="gender" value="Male" checked/>
+                                        <td><input type="radio" id="gender_male" name="gender" value="Male" />
 					  <span style="color: #275C0D">Male</span> <span style="margin-left: 50px; color: #275C0D;">
 				  <input type="radio" name="gender" id="gender_female" value="Female"/>Female</span> </td>
 				</tr>

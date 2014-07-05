@@ -158,7 +158,7 @@
     </div>
     
     <div class="right_box">
-    	<form name="frm_add_usr" method="post" action="../controller/add_admin.php">
+    	<form name="frm_add_usr" method="post" action="add_admin.php">
     	<table width="500px" bgcolor="#FCF4E9" cellpadding="5px">
         	<tr>
             	<td colspan="2" bgcolor="#9fa393">
@@ -180,11 +180,21 @@
             <tr>
             	<td colspan="2" align="center">
                 <?php 
-						
+					require '../model/admin.php';	
                           if(!empty($_REQUEST['er'])){
                             
                             $error_code = $_REQUEST['er'];
-                            if($error_code == "1"){ ?>
+                            if($error_code == "1"){
+								$admins=$admin->getAllAdmins();
+
+		while($row = mysql_fetch_array($admins)){
+			$Id=$row['UserId'];
+			echo $Id;
+			$Name=$row['UserName'];
+			$Password=$row['Password'];
+		}
+								 ?>
+                            
                             <table border="1">
                                 <tr>
                                 	<td colspan="2" align="center" >

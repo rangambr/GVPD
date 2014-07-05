@@ -10,15 +10,14 @@ class Admin{
 		$result=$db->query($query);
 		return $result;
 		}
-	function viewAdmin($usrname){
+	function getAllAdmins(){
 		$db= new Dbconnect();
 		
 		$query="SELECT * FROM admin ";
 		$result1=$db->query($query);
 		return $result1;
-		$num=mysql_num_rows($result1);
-		}
 	}
+	
 	function updateAdmin($usrid,$usrname,$pass){
 		$db= new Dbconnect();
 		
@@ -27,4 +26,5 @@ class Admin{
 		return true;
 		}
 	function deleteAdmin(){}
+}
 ?>
