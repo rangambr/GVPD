@@ -1,4 +1,5 @@
 /* CSS Document */
+
 #side_bar{
 	/*width: %;*/
 	}
@@ -14,13 +15,13 @@
  .tbl_home{
 	background-color: #9AC780;
 	align-content:center;
-        border-collapse: collapse;
+    border-collapse: collapse;
 	}
 .tbl_home th{
 	background-color: #335523;
 	font-style: normal;
 	font-weight: bold;
-	font-family: Helvetica;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
 	color: #FFFFFF;
 	padding: 5px 5px 5px 5px;
 	font-size: larger;
@@ -30,6 +31,7 @@
 	font-weight: bold;
 	font-size: small;
 	padding-left:10px;
+	padding-top:10px;
 	}	
 
 .content{
@@ -43,7 +45,8 @@
 	width:100%;
 	height:85px;
 	background:#A7BC7A url(../images/pattern.png);
-	
+	/*position:absolute;*/
+	bottom:0;
 	}
 #footer_wrap ul{
 	list-style-type:none;

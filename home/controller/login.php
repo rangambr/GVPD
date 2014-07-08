@@ -19,6 +19,7 @@
     if($num==0){
         header("location:../view/index.php?er=4");  
     }
+	
     else{
         
         while($row=mysql_fetch_array($result)){
