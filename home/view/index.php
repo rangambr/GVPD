@@ -106,33 +106,31 @@
             
             <?php 
                 if(! isset($_SESSION['username'])){ ?>
-                <tr>
+              <tr>
                     <td colspan="3"><a href="../../customer/view/register.php">Register</a></td>
             	</tr>
-                <tr>
-                    <td  style="font-style: normal; font-weight: bold; color: #0F2701;">
-                         <span style="font-weight: bolder; color: rgba(15,39,1,1);">Username</span>:
-                    </td>
+                <tr style="font-size: small">
+                    <td>
+                    <span style="font-size: small; font-weight: bolder;">Username:</span></td>
                     <td >
                          <input name="username" class="textbox1" type="text" size="20" />
-                    </td>
+                  </td>
                     <td>
                          <input type="checkbox" name="checkbox" id="checkbox">
-                         <label for="checkbox" style="color: #0F2701">Remember me.</label>
-                    </td>
-                </tr>
+                         <label for="checkbox" style="color: #0F2701; font-size: small; font-weight: bolder;">Remember me.</label>
+                  </td>
+              </tr>
                     
                 <tr>
-                    <td style="font-weight: bold; color: #0F2701;">
-                        Password:
-                    </td>
+                    <td style="font-weight: bold; color: #0F2701; font-size: small;">
+                  <span style="font-weight: bolder">Password</span>: </td>
                     <td>
                         <input name="password" class="textbox2" type="password" size="20" />
                     </td>
                     <td class="lng_btn_td">
                         <input name="login" type="submit" value="Login" class="myButton small_btn" /><?php ?>
                     </td>
-                </tr>
+              </tr>
                    
                 <tr>
                     <td colspan="3">
@@ -145,6 +143,7 @@
                                     <p><strong style="color: #FF0000">Invalid username or password! </strong></p>
                             </div><?php 
                             }
+							
                             if($error_code == "8"){ ?>
                                 <div class="msg msg-error">
                                     <p><strong style="color: #FF0000">Activation Required! </strong></p>
@@ -192,12 +191,12 @@
 <div>
 <table width="80%" border="0">
   <tr>
-  <!-- qick search table-->
+  <!-- quick search table-->
     <td width="15%">
     	
-        <table width="299" height="400" class="tbl_home">
+        <table width="285" height="400" class="tbl_home">
 	<tr>
-		<th width="291" height="65" scope="col" >Quick Find</th>
+		<th width="291" height="60" scope="col" ><img src="../../common/images/quick-search-heading-white.png"/></th>
 	</tr>                     
 	<tr align="left">
 		<td width="291" height="37"><span style="font-weight: bold; font-style: normal;">City:</span><br/>
@@ -246,11 +245,14 @@
 		</td> 
 	</tr>
 	<tr>
-		<td height="125" align="center" colspan="2">
-                    <input name="q_search"class="myButton" type="submit" value="Search" />
-                    <br/><br/>
-                    <a href="#" style="font-style: normal">Advanced Search</a>
-                </td>
+		<td height="50" align="center" colspan="2">
+            <input name="q_search"class="myButton small_btn" type="submit" value="Search" />
+             </td>
+     </tr>
+     <tr>       
+        <td colspan="2" align="center">
+            <a href="#" style="font-style: normal">Advanced Search</a>
+        </td>
 	</tr>
 </table>
     </td>

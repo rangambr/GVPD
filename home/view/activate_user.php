@@ -11,7 +11,14 @@
     <link rel="stylesheet" type="text/css" href="../../common/CSS/home.css">
     <link rel="stylesheet" type="text/css" href="../../common/CSS/menu_bar.css">
     <link rel="stylesheet" type="text/css" href="../../common/CSS/form.css">
- 
+    <style type="text/css">
+    	.content{
+			padding-top:50px;
+			}
+		#footer_wrap{
+			position:absolute;
+			}
+    </style>
 <body  bgcolor="#EAF3CF">
 
 <div class="header">
