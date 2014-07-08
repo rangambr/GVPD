@@ -34,9 +34,42 @@ class Property{
         return $result;  
     }
 	
-	function getPropertySubset($limit){
+    function getPropertySubset($limit){
         $db = new Dbconnect();
         $result = $db->query("select * from property ".$limit);
+        return $result;
+    }
+    
+    function getPropertiesBySearchCategory($location,$type, $min_val, $max_val,$no_min,$no_max,$no_type,$no_location){
+        $db = new Dbconnect();
+        $min_max_filter = "";
+        $type_filter = "";
+        $location_filter = "";
+        
+        if($no_min && $no_max){
+            $min_max_filter = "";
+        }
+        elseif ($no_min) {
+            $min_max_filter = " unit_price <= '$max_val' and ";
+        }
+        elseif ($no_max) {
+            $min_max_filter = " unit_price >= '$min_val' and ";
+        }
+        else{
+            $min_max_filter = " ( unit_price >= '$min_val' and unit_price <= '$max_val' ) and ";
+        }
+        
+        if(! $no_type){
+            $type_filter = "type = '$type' and ";
+        }
+        
+        if(! $no_location){
+            $location_filter = "( address1 = '$location' or address2 = '$location' or city = '$location' or province = '$location') and ";
+        }
+        
+        $query_str = "select * from property where ".$type_filter." ".$min_max_filter." ".$location_filter." status = 'Active' ";
+        //KINT::dump($query_str);
+        $result = $db->query($query_str);
         return $result;
     }
 }

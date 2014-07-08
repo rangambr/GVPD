@@ -189,9 +189,9 @@
                                     $admins = $admin->getAllAdmins();
 
                                     while ($row = mysql_fetch_array($admins)) {
-                                        $Id = $row['UserId'];
+                                        $Id = $row['User_Id'];
                                         echo '<td>'.$Id.'</td>';
-                                        $Name = $row['UserName'];
+                                        $Name = $row['User_Name'];
                                         echo '<td>'.$Name.'</td>';
                                     }
                                     ?>
