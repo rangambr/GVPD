@@ -107,10 +107,11 @@
 
                                 <?php if (!isset($_SESSION['username'])) { ?>
                                     <tr>
-                                        <td colspan="3"><a href="../../customer/view/register.php">Register</a></td>
+                                        <td colspan="2"><a href="../../customer/view/register.php" style="font-style: normal; font-size: small;">Register</a></td>
+                                        <td><a href="../../admin/view/control_panel.php" style="font-style: normal">Admin</a></td>
                                     </tr>
                                     <tr>
-                                        <td  style="font-style: normal; font-weight: bold; color: #0F2701;">
+                                        <td  style="font-style: normal; font-weight: bold; color: #0F2701; font-size: x-small;">
                                             <span style="font-weight: bolder; color: rgba(15,39,1,1);">Username</span>:
                                         </td>
                                         <td >
@@ -118,12 +119,12 @@
                                         </td>
                                         <td>
                                             <input type="checkbox" name="checkbox" id="checkbox">
-                                            <label for="checkbox" style="color: #0F2701">Remember me.</label>
+                                            <label for="checkbox" style="color: #0F2701; font-style: normal; font-size: x-small;">Remember me.</label>
                                         </td>
                                     </tr>
 
                                     <tr>
-                                        <td style="font-weight: bold; color: #0F2701;">
+                                        <td style="font-weight: bold; color: #0F2701; font-style: normal; font-size: x-small;">
                                             Password:
                                         </td>
                                         <td>
@@ -163,10 +164,8 @@
                                     <?php if (isset($_SESSION['username']) && $_SESSION['active'] == 1) { ?> 
                                         <td colspan="3" class="user_lgn_msg">
                                             <?php echo 'Hi, <a href="../../customer/view/display_profile.php">' . $_SESSION['username'] . '</a> '; ?>
-                                            <a style="display: inline; font-size: small;" href="../controller/logout.php">
-                                                Logout
-                                            </a> 
-                                        </td>      
+                                            <span style="font-style: normal"><a style="display: inline; font-size: small;" href="../controller/logout.php">
+                                        Logout</a><a style="display: inline; font-size: small;" href="../controller/logout.php"></a></span> </td>      
                                     <?php } ?> 
 
                                 </tr>
@@ -268,186 +267,7 @@
                     </td>
                 </tr>
             </table>
-
-<table width="100%" border="0">
-  <tr>
-    <td style="margin-left:30px; padding-left:30px;">
-        <div align="center"><img src="../../common/images/tr_banner.png"/><br/>
-          <span style="color: #275C0D; font-weight: bold; font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans', Verdana, sans-serif; font-style: italic; font-size: large;">We Make Your Dream Come True.</span>
-        </div>
-        
-    </td>
-    <td>
-        <table class="login_tbl">
-            <form name="frm_login" method="post" action="../controller/login.php" onsubmit="return validateForm();"  >	
-            
-            <?php 
-                if(! isset($_SESSION['username'])){ ?>
-              <tr>
-                    <td colspan="3"><a href="../../customer/view/register.php">Register</a></td>
-            	</tr>
-                <tr style="font-size: small">
-                    <td>
-                    <span style="font-size: small; font-weight: bolder;">Username:</span></td>
-                    <td >
-                         <input name="username" class="textbox1" type="text" size="20" />
-                  </td>
-                    <td>
-                         <input type="checkbox" name="checkbox" id="checkbox">
-                         <label for="checkbox" style="color: #0F2701; font-size: small; font-weight: bolder;">Remember me.</label>
-                  </td>
-              </tr>
-                    
-                <tr>
-                    <td style="font-weight: bold; color: #0F2701; font-size: small;">
-                  <span style="font-weight: bolder">Password</span>: </td>
-                    <td>
-                        <input name="password" class="textbox2" type="password" size="20" />
-                    </td>
-                    <td class="lng_btn_td">
-                        <input name="login" type="submit" value="Login" class="myButton small_btn" /><?php ?>
-                    </td>
-              </tr>
-                   
-                <tr>
-                    <td colspan="3">
-                          <?php 
-                          if(!empty($_REQUEST['er'])){
-                            
-                            $error_code = $_REQUEST['er'];
-                            if($error_code == "4"){ ?>
-                                <div class="msg msg-error">
-                                    <p><strong style="color: #FF0000">Invalid username or password! </strong></p>
-                            </div><?php 
-                            }
-							
-                            if($error_code == "8"){ ?>
-                                <div class="msg msg-error">
-                                    <p><strong style="color: #FF0000">Activation Required! </strong></p>
-                            </div><?php 
-                            } 
-                          }
-                          ?>   
-                    </td>
-                </tr>
-      
-                <?php } ?> 
-            <tr>
-                
-            <?php
-            if(isset($_SESSION['username']) && $_SESSION['active'] == 1 ){ ?> 
-                <td colspan="3" class="user_lgn_msg">
-                <?php echo 'Hi, <a href="../../customer/view/display_profile.php">'.$_SESSION['username'].'</a> ';?>
-                <a style="display: inline; font-size: small;" href="../controller/logout.php">
-                    Logout
-                </a> 
-               </td>      
-            <?php } ?> 
-               
-            </tr>
-            </form>
-    </table>
-    </td>
-  </tr>
-</table>
-
 </div>
-
-<div class="menu_bar" align="center" id="cssmenu">
-	<ul>
-	  <li class='active'><a href='index.php'><span>Home</span></a></li>
-	  <li><a href='#'><span>Buying</span></a></li>
-	  <li><a href='#'><span>Selling</span></a></li>
-	  <li><a href="../../property/view/search_property.php"><span>Search property</span></a></li>
-	  <li><a href='#'><span>My profile</span></a></li>
-	  <li><a href='#'><span>Review</span></a></li>
-	  <li class='last'><a href='#'><span>Contact us</span></a></li>
-  </ul>
-</div>
-
-<div>
-<table width="80%" border="0">
-  <tr>
-  <!-- quick search table-->
-    <td width="15%">
-    	
-        <table width="285" height="400" class="tbl_home">
-	<tr>
-		<th width="291" height="60" scope="col" ><img src="../../common/images/quick-search-heading-white.png"/></th>
-	</tr>                     
-	<tr align="left">
-		<td width="291" height="37"><span style="font-weight: bold; font-style: normal;">City:</span><br/>
-			<select >
-            	<option>--Select Here--</option>
-				<option>Kandy</option>
-				<option>Kurunegala</option>
-				<option>Kegalle</option>
-				<option>Mathale</option>
-				<option>Nuwara Eliya</option>
-			</select>
-		</td>
-	</tr>
-	<tr align="left">
-		<td height="25"><span style="font-size: small"><span style="font-style: normal">Property Type</span>:</span><br/>
-			<select>
-            	<option>--Select Here--</option>
-				<option>All</option>
-				<option>Lots & Lands</option>
-				<option>Estate & Plantation</option>
-				<option>Commercial</option>
-				<option>Rentals</option>
-				<option>Residential</option>
-			</select>
-		</td>
-	</tr>
-	<tr align="left">
-		<td height="25"><span style="font-size: small; font-style: normal;">Price(LKR):</span><br/>
-			<select class="len">
-				<option>Min</option>
-				<option>28,000</option>
-				<option>38,000</option>
-				<option>65,000</option>
-				<option>100,000</option>
-				<option>150,000</option>
-				<option>250,000</option>
-			</select></label>
-			<select class="len">
-				<option>Max</option>
-				<option>38,000</option>
-				<option>65,000</option>
-				<option>100,000</option>
-				<option>150,000</option>
-				<option>1,000,000</option>
-			</select>
-		</td> 
-	</tr>
-	<tr>
-		<td height="50" align="center" colspan="2">
-            <input name="q_search"class="myButton small_btn" type="submit" value="Search" />
-             </td>
-     </tr>
-     <tr>       
-        <td colspan="2" align="center">
-            <a href="#" style="font-style: normal">Advanced Search</a>
-        </td>
-	</tr>
-</table>
-    </td>
-    
-    <!-- slideshow-->
-    <td width="65%">
-    	<div id="slideshow" align="center">
-        	<img src="../../common/images/slide1.jpg" alt="Slideshow Image 1" width="750" height="411" class="active" />
-            <img src="../../common/images/slide2.jpg" alt="Slideshow Image 2" />
-    		<img src="../../common/images/slide3.jpg" alt="Slideshow Image 3" />
-    		<img src="../../common/images/slide4.jpg" alt="Slideshow Image 4" />
-		</div>
-    </td>
-  </tr>
-</table>
-
-        </div>
-
 
         <div id="scroller" style="width: 900px; height: 500px; margin: 0 auto;">
             <div class="innerScrollArea">
