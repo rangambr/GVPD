@@ -3,7 +3,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>HOME</title>
+        <title>Admin</title>
 
         <link rel="stylesheet" type="text/css" href="../../common/CSS/home.css">
         <link rel="stylesheet" type="text/css" href="../../common/CSS/menu_bar.css">
@@ -52,8 +52,7 @@
                         <div align="center"><img src="../../common/images/tr_banner.png"/><br/>
                             <span style="color: #275C0D; font-weight: bold; font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans', Verdana, sans-serif; font-style: italic; font-size: large;">We Make Your Dream Come True.</span>
                         </div>
-
-                    </td>
+					</td>
                     <td>
                         <table>
                             <form name="frm_login" method="post" action="../controller/login.php" onsubmit="return validateForm();"  >	
@@ -174,39 +173,31 @@
                         <tr>
                             <td colspan="2" align="center"><input type="submit" value="submit"/></td>
                         </tr>
+					</table>
+				</form>
+                <br/>  
+                <table border="1" width="500px" cellpadding="5" style="margin-left:100px">
+                    <tr>
+                        <td align="center">User Id</td>
+                        <td align="center">Type</td>
+                    </tr> 
+                    <tr>
+                        <?php
+                            require '../model/admin.php';
+                            $admin = new Admin();
+                            $admins = $admin->getAllAdmins();
 
-                        <tr>
-                            <td colspan="2" align="center">
-                                <table border="1">
-                                    <tr>
-                                        <td>User Id</td>
-                                        <td>User Name</td>
-                                    </tr> 
-                                    <tr>
-                                <?php
-                                    require '../model/admin.php';
-                                    $admin = new Admin();
-                                    $admins = $admin->getAllAdmins();
-
-                                    while ($row = mysql_fetch_array($admins)) {
-                                        $Id = $row['User_Id'];
-                                        echo '<td>'.$Id.'</td>';
-                                        $Name = $row['User_Name'];
-                                        echo '<td>'.$Name.'</td>';
-                                    }
-                                    ?>
-                                     </tr>
-                                </table>
-                                            
-                                </tr>                     
-                            </td>
-                        </tr>
-                    </table>
-                </form>
+                            while ($row = mysql_fetch_array($admins)) {
+                                $name = $row['username'];
+                                echo '<td>'.$name.'</td>';
+                                $type = $row['type'];
+                                echo '<td>'.$type.'</td>';
+								echo'</tr>';
+                            }
+                        ?>
+                    </tr>
+                </table>
             </div>
-
-
-        </div>
         <br/><br/><br/><br/><br/><br/><br/><br/><br/>
         <div class="footer" id="footer_wrap">
             <ul>
@@ -222,6 +213,6 @@
                 Copyright © 2014 Greenvalley.lk All rights reserved.
             </p>
         </div>
-
+	</div>
     </body>
 </html>

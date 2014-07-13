@@ -1,7 +1,6 @@
 <?php
 require '../model/admin.php';
 
-$usrid=$_POST["txt_usrid"];
 $usrname=$_POST["txt_usrname"];
 $pass=md5($_POST["txt_pass"]);
 
