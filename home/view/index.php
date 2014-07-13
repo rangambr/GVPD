@@ -93,7 +93,6 @@
 
         <div class="header">
 
-<<<<<<< HEAD
             <table width="100%" border="0">
                 <tr>
                     <td style="margin-left:30px; padding-left:30px;">
