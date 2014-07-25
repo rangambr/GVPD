@@ -55,7 +55,7 @@ $(function() {
   
   <table align="center" width="500" style="border:1px groove #93AE13;">
        	 <tr bgcolor="#005825">
-       	   <td colspan="2" align="center" bgcolor="#005825"><h1 style="color: #FFFFFF">Remind !</h1></td>
+       	   <td colspan="2" align="center" bgcolor="#005825"><h1 style="color: #FFFFFF; font-style: normal;">Add an appointment</h1></td>
       </tr>
          <tr>
        	   <td>Select Date :</td>
@@ -67,7 +67,7 @@ $(function() {
            <td><textarea name="txt_note" rows="5" cols="40" class="inputs"></textarea></td>
          </tr>
          <tr>
-       	   <td colspan="2" align="center" valign="middle"><input type="submit" value="Save" class="myButton" name="save" />
+       	   <td colspan="2" align="center" valign="middle"><input type="submit" value="Save" class="myButton small_btn" name="save" />
            </td>
       </tr>
        </table>

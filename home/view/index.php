@@ -196,7 +196,7 @@
                         <form name="frm_qfind" method="post" action="../controller/quick_find.php" onsubmit="return validateQuickFind();" >
                             <table width="299" height="400" class="tbl_home">
                                 <tr>
-                                    <th width="291" height="65" scope="col" >Quick Find</th>
+                                    <th width="291" height="65" scope="col" ><img src="../../common/images/quick-search-heading-white.png" width="160" height="34" alt=""/></th>
                                 </tr>                     
                                 <tr align="left">
                                     <td width="291" height="37"><span style="font-weight: bold; font-style: normal;">City:</span><br/>

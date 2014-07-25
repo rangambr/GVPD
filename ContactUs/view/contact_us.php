@@ -13,15 +13,14 @@
 	padding-left:380px;
 	}
 .side_bar{
-	position:absolute;
-	background-color:#E7E08E;
-    left:10px;
-    bottom:0px;
-    top:183px;
-    width:300px;
-	height:360px;
-	padding:20px;
-	
+	position: absolute;
+	background-color: #E7E08E;
+	left: 10px;
+	bottom: 0px;
+	top: 183px;
+	width: 300px;
+	height: 325px;
+	padding: 20px;
 	}
 </style>
 </head>
@@ -56,7 +55,7 @@ If your question was not addressed in our <a href="#">FAQs</a>!</span>
     <tr><td style="color: #275C0D;">Email:</td><td style="color: #275C0D;">greenvalley@gmail.com</td></tr>
     <tr><td colspan="2" style="color: #275C0D"><hr/></td></tr>
     <tr><td style="color: #275C0D;">Office Address:</td><td style="color: #275C0D; ">Third floor,<br/>
-    Silverdale Complex,<br/>Yatinuwara Veediya,<br/>Kandy.</td></tr>
+    Silverdale Complex,<br/>Yatinuwara Veediya,<br/>Kandy. OR<br/>No:77, Doranegama Road, Medawala(H:P).</td></tr>
 </table>
 </div>
 <div class="content">

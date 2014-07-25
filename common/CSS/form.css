@@ -5,7 +5,7 @@
 	}
 tr,td{
 	font-size: small;
-	font-style: italic;
+	font-style: normal;
 	font-weight: bold;
 	color: #000000;
 	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -14,6 +14,7 @@ th{
 	padding-left: 20px;
 	color: #275C0D;
 	font-size: 12px;
+	font-style: normal;
 }
 
 .inputs  { 

@@ -37,7 +37,7 @@
         <form name="frm_register" method="post" action="../controller/add_property.php">
           <table align="center" width="500" style="border:1px groove #93AE13;" >
             <tr bgcolor="#005825">
-              <td colspan="2" align="center"><h1 style="color: #FFFFFF">Add Property</h1></td>
+              <td colspan="2" align="center"><h1 style="color: #FFFFFF; font-style: normal;">Add Property</h1></td>
             </tr>
             <tr>
               <th align="left"> Title : </th>
@@ -96,6 +96,12 @@
               <td><label for="description">
                 <textarea name="description" id="description" placeholder="Enter description of the land here" rows="5" cols="40" class="inputs"></textarea>
               </label></td>
+            </tr>
+            <tr>
+              <th align="left">Upload images :</th>
+              <td><label for="images"><input type="file" name="imgfile" id="imgfile" />
+              </label>
+              </td>
             </tr>
             <tr>
               <td colspan="2" align="center" valign="middle"><input type="submit" value="Add Property" class="myButton" name="submit" /></td>
