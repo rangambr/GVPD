@@ -91,9 +91,10 @@
 
     <body  bgcolor="#EAF3CF">
 
-    <div class="header">
-      <table width="100%" border="0">
-          <tr>
+        <div class="header">
+
+            <table width="100%" border="0">
+                <tr>
                     <td style="margin-left:30px; padding-left:30px;">
                         <div align="center"><img src="../../common/images/tr_banner.png"/><br/>
                             <span style="color: #275C0D; font-weight: bold; font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans', Verdana, sans-serif; font-style: italic; font-size: large;">We Make Your Dream Come True.</span>

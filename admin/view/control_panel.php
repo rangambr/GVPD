@@ -4,7 +4,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>HOME</title>
+	<title>Control Panel</title>
     
     <link rel="stylesheet" type="text/css" href="../../common/CSS/home.css">
 	<link rel="stylesheet" type="text/css" href="../../common/CSS/menu_bar.css">
@@ -13,19 +13,14 @@
     <link rel="stylesheet" type="text/css" href="../../common/CSS/dropdown_menu.css">
  	
      <style type="text/css">
-            .left_box{
-                float:left;
-                width:200px;
-                height:380px;
-                padding:10px;
-				padding-top:50px;
+         .left_box{
+             width: 100%;
+         }
+            .left_box td{
+                padding-left: 9%;
+                padding-top: 10px;
             }
-            .left_box ul {
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
-            }
-
+           
             .left_box a:link, a:visited {
                 display: block;
                 font-weight: bold;
@@ -40,10 +35,16 @@
             .left_box a:hover, a:active {
                 background-color: #D1D3CB;
             }
-			.footer{
-				position:absolute;
-				bottom:0px;
-				}
+            .spacer{
+                width: 15%;
+            }
+            .footer{
+                    position:absolute;
+                    bottom:0px;
+            }
+            .btn{
+                width: 42.5%;
+            }
         </style>
 </head>
 
@@ -76,17 +77,42 @@
   </ul>
 </div>
 
-<div class="content">
-  <div class="left_box">
-        <ul>
-            <li><a href="add_user.php">Manage users</a></li>
-            <li><a href="#">Manage property</a></li>
-            <li><a href="view_inquiries.php">Handle inquiries</a></li>
-            <li><a href="#">Handle payments</a></li>
-            <li><a href="#">Reports</a></li>
-        </ul>
-    </div>
-    <div style="margin-left: 300px; font-style: normal; color: #000089;"><h3>Welcome To Control Panel</h3></div>
+<div class="content" style="padding-top:0px;">
+ 
+ <table class="left_box">
+     <tr>
+         <th colspan="3"><h3 style="color:#120072;">Administration Tools</h3></th>
+     </tr>
+     <tr>
+         <td class="btn">
+             <a href="../view/manage_users.php">Manage users</a>
+         </td>
+         <td class="spacer"></td>
+          <td  class="btn">
+              <a href="../view/manage_properties.php">Manage properties</a>
+         </td>
+     </tr>
+     <tr>
+         <td  class="btn">
+             <a href="../view/manage_inquiries.php">Manage inquiries</a>
+         </td>
+         <td class="spacer"></td>
+          <td  class="btn">
+             <a href="#">Handle payments</a>
+         </td>
+     </tr>
+     <tr>
+         <td  class="btn">
+             <a href="../view/reports.php">Reports</a>
+         </td>
+         <td class="spacer"></td>
+          <td  class="btn">
+              <a href="../view/manage_reviews.php">Manage reviews</a>
+         </td>
+     </tr>
+     
+ </table>
+    
 </div>
 
 <div class="footer" id="footer_wrap">
