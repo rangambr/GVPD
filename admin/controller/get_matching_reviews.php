@@ -10,7 +10,7 @@ if($q == ""){
     $result = $inc->getAllReviews();
 }
 else{
-    $result = $inc->getInquiryByRating($q);
+    $result = $inc->getReviewByRating($q);
 }
 
 

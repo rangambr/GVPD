@@ -19,10 +19,16 @@ class Search_Preference{
     
     function getPreferencesGroupByCity(){
         $db=new Dbconnect();
-        $query = "SELECT city,COUNT(id) FROM search_preference GROUP BY city"; 
+        $query = "SELECT city,COUNT(id) FROM search_preference GROUP BY city order by COUNT(id) desc"; 
 	$result=$db->query($query);
         return $result;
     }
     
+    function getPreferencesGroupByPrice(){
+        $db=new Dbconnect();
+        $query = "SELECT price_range,COUNT(id) FROM search_preference GROUP BY price_range order by COUNT(id) desc"; 
+	$result=$db->query($query);
+        return $result;
+    }
 }
 

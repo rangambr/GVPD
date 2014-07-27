@@ -1,12 +1,11 @@
 <?php
 require '../controller/get_search_preferences.php';
-// Print out result
+require '../../common/kint/Kint.class.php';
 ?>
-<!doctype html>
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Most Popular Locations</title>
+        <title>Most Popular Price Ranges</title>
         <script type="text/javascript" src="../../common/JS/jsapi.js"></script>
         <script type="text/javascript">
             google.load("visualization", "1", {packages: ["corechart"]});
@@ -15,8 +14,8 @@ require '../controller/get_search_preferences.php';
                 var data = google.visualization.arrayToDataTable([
                     ['Price Range', 'Number of hits'],
                     <?php
-                    while ($row = mysql_fetch_array($search_pref_by_city_chart)) {
-                        echo '[ "' . $row['city'] . '",'.$row['COUNT(id)'].'],';
+                    while ($row = mysql_fetch_array($search_pref_by_price_chart)) {
+                        echo '[ "' . $row['price_range'] . '",'.$row['COUNT(id)'].'],';
                     }
                     ?>
                    
@@ -42,27 +41,30 @@ require '../controller/get_search_preferences.php';
 
         <hr/>                         
         <br/><br/>
-        <h3 style="color: #275C0D" align="center">Most Popular Areas – From 2013-01-01 to 2014-01-01</h3>
-        <table align="center" width="40%" border="0" cellspacing="5" cellpadding="5" style="font-size: 14px; font-weight: bold;">
+        <h3 style="color: #275C0D" align="center">Most Popular Price Ranges– From 2013-01-01 to 2014-01-01</h3>
+        <table align="center" width="59%" border="0" cellspacing="5" cellpadding="5" style="font-size: 14px; font-weight: bold;">
             <tr>
-                <td width="17%">&nbsp;</td>
-                <td width="56%">NAME</td>
-                <td width="27%">NO OF HITS</td>
+                <td width="16%">&nbsp;</td>
+                <td width="52%">Price Range</td>
+                <td width="32%">NO OF HITS</td>
             </tr>
             <?php
             $counter = 0;
-            while ($row = mysql_fetch_array($search_pref_by_city)) {
+
+            while ($row = mysql_fetch_array($search_pref_by_price)) {
                 $counter++;
                 echo '<tr><td style="text-align: center">' . $counter . '</td>';
-                echo '<td >' . $row['city'] . '</td>';
-                echo '<td >' . $row['COUNT(id)'] . '</td></tr>';
+                echo '<td >' . $row['price_range'] . '</td>';
+                echo '<td style="text-align: left">' . $row['COUNT(id)'] . '</td></tr>';
             }
             ?>
+
+
         </table>
-        <br/>
-        <div id="chart_div" style="width: 900px; height: 500px;padding-left: 21%;"></div>
+<br/>
+        <div id="chart_div" style="width: 900px; height: 500px;padding-left: 18%;"></div>
 
-
+        <p>&nbsp;</p>
         <hr/>
         <div align='center'>
             <font size='9px; color:#275C0D; font-style:italic' style="font-size: small; font-weight: bold; font-style: italic; color: #275C0D;" font-weight:bolder;'> No:77,Doranegama  Road,Medawala(H:P).  &nbsp;&nbsp;&nbsp;email:greenvalleyDev@hotmail.com  &nbsp;&nbsp;&nbsp; 
@@ -70,4 +72,3 @@ require '../controller/get_search_preferences.php';
         </div>
     </body>
 </html>
-
