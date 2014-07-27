@@ -42,6 +42,9 @@ require_once '../controller/display_profile.php';
             .content{
                 padding: 0px !important;
             }
+            .wlist{
+                text-align: center;
+            }
         </style>
         
     </head>
@@ -138,6 +141,24 @@ require_once '../controller/display_profile.php';
                             <tr>
                                 <td colspan="2" align="center" valign="middle"><input type="submit" value="Update" class="myButton" name="submit" /></td>
                             </tr>
+                        </table>
+                        
+                        <table align="center" width="500" style="border:1px groove #93AE13;">
+                            <tr height="33px">
+                                <td align="center"><img src="../../common/images/icons/user_yellow_edit.png"/></td>
+                                <td><p align="left" style="font-weight: bold; font-style: normal; font-size: 16px; color: #275C0D;">My watch list.</p>
+                                </td>
+                            </tr>
+                            <tr><th>Property</th><th>Location</th><th>Status</th><th>Action</th></tr>
+                            <?php
+                                while($row=mysql_fetch_array($watch_list)){
+                                    echo '<tr><td class="wlist"> <a href="../../property/view/display_property.php?id='.$row['id'].'">'.$row['name'].'</a></td>';
+                                    echo '<td class="wlist">'.$row['city'].'</td>';
+                                    echo '<td class="wlist">'.$row['status'].'</td>';
+                                    echo '<td class="wlist"> <a href="../controller/remove_watch_list.php?id='.$row['id'].'">remove from watch list</a></td></tr>';
+                                }
+                            ?>
+                               
                         </table>
                     </form>
                 </div>

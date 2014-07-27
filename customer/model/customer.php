@@ -28,7 +28,14 @@ class Customer{
         $result = $db->query($sql);
         //KINT::dump($result);
         return true;
-    }	
+    }
+    
+    function get_watchlist($username){
+        $db=new Dbconnect();
+        $sql="select property.id,property.name, property.city, property.status from watch_list,property where watch_list.username='$username' and property.id = watch_list.property_id";    
+        $result=$db->query($sql);
+        return $result;  
+    }
 }
 ?>
      

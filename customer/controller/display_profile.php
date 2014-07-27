@@ -25,6 +25,8 @@ while($row=mysql_fetch_array($result)){
 	$contact_no1 = $row["contact_no_1"];
 	$contact_no2 = $row["contact_no_2"];
 	}
+        
+$watch_list = $customer->get_watchlist($username);        
 //$customer->updateCustomer($fname,$lname,$gender,$address1,$address2,$city,$birthday,$email,$contact_no1,$contact_no2);
 //Kint::dump($fname);
 
