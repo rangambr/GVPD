@@ -158,9 +158,9 @@ function validate(){
 
 <div class="content">
   <form name="register" method="post" action="../controller/register.php" onsubmit="return validate();">
-  <table align="center" width="500" style="border:1px groove #93AE13;">
+  <table align="center" width="500" style="border: 1px groove #93AE13; font-style: normal;">
        	 <tr bgcolor="#005825">
-         		<td colspan="2" align="center" bgcolor="#005825"><h1 style="color: #FFFFFF">User Registration</h1></td>
+         		<td colspan="2" align="center" bgcolor="#005825"><h1 style="color: #FFFFFF; font-style: normal;">User Registration</h1></td>
          	</tr>
          		<tr>
 					<th align="left">First Name :</th>
@@ -173,7 +173,7 @@ function validate(){
 				<tr>
 					<th align="left">Gender :</th>
                                         <td><input type="radio" id="gender_male" name="gender" value="Male" />
-					  <span style="color: #275C0D">Male</span> <span style="margin-left: 50px; color: #275C0D;">
+					  <span style="color: #275C0D; font-style: normal;">Male</span> <span style="margin-left: 50px; color: #275C0D; font-style: normal;">
 				  <input type="radio" name="gender" id="gender_female" value="Female"/>Female</span> </td>
 				</tr>
 				<tr>

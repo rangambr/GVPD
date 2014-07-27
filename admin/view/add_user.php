@@ -176,10 +176,10 @@
 					</table>
 				</form>
                 <br/>  
-                <table border="1" width="500px" cellpadding="5" style="margin-left:100px">
-                    <tr>
-                        <td align="center">User Id</td>
-                        <td align="center">Type</td>
+                <table border="1" width="500px" cellpadding="5" style="margin-left: 100px; color: #000000;">
+                    <tr bgcolor="#9FA393">
+                        <td>USER ID</td>
+                        <td>TYPE</td>
                     </tr> 
                     <tr>
                         <?php
