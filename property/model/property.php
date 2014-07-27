@@ -40,6 +40,14 @@ class Property{
         return $result;
     }
     
+    function getPropertiesByStatus($status){
+        $db=new Dbconnect();
+        $sql="select * from property where status = '$status'";  
+        //kint::dump($status);
+        $result=$db->query($sql);
+        return $result;  
+    }
+    
     function getPropertiesBySearchCategory($location,$type, $min_val, $max_val,$no_min,$no_max,$no_type,$no_location){
         $db = new Dbconnect();
         $min_max_filter = "";

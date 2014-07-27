@@ -53,13 +53,13 @@ require_once '../controller/display_profile.php';
 
         <div class="menu_bar" align="center" id="cssmenu">
             <ul>
-                <li class='active'><a href='index.html'><span>Home</span></a></li>
-                <li><a href='#'><span>Buying</span></a></li>
-                <li><a href='#'><span>Selling</span></a></li>
-                <li><a href='#'><span>Search property</span></a></li>
-                <li><a href='#'><span>My profile</span></a></li>
+                 <li class='active'><a href='index.php'><span>Home</span></a></li>
+                <li><a href='../view/advanced_search.php'><span>Buying</span></a></li>
+                <li><a href='../../property/view/add_property.php'><span>Selling</span></a></li>
+                <li><a href="../../property/view/search_property.php"><span>Properties</span></a></li>
+                <li><a href='../view/hot_deals.php'><span>Hot Deals</span></a></li>
                 <li><a href='#'><span>Review</span></a></li>
-                <li class='last'><a href='#'><span>Contact us</span></a></li>
+                <li class='last'><a href='../view/contact_us.php'><span>Contact us</span></a></li>
             </ul>
         </div>
         <div class="content">
