@@ -3,16 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/opt/lampp/htdocs/IMS_3/sms/index.php</file>
-            <file>file:/opt/lampp/htdocs/IMS_3/customer/view/display_profile.php</file>
-            <file>file:/opt/lampp/htdocs/IMS_3/admin/view/update_user.php</file>
-            <file>file:/opt/lampp/htdocs/IMS_3/sms/sendsms.php</file>
-            <file>file:/opt/lampp/htdocs/IMS_3/customer/view/update_profile.php</file>
-            <file>file:/opt/lampp/htdocs/IMS_3/admin/controller/update_user.php</file>
-            <file>file:/opt/lampp/htdocs/IMS_3/customer/controller/update_profile.php</file>
-            <file>file:/opt/lampp/htdocs/IMS_3/customer/controller/save_profile.php</file>
-            <file>file:/opt/lampp/htdocs/IMS_3/customer/view/register.php</file>
-            <file>file:/opt/lampp/htdocs/IMS_3/customer/controller/display_profile.php</file>
+            <file>file:/opt/lampp/htdocs/IMS_3/admin/view/reports.php</file>
+            <file>file:/opt/lampp/htdocs/IMS_3/reports/view/prefered_properties.php</file>
+            <file>file:/opt/lampp/htdocs/IMS_3/admin/view/control_panel.php</file>
+            <file>file:/opt/lampp/htdocs/IMS_3/reports/view/prefered_price_ranges.php</file>
+            <file>file:/opt/lampp/htdocs/IMS_3/reports/view/prefered_locations.php</file>
         </group>
     </open-files>
 </project-private>
