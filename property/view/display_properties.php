@@ -47,12 +47,23 @@
         <?php session_start(); ?>
 
         <div class="header">
-	<img src="../../common/images/myBanner.png"  style="margin-left:50px"/><span>
-    <img src="../../common/images/contact.png" style="margin-left:140px"/></span> </div>  		
+        	<table border="0" align="center" width="100%">
+            	<tr>
+                	<td style="margin-left:30px; padding-left:30px;">
+                        <div align="center"><img src="../../common/images/tr_banner.png"/><br/>
+                            <span style="color: #3A6839; font-weight: bold; font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans', Verdana, sans-serif; font-style: italic; font-size: large;">We Make Your Dream Come True.</span>
+                        </div>
+           			<td align="center">             
+    					<img src="../../common/images/contact.png"/>
+    	   			</td>
+    			</tr>
+    	</table>  		
+</div>		
 
 <div class="menu_bar" align="center" id="cssmenu">
 	<ul>
 	  <li class='active'><a href='index.html'><span>Home</span></a></li>
+       <li><a href='about_us.php'><span>About Us</span></a></li>
 	  <li><a href='#'><span>Buying</span></a></li>
 	  <li><a href='#'><span>Selling</span></a></li>
 	  <li><a href='#'><span>Search property</span></a></li>
@@ -214,7 +225,7 @@
                         </p>
                         <p class="desc">
                             <?php
-                            echo $row['facilities'];
+                            echo $row['description'];
                             ?>
                         </p>
                         <p class="like">

@@ -7,14 +7,14 @@ class Customer{
     function registerCustomer($username,$fname,$lname,$gender,$birthday,$address1,$address2,$city,$province,$email,$contact_no1,$contact_no2){
         $db=new Dbconnect();
         //KINT::dump($username,$fname,$lname,$address1,$address2,$city,$province,$email,$contact_no1,$contact_no2,$gender,$birthday);
-        $sql="insert into customer (username,fname,lname,gender,birthday,address1,address2,city,province,email,contact_no_1,contact_no_2) values ('$username','$fname','$lname','$gender','$birthday','$address1','$address2','$city','$province','$email','$contact_no1','$contact_no2')";    
+        $sql="INSERT INTO customer (username,fname,lname,gender,birthday,address1,address2,city,province,email,contact_no_1,contact_no_2) VALUES ('$username','$fname','$lname','$gender','$birthday','$address1','$address2','$city','$province','$email','$contact_no1','$contact_no2')";    
         $result = $db->query($sql);
         return true; 
     }
     
     function getCustomer($username){    
         $db=new Dbconnect();
-        $sql="select * from customer where username='$username'";    
+        $sql="SELECT * FROM customer WHERE username='$username'";    
         $result=$db->query($sql);
         return $result;  
     }  

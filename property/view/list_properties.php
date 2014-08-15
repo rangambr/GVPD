@@ -81,7 +81,7 @@
                         <a href=""><img src="../../common/images/save.png" alt="save property" title="save property"/></a><span style="margin-left:25px;" >
                             <a href=""><img src="../../common/images/star_full.png" alt="rate property" title="rate property"/></a><a href=""><img src="../../common/images/star_half.png" alt="rate property" title="rate property"/></a>&nbsp;<a href=""><img src="../../common/images/star_empty.png" alt="rate property" title="rate property"/></a></span><span style="margin-left:25px;" ><a href=""><img src="../../common/images/email.png" alt="contact us" title="contact us"/></a></span>
                         <span style="margin-left:25px;" ><a href=""><img src="../../common/images/share.png" alt="share property" title="share property"/></a></span>
-                        <span style="margin-left:25px;" ><a href="reminder.php"><img src="../../common/images/icons/reminders.png" alt="add reminder" title="add reminder"/></a></span>
+                        <span style="margin-left:25px;" ><a href="add_appointment.php"><img src="../../common/images/icons/reminders.png" alt="add reminder" title="add reminder"/></a></span>
                         <span style="margin-left:25px; float:right;" >
                             <input type="button" value="Check Availability"/>
                         </span>
