@@ -13,18 +13,18 @@ $result = $customer->getCustomer($username);
 
 //Kint::dump($result);
 while ($row = mysql_fetch_array($result)) {
-    $fname = $row['fname'];
+    $fname = $row['txtfname'];
     //Kint::dump($fname);
-    $lname = $row['lname'];
+    $lname = $row['txtlname'];
     $gender = $row['gender'];
     //KINT::dump($gender);
-    $address1 = $row["address1"];
-    $address2 = $row["address2"];
-    $city = $row["city"];
-    $birthday = $row["birthday"];
-    $email = $row["email"];
-    $contact_no1 = $row["contact_no_1"];
-    $contact_no2 = $row["contact_no_2"];
+    $address1 = $row['txtaddress1'];
+    $address2 = $row['txtaddress2'];
+    $city = $row['txtcity'];
+    $birthday = $row['txtbday'];
+    $email = $row['txtemail'];
+    $contact_no1 = $row['txttp1'];
+    $contact_no2 = $row['txttp2'];
 }
 header("Location:../view/update_profile.php");
 //$customer->updateCustomer($fname,$lname,$gender,$address1,$address2,$city,$birthday,$email,$contact_no1,$contact_no2);

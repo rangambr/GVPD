@@ -51,15 +51,15 @@
 </div>
 
 <div class="menu_bar" align="center" id="cssmenu">
-	<ul>
-	   <li class='active'><a href='index.php'><span>Home</span></a></li>
-                <li><a href='../view/advanced_search.php'><span>Buying</span></a></li>
+            <ul>
+                <li class='active'><a href='../../home/view/index.php'><span>Home</span></a></li>
+                <li><a href='../../home/view/about_us.php'><span>About Us</span></a></li>
+                <li><a href='../../property/view/advaced_search_property.php'><span>Buying</span></a></li>
                 <li><a href='../../property/view/add_property.php'><span>Selling</span></a></li>
-                <li><a href="../../property/view/search_property.php"><span>Properties</span></a></li>
-                <li><a href='../view/hot_deals.php'><span>Hot Deals</span></a></li>
-                <li><a href='#'><span>Review</span></a></li>
-                <li class='last'><a href='../view/contact_us.php'><span>Contact us</span></a></li>
-  </ul>
+                <li><a href='../../home/view/hot_deals.php'><span>Hot Deals</span></a></li>
+                <li><a href='../../reviews/view/review.php'><span>Review</span></a></li>
+                <li class='last'><a href='../../contact_us/view/contact_us.php'><span>Contact us</span></a></li>
+     </ul>
 </div>
 
 <div class="content">

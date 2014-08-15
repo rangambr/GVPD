@@ -51,8 +51,30 @@ require '../controller/update_user.php';
         <div class="header">
 
             <div class="header">
-                <img src="../../common/images/myBanner.png"  style="margin-left:50px"/><span>
-                    <img src="../../common/images/contact.png" style="margin-left:140px"/></span> </div>  		
+        	<table border="0" align="center" width="100%">
+            	<tr>
+                	<td style="margin-left:30px; padding-left:30px;">
+                        <div align="center"><img src="../../common/images/tr_banner.png"/><br/>
+                            <span style="color: #3A6839; font-weight: bold; font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans', Verdana, sans-serif; font-style: italic; font-size: large;">We Make Your Dream Come True.</span>
+                        </div>
+					</td>
+                    <td align="center">
+               			<table class="login_tbl">
+                 			<tr>
+                    			<td class="user_lgn_msg">
+								  <?php if (isset($_SESSION['username']) && $_SESSION['active'] == 1) { ?> 
+                                  <?php echo 'Hi, <a href="../../customer/view/display_profile.php">' . $_SESSION['username'] . '</a> '; ?>
+                                      <span style="font-style: normal">
+                                          <a style="display: inline; font-size: small;" href="../controller/logout.php">Logout</a>
+                                     </span>      
+                        		<?php } ?>
+                    		  </td>
+               				</tr>
+             			</table>
+             	</td>
+             </tr>
+         </table>
+        </div>    		
 
         </div>
 
@@ -64,15 +86,15 @@ require '../controller/update_user.php';
 </div>
 
 <div class="menu_bar" align="center" id="cssmenu">
-    <ul>
-         <li class='active'><a href='index.php'><span>Home</span></a></li>
-                <li><a href='../view/advanced_search.php'><span>Buying</span></a></li>
+            <ul>
+                <li class='active'><a href='../../home/view/index.php'><span>Home</span></a></li>
+                <li><a href='../../home/view/about_us.php'><span>About Us</span></a></li>
+                <li><a href='../../property/view/advaced_search_property.php'><span>Buying</span></a></li>
                 <li><a href='../../property/view/add_property.php'><span>Selling</span></a></li>
-                <li><a href="../../property/view/search_property.php"><span>Properties</span></a></li>
-                <li><a href='../view/hot_deals.php'><span>Hot Deals</span></a></li>
-                <li><a href='#'><span>Review</span></a></li>
-                <li class='last'><a href='../view/contact_us.php'><span>Contact us</span></a></li>
-    </ul>
+                <li><a href='../../home/view/hot_deals.php'><span>Hot Deals</span></a></li>
+                <li><a href='../../reviews/view/review.php'><span>Review</span></a></li>
+                <li class='last'><a href='../../contact_us/view/contact_us.php'><span>Contact us</span></a></li>
+     </ul>
 </div>
 
 <div class="content">

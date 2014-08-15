@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Rate Property</title>
+<title>News</title>
 
 <link rel="stylesheet" type="text/css" href="../../common/CSS/home.css">
 <link rel="stylesheet" type="text/css" href="../../common/CSS/menu_bar.css">
@@ -45,34 +45,27 @@
 
 <div class="content">
   <form name="frm_rate" method="post" action="../controller/review.php" >
-  <table align="center" width="500" style="border:1px groove #93AE13;">
+  <table align="center" width="555" style="border:1px groove #93AE13;">
        	 <tr bgcolor="#005825">
-         		<td colspan="2" align="center" bgcolor="#005825"><h2 style="color: #FFFFFF">Rate &amp; review your favourite properties...</h2></td>
-         </tr>
-         		<tr>
-					<th align="left">Review :</th>
-					<td style="padding-top:10px;">
-                    	<textarea name="txt_desc" rows="5" class="inputs" placeholder="Type here"></textarea>
-                    </td>
-				</tr>
-				<tr>
-					<th align="left">Rating  :</th>
-					<td>
-                    	<select name="cmb_rate">
-                    		<option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                     </td>
-				</tr>
-             	<tr>
-             		<td colspan="2" align="center" valign="middle">
-                    	<input type="submit" value="save" class="myButton small_btn" name="submit"  />
-                    </td>
-             </tr>
-       </table>
+         		<td height="35" colspan="2" align="center" bgcolor="#005825"><h2 style="color: #FFFFFF">Add News</h2></td>
+      	</tr>
+        <tr>
+			<th width="129" align="left">Date added :</th>
+			<td width="414">&nbsp;</td>
+		</tr>		
+        <tr>
+		  <th align="left">Description :</th>
+			<td style="padding-top:10px;">
+               <textarea name="txt_desc" rows="7" cols="150" class="inputs" placeholder="Type here"></textarea>
+            </td>
+		</tr>
+				
+        <tr>
+           <td colspan="2" align="center" valign="middle">
+              <input type="submit" value="save" class="myButton small_btn" name="submit"  />
+           </td>
+        </tr>
+    </table>
   </form>
 </div>
 

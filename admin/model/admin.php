@@ -37,14 +37,14 @@ class Admin {
 
     function getAllInquiries() {
         $db = new Dbconnect();
-        $sql = "select * from inquiry limit 1000";
+        $sql = "SELECT * FROM inquiry LIMIT 1000";
         $result = $db->query($sql);
         return $result;
     }
     
     function getAllUsers(){
         $db = new Dbconnect();
-        $sql = "select * from user order by type, username";
+        $sql = "SELECT * FROM user ORDER BY type, username";
         $result = $db->query($sql);
         return $result;
     }

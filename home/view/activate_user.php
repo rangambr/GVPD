@@ -6,7 +6,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>HOME</title>
+	<title>Activation</title>
     
     <link rel="stylesheet" type="text/css" href="../../common/CSS/home.css">
     <link rel="stylesheet" type="text/css" href="../../common/CSS/menu_bar.css">

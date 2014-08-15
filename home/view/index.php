@@ -97,7 +97,7 @@
                 <tr>
                     <td style="margin-left:30px; padding-left:30px;">
                         <div align="center"><img src="../../common/images/tr_banner.png"/><br/>
-                            <span style="color: #275C0D; font-weight: bold; font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans', Verdana, sans-serif; font-style: italic; font-size: large;">We Make Your Dream Come True.</span>
+                            <span style="color: #3A6839; font-weight: bold; font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans', Verdana, sans-serif; font-style: italic; font-size: large;">We Make Your Dream Come True.</span>
                         </div>
 
                     </td>
@@ -107,8 +107,8 @@
 
                                 <?php if (!isset($_SESSION['username'])) { ?>
                                     <tr>
-                                        <td colspan="2"><a href="../../customer/view/register.php" style="font-style: normal; font-size: small;">Register</a></td>
-                                        <td><a href="../../admin/view/control_panel.php" style="font-style: normal">Admin</a></td>
+                                        <td colspan="2"><a href="../../customer/view/register.php" style="font-style: normal; font-size: small; padding:5px;">Register</a></td>
+                                        
                                     </tr>
                                     <tr>
                                         <td  style="font-style: normal; font-weight: bold; color: #0F2701; font-size: x-small;">
@@ -180,12 +180,12 @@
         <div class="menu_bar" align="center" id="cssmenu">
             <ul>
                 <li class='active'><a href='index.php'><span>Home</span></a></li>
-                <li><a href='../view/advanced_search.php'><span>Buying</span></a></li>
+                <li><a href='about_us.php'><span>About Us</span></a></li>
+                <li><a href='../../property/view/advaced_search_property.php'><span>Buying</span></a></li>
                 <li><a href='../../property/view/add_property.php'><span>Selling</span></a></li>
-                <li><a href="../../property/view/search_property.php"><span>Properties</span></a></li>
                 <li><a href='../view/hot_deals.php'><span>Hot Deals</span></a></li>
-                <li><a href='#'><span>Review</span></a></li>
-                <li class='last'><a href='../view/contact_us.php'><span>Contact us</span></a></li>
+                <li><a href='../../reviews/view/review.php'><span>Review</span></a></li>
+                <li class='last'><a href='../../contact_us/view/contact_us.php'><span>Contact us</span></a></li>
             </ul>
         </div>
 
@@ -249,7 +249,7 @@
                                     <td height="125" align="center" colspan="2">
                                         <input name="q_search"class="myButton" type="submit" value="Search" />
                                         <br/><br/>
-                                        <a href="../view/advanced_search.php" style="font-style: normal">Advanced Search</a>
+                                        <a href="../../property/view/advaced_search_property.php" style="font-style: normal">Advanced Search</a>
                                     </td>
                                 </tr>
                             </table>

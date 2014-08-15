@@ -4,10 +4,10 @@ require_once '../../common/conn.php';
 
 class Property{
     
-    function registerProperty($username,$name,$address1,$address2,$city,$province,$extent,$unit_price,$facilities){
+    function registerProperty($username,$title,$name,$address1,$address2,$city,$province,$extent,$unit_price,$description){
         $db=new Dbconnect();
         //KINT::dump($username,$fname,$lastname,$address1,$address2,$city,$province,$email,$contact_no1,$contact_no2,$gender,$birthday);
-        $sql="insert into property (username,name,address1,address2,city,province,extent,unit_price,facilities) values ('$username','$name','$address1','$address2','$city','$province','$extent','$unit_price','$facilities')";    
+        $sql="insert into property (username,title,name,address1,address2,city,province,extent,unit_price,description) values ('$username','$title','$name','$address1','$address2','$city','$province','$extent','$unit_price','$description')";    
         $result = $db->query($sql);
         //KINT::dump($result);
         return true; 
@@ -80,5 +80,7 @@ class Property{
         $result = $db->query($query_str);
         return $result;
     }
+	// image upload
+	function uploadImage(){}
 }
 ?>
