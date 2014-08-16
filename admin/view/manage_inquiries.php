@@ -34,6 +34,12 @@ session_start();
                 font-size: 10pt;
                 font-family: Arial;
             }
+            .resp_link{
+                 content:url(../..//common/icons/envelope_icon_small.gif);
+            }
+            .close_link{
+                content:url(../..//common/icons/tick-icon-small.png);
+            }
         </style>
         <script>
             function showSelectedInquiries(str) {

@@ -1,5 +1,4 @@
 <?php
-session_start();
 require_once '../controller/display_profile.php';
 
 ?>
@@ -178,6 +177,24 @@ require_once '../controller/display_profile.php';
                                     echo '<td class="wlist">'.$row['city'].'</td>';
                                     echo '<td class="wlist">'.$row['status'].'</td>';
                                     echo '<td class="wlist"> <a href="../controller/remove_watch_list.php?id='.$row['id'].'">remove from watch list</a></td></tr>';
+                                }
+                            ?>
+                               
+                        </table>
+                        
+                        <table align="center" width="500" style="border:1px groove #93AE13;">
+                            <tr height="33px">
+                                <td align="center"><img src="../../common/images/icons/user_yellow_edit.png"/></td>
+                                <td><p align="left" style="font-weight: bold; font-style: normal; font-size: 16px; color: #275C0D;">Properties Added by me</p>
+                                </td>
+                            </tr>
+                            <tr><th>Property</th><th>Location</th><th>Status</th><th>Action</th></tr>
+                            <?php
+                                while($row=mysql_fetch_array($my_properties)){
+                                    echo '<tr><td class="wlist"> <a href="../../property/view/display_property.php?id='.$row['id'].'">'.$row['name'].'</a></td>';
+                                    echo '<td class="wlist">'.$row['city'].'</td>';
+                                    echo '<td class="wlist">'.$row['Status'].'</td>';
+                                    echo '<td class="wlist"> <a href="../controller/remove_property.php?id='.$row['id'].'">remove</a></td></tr>';
                                 }
                             ?>
                                

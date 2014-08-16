@@ -34,6 +34,12 @@ session_start();
                 font-size: 10pt;
                 font-family: Arial;
             }
+            .add_top{
+                content: url('../../common/icons/add_small.png');
+            }
+            .delete_link{
+                content: url('../../common/icons/icon-delete-small.png');
+            }
         </style>
         <script>
             function showSelectedReviews(str) {
