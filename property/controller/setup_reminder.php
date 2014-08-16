@@ -13,5 +13,5 @@ $reminder=new Reminder();
 
 $reminder->addReminder($username,$date,$note);
 
-header("location:../view/reminder.php");
+header("location:../view/add_appointment.php");
 ?>

@@ -35,6 +35,17 @@
   </tr>
 </table>
 </div>
+<div class="menu_bar" align="center" id="cssmenu">
+            <ul>
+                <li class='active'><a href='index.php'><span>Home</span></a></li>
+                <li><a href='about_us.php'><span>About Us</span></a></li>
+                <li><a href='../../property/view/advaced_search_property.php'><span>Buying</span></a></li>
+                <li><a href='../../property/view/add_property.php'><span>Selling</span></a></li>
+                <li><a href='../view/hot_deals.php'><span>Hot Deals</span></a></li>
+                <li><a href='../../reviews/view/review.php'><span>Review</span></a></li>
+                <li class='last'><a href='../../contact_us/view/contact_us.php'><span>Contact us</span></a></li>
+   </ul>
+</div>
 
     <div class="content">
         <?php
@@ -57,12 +68,12 @@
 <div class="footer" id="footer_wrap">
      <ul>
 	  <li class='active'><a href='index.php'><span>Home</span></a></li>
-	  <li><a href='#'><span>Buying</span></a></li>
-	  <li><a href='#'><span>Selling</span></a></li>
-	  <li><a href='#'><span>Search property</span></a></li>
-	  <li><a href='#'><span>My profile</span></a></li>
-	  <li><a href='#'><span>Review</span></a></li>
-	  <li class='last'><a href='#'><span>Contact us</span></a></li>
+                <li><a href='about_us.php'><span>About Us</span></a></li>
+                <li><a href='../../property/view/advaced_search_property.php'><span>Buying</span></a></li>
+                <li><a href='../../property/view/add_property.php'><span>Selling</span></a></li>
+                <li><a href='../view/hot_deals.php'><span>Hot Deals</span></a></li>
+                <li><a href='../../reviews/view/review.php'><span>Review</span></a></li>
+                <li class='last'><a href='../../contact_us/view/contact_us.php'><span>Contact us</span></a></li>
 	</ul>
 <p id="copyright" >
 	Copyright © 2014 Greenvalley.lk All rights reserved.

@@ -81,29 +81,29 @@
      </tr>
      <tr>
          <td class="btn">
-             <a href="../view/manage_users.php">Manage users</a>
+             <a href="../view/manage_users.php"><img src="../../common/images/icons/user.png"/>Manage users</a>
          </td>
          <td class="spacer"></td>
           <td  class="btn">
-              <a href="../view/manage_properties.php">Manage properties</a>
+              <a href="../view/manage_properties.php"><img src="../../common/images/icons/property.png"/>Manage properties</a>
          </td>
      </tr>
      <tr>
          <td  class="btn">
-             <a href="../view/manage_inquiries.php">Manage inquiries</a>
+             <a href="../view/manage_inquiries.php"><img src="../../common/images/icons/inquiry.png"/>Manage inquiries</a>
          </td>
          <td class="spacer"></td>
           <td  class="btn">
-             <a href="#">Handle payments</a>
+             <a href="#"><img src="../../common/images/icons/payments.png"/>Handle payments</a>
          </td>
      </tr>
      <tr>
          <td  class="btn">
-             <a href="../view/reports.php">Reports</a>
+             <a href="../view/reports.php"><img src="../../common/images/icons/report.png"/>Reports</a>
          </td>
          <td class="spacer"></td>
           <td  class="btn">
-              <a href="../view/manage_reviews.php">Manage reviews</a>
+              <a href="../view/manage_reviews.php"><img src="../../common/images/icons/review.png"/>Manage reviews</a>
          </td>
      </tr>
      
@@ -113,13 +113,13 @@
 
 <div class="footer" id="footer_wrap">
      <ul>
-	  <li class='active'><a href='index.php'><span>Home</span></a></li>
-	  <li><a href='#'><span>Buying</span></a></li>
-	  <li><a href='#'><span>Selling</span></a></li>
-	  <li><a href='#'><span>Search property</span></a></li>
-	  <li><a href='#'><span>My profile</span></a></li>
-	  <li><a href='#'><span>Review</span></a></li>
-	  <li class='last'><a href='#'><span>Contact us</span></a></li>
+	   <li class='active'><a href='../../home/view/index.php'><span>Home</span></a></li>
+                <li><a href='../../home/view/about_us.php'><span>About Us</span></a></li>
+                <li><a href='../../property/view/advaced_search_property.php'><span>Buying</span></a></li>
+                <li><a href='../../property/view/add_property.php'><span>Selling</span></a></li>
+                <li><a href='../../home/view/hot_deals.php'><span>Hot Deals</span></a></li>
+                <li><a href='../../reviews/view/review.php'><span>Review</span></a></li>
+                <li class='last'><a href='../../contact_us/view/contact_us.php'><span>Contact us</span></a></li>
 	</ul>
 <p id="copyright" >
 	Copyright © 2014 Greenvalley.lk All rights reserved.
