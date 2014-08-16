@@ -3,7 +3,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Insert Property</title>
+		<title>Add Property</title>
 
 		<link rel="stylesheet" type="text/css" href="../../common/CSS/home.css">
         <link rel="stylesheet" type="text/css" href="../../common/CSS/menu_bar.css">
@@ -11,7 +11,12 @@
         <link rel="stylesheet" type="text/css" href="../../common/CSS/button.css">
         <link rel="stylesheet" type="text/css" href="../../common/CSS/login_tbl.css">
 		<link rel="stylesheet" type="text/css" href="../../common/CSS/dropdown_menu.css">
-
+                <style>
+                    .ct_table th{
+                        width: 33%;
+                    }
+                    
+                </style>        
 	</head>
 
 	<body  bgcolor="#EAF3CF">
@@ -28,7 +33,7 @@
                  			<tr>
                     			<td class="user_lgn_msg">
 								  <?php if (isset($_SESSION['username']) && $_SESSION['active'] == 1) { ?> 
-                                  <?php echo 'Hi, <a href="../../customer/controller/display_profile.php">' . $_SESSION['username'] . '</a> '; ?>
+                                  <?php echo 'Hi, <a href="../../customer/view/display_profile.php">' . $_SESSION['username'] . '</a> '; ?>
                                       <span style="font-style: normal">
                                           <a style="display: inline; font-size: small;" href="../../home/controller/logout.php">Logout</a>
                                      </span>      
@@ -54,21 +59,15 @@
         </div>
 
         <div class="content">
+        <?php if(isset($_SESSION['username']) && $_SESSION['active'] == 1) {{
+            
+        } ?>    
         <form name="frm_register" method="post" action="../controller/add_property.php" enctype="multipart/form-data">
-          <table align="center" width="500" style="border:1px groove #93AE13;" >
+            <table class="ct_table" align="center" width="500" style="border:1px groove #93AE13;" >
             <tr bgcolor="#005825">
               <td colspan="2" align="center"><h1 style="color: #FFFFFF; font-style: normal;">Add Property</h1></td>
             </tr>
-            <tr>
-              <th align="left"> Title : </th>
-              <td><select name="cmb_title">
-              		<option>select</option>
-              		<option>Mr</option>
-                    <option>Mrs</option>
-                    <option>Miss</option>
-                    <option>Rev</option>
-              	</select></td>
-            </tr>
+            
             <tr>
               <th align="left"> Name : </th>
               <td><label for="property_name">
@@ -119,9 +118,18 @@
             </tr>
             <tr>
               <th align="left">Upload images :</th>
-              <td><label for="images"><input type="hidden" name="MAX_FILE_SIZE" value="100000" />
- <input name="uploadedfile" type="file" />
-              </label>
+              <td>
+                  <label for="images">
+                        <input name="uploadedfile1" type="file" />
+                  </label>
+                  
+                  <label for="images">
+                        <input name="uploadedfile2" type="file" />
+                  </label>
+                  
+                  <label for="images">
+                        <input name="uploadedfile3" type="file" />
+                  </label>
               </td>
             </tr>
             <tr>
@@ -129,6 +137,14 @@
             </tr>
           </table>
          </form>
+        <?php }
+            else{
+        ?>
+            Please login before you add a Property. If haven't registered with us yet, click <a href="../../customer/view/register.php"> here </a> to get Registered.
+            
+          <?php 
+            }
+        ?>  
         </div>
 
         <div class="footer" id="footer_wrap">

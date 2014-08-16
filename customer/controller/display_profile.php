@@ -1,5 +1,6 @@
-<?php
+<?php session_start();
 require '../model/customer.php';
+require '../../property/model/property.php';
 require '../../home/model/user.php';
 require_once '../../common/kint/Kint.class.php';
 //Kint::dump($_SESSION['username']);
@@ -26,7 +27,10 @@ while($row=mysql_fetch_array($result)){
 	$contact_no2 = $row["contact_no_2"];
 	}
         
-$watch_list = $customer->get_watchlist($username);        
+$watch_list = $customer->get_watchlist($username);  
+$prps = new Property();
+
+$my_properties = $prps->getPropertiesByUsername($username);
 //$customer->updateCustomer($fname,$lname,$gender,$address1,$address2,$city,$birthday,$email,$contact_no1,$contact_no2);
 //Kint::dump($fname);
 
