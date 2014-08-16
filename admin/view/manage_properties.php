@@ -34,6 +34,21 @@ session_start();
                 font-size: 10pt;
                 font-family: Arial;
             }
+            .edit_link{
+                content: url('../..//common/icons/sites-pencil-icon-small.gif');
+            }
+            .delete_link{
+                content: url('../..//common/icons/icon-delete-small.png');
+            }
+            .add_hot{
+                content: url('../..//common/icons/fire-small.png');
+            }
+            .remove_hot{
+                content: url('../..//common/icons/flame-2-xxl.png');
+            }
+            .ac_link a{
+                padding-left: 10px;
+            }
         </style>
         <script>
             function showSelectedProperties(str) {

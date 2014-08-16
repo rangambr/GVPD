@@ -30,6 +30,15 @@
             .ac_link{
                 text-align: center !important;
             }
+            .edit_link{
+                content: url('../..//common/icons/sites-pencil-icon-small.gif');
+            }
+            .reset_pw{
+                content: url('../..//common/icons/change_password.png');
+            }
+            .delete_link{
+                content: url('../..//common/icons/icon-delete-small.png');
+            }
         </style>
 </head>
 
@@ -75,9 +84,9 @@
           {
           echo "<tr class='user_info'><td>".$usr['username']."</td>";
           echo "<td class='user_info'>".$usr['type']."</td>";
-          echo "<td class='ac_link'><a  href='update_user.php?username=".$usr['username']."'>Edit</a>";
-          echo " | <a  href='../controller/reset_password.php?username=".$usr['username']."'>Reset password</a>";
-          echo " | <a  href='../controller/delete_users.php?username=".$usr['username']."'>delete</a></td><tr>";
+          echo "<td class='ac_link'><a  href='update_user.php?username=".$usr['username']."'><span class='edit_link'></span></a>";
+          echo " | <a  href='../controller/reset_password.php?username=".$usr['username']."'><span class='reset_pw'></span></a>";
+          echo " | <a  href='../controller/delete_users.php?username=".$usr['username']."'><span class='delete_link'></span></a></td><tr>";
           }
       ?>
     </table>
