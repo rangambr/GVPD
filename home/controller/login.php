@@ -5,6 +5,7 @@
     //retrieve the username and password values from the view
     $username = $_POST['username']; 
     $password = md5($_POST['password']);
+    $user_type = "";
     $active = 0;
     
     //create obj object of the user
@@ -24,6 +25,7 @@
         
         while($row=mysql_fetch_array($result)){
             $active=$row['active'];
+            $user_type = $row['type'];
         }
 
         if($active == 1){
@@ -32,6 +34,7 @@
             $_SESSION['username'] = $username;
             $_SESSION['password'] = $password;
             $_SESSION['active']=1;
+            $_SESSION['user_type']=$user_type;
             header("location:../view/index.php");
         }
         else{
