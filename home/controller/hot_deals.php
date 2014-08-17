@@ -16,3 +16,4 @@ function getPhotoURLs($property_id){
     echo ''.$pic;
 }
 
+?>
