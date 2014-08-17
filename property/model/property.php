@@ -96,6 +96,15 @@ class Property {
         return $result;
     }
 
+    function updateProperty($prop_id, $name, $address1, $address2, $city, $province, $extent, $unit_price, $description) {
+        $db = new Dbconnect();
+        //KINT::dump($username,$name,$address1,$address2,$city,$province);
+        $sql = "update property set name = '$name',address1 = '$address1',address2 = '$address2',city = '$city',province = '$province',extent='$extent',unit_price='$unit_price',description='$description' where  id='$prop_id' ";
+        $result = $db->query($sql);
+        //KINT::dump($result);
+        return $result;
+    }
+
     // image upload
     function insertPhotoImage($property_id, $pic) {
         $db = new Dbconnect();
@@ -103,6 +112,18 @@ class Property {
         $sql = "insert into property_photo (property_id,pic) values ('$property_id','$pic')";
         $result = $db->query($sql);
         //KINT::dump($result);
+        return true;
+    }
+    
+    // image upload
+    function updatePhotoImage($property_id, $pic, $oldpic) {
+        $db = new Dbconnect();
+        //KINT::dump($username,$name,$address1,$address2,$city,$province);
+        $sqldel = "delete from property_photo where property_id='$property_id' and pic = '$oldpic'";
+        $db->query($sqldel);
+        
+        $sql = "insert into property_photo (property_id,pic) values ('$property_id','$pic')";
+        $result = $db->query($sql);
         return true;
     }
 
@@ -118,15 +139,14 @@ class Property {
         }
         echo '' . $pic;
     }
-    
+
     function getAllPhotoURLs($property_id) {
         $db = new Dbconnect();
         $sql = "select * from property_photo where property_id = '$property_id' order by id";
-        
+
         $result = $db->query($sql);
         return $result;
     }
-
 }
 
 ?>

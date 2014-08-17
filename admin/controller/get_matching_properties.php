@@ -18,7 +18,7 @@ while ($prp = mysql_fetch_array($result)) {
     
     echo "<tr class='user_info'><td>" . $prp['name'] . "</td>";
     echo "<td class='user_info'>" . $prp['Status'] . "</td>";
-   echo "<td class='ac_link'><a  href='update_property.php?propId=" . $prp['id'] . "'><span class='edit_link'></span></a>";
+   echo "<td class='ac_link'><a  href='../../property/view/update_property.php?propId=" . $prp['id'] . "'><span class='edit_link'></span></a>";
     if ($prp['visible_home_page'] == 0) {
         echo "  <a  href='../controller/add_hot_properties.php?propId=" . $prp['id'] . "'><span class='add_hot'>Add to hot properties</span></a>";
     } else {
