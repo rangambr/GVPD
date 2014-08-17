@@ -4,7 +4,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>HOME</title>
+        <title>Home</title>
 
         <link rel="stylesheet" type="text/css" href="../../common/CSS/home.css">
         <link rel="stylesheet" type="text/css" href="../../common/CSS/menu_bar.css">
@@ -193,6 +193,7 @@
                 <li><a href='../../property/view/advaced_search_property.php'><span>Buying</span></a></li>
                 <li><a href='../../property/view/add_property.php'><span>Selling</span></a></li>
                 <li><a href='../view/hot_deals.php'><span>Hot Deals</span></a></li>
+				<li><a href='../../forum/create_topic.php'><span>Forum</span></a></li>
                 <li><a href='../../reviews/view/review.php'><span>Review</span></a></li>
                 <li class='last'><a href='../../contact_us/view/contact_us.php'><span>Contact us</span></a></li>
                 <li><a href='../../forum/view/forum.php'><span>Forum</span></a></li>

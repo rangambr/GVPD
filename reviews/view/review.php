@@ -47,7 +47,7 @@
   <form name="frm_rate" method="post" action="../controller/review.php" >
   <table align="center" width="500" style="border:1px groove #93AE13;">
        	 <tr bgcolor="#005825">
-         		<td colspan="2" align="center" bgcolor="#005825"><h2 style="color: #FFFFFF">Rate &amp; review your favourite properties...</h2></td>
+         		<td height="33" colspan="2" align="center" bgcolor="#005825"><h2 style="color: #FFFFFF">Rate &amp; review your favourite properties...</h2></td>
          </tr>
          		<tr>
 					<th align="left">Review :</th>

@@ -48,8 +48,6 @@ $search_pref = new Search_Preference();
 $searchResult = $property->getPropertiesBySearchCategory($location, $property_type, $min_val_dec, $max_val_dec,$no_min,$no_max,$no_type,$no_location);
 date_default_timezone_set('Asia/Colombo');
 $date = date('m/d/Y h:i:s a', time());
-//$search_pref->insert_search_preference($property_type, $min_val.'-'.$max_val, $location);
-include '../../property/view/display_properties.php';
 
 
 function getPhotoURLs($property_id){
@@ -64,4 +62,11 @@ function getPhotoURLs($property_id){
     }
     echo ''.$pic;
 }
+
+if(($location) =='--Select Here--' && ($property_type) =='--Select Here--' && ($min_val) =='No min' && ($max_val) =='No max'){
+	}
+else{
+	$search_pref->insert_search_preference($property_type, $min_val.'-'.$max_val, $location);
+	}
+include '../../property/view/display_properties.php';
 
