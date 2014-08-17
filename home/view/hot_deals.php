@@ -17,12 +17,6 @@ require '../controller/hot_deals.php';
         <link rel="stylesheet" type="text/css" href="../../common/CSS/button.css">
         <link rel="stylesheet" type="text/css" href="../../common/CSS/dropdown.css">
         <link rel="stylesheet" type="text/css" href="../../common/CSS/dropdown_menu.css">
-
-        <script type="text/javascript" src="../../common/JS/jquery-2.1.1.min.js"></script>
-        <script type="text/javascript" src="../../common/JS/form_validation.js"></script>
-
-        <!-- Main fade out silder js -->  
-
     </head>
 
     <body  bgcolor="#EAF3CF">
@@ -107,7 +101,7 @@ require '../controller/hot_deals.php';
                                 </p>
                                 <p> <a href="../../property/view/display_property.php?id=<?php echo $row['id']; ?>">More details>></a></p>
                                 <hr />
-                                <a href="../controller/add_to_watchlist"><img src="../../common/images/save.png" alt="save property" title="save property"/></a>
+                                <a href="../controller/add_to_watchlist.php?id=<?php echo $row['id']; ?>"><img src="../../common/images/save.png" alt="save property" title="save property"/></a>
                                 <span style="margin-left:25px;" >
                                     <a href=""><img src="../../common/images/star_full.png" alt="rate property" title="rate property"/></a>
                                     <a href=""><img src="../../common/images/star_half.png" alt="rate property" title="rate property"/></a>&nbsp;

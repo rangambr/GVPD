@@ -32,7 +32,7 @@
             </tr>
             
         	<tr>
-            	<td>1.	The property shall be sold at aggregate price of sum of Rupees 1,850,000/= (Rupees one million eight hundred and fifty thousand ) at 18,500/= (Rupees eighteen thousand five hundred )per perch as agreed by the Seller, either in one unit or in defined block in such a manner that the Company think fit and expedient.
+            	<td>1.	The property shall be sold at aggregate price of sum of Rupees <input type="text" name="txt_agreed_price" placeholder="agreed price"/> at<input type="text" name="txt_perch_price" placeholder="price of the perch"/> per perch as agreed by the Seller, either in one unit or in defined block in such a manner that the Company think fit and expedient.
 </td>
             </tr>
             <tr>

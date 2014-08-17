@@ -69,8 +69,11 @@ class User {
             $sql = "UPDATE user SET type ='$type', active ='$status' WHERE username = '$username'";
             $db->query($sql);
             return true;
-        
-       
-    }
-
+	}
+     function saveWatchList($username,$property_id){
+		  $db = new Dbconnect();
+       	  $sql = "INSERT INTO watch_list (username,property_id) VALUES('$username','$property_id')";
+          $db->query($sql);
+          return true;
+		 }
 }

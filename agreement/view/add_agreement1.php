@@ -24,7 +24,7 @@
         </div>
 
 <div class="content" style="padding-top:0px;">
-	<form>
+	<form name="frm_agreement" action="../controller/agreement.php" method="post">
     	<table align="center" width="500px">
         	<tr>
             	<td>Prior Registration:</td>
@@ -60,6 +60,9 @@
 The Seller is the owner and the proprietor of the Company is engaged as the Seller’s agent for the sale of property described in the Schedule hereto.
 					</p>
                 </td>
+            </tr>
+            <tr>
+            	<td colspan="2" align="center"><input type="submit" value="save" /></td>
             </tr>
              <tr>
             	<td colspan="2" align="right"><a href="add_agreement2.php"><strong>Next>></strong></a></td>

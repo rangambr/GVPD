@@ -69,7 +69,7 @@
             </tr>
             
             <tr>
-              <th align="left"> Name : </th>
+              <th align="left"> Property Name : </th>
               <td><label for="property_name">
                 <input name="property_name" type="text" id="property_name" placeholder="Please type property name here" size="45" class="inputs" />
               </label></td>

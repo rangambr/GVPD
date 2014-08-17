@@ -54,17 +54,17 @@
 
 <div class="side_bar">
 
-  <span style="font-size: 14px; font-style: normal; font-weight: 600;">We welcome and value your feedback about our real estate services. Please visit our <a href="#">FAQs</a> – we may have answered your question already!<br/>
+  <span style="font-size: small; font-weight: bold;">We welcome and value your feedback about our real estate services. Please visit our <a href="#">FAQs</a> – we may have answered your question already!<br/>
 If your question was not addressed in our <a href="#">FAQs</a>!</span> 
 <table>
 	<tr><td colspan="2"><h2 style="color: #000089;">Please contact us</h2></td></tr>
-	<tr><td style="color: #275C0D; ">T<span style="font-style: normal">elephone:</span></td><td style="color: #275C0D; ">0812 490738 / 0777 031403</td></tr>
-    <tr><td colspan="2" style="color: #275C0D"><hr/></td></tr>
-    <tr><td style="color: #275C0D;">Fax:</td><td style="color: #275C0D;">0812 490738</td></tr>
-    <tr><td colspan="2" style="color: #275C0D"><hr/></td></tr>
-    <tr><td style="color: #275C0D;">Email:</td><td style="color: #275C0D;">greenvalley@gmail.com</td></tr>
-    <tr><td colspan="2" style="color: #275C0D"><hr/></td></tr>
-    <tr><td style="color: #275C0D;">Office Address:</td><td style="color: #275C0D; ">Third floor,<br/>
+	<tr><td style="font-family: Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', serif">T<span style="font-style: normal">elephone:</span></td><td style="font-family: Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', serif">0812 490738 / 0777 031403</td></tr>
+    <tr><td colspan="2" style="font-family: Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', serif"><hr/></td></tr>
+    <tr><td style="font-family: Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', serif">Fax:</td><td style="font-family: Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', serif">0812 490738</td></tr>
+    <tr><td colspan="2" style="font-family: Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', serif"><hr/></td></tr>
+    <tr><td style="font-family: Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', serif">Email:</td><td style="font-family: Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', serif">greenvalley@gmail.com</td></tr>
+    <tr><td colspan="2" style="font-family: Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', serif"><hr/></td></tr>
+    <tr><td style="font-family: Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', serif">Office Address:</td><td style="font-family: Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', serif">Third floor,<br/>
     Silverdale Complex,<br/>Yatinuwara Veediya,<br/>Kandy. OR<br/>No:77, Doranegama Road, Medawala(H:P).</td></tr>
 </table>
 </div>

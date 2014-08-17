@@ -89,7 +89,7 @@
      </tr>
       <tr>
          <td>
-             <a href="../../agreement/view/add_agreement.php"><img src="../../common/images/icons/agreement.png"/>Create agreement</a>
+             <a href="../../agreement/view/add_agreement1.php"><img src="../../common/images/icons/agreement.png"/>Create agreements</a>
          </td>
           <td>
               <a href="../view/manage_reviews.php"><img src="../../common/images/icons/review.png"/>Manage reviews</a>

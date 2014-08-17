@@ -32,6 +32,10 @@
             <tr>
             	<td>Add description:</td>
                 <td><textarea name="txt_description"></textarea></td>
+            </tr>
+            <tr>
+            	<td>Add description:</td>
+                <td><textarea name="txt_description"></textarea></td>
             </tr>   	
         </table>
 	</form>
