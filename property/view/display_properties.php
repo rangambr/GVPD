@@ -62,15 +62,15 @@
 
 <div class="menu_bar" align="center" id="cssmenu">
 	<ul>
-	  <li class='active'><a href='index.html'><span>Home</span></a></li>
-       <li><a href='about_us.php'><span>About Us</span></a></li>
-	  <li><a href='#'><span>Buying</span></a></li>
-	  <li><a href='#'><span>Selling</span></a></li>
-	  <li><a href='#'><span>Search property</span></a></li>
-	  <li><a href='#'><span>My profile</span></a></li>
-	  <li><a href='#'><span>Review</span></a></li>
-	  <li class='last'><a href='#'><span>Contact us</span></a></li>
-  </ul>
+            <li class='active'><a href='../view/index.php'><span>Home</span></a></li>
+                <li><a href='../view/about_us.php'><span>About Us</span></a></li>
+                <li><a href='../../property/view/advaced_search_property.php'><span>Buying</span></a></li>
+                <li><a href='../../property/view/add_property.php'><span>Selling</span></a></li>
+                <li><a href='../view/hot_deals.php'><span>Hot Deals</span></a></li>
+                <li><a href='../../reviews/view/review.php'><span>Review</span></a></li>
+                <li class='last'><a href='../../contact_us/view/contact_us.php'><span>Contact us</span></a></li>
+                <li><a href='../../forum/view/forum.php'><span>Forum</span></a></li>
+            </ul>
 </div>
     <!-- demo -->
     <div id="demo" class="box jplist">
@@ -206,7 +206,7 @@
             <div class="list-item box">					
                 <!-- img -->
                 <div class="img left">
-                    <img src="../../common/jplist/img/thumbs/arch-2.jpg" alt="" title=""/>
+                    <img src="../../property/photos/<?php getPhotoURLs($row['id']) ?>" alt="" title=""/>
                 </div>
 
                 <!-- data -->
