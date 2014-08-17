@@ -174,59 +174,71 @@ function validate(){
          	</tr>
          		<tr>
 					<th align="left">First Name :</th>
-					<td><input name="txtfname" type="text" id="txtfname" placeholder="Please type your first  name here" size="20" class="inputs" /></td>
+					<td><input name="txtfname" type="text" id="txtfname" size="20" class="inputs" /></td>
 				</tr>
 				<tr>
 					<th align="left">Last Name :</th>
-					<td><input name="txtlname" type="text" id="txtlname" placeholder="Please type your last name here" size="20" class="inputs" /></td>
+					<td><input name="txtlname" type="text" id="txtlname"  size="20" class="inputs" /></td>
 				</tr>
 				<tr>
 					<th align="left">Gender :</th>
                                         <td><input type="radio" id="gender_male" name="gender" value="Male" />
-					  <span style="color: #0F2701; font-style: normal;">Male</span> <span style="margin-left: 50px; color: #0F2701; font-style: normal;">
+					  <span style="color: #0F2701; font-style: normal; font-size: 10px;">Male</span> <span style="margin-left: 50px; color: #0F2701; font-style: normal; font-size: 10px;">
 				  <input type="radio" name="gender" id="gender_female" value="Female"/>Female</span> </td>
 				</tr>
 				<tr>
 					<th align="left">House Number/ Name :</th>
-					<td><input name="txtaddress1" type="text" class="inputs" id="txtaddress1" placeholder="Please type your home number here" size="20"/></td>
+					<td><input name="txtaddress1" type="text" class="inputs" id="txtaddress1" size="20"/></td>
 				</tr>
 				<tr>
 					<th align="left">Street :</th>
-					<td><input name="txtaddress2" type="text" class="inputs" id="txtaddress2" placeholder="Please type your street name here" size="20" /></td>
+					<td><input name="txtaddress2" type="text" class="inputs" id="txtaddress2" size="20" /></td>
 				</tr>
 				<tr>
 					<th align="left">City :</th>
-					<td><input name="txtcity" class="inputs" type="text" id="city" placeholder="Please type your city here" size="20" /></td>
+					<td><input name="txtcity" class="inputs" type="text" id="city" size="20" /></td>
 				</tr>
                 <tr>
 					<th align="left">Province :</th>
-					<td><input name="txtprovince" class="inputs" type="text" id="province" placeholder="Please type your province here" size="20" /></td>
+					<td><select name="txtprovince" class="drpdown_list">
+                            <option></option>
+                            <option>Central Province </option>
+                            <option>Eastern Province</option>
+                            <option>Northern Province</option>
+                            <option>Southern Province</option>
+                            <option>Western Province</option>
+                            <option>North Western Province</option>
+                             <option>North Central Province</option>
+                            <option>Uva Province</option>
+                            <option>Sabaragamuwa Province</option>
+                        </select>
+                    </td>
 				</tr>
 				<tr>
 					<th align="left">Birthday :</th>
-					<td><input type="text" id="Datepicker1" class="inputs" name="txtbday" placeholder="Enter your birthday here" size="20" readonly /></td>
+					<td><input type="text" id="Datepicker1" class="inputs" name="txtbday" size="20" readonly /></td>
 				</tr>
 				<tr>
 					<th align="left">Email :</th>
-					<td><input name="txtemail" type="text" id="txtemail" placeholder="Enter your valid email address here" size="20" class="inputs" /></td>
+					<td><input name="txtemail" type="text" id="txtemail" size="20" class="inputs" /></td>
 				</tr>
 				<tr>
 					<th align="left">Contact Numbers :</th> 
-					<td><input name="txttp1" type="text" id="txttp1" placeholder="0000 000000" size="20" class="inputs"/>
+					<td><input name="txttp1" type="text" id="txttp1" size="20" class="inputs"/>
 						<br/>
-						<input name="txttp2" type="text" id="txttp2" placeholder="Enter your telephone number here" size="20" class="inputs"/></td>
+						<input name="txttp2" type="text" id="txttp2" size="20" class="inputs"/></td>
 				</tr>
 				<tr>
 					<th align="left">User name :</th>
-					<td><input name="txtusername" type="text" id="username" placeholder="Enter your username" size="20" class="inputs"/></td>
+					<td><input name="txtusername" type="text" id="username" size="20" class="inputs"/></td>
 				</tr>
 				<tr>
 					<th align="left">Password :</th>
-					<td><input name="txtpass" type="password" id="txtpass" placeholder="Enter your password" size="20" class="inputs"/></td>
+					<td><input name="txtpass" type="password" id="txtpass"  size="20" class="inputs"/></td>
 				</tr>
 				<tr>
 					<th align="left">Confirm Password :</th>
-					<td><input name="txtpass2" type="password" id="txtpass2" placeholder="Re-enter your password" size="20" class="inputs" /></td>
+					<td><input name="txtpass2" type="password" id="txtpass2"  size="20" class="inputs" /></td>
 				</tr>
              	<tr>
              		<td colspan="2" align="center" valign="middle"><input type="submit" value="Register" class="myButton" name="submit"  /></td>
