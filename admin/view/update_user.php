@@ -1,8 +1,4 @@
-<?php
-session_start();
-require '../controller/update_user.php';
-?>
-
+<?php require '../controller/update_user.php'; ?>
 <!doctype html>
 <html>
     <head>
@@ -51,30 +47,30 @@ require '../controller/update_user.php';
         <div class="header">
 
             <div class="header">
-        	<table border="0" align="center" width="100%">
-            	<tr>
-                	<td style="margin-left:30px; padding-left:30px;">
-                        <div align="center"><img src="../../common/images/tr_banner.png"/><br/>
-                            <span style="color: #3A6839; font-weight: bold; font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans', Verdana, sans-serif; font-style: italic; font-size: large;">We Make Your Dream Come True.</span>
-                        </div>
-					</td>
-                    <td align="center">
-               			<table class="login_tbl">
-                 			<tr>
-                    			<td class="user_lgn_msg">
-								  <?php if (isset($_SESSION['username']) && $_SESSION['active'] == 1) { ?> 
-                                  <?php echo 'Hi, <a href="../../customer/view/display_profile.php">' . $_SESSION['username'] . '</a> '; ?>
-                                      <span style="font-style: normal">
-                                          <a style="display: inline; font-size: small;" href="../controller/logout.php">Logout</a>
-                                     </span>      
-                        		<?php } ?>
-                    		  </td>
-               				</tr>
-             			</table>
-             	</td>
-             </tr>
-         </table>
-        </div>    		
+                <table border="0" align="center" width="100%">
+                    <tr>
+                        <td style="margin-left:30px; padding-left:30px;">
+                            <div align="center"><img src="../../common/images/tr_banner.png"/><br/>
+                                <span style="color: #3A6839; font-weight: bold; font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans', Verdana, sans-serif; font-style: italic; font-size: large;">We Make Your Dream Come True.</span>
+                            </div>
+                        </td>
+                        <td align="center">
+                            <table class="login_tbl">
+                                <tr>
+                                    <td class="user_lgn_msg">
+                                        <?php if (isset($_SESSION['username']) && $_SESSION['active'] == 1) { ?> 
+                                            <?php echo 'Hi, <a href="../../customer/view/display_profile.php">' . $_SESSION['username'] . '</a> '; ?>
+                                            <span style="font-style: normal">
+                                                <a style="display: inline; font-size: small;" href="../controller/logout.php">Logout</a>
+                                            </span>      
+                                        <?php } ?>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>    		
 
         </div>
 
@@ -86,22 +82,23 @@ require '../controller/update_user.php';
 </div>
 
 <div class="menu_bar" align="center" id="cssmenu">
-            <ul>
-                <li class='active'><a href='../../home/view/index.php'><span>Home</span></a></li>
-                <li><a href='../../home/view/about_us.php'><span>About Us</span></a></li>
-                <li><a href='../../property/view/advaced_search_property.php'><span>Buying</span></a></li>
-                <li><a href='../../property/view/add_property.php'><span>Selling</span></a></li>
-                <li><a href='../../home/view/hot_deals.php'><span>Hot Deals</span></a></li>
-                <li><a href='../../reviews/view/review.php'><span>Review</span></a></li>
-                <li class='last'><a href='../../contact_us/view/contact_us.php'><span>Contact us</span></a></li>
-     </ul>
+    <ul>
+        <li class='active'><a href='../../home/view/index.php'><span>Home</span></a></li>
+        <li><a href='../../home/view/about_us.php'><span>About Us</span></a></li>
+        <li><a href='../../property/view/advaced_search_property.php'><span>Buying</span></a></li>
+        <li><a href='../../property/view/add_property.php'><span>Selling</span></a></li>
+        <li><a href='../../home/view/hot_deals.php'><span>Hot Deals</span></a></li>
+        <li><a href='../../reviews/view/review.php'><span>Review</span></a></li>
+        <li class='last'><a href='../../contact_us/view/contact_us.php'><span>Contact us</span></a></li>
+    </ul>
 </div>
 
 <div class="content">
     <div id="Tabs1">
-
+        <?php
+        ?>
         <div id="tabs-1">
-            <form name="update_profile.php" method="post" action="../controller/update_user.php">
+            <form name="frm_update" method="post" action="../controller/edit_user.php">
                 <table align="center" width="500" style="border:1px groove #93AE13;padding-bottom: 8%;">
                     <tr height="33px">
                         <td align="center"><img src="../../common/images/icons/user_yellow_edit.png"/></td>
@@ -114,7 +111,9 @@ require '../controller/update_user.php';
                     <tr>
                         <th align="left">Username:</th>
                         <td>
-                            <input name="username" type="text" id="txtfname" placeholder="Please enter username here" size="20" class="inputs" value="<?php echo ''.$username; ?>"/>
+                            <div><?php echo '' . $username;?>
+                                <input name="username" type="hidden" value="<?php echo '' . $username;?>">
+                            </div>
                         </td>
                     </tr>
                     <tr>
@@ -122,13 +121,14 @@ require '../controller/update_user.php';
                         <td>
                             <select class="len" name="type">
                                 <?php
-                                echo '<option '. ( $userType == 'Readonly' ? 'selected="selected"' : '' ) . '>Readonly</option>';
+                                
+                                echo '<option ' . ( $userType == 'Readonly' ? 'selected="selected"' : '' ) . '>Readonly</option>';
                                 ?>
                                 <?php
-                                echo '<option '. ( $userType == 'Admin' ? 'selected="selected"' : '' ) . '>Admin</option>';
+                                echo '<option ' . ( $userType == 'Admin' ? 'selected="selected"' : '' ) . '>Admin</option>';
                                 ?>
                                 <?php
-                                echo '<option '. ( $userType == 'Super' ? 'selected="selected"' : '' ) . '>Super</option>';
+                                echo '<option ' . ( $userType == 'Super' ? 'selected="selected"' : '' ) . '>Super</option>';
                                 ?>
                             </select>
                         </td>
@@ -138,10 +138,11 @@ require '../controller/update_user.php';
                         <td>
                             <select class="len" name="status">
                                 <?php
-                                echo '<option '. ( $userStatus == '0' ? 'selected="selected"' : '' ) . '>Active</option>';
+                                
+                                echo '<option ' . ( $userStatus == '1' ? 'selected="selected"' : '' ) . ' value="1">Active</option>';
                                 ?>
                                 <?php
-                                echo '<option '. ( $userStatus == '1' ? 'selected="selected"' : '' ) . '>Inactive</option>';
+                                echo '<option ' . ( $userStatus == '0' ? 'selected="selected"' : '' ) . ' value="0">Inactive</option>';
                                 ?>
                             </select>
                         </td>
@@ -152,11 +153,13 @@ require '../controller/update_user.php';
                     <tr>
                         <td colspan="2">&nbsp;</td>
                     </tr>
-                     <tr>
-                         <td colspan="2">&nbsp;</td>
+                    <tr>
+                        <td colspan="2">&nbsp;</td>
                     </tr>
                     <tr>
-                        <td colspan="2" align="center" valign="middle"><input type="submit" value="Update" class="myButton" name="submit" /></td>
+                        <td colspan="2" align="center" valign="middle">
+                            <input type="submit" value="Update" class="myButton" name="submit" />
+                        </td>
                     </tr>
                 </table>
             </form>
@@ -167,12 +170,12 @@ require '../controller/update_user.php';
 <div class="footer" id="footer_wrap">
     <ul>
         <li class='active'><a href='../../home/view/index.php'><span>Home</span></a></li>
-                <li><a href='../../home/view/about_us.php'><span>About Us</span></a></li>
-                <li><a href='../../property/view/advaced_search_property.php'><span>Buying</span></a></li>
-                <li><a href='../../property/view/add_property.php'><span>Selling</span></a></li>
-                <li><a href='../../home/view/hot_deals.php'><span>Hot Deals</span></a></li>
-                <li><a href='../../reviews/view/review.php'><span>Review</span></a></li>
-                <li class='last'><a href='../../contact_us/view/contact_us.php'><span>Contact us</span></a></li>
+        <li><a href='../../home/view/about_us.php'><span>About Us</span></a></li>
+        <li><a href='../../property/view/advaced_search_property.php'><span>Buying</span></a></li>
+        <li><a href='../../property/view/add_property.php'><span>Selling</span></a></li>
+        <li><a href='../../home/view/hot_deals.php'><span>Hot Deals</span></a></li>
+        <li><a href='../../reviews/view/review.php'><span>Review</span></a></li>
+        <li class='last'><a href='../../contact_us/view/contact_us.php'><span>Contact us</span></a></li>
     </ul>
     <p id="copyright" >
         Copyright © 2014 Greenvalley.lk All rights reserved.
