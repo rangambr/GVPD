@@ -105,7 +105,7 @@ require '../controller/hot_deals.php';
                                 <p>
                                     <?php echo $row['description']; ?>
                                 </p>
-                                <p> <a href="../../property/controller/display_property.php?id=<?php echo $row['id']; ?>">More details>></a></p>
+                                <p> <a href="../../property/view/display_property.php?id=<?php echo $row['id']; ?>">More details>></a></p>
                                 <hr />
                                 <a href="../controller/add_to_watchlist"><img src="../../common/images/save.png" alt="save property" title="save property"/></a>
                                 <span style="margin-left:25px;" >

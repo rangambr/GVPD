@@ -62,5 +62,15 @@ class User {
         $result = $db->query("select * from user where username = '$username'");
         return $result;
     }
+    
+    function updateUser($username, $type, $status){
+         $db = new Dbconnect();
+       
+            $sql = "UPDATE user SET type ='$type', active ='$status' WHERE username = '$username'";
+            $db->query($sql);
+            return true;
+        
+       
+    }
 
 }
