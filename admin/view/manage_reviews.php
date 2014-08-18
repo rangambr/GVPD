@@ -9,7 +9,7 @@ session_start();
         <title>Manage Reviews</title>
 
         <link rel="stylesheet" type="text/css" href="../../common/CSS/home.css">
-        <link rel="stylesheet" type="text/css" href="../../common/CSS/menu_bar.css">
+        <link rel="stylesheet" type="text/css" href="../../common/CSS/admin_menu_bar.css">
         <link rel="stylesheet" type="text/css" href="../../common/CSS/button.css">
         <link rel="stylesheet" type="text/css" href="../../common/CSS/dropdown.css">
         <link rel="stylesheet" type="text/css" href="../../common/CSS/dropdown_menu.css">
@@ -80,35 +80,24 @@ session_start();
         </script>
     </head>
 
-    <body  bgcolor="#EAF3CF" onload="showAllReviews();">
-
-        <div class="header">
-
-            <div class="header">
-                <img src="../../common/images/myBanner.png"  style="margin-left:50px"/><span>
-                    <img src="../../common/images/contact.png" style="margin-left:140px"/></span> </div>  		
-
-        </div>
-
-    </td>
-<td>&nbsp;</td>
-</tr>
-</table>
-
+    <body  bgcolor="#E1E1FF" onload="showAllReviews();">
+	
+    <div style="background-color:#000089; height:10%;padding:10px; padding-left:50px" >
+		<h3 style="color:#FFFFFF">Manage reviews</h3>
+	</div>
+	<br/>
+<div class="admin_menu_bar" align="center" id="cssmenu">
+           <ul>
+                <li class='active'><a href='index.php'>Home</a></li>
+                <li><a href='about_us.php'><span>Users</span></a></li>
+                <li><a href='about_us.php'><span>Properties</span></a></li>
+                <li><a href='about_us.php'><span>Inquiries</span></a></li>
+                <li><a href='../../reviews/view/review.php'><span>Reviews</span></a></li>
+                <li><a href='../../reviews/view/review.php'><span>Reports</span></a></li>
+                <li><a href='../../agreement/view/add_agreement1.php'><span>Agreements</span></a></li>
+  </ul>
 </div>
-
-<div class="menu_bar" align="center" id="cssmenu">
-            <ul>
-                <li class='active'><a href='../../home/view/index.php'><span>Home</span></a></li>
-                <li><a href='../../home/view/about_us.php'><span>About Us</span></a></li>
-                <li><a href='../../property/view/advaced_search_property.php'><span>Buying</span></a></li>
-                <li><a href='../../property/view/add_property.php'><span>Selling</span></a></li>
-                <li><a href='../../home/view/hot_deals.php'><span>Hot Deals</span></a></li>
-                <li><a href='../../reviews/view/review.php'><span>Review</span></a></li>
-                <li class='last'><a href='../../contact_us/view/contact_us.php'><span>Contact us</span></a></li>
-     </ul>
-</div>
-
+<br/>
 <div class="content">
 
     <div class="CSSTableGenerator" >
@@ -130,21 +119,5 @@ session_start();
         <!--<div id="txtHint"><b>Person info will be listed here.</b></div>-->
     </div>
 </div>
-
-<div class="footer" id="footer_wrap" style="position: relative">
-    <ul>
-        <li class='active'><a href='../../home/view/index.php'><span>Home</span></a></li>
-                <li><a href='../../home/view/about_us.php'><span>About Us</span></a></li>
-                <li><a href='../../property/view/advaced_search_property.php'><span>Buying</span></a></li>
-                <li><a href='../../property/view/add_property.php'><span>Selling</span></a></li>
-                <li><a href='../../home/view/hot_deals.php'><span>Hot Deals</span></a></li>
-                <li><a href='../../reviews/view/review.php'><span>Review</span></a></li>
-                <li class='last'><a href='../../contact_us/view/contact_us.php'><span>Contact us</span></a></li>
-    </ul>
-    <p id="copyright" >
-        Copyright © 2014 Greenvalley.lk All rights reserved.
-    </p>
-</div>
-
 </body>
 </html>

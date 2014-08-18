@@ -60,12 +60,12 @@
                 <li><a href='../../reviews/view/review.php'><span>Reviews</span></a></li>
             </ul>
 		</div>
-        
+<br/><br/>        
 <div class="content" style="padding-top:0px;">
 
     <table class="left_box" align="center">
         <tr>
-         <th colspan="2" align="center"><h3 style="color:#120072;">Administration Tools</h3></th>
+         <th colspan="2" align="center"><h3 style="color:#120072;">Management Reports</h3></th>
         </tr>
         <tr>
             <td>
@@ -85,21 +85,5 @@
      </table>
 
 </div>
-
-<div class="footer" id="footer_wrap">
-    <ul>
-         <li class='active'><a href='../../home/view/index.php'><span>Home</span></a></li>
-                <li><a href='../../home/view/about_us.php'><span>About Us</span></a></li>
-                <li><a href='../../property/view/advaced_search_property.php'><span>Buying</span></a></li>
-                <li><a href='../../property/view/add_property.php'><span>Selling</span></a></li>
-                <li><a href='../../home/view/hot_deals.php'><span>Hot Deals</span></a></li>
-                <li><a href='../../reviews/view/review.php'><span>Review</span></a></li>
-                <li class='last'><a href='../../contact_us/view/contact_us.php'><span>Contact us</span></a></li>
-    </ul>
-    <p id="copyright" >
-        Copyright © 2014 Greenvalley.lk All rights reserved.
-    </p>
-</div>
-
 </body>
 </html>

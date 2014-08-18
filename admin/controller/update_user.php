@@ -9,7 +9,7 @@ $userType = '';
 $userStatus = '';
 
 if (isset($_GET['username'])) {
-	 Kint::dump($username);
+	 //Kint::dump($username);
     $username = $_GET['username'];
 }
 

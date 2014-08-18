@@ -6,7 +6,7 @@
         <title>Update user</title>
 
         <link rel="stylesheet" type="text/css" href="../../common/CSS/home.css">
-        <link rel="stylesheet" type="text/css" href="../../common/CSS/menu_bar.css">
+        <link rel="stylesheet" type="text/css" href="../../common/CSS/admin_menu_bar.css">
         <link rel="stylesheet" type="text/css" href="../../common/CSS/button.css">
         <link rel="stylesheet" type="text/css" href="../../common/CSS/dropdown.css">
         <link rel="stylesheet" type="text/css" href="../../common/CSS/form.css">
@@ -14,99 +14,46 @@
         <link rel="stylesheet" type="text/css" href="../../common/CSS/manage_user_table.css">
 
         <style type="text/css">
-            .sidebar {
-                position: absolute;
-                left: 62px;
-                top: 214px;
-                bottom: 0;
-                width: 282px;
-                height: 480px;
-                padding: 5px 5px 5px 25px;
-            }
-            #Tabs1{
-                width: 800px;
-                margin-left: 280px;
-                margin-right: auto;
-                margin-top: 5px;
-                background-color:#FFFFFF;
-            }
-            #Tabs1 li{
-                font-size:14px ;color:#275C0D;
-                font-family:Helvatica;
-                font-weight:bold;
-
-            }
             .content{
                 padding: 0px !important;
             }
         </style>
     </head>
 
-    <body  bgcolor="#EAF3CF">
+    <body  bgcolor="#E1E1FF">
 
-        <div class="header">
-
-            <div class="header">
-                <table border="0" align="center" width="100%">
-                    <tr>
-                        <td style="margin-left:30px; padding-left:30px;">
-                            <div align="center"><img src="../../common/images/tr_banner.png"/><br/>
-                                <span style="color: #3A6839; font-weight: bold; font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans', Verdana, sans-serif; font-style: italic; font-size: large;">We Make Your Dream Come True.</span>
-                            </div>
-                        </td>
-                        <td align="center">
-                            <table class="login_tbl">
-                                <tr>
-                                    <td class="user_lgn_msg">
-                                        <?php if (isset($_SESSION['username']) && $_SESSION['active'] == 1) { ?> 
-                                            <?php echo 'Hi, <a href="../../customer/view/display_profile.php">' . $_SESSION['username'] . '</a> '; ?>
-                                            <span style="font-style: normal">
-                                                <a style="display: inline; font-size: small;" href="../controller/logout.php">Logout</a>
-                                            </span>      
-                                        <?php } ?>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                </table>
-            </div>    		
-
-        </div>
-
-    </td>
-<td>&nbsp;</td>
-</tr>
-</table>
-
+<div class="header">
+<div style="background-color:#000089; height:10%;padding:10px; padding-left:50px" >
+		<h3 style="color:#FFFFFF">Update users</h3>
+	</div>
+	<br/>
+<div class="admin_menu_bar" align="center" id="cssmenu">
+           <ul>
+                <li class='active'><a href='index.php'>Home</a></li>
+                <li><a href='about_us.php'><span>Users</span></a></li>
+                <li><a href='about_us.php'><span>Properties</span></a></li>
+                <li><a href='about_us.php'><span>Inquiries</span></a></li>
+                <li><a href='../../reviews/view/review.php'><span>Reviews</span></a></li>
+                <li><a href='../../reviews/view/review.php'><span>Reports</span></a></li>
+                <li><a href='../../agreement/view/add_agreement1.php'><span>Agreements</span></a></li>
+            </ul>
 </div>
-
-<div class="menu_bar" align="center" id="cssmenu">
-    <ul>
-        <li class='active'><a href='../../home/view/index.php'><span>Home</span></a></li>
-        <li><a href='../../home/view/about_us.php'><span>About Us</span></a></li>
-        <li><a href='../../property/view/advaced_search_property.php'><span>Buying</span></a></li>
-        <li><a href='../../property/view/add_property.php'><span>Selling</span></a></li>
-        <li><a href='../../home/view/hot_deals.php'><span>Hot Deals</span></a></li>
-        <li><a href='../../reviews/view/review.php'><span>Review</span></a></li>
-        <li class='last'><a href='../../contact_us/view/contact_us.php'><span>Contact us</span></a></li>
-    </ul>
 </div>
-
+<br/><br/>
 <div class="content">
-    <div id="Tabs1">
+   
         <?php
         ?>
-        <div id="tabs-1">
+        
             <form name="frm_update" method="post" action="../controller/edit_user.php">
-                <table align="center" width="500" style="border:1px groove #93AE13;padding-bottom: 8%;">
+                <table align="center" width="338" style="border:1px groove #93AE13;padding-bottom: 8%; background-color:#F8F8F7;">
                     <tr height="33px">
-                        <td align="center"><img src="../../common/images/icons/user_yellow_edit.png"/></td>
-                        <td><p align="left" style="font-weight: bold; font-style: normal; font-size: 16px; color: #275C0D;">Something Changed? &nbsp;&nbsp; Edit user profile.</p>
+                        <td width="157" align="center" style="padding:5px;"><img src="../../common/images/icons/user.png"/></td>
+                        <td width="169"><p align="left" style="font-weight: bold; font-style: normal; font-size: 16px; color: #275C0D;">Update User</p>
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="2"><hr /></td>
+                        <td colspan="2">&nbsp;</td>
                     </tr>
                     <tr>
                         <th align="left">Username:</th>
@@ -148,15 +95,6 @@
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="2">&nbsp;</td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">&nbsp;</td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">&nbsp;</td>
-                    </tr>
-                    <tr>
                         <td colspan="2" align="center" valign="middle">
                             <input type="submit" value="Update" class="myButton" name="submit" />
                         </td>
@@ -164,23 +102,5 @@
                 </table>
             </form>
         </div>
-    </div>
-</div>
-
-<div class="footer" id="footer_wrap">
-    <ul>
-        <li class='active'><a href='../../home/view/index.php'><span>Home</span></a></li>
-        <li><a href='../../home/view/about_us.php'><span>About Us</span></a></li>
-        <li><a href='../../property/view/advaced_search_property.php'><span>Buying</span></a></li>
-        <li><a href='../../property/view/add_property.php'><span>Selling</span></a></li>
-        <li><a href='../../home/view/hot_deals.php'><span>Hot Deals</span></a></li>
-        <li><a href='../../reviews/view/review.php'><span>Review</span></a></li>
-        <li class='last'><a href='../../contact_us/view/contact_us.php'><span>Contact us</span></a></li>
-    </ul>
-    <p id="copyright" >
-        Copyright © 2014 Greenvalley.lk All rights reserved.
-    </p>
-</div>
-
 </body>
 </html>

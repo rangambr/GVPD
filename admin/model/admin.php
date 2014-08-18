@@ -48,7 +48,12 @@ class Admin {
         $result = $db->query($sql);
         return $result;
     }
-
+	/*function addHotProperties($prop_id,$){
+		$db = new Dbconnect();
+        $sql = "UPDATE property SET is_hot_property='" . $usrname . "',password='" . $pass . "' WHERE id=" . $prop_id . " ";
+        $result = $db->query($sql);
+        return $result;
+		} */
 }
 
 ?>
