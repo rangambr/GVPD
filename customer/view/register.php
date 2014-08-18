@@ -99,13 +99,13 @@ function validate(){
               return false;
 		}*/
     function validatePasswords(){
-         if($("#txtpass").val() != "" && $("#txtpass").val() == $("#txtpass2").val()) {
-            if($("#txtpass1").val().length < 6) {
+         //if($("#txtpass").val() != "" && $("#txtpass").val() == $("#txtpass2").val()) {
+            if($("#txtpass").val().length < 6) {
               alert("Error: Password must contain at least six characters!");
               $("#txtpass1").focus();
               return false;
             }
-            if($("#txtpass1").val() == $("#username").val()) {
+            if($("#txtpass").val() === $("#username").val()) {
               alert("Error: Password must be different from Username!");
               $("#txtpass1").focus();
               return false;
@@ -119,7 +119,7 @@ function validate(){
             re = /[a-z]/;
             if(!re.test($("#txtpass").val())) {
               alert("Error: password must contain at least one lowercase letter (a-z)!");
-              form.pwd1.focus();
+              $("#txtpass1").focus();
               return false;
             }
             re = /[A-Z]/;
@@ -128,13 +128,14 @@ function validate(){
               $("#txtpass1").focus();
               return false;
             }
-          } else {
-            alert("Error: Please check that you've entered and confirmed your password!");
-            $("#txtpass1").focus();
-            return false;
-          }
-          return true;
-      }
+            return true;
+          } //else {
+            //alert("Error: Please check that you've entered and confirmed your password!");
+            //$("#txtpass1").focus();
+            //return false;
+         // }
+          
+      
 </script>
 
 </head>
