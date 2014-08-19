@@ -45,17 +45,6 @@
 	<h1 style="color:#FFFFFF">Welcome to admin panel</h1>
 </div>
 <br/>
-<div class="admin_menu_bar" align="center" id="cssmenu">
-            <ul>
-                <li class='active'><a href='index.php'>Home</a></li>
-                <li><a href='about_us.php'><span>Users</span></a></li>
-                <li><a href='about_us.php'><span>Properties</span></a></li>
-                <li><a href='about_us.php'><span>Inquiries</span></a></li>
-                <li><a href='../../reviews/view/review.php'><span>Reviews</span></a></li>
-                <li><a href='../../reviews/view/review.php'><span>Reports</span></a></li>
-                <li><a href='../../agreement/view/add_agreement1.php'><span>Agreements</span></a></li>
-            </ul>
-        </div>
 
 <div class="content" style="padding-top:0px;">
  

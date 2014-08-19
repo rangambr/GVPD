@@ -1,14 +1,14 @@
 <?php
 
 require_once '../../common/conn.php';
-
+require '../../common/kint/Kint.class.php';
 class Review {
 
-    function insertRatings($description, $rate) {
+    function insertRatings($property_id,$description, $rate) {
         $db = new Dbconnect();
-
-        $sql = "insert into reviews (description,rating) values ('$description','$rate')";
-        $result = $db->query($sql);
+		//KINT::dump($description, $rate);
+        $sql = "insert into review (property_id,rw_description,rating) values ('$property_id','$description','$rate') ";
+       $result = $db->query($sql);
         return true;
     }
 

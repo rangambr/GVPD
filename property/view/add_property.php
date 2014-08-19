@@ -16,7 +16,36 @@
                         width: 33%;
                     }
                     
-                </style>        
+                </style> 
+	<script>
+    	function validateForm(){
+			var x=document.forms["frm_add"]["property_name"].value
+			if (x==null || x==""){
+  				alert("Please enter property name.");
+  				return false;
+ 			 }
+			 var x=document.forms["frm_add"]["address1"].value
+			 if (x==null || x==""){
+  				alert("Please enter the address of the property.");
+  				return false;
+ 			 }
+			 var x=document.forms["frm_add"]["address2"].value
+			 if (x==null || x==""){
+  				alert("Please enter the address of the property.");
+  				return false;
+ 			 }
+			 var x=document.forms["frm_add"]["city"].value
+			 if (x==null || x==""){
+  				alert("Please enter the city.");
+  				return false;
+ 			 }
+			 var x=document.forms["frm_add"]["province"].value
+			 if (x==null || x==""){
+  				alert("Please select the province.");
+  				return false;
+ 			 }
+		}
+    </script>       
 	</head>
 
 	<body  bgcolor="#EAF3CF">
@@ -62,7 +91,7 @@
         <?php if(isset($_SESSION['username']) && $_SESSION['active'] == 1) {{
             
         } ?>    
-        <form name="frm_register" method="post" action="../controller/add_property.php" enctype="multipart/form-data">
+        <form name="frm_add" method="post" onsubmit="return validateForm();" action="../controller/add_property.php" enctype="multipart/form-data" >
             <table class="ct_table" align="center" width="500" style="border:1px groove #93AE13;" >
             <tr bgcolor="#005825">
               <td colspan="2" align="center"><h1 style="color: #FFFFFF; font-style: normal;">Add Property</h1></td>
@@ -95,17 +124,28 @@
             <tr>
               <th align="left">Province :</th>
               <td><label for="province">
-                <input name="province" class="inputs" id="city" placeholder="Please type province here" size="45" cols="47" rows="5"/>
+              	<select name="province" class="drpdown_list">
+                            <option></option>
+                            <option>Central Province </option>
+                            <option>Eastern Province</option>
+                            <option>Northern Province</option>
+                            <option>Southern Province</option>
+                            <option>Western Province</option>
+                            <option>North Western Province</option>
+                             <option>North Central Province</option>
+                            <option>Uva Province</option>
+                            <option>Sabaragamuwa Province</option>
+                        </select>
               </label></td>
             </tr>
             <tr>
-              <th align="left">Extent(no. of perches) :</th>
+              <th align="left">Extent(no. of perches/acres) :</th>
               <td><label for="extent">
                 <input name="extent" type="text" id="extent" placeholder="Enter extent here" size="45" class="inputs"/>
               </label></td>
             </tr>
             <tr>
-              <th align="left">Unit Price :</th>
+              <th align="left"> Price/Unit price :</th>
               <td><label for="unit_price">
                 <input name="unit_price" type="text" id="unit_price" placeholder="Enter price per perch here" size="45" class="inputs"/>
               </label></td>

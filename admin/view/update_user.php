@@ -29,12 +29,13 @@
 	<br/>
 <div class="admin_menu_bar" align="center" id="cssmenu">
            <ul>
-                <li class='active'><a href='index.php'>Home</a></li>
-                <li><a href='about_us.php'><span>Users</span></a></li>
-                <li><a href='about_us.php'><span>Properties</span></a></li>
-                <li><a href='about_us.php'><span>Inquiries</span></a></li>
-                <li><a href='../../reviews/view/review.php'><span>Reviews</span></a></li>
-                <li><a href='../../reviews/view/review.php'><span>Reports</span></a></li>
+                <li class='active'><a href='../../home/view/index.php'>Home</a></li>
+                <li><a href='control_panel.php'><span>Admin panel</span></a></li>
+                <li><a href='manage_users.php'><span>Users</span></a></li>
+                <li><a href='manage_properties.php'><span>Properties</span></a></li>
+                <li><a href='manage_inquiries.php'><span>Inquiries</span></a></li>
+                <li><a href='manage_reviews.php'><span>Reviews</span></a></li>
+                <li><a href='reports.php'><span>Reports</span></a></li>
                 <li><a href='../../agreement/view/add_agreement1.php'><span>Agreements</span></a></li>
             </ul>
 </div>
@@ -48,8 +49,8 @@
             <form name="frm_update" method="post" action="../controller/edit_user.php">
                 <table align="center" width="338" style="border:1px groove #93AE13;padding-bottom: 8%; background-color:#F8F8F7;">
                     <tr height="33px">
-                        <td width="157" align="center" style="padding:5px;"><img src="../../common/images/icons/user.png"/></td>
-                        <td width="169"><p align="left" style="font-weight: bold; font-style: normal; font-size: 16px; color: #275C0D;">Update User</p>
+                        <td width="100" align="center" style="padding:5px;"><img src="../../common/images/icons/user.png"/></td>
+                        <td width="226"><p align="left" style="font-weight: bold; font-style: normal; font-size: 16px; color: #01015C; text-align: center;">Update User</p>
                         </td>
                     </tr>
                     <tr>

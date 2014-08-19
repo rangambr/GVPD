@@ -1,6 +1,5 @@
 <?php
 require '../controller/get_search_preferences.php';
-require '../../common/kint/Kint.class.php';
 ?>
 <html>
     <head>

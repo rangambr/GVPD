@@ -13,13 +13,14 @@
 	<br/>
 	<div class="admin_menu_bar" align="center" id="cssmenu">
             <ul>
-                <li class='active'><a href='index.php'>Home</a></li>
-                <li><a href='about_us.php'><span>Users</span></a></li>
-                <li><a href='about_us.php'><span>Properties</span></a></li>
-                <li><a href='about_us.php'><span>Inquiries</span></a></li>
-                <li><a href='../view/hot_deals.php'><span>Payments</span></a></li>
-				<li><a href='../../forum/create_topic.php'><span>Reports</span></a></li>
-                <li><a href='../../reviews/view/review.php'><span>Reviews</span></a></li>
+               <li class='active'><a href='../../home/view/index.php'>Home</a></li>
+               <li><a href='control_panel.php'><span>Admin panel</span></a></li>
+                <li><a href='manage_users.php'><span>Users</span></a></li>
+                <li><a href='manage_properties.php'><span>Properties</span></a></li>
+                <li><a href='manage_inquiries.php'><span>Inquiries</span></a></li>
+                <li><a href='manage_reviews.php'><span>Reviews</span></a></li>
+                <li><a href='reports.php'><span>Reports</span></a></li>
+                <li><a href='../../agreement/view/add_agreement1.php'><span>Agreements</span></a></li>
             </ul>
         </div>
 
@@ -34,9 +35,17 @@
                 <td><textarea name="txt_description"></textarea></td>
             </tr>
             <tr>
-            	<td>Add description:</td>
-                <td><textarea name="txt_description"></textarea></td>
-            </tr>   	
+            	<td><p>Signed  in the presence of us and we do here by declare that we are well acquainted  with the executants and know their proper names occupations and residences…………</p></td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+            	<td>1.<input type="text" name="txt_wit1" placeholder="witness 1"/></td>
+                <td>&nbsp;</td>
+            </tr>  
+            <tr>
+            	<td>2.<input type="text" name="txt_wit2" placeholder="witness 2"/></td>
+                <td>&nbsp;</td>
+            </tr>     	
         </table>
 	</form>
 </div>

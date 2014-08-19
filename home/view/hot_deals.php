@@ -103,36 +103,26 @@ require '../controller/hot_deals.php';
                                 <hr />
                                 <a href="../controller/add_to_watchlist.php?id=<?php echo $row['id']; ?>"><img src="../../common/images/save.png" alt="save property" title="save property"/></a>
                                 <span style="margin-left:25px;" >
-                                    <a href=""><img src="../../common/images/star_full.png" alt="rate property" title="rate property"/></a>
-                                    <a href=""><img src="../../common/images/star_half.png" alt="rate property" title="rate property"/></a>&nbsp;
-                                    <a href=""><img src="../../common/images/star_empty.png" alt="rate property" title="rate property"/></a>
+                                    <a href="../../reviews/view/review.php?id=<?php echo $row['id']; ?>"><img src="../../common/images/star_full.png" alt="rate property" title="rate property"/></a>
+                                    <a href="../../reviews/view/review.php?id=<?php echo $row['id']; ?>"><img src="../../common/images/star_half.png" alt="rate property" title="rate property"/></a>&nbsp;
+                                    <a href="../../reviews/view/review.php?id=<?php echo $row['id']; ?>"><img src="../../common/images/star_empty.png" alt="rate property" title="rate property"/></a>
                                 </span>
                                 <span style="margin-left:25px;" >
-                                    <a href="../controller/email_property.php"><img src="../../common/images/email.png" alt="contact us" title="contact us"/></a>
+                                 <a href="../controller/email_property.php"><img src="../../common/images/email.png" alt="contact us" title="contact us"/></a>
                                 </span>
-                                <span style="margin-left:25px;" >
-                                    <a href="../controller/share_property.php">
-                                        <img src="../../common/images/share.png" alt="share property" title="share property"/>
-                                    </a>
-                                </span>
-                                
                                 <span style="margin-left:25px; float:right;" >
                                     <a href="../../inquiry/view/add_inquiry.php">
                                         Inquire about this
                                     </a>
                                 </span>
-
                             </td>
                         </tr>
                     </table>        
-
-
                     <?php
                 }
                 ?> 
                 </tbody>
             </table>
-
         </div>
 
         <div class="footer" id="footer_wrap">

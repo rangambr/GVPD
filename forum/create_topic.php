@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!doctype html>
 <html>
 <head>
@@ -37,7 +38,9 @@
         </div>
 
 <div class="content">
-	
+	<?php if(isset($_SESSION['username']) && $_SESSION['active'] == 1) {{
+            
+        } ?>
     <table width="400" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#EAF3CF" style="border:1px groove #93AE13;">
         <tr>
             <form id="form1" name="form1" method="post" action="add_topic.php">
@@ -76,6 +79,14 @@
             </form>
         </tr>
     </table>
+    <?php }
+            else{
+        ?>
+            Please login!  If haven't registered with us yet, click <a href="../customer/view/register.php"> here </a> to get Registered.
+            
+          <?php 
+            }
+        ?>  
 </div>
 <div class="footer" id="footer_wrap">
 	<ul>

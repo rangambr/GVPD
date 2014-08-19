@@ -23,6 +23,27 @@
 	padding: 20px;
 	}
 </style>
+<script type="text/javascript">
+	function validate(){
+			var x=document.forms["frm_con"]["txtname"].value
+			if (x==null || x==""){
+  				alert("Please enter your name.");
+  				return false;
+ 			 }
+			 var x=document.forms["frm_con"]["txtemail"].value
+			 var atpos=x.indexOf("@");
+			 var dotpos=x.lastIndexOf(".");
+			 if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length){
+  				alert("Please enter a valid e-mail address");
+  				return false;
+ 			 }
+			 var x=document.forms["frm_con"]["txtmsg"].value
+			if (x==null || x==""){
+  				alert("Please enter the message.");
+  				return false;
+ 			 }
+	}
+</script>
 </head>
 
 <body  bgcolor="#EAF3CF">
@@ -83,7 +104,7 @@ If your question was not addressed in our <a href="#">FAQs</a>!</span>
   				</div><?php 
 				}
 	}?>
-  <form name="frm_contact_us" method="post" action="../controller/contact.php" onsubmit="return validate();">
+  <form name="frm_con" method="post" action="../controller/contact.php" onsubmit="return validate();">
   <table align="center" width="500" style="border:1px groove #93AE13;">
        	<tr bgcolor="#005825">
          		<td colspan="2" align="center" bgcolor="#005825"><h1 style="color: #FFFFFF">Send us an inquiry</h1></td>
@@ -91,6 +112,7 @@ If your question was not addressed in our <a href="#">FAQs</a>!</span>
 		<tr>
 			<th align="left">Title :</th>
 			<td><select name="cmb_title">
+            		<option> </option>
 					<option>Mr</option>
 					<option>Mrs</option>
 					<option>Miss</option>

@@ -14,10 +14,10 @@
 
         <style type="text/css">
             .left_box{
-                width: 15%;
+                width: 20%;
             }
             .left_box td{
-                padding-left: 9%;
+                padding-left: 7%;
                 padding-top: 10px;
             }
 
@@ -26,7 +26,7 @@
                 font-weight: bold;
                 color: #FFFFFF;
                 background-color: #9fa393;
-                width: 220px;
+                width: 235px;
                 text-align: center;
                 padding: 4px;
                 text-decoration: none;
@@ -51,13 +51,14 @@
 		<br/>
 		<div class="admin_menu_bar" align="center" id="cssmenu">
             <ul>
-              <li class='active'><a href='index.php'><span>Home</span></a></li>
-                <li><a href='about_us.php'><span>Users</span></a></li>
-                <li><a href='about_us.php'><span>Properties</span></a></li>
-                <li><a href='about_us.php'><span>Inquiries</span></a></li>
-                <li><a href='../view/hot_deals.php'><span>Payments</span></a></li>
-				<li><a href='../../forum/create_topic.php'><span>Reports</span></a></li>
-                <li><a href='../../reviews/view/review.php'><span>Reviews</span></a></li>
+              <li class='active'><a href='../../home/view/index.php'>Home</a></li>
+              	<li><a href='control_panel.php'><span>Admin panel</span></a></li>
+                <li><a href='manage_users.php'><span>Users</span></a></li>
+                <li><a href='manage_properties.php'><span>Properties</span></a></li>
+                <li><a href='manage_inquiries.php'><span>Inquiries</span></a></li>
+                <li><a href='manage_reviews.php'><span>Reviews</span></a></li>
+                <li><a href='reports.php'><span>Reports</span></a></li>
+                <li><a href='../../agreement/view/add_agreement1.php'><span>Agreements</span></a></li>
             </ul>
 		</div>
 <br/><br/>        
@@ -68,18 +69,17 @@
          <th colspan="2" align="center"><h3 style="color:#120072;">Management Reports</h3></th>
         </tr>
         <tr>
-            <td>
-                <a href="../../reports/view/prefered_properties.php">Most Popular Properties</a>
+            <td><a href="../../reports/view/prefered_properties.php"><img src="../../common/images/icons/property.png" />Most Popular Properties</a>
             </td>
         </tr>
         <tr>
             <td>
-                <a href="../../reports/view/prefered_locations.php">Most Popular Areas</a>
+                <a href="../../reports/view/prefered_locations.php"><img src="../../common/images/icons/areas.png"/>Most Popular Areas</a>
             </td>
         </tr>
         <tr>
             <td>
-                <a href="../../reports/view/prefered_price_ranges.php">Most Popular Price Ranges</a>
+                <a href="../../reports/view/prefered_price_ranges.php"><img src="../../common/images/icons/price report.png"/>Most Popular Price Ranges</a>
             </td>
         </tr>
      </table>

@@ -67,6 +67,9 @@
                         </select>
                      </td>
 				</tr>
+                <tr>
+                	<td><input type="hidden" name="property_id" value="<?php echo''.$_REQUEST['id'] ?>"/></td>
+                </tr>
              	<tr>
              		<td colspan="2" align="center" valign="middle">
                     	<input type="submit" value="save" class="myButton small_btn" name="submit"  />

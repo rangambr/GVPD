@@ -49,13 +49,14 @@
 <br/>
 <div class="admin_menu_bar" align="center" id="cssmenu">
             <ul>
-              <li class='active'><a href='index.php'><span>Home</span></a></li>
-                <li><a href='about_us.php'><span>Users</span></a></li>
-                <li><a href='about_us.php'><span>Properties</span></a></li>
-                <li><a href='about_us.php'><span>Inquiries</span></a></li>
-                <li><a href='../view/hot_deals.php'><span>Payments</span></a></li>
-				<li><a href='../../forum/create_topic.php'><span>Reports</span></a></li>
-                <li><a href='../../reviews/view/review.php'><span>Reviews</span></a></li>
+              <li class='active'><a href='../../home/view/index.php'>Home</a></li>
+              <li><a href='control_panel.php'><span>Admin panel</span></a></li>
+              <li><a href='manage_users.php'><span>Users</span></a></li>
+              <li><a href='manage_properties.php'><span>Properties</span></a></li>
+              <li><a href='manage_inquiries.php'><span>Inquiries</span></a></li>
+              <li><a href='manage_reviews.php'><span>Reviews</span></a></li>
+              <li><a href='reports.php'><span>Reports</span></a></li>
+              <li><a href='../../agreement/view/add_agreement1.php'><span>Agreements</span></a></li>
             </ul>
 </div>
 

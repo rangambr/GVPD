@@ -35,6 +35,7 @@
                 <li class='last'><a href='../contact_us/view/contact_us.php'><span>Contact us</span></a></li>
             </ul>
         </div>
+        <br/>
 		  <?php
           
           $host="localhost"; // Host name 
@@ -51,7 +52,15 @@
           
           $result=mysql_query($sql);
           ?>
-
+<?php 
+	if(!empty($_REQUEST['msg'])){
+  		$error_code = $_REQUEST['msg'];
+  			if($error_code == "3"){ ?>
+            	<div align="center" style="color: #10781F; font-size: 14px;"><b>Added the topic successfully!</b></div>
+                <?php 
+				}
+	}?>
+<br/><br/>
 <table width="90%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
 <tr>
 <td width="6%" align="center" bgcolor="#E6E6E6"><strong>#</strong></td>
@@ -84,6 +93,9 @@
 <td colspan="5" align="right" bgcolor="#E6E6E6"><a href="create_topic.php"><strong>Create New Topic</strong> </a></td>
 </tr>
 </table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 <div class="footer" id="footer_wrap">
 	<ul>
 	 <li class='active'><a href='../home/view/index.php'><span>Home</span></a></li>

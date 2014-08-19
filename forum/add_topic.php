@@ -22,8 +22,9 @@ $sql="INSERT INTO $tbl_name(topic, detail, name, email, datetime)VALUES('$topic'
 $result=mysql_query($sql);
 
 if($result){
-echo "Successful<BR>";
-echo "<a href=main_forum.php>View your topic</a>";
+//echo "Successful<BR>";
+//echo "<a href=main_forum.php>View your topic</a>";
+header("Location:main_forum.php?msg=3");
 }
 else {
 echo "ERROR";
