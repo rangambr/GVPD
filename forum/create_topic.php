@@ -8,6 +8,37 @@
 <link rel="stylesheet" type="text/css" href="../common/CSS/home.css">
 <link rel="stylesheet" type="text/css" href="../common/CSS/menu_bar.css">
 
+<script type="text/javascript">
+	function validate(){
+		var x=document.forms["form1"]["topic"].value
+		if (x==null || x==""){
+  			alert("Please enter a topic.");
+  			return false;
+  		}
+		var x=document.forms["form1"]["detail"].value
+		if (x==null || x==""){
+  			alert("Please enter a description.");
+  			return false;
+  		}
+		var x=document.forms["form1"]["name"].value
+		if (x==null || x==""){
+  			alert("Please enter your name.");
+  			return false;
+  		}
+		var x=document.forms["form1"]["email"].value
+		if (x==null || x==""){
+  			alert("Please enter your email.");
+  			return false;
+  		}
+		var x=document.forms["form1"]["email"].value
+		var atpos=x.indexOf("@");
+		var dotpos=x.lastIndexOf(".");
+		if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length){
+  			alert("Not a valid e-mail address");
+  			return false;
+  		}
+	}
+</script>
 </head>
 
 <body  bgcolor="#EAF3CF">
@@ -43,7 +74,7 @@
         } ?>
     <table width="400" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#EAF3CF" style="border:1px groove #93AE13;">
         <tr>
-            <form id="form1" name="form1" method="post" action="add_topic.php">
+            <form id="form1" name="form1" method="post" action="add_topic.php" onSubmit="return validate();">
             <td>
                 <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
                 <tr>

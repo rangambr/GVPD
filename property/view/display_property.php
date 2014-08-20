@@ -56,6 +56,7 @@
                 <li><a href='advaced_search_property.php'><span>Buying</span></a></li>
                 <li><a href='add_property.php'><span>Selling</span></a></li>
                 <li><a href='../../home/view/hot_deals.php'><span>Hot Deals</span></a></li>
+                <li><a href='../../forum/create_topic.php'><span>Forum</span></a></li>
                 <li><a href='../../reviews/view/review.php'><span>Review</span></a></li>
                 <li class='last'><a href='../../contact_us/view/contact_us.php'><span>Contact us</span></a></li>
             </ul>
@@ -127,13 +128,14 @@
             <tr>
               <th align="left">Images :</th>
               <td>
+              		<div>
                     <?php while ($rowpic = mysql_fetch_array($allPhotoURLs)) { ?>
                     <span class="img left">
                         
-                        <img src="../../property/photos/<?php echo ''.$rowpic['pic'] ?>" alt="" title=""/>
+                        <img src="../../property/photos/<?php echo ''.$rowpic['pic'] ?>" alt="" title="" width="130px" height="95 px"/>
                     </span>
                     <?php } ?>
-                
+                	</div>
               </td>
             </tr>
             

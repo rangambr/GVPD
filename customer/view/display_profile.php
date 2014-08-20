@@ -64,7 +64,7 @@ require_once '../controller/display_profile.php';
 								  <?php if (isset($_SESSION['username']) && $_SESSION['active'] == 1) { ?> 
                                   <?php echo 'Hi, <a href="../../customer/view/display_profile.php">' . $_SESSION['username'] . '</a> '; ?>
                                       <span style="font-style: normal">
-                                          <a style="display: inline; font-size: small;" href="../controller/logout.php">Logout</a>
+                                          <a style="display: inline; font-size: small;" href="../../home/controller/logout.php">Logout</a>
                                      </span>      
                         		<?php } ?>
                     		  </td>

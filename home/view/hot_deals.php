@@ -61,9 +61,9 @@ require '../controller/hot_deals.php';
                 <li><a href='../../property/view/advaced_search_property.php'><span>Buying</span></a></li>
                 <li><a href='../../property/view/add_property.php'><span>Selling</span></a></li>
                 <li><a href='../view/hot_deals.php'><span>Hot Deals</span></a></li>
+                <li><a href='../../forum/create_topic.php'><span>Forum</span></a></li>
                 <li><a href='../../reviews/view/review.php'><span>Review</span></a></li>
                 <li class='last'><a href='../../contact_us/view/contact_us.php'><span>Contact us</span></a></li>
-                <li><a href='../../forum/view/forum.php'><span>Forum</span></a></li>
             </ul>
         </div>
 
@@ -100,6 +100,9 @@ require '../controller/hot_deals.php';
                                     <?php echo $row['description']; ?>
                                 </p>
                                 <p> <a href="../../property/view/display_property.php?id=<?php echo $row['id']; ?>">More details>></a></p>
+                                <?php if(isset($_SESSION['username']) && $_SESSION['active'] == 1) {{
+            
+       							 } ?>
                                 <hr />
                                 <a href="../controller/add_to_watchlist.php?id=<?php echo $row['id']; ?>"><img src="../../common/images/save.png" alt="save property" title="save property"/></a>
                                 <span style="margin-left:25px;" >
@@ -115,6 +118,13 @@ require '../controller/hot_deals.php';
                                         Inquire about this
                                     </a>
                                 </span>
+                                <?php }
+            						else{
+       							 ?>
+          						<?php 
+            						}
+        						?>  
+
                             </td>
                         </tr>
                     </table>        

@@ -38,6 +38,7 @@
                 <li><a href='../../property/view/advaced_search_property.php'><span>Buying</span></a></li>
                 <li><a href='../../property/view/add_property.php'><span>Selling</span></a></li>
                 <li><a href='../../home/view/hot_deals.php'><span>Hot Deals</span></a></li>
+                <li><a href='../../forum/create_topic.php'><span>Forum</span></a></li>
                 <li><a href='review.php'p'><span>Review</span></a></li>
                 <li class='last'><a href='../../contact_us/view/contact_us.php'><span>Contact us</span></a></li>
             </ul>
@@ -47,7 +48,7 @@
   <form name="frm_rate" method="post" action="../controller/review.php" >
   <table align="center" width="500" style="border:1px groove #93AE13;">
        	 <tr bgcolor="#005825">
-         		<td height="33" colspan="2" align="center" bgcolor="#005825"><h2 style="color: #FFFFFF">Rate &amp; review your favourite properties...</h2></td>
+         		<td height="33" colspan="2" align="center" bgcolor="#005825"><h2 style="color: #FFFFFF">Rate &amp; Review <?php echo''.$property1['name'] ?></h2></td>
          </tr>
          		<tr>
 					<th align="left">Review :</th>

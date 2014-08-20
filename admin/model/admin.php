@@ -28,10 +28,10 @@ class Admin {
         return true;
     }
 
-    function deleteAdmin() {
+    function deleteAdmin($username) {
         $db = new Dbconnect();
 
-        $sql = "DELETE FROM user WHERE id=$del_id";
+        $sql = "DELETE FROM user WHERE username='" . $username . "'";
         $result = $db->query($sql);
     }
 
@@ -53,6 +53,28 @@ class Admin {
         $sql = "UPDATE property SET is_hot_property='1' WHERE id='$prop_id' ";
         $result = $db->query($sql);
         return $result;
+		} 
+	 
+	 function deleteProperties($pro_id){
+		$db = new Dbconnect();
+
+        $sql = "DELETE FROM property WHERE id='" .$pro_id. "'";
+        $result = $db->query($sql);
+		}
+	 
+	 function updatePassword($pass) {
+        $db = new Dbconnect();
+
+        $query = "UPDATE user SET password='". $pass. "' WHERE username=" . $username . " ";
+        $result = $db->query($query);
+        return true;
+    }
+	
+	 function deleteReview($pro_id){
+		$db = new Dbconnect();
+
+        $sql = "DELETE FROM review WHERE id='" .$pro_id. "'";
+        $result = $db->query($sql);
 		} 
 }
 

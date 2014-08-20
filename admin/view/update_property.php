@@ -8,7 +8,7 @@ require '../controller/update_property.php';
         <title><?php echo '' . $property['name']; ?></title>
 
         <link rel="stylesheet" type="text/css" href="../../common/CSS/home.css">
-        <link rel="stylesheet" type="text/css" href="../../common/CSS/menu_bar.css">
+        <link rel="stylesheet" type="text/css" href="../../common/CSS/admin_menu_bar.css">
         <link rel="stylesheet" type="text/css" href="../../common/CSS/form.css">
         <link rel="stylesheet" type="text/css" href="../../common/CSS/button.css">
         <link rel="stylesheet" type="text/css" href="../../common/CSS/login_tbl.css">
@@ -21,60 +21,36 @@ require '../controller/update_property.php';
         </style>        
     </head>
 
-    <body  bgcolor="#EAF3CF">
-        <div class="header">
-            <table border="0" align="center" width="100%">
-                <tr>
-                    <td style="margin-left:30px; padding-left:30px;">
-                        <div align="center"><img src="../../common/images/tr_banner.png"/><br/>
-                            <span style="color: #3A6839; font-weight: bold; font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans', Verdana, sans-serif; font-style: italic; font-size: large;">We Make Your Dream Come True.</span>
-                        </div>
-                    </td>
-                    <td align="center">
-                        <table >
-                            <tr>
-                                <td class="user_lgn_msg">
-                                    <?php if (isset($_SESSION['username']) && $_SESSION['active'] == 1) { ?> 
-                                        <?php echo 'Hi, <a href="../../customer/view/display_profile.php">' . $_SESSION['username'] . '</a> '; ?>
-                                        <span style="font-style: normal">
-                                            <a style="display: inline; font-size: small;" href="../../home/controller/logout.php">Logout</a>
-                                        </span>      
-                                    <?php } ?>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-            </table>
-        </div>  		
-
-        <div class="menu_bar" align="center" id="cssmenu">
-            <ul>
-                <li class='active'><a href='../../home/view/index.php'><span>Home</span></a></li>
-                <li><a href='../../home/view/about_us.php'><span>About Us</span></a></li>
-                <li><a href='advaced_search_property.php'><span>Buying</span></a></li>
-                <li><a href='add_property.php'><span>Selling</span></a></li>
-                <li><a href='../../home/view/hot_deals.php'><span>Hot Deals</span></a></li>
-                <li><a href='../../forum/create_topic.php'><span>Forum</span></a></li>
-                <li><a href='../../reviews/view/review.php'><span>Review</span></a></li>
-                <li class='last'><a href='../../contact_us/view/contact_us.php'><span>Contact us</span></a></li>
+    <body  bgcolor="#E1E1FF">
+    <div class="header">
+<div style="background-color:#000089; height:10%;padding:10px; padding-left:50px" >
+		<h3 style="color:#FFFFFF">Reset Password</h3>
+	</div>
+	<br/>
+<div class="admin_menu_bar" align="center" id="cssmenu">
+           <ul>
+                <li class='active'><a href='../../home/view/index.php'>Home</a></li>
+                <li><a href='control_panel.php'><span>Admin panel</span></a></li>
+                <li><a href='manage_users.php'><span>Users</span></a></li>
+                <li><a href='manage_properties.php'><span>Properties</span></a></li>
+                <li><a href='manage_inquiries.php'><span>Inquiries</span></a></li>
+                <li><a href='manage_reviews.php'><span>Reviews</span></a></li>
+                <li><a href='reports.php'><span>Reports</span></a></li>
+                <li><a href='../../agreement/view/add_agreement1.php'><span>Agreements</span></a></li>
             </ul>
-        </div>
+</div>
+</div>
 
-        <div class="content">
-             <form name="edit_form" action="../controller/edit_property.php" method="post" enctype="multipart/form-data">
-            <table class="ct_table" align="center" width="500" style="border:1px groove #93AE13;" >
-                <tr bgcolor="#005825">
-                    <td colspan="2" align="center"><h1 style="color: #FFFFFF; font-style: normal;"> Edit Property</h1></td>
-                </tr>
-               		<tr>
-                        <th align="left"> Property status : </th>
-                        <td><label for="property_status">
-                        	<input type="radio" name="state" value="Active">Active <span style="margin-left:45px;"> 
-                            
-                            <input type="radio" name="state" value="Draft">Draft </span>
-                            </label></td>
-                    </tr>
+   <div class="content">
+             <form name="edit_form" action="update_property.php" method="post" enctype="multipart/form-data">
+             
+             <table align="center" width="500" cellspacing="8px" style="border:1px groove #93AE13; background-color:#F8F8F7;">
+                <tr height="33px">
+                        <td width="149" align="center" style="padding:5px;"><img src="../../common/images/icons/edit-property.png" style="margin-left:40px;"/></td>
+                        <td width="271"><p align="left" style="font-weight: bold; font-style: normal; font-size: 16px; color: #01015C; margin-left:30px;"> Edit Property</p>
+                        </td>
+               </tr>
+               
                     <tr>
                         <th align="left"> Name : </th>
                         <td><label for="property_name">

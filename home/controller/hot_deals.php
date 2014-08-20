@@ -1,5 +1,6 @@
 <?php
 require '../../property/model/property.php';
+
 $property = new Property();
 $hot_props = $property->getHotProperties();
 
@@ -15,5 +16,5 @@ function getPhotoURLs($property_id){
     }
     echo ''.$pic;
 }
-
+	
 ?>
