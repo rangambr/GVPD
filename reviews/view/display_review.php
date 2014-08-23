@@ -14,7 +14,6 @@ require '../../property/model/property.php';
         <link rel="stylesheet" type="text/css" href="../../common/CSS/home.css">
         <link rel="stylesheet" type="text/css" href="../../common/CSS/menu_bar.css">
         <link rel="stylesheet" type="text/css" href="../../common/CSS/login_tbl.css">
-        <link rel="stylesheet" type="text/css" href="../../common/CSS/slider.css">
         <link rel="stylesheet" type="text/css" href="../../common/CSS/form.css">
         <link rel="stylesheet" type="text/css" href="../../common/CSS/button.css">
         <link rel="stylesheet" type="text/css" href="../../common/CSS/dropdown.css">
@@ -49,13 +48,13 @@ require '../../property/model/property.php';
 
         <div class="menu_bar" align="center" id="cssmenu">
             <ul>
-                <li class='active'><a href='index.php'><span>Home</span></a></li>
-                <li><a href='about_us.php'><span>About Us</span></a></li>
+                <li class='active'><a href='../../home/view/index.php'><span>Home</span></a></li>
+                <li><a href='../../home/view/about_us.php'><span>About Us</span></a></li>
                 <li><a href='../../property/view/advaced_search_property.php'><span>Buying</span></a></li>
                 <li><a href='../../property/view/add_property.php'><span>Selling</span></a></li>
-                <li><a href='../view/hot_deals.php'><span>Hot Deals</span></a></li>
-                <li><a href='../../forum/create_topic.php'><span>Forum</span></a></li>
-                <li><a href='../../reviews/view/review.php'><span>Review</span></a></li>
+                <li><a href='../../home/view/hot_deals.php'><span>Hot Deals</span></a></li>
+                <li><a href='../../forum/main_forum.php'><span>Forum</span></a></li>
+                <li><a href='display_review.php'><span>Review</span></a></li>
                 <li class='last'><a href='../../contact_us/view/contact_us.php'><span>Contact us</span></a></li>
             </ul>
         </div>
@@ -131,12 +130,13 @@ require '../../property/model/property.php';
 
         <div class="footer" id="footer_wrap">
             <ul>
-                <li class='active'><a href='index.php'><span>Home</span></a></li>
-                <li><a href='about_us.php'><span>About Us</span></a></li>
+                <li class='active'><a href='../../home/view/index.php'><span>Home</span></a></li>
+                <li><a href='../../home/view/about_us.php'><span>About Us</span></a></li>
                 <li><a href='../../property/view/advaced_search_property.php'><span>Buying</span></a></li>
                 <li><a href='../../property/view/add_property.php'><span>Selling</span></a></li>
-                <li><a href='../view/hot_deals.php'><span>Hot Deals</span></a></li>
-                <li><a href='../../reviews/view/review.php'><span>Review</span></a></li>
+                <li><a href='../../home/view/hot_deals.php'><span>Hot Deals</span></a></li>
+                <li><a href='../../forum/main_forum.php'><span>Forum</span></a></li>
+                <li><a href='display_review.php'><span>Review</span></a></li>
                 <li class='last'><a href='../../contact_us/view/contact_us.php'><span>Contact us</span></a></li>
             </ul>
             <p id="copyright" >

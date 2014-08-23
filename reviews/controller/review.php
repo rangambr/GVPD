@@ -17,8 +17,6 @@ $rating=new Review();
 $rating->insertRatings($property_id,$description,$rate);
 header("Location: ../../home/view/hot_deals.php");
 
-$review=new Review();
-$get_review=$review->getAllReviews();
 ?>
 
 
