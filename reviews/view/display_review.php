@@ -1,8 +1,6 @@
 <?php
 session_start();
 require '../controller/display_review.php';
-require '../../property/model/property.php';
-
 ?>
 
 <!doctype html>
@@ -61,12 +59,14 @@ require '../../property/model/property.php';
         </div>
 
         <div class="content">
-			<table id="myTable" class="tablesorter">
+            <table id="myTable" class="tablesorter">
 
                 <tbody>
-                
-                    <?php while ($row = mysql_fetch_array($get_review)) { ?>
-                    <?php kint::dump($row);	?>
+
+                    <?php
+                    while ($row = mysql_fetch_array($get_review)) {
+                        ?>
+
                     <table width="80%" border="0" cellspacing="5" cellpadding="5" align="center" bgcolor="#fffdd9">
                         <tr bgcolor="#889E43">
                             <td colspan="2" style="font-size: 18px; color: #FCFCFC; font-weight: bolder;">
@@ -86,38 +86,47 @@ require '../../property/model/property.php';
                                         <?php echo $row['unit_price']; ?>
                                     </span></h3>
                                 <span style="font-style: normal"><br/>
-                                    <span style="font-size: 14px"><?php echo $row['address1'].', '.$row['address2']; ?>
+                                    <span style="font-size: 14px"><?php echo $row['address1'] . ', ' . $row['address2']; ?>
                                         </p>
                                     </span></span>
                                 <p style="font-size: 14px">Property Type: <?php echo $row['type']; ?></p>
                                 <p>
                                     <?php echo $row['description']; ?>
                                 </p>
-                                <p> <a href="../../property/view/display_property.php?id=<?php echo $row['id']; ?>">More details>></a></p>
-                                <?php if(isset($_SESSION['username']) && $_SESSION['active'] == 1) {{
-            
-       							 } ?>
-                                <hr />
-                                <a href="../controller/add_to_watchlist.php?id=<?php echo $row['review.property_id']; ?>"><img src="../../common/images/save.png" alt="save property" title="save property"/></a>
-                                <span style="margin-left:25px;" >
-                                    <a href="../../reviews/view/review.php?id=<?php echo $row['review.property_id']; ?>"><img src="../../common/images/star_full.png" alt="rate property" title="rate property"/></a>
-                                    <a href="../../reviews/view/review.php?id=<?php echo $row['review.property_id']; ?>"><img src="../../common/images/star_half.png" alt="rate property" title="rate property"/></a>&nbsp;
-                                    <a href="../../reviews/view/review.php?id=<?php echo $row['review.property_id']; ?>"><img src="../../common/images/star_empty.png" alt="rate property" title="rate property"/></a>
-                                </span>
-                                <span style="margin-left:25px;" >
-                                 <a href="../controller/email_property.php"><img src="../../common/images/email.png" alt="contact us" title="contact us"/></a>
-                                </span>
-                                <span style="margin-left:25px; float:right;" >
-                                    <a href="../../inquiry/view/add_inquiry.php">
-                                        Inquire about this
-                                    </a>
-                                </span>
-                                <?php }
-            						else{
-       							 ?>
-          						<?php 
-            						}
-        						?>  
+                                <p>
+                                    <b>Reviews: </b>
+                                    <?php echo $row['GROUP_CONCAT(rw_description)']; ?>
+
+                                    
+                                   
+                                </p>
+                                <p> <a href="../../property/view/display_property.php?id=<?php echo $row['property_id']; ?>">More details>></a></p>
+                                <?php
+                                if (isset($_SESSION['username']) && $_SESSION['active'] == 1) { {
+                                        
+                                    }
+                                    ?>
+                                    <hr />
+                                    <a href="../controller/add_to_watchlist.php?id=<?php echo $row['property_id']; ?>"><img src="../../common/images/save.png" alt="save property" title="save property"/></a>
+                                    <span style="margin-left:25px;" >
+                                        <a href="../../reviews/view/review.php?id=<?php echo $row['property_id']; ?>"><img src="../../common/images/star_full.png" alt="rate property" title="rate property"/></a>
+                                        <a href="../../reviews/view/review.php?id=<?php echo $row['property_id']; ?>"><img src="../../common/images/star_half.png" alt="rate property" title="rate property"/></a>&nbsp;
+                                        <a href="../../reviews/view/review.php?id=<?php echo $row['property_id']; ?>"><img src="../../common/images/star_empty.png" alt="rate property" title="rate property"/></a>
+                                    </span>
+                                    <span style="margin-left:25px;" >
+                                        <a href="../controller/email_property.php"><img src="../../common/images/email.png" alt="contact us" title="contact us"/></a>
+                                    </span>
+                                    <span style="margin-left:25px; float:right;" >
+                                        <a href="../../inquiry/view/add_inquiry.php">
+                                            Inquire about this
+                                        </a>
+                                    </span>
+                                    <?php
+                                } else {
+                                    ?>
+                                    <?php
+                                }
+                                ?>  
 
                             </td>
                         </tr>
