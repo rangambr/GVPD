@@ -38,19 +38,12 @@
         <br/>
 		  <?php
           
-          $host="localhost"; // Host name 
-          $username=""; // Mysql username 
-          $password=""; // Mysql password 
-          $db_name="gvpd"; // Database name 
-          $tbl_name="forum_question"; // Table name 
+          require '../common/conn.php';
+          $db = new Dbconnect();
           
-          // Connect to server and select databse.
-          mysql_connect("$host", "root", "")or die("cannot connect"); 
-          mysql_select_db("$db_name")or die("cannot select DB");
-          $sql="SELECT * FROM $tbl_name ORDER BY id DESC";
-          // OREDER BY id DESC is order result by descending
-          
-          $result=mysql_query($sql);
+          $sql="SELECT * FROM forum_question ORDER BY id DESC";
+          $result = $db->query($sql);
+      
           ?>
 <?php 
 	if(!empty($_REQUEST['msg'])){
@@ -86,7 +79,7 @@
           <?php
           // Exit looping and close connection 
           } 
-          mysql_close();
+         
 		  
           ?>
 

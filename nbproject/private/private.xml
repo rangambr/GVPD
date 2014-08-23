@@ -3,9 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/opt/lampp/htdocs/IMS_3/admin/view/reports.php</file>
+            <file>file:/opt/lampp/htdocs/IMS_3/reports/model/search_preference.php</file>
             <file>file:/opt/lampp/htdocs/IMS_3/reports/view/prefered_properties.php</file>
-            <file>file:/opt/lampp/htdocs/IMS_3/admin/view/control_panel.php</file>
+            <file>file:/opt/lampp/htdocs/IMS_3/reports/controller/get_search_preferences.php</file>
+            <file>file:/opt/lampp/htdocs/IMS_3/reports/view/all_properties.php</file>
             <file>file:/opt/lampp/htdocs/IMS_3/reports/view/prefered_price_ranges.php</file>
             <file>file:/opt/lampp/htdocs/IMS_3/reports/view/prefered_locations.php</file>
         </group>
