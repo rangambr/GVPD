@@ -87,7 +87,7 @@
           echo "<td class='user_info'>".$usr['type']."</td>";
           echo "<td class='ac_link'><a  href='update_user.php?username=".$usr['username']."'><span class='edit_link'></span></a>";
           echo " | <a  href='../controller/reset_password.php?username=".$usr['username']."'><span class='reset_pw'></span></a>";
-          echo " | <a  href='../controller/delete_users.php?username=".$usr['username']."'><span class='delete_link' ></span></a></td><tr>";
+          echo " | <a onClick='confirm('Are you sure?')' href='../controller/delete_users.php?username=".$usr['username']."'><span class='delete_link' ></span></a></td><tr>";
           }
       ?>
     </table>
