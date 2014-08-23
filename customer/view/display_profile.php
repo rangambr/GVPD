@@ -131,6 +131,7 @@ require_once '../controller/display_profile.php';
                                             echo '<input type="radio" name="gender" value="Female" checked/> <span style="color: #275C0D">Female</span> ';
                                         }
                                     ?>
+                                    </td>
                             </tr>
                             <tr>
                                 <th align="left">House Number/ Name :</th>

@@ -1,4 +1,5 @@
 <?php
+session_start();
 require '../controller/update_property.php';
 ?>
 <!doctype html>
@@ -67,14 +68,24 @@ require '../controller/update_property.php';
                 <tr bgcolor="#005825">
                     <td colspan="2" align="center"><h1 style="color: #FFFFFF; font-style: normal;"> Edit Property</h1></td>
                 </tr>
-               		<tr>
-                        <th align="left"> Property status : </th>
-                        <td><label for="property_status">
-                        	<input type="radio" name="state" value="Active">Active <span style="margin-left:45px;"> 
-                            
-                            <input type="radio" name="state" value="Draft">Draft </span>
-                            </label></td>
-                    </tr>
+                <tr>
+                                <th align="left">Status :</th>
+                                <td>
+                                    <?php 
+                                        if($status == 'Active'){
+                                            echo '<input type="radio" name="status" value="Active" checked disabled="true"/> <span style="color: #275C0D">Active</span> ';
+                                            echo '<input type="radio" name="status" value="Draft" disabled="true"/> <span style="color: #275C0D">Draft</span> ';
+                                        }
+									?>
+                                        
+                                    <?php 
+                                        if($status == 'Draft'){
+                                            echo '<input type="radio" name="status" value="Active" /> <span style="color: #275C0D">Active</span> ';
+                                            echo '<input type="radio" name="status" value="Draft" checked/> <span style="color: #275C0D">Draft</span> ';
+                                        }
+                                    ?>
+                                    </td>
+                            </tr>           
                     <tr>
                         <th align="left"> Name : </th>
                         <td><label for="property_name">

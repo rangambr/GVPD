@@ -76,8 +76,8 @@
 
 <div class="side_bar">
 
-  <span style="font-size: small; font-weight: bold;">We welcome and value your feedback about our real estate services. Please visit our <a href="#">FAQs</a> – we may have answered your question already!<br/>
-If your question was not addressed in our <a href="#">FAQs</a>!</span> 
+  <span style="font-size: small; font-weight: bold;">We welcome and value your feedback about our real estate services. Please visit our <a href="FAQ.php">FAQs</a> – we may have answered your question already!<br/>
+If your question was not addressed in our <a href="FAQ.php">FAQs</a>!</span> 
 <table>
 	<tr><td colspan="2"><h2 style="color: #000089;">Please contact us</h2></td></tr>
 	<tr><td style="font-family: Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', serif">T<span style="font-style: normal">elephone:</span></td><td style="font-family: Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', serif">0812 490738 / 0777 031403</td></tr>

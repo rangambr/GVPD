@@ -14,13 +14,10 @@ if (isset($_GET['username'])) {
     $username = $_GET['username'];
 }
 
-$usr = new User();
-$usrRecord = $usr->getUserByUsername($username);
+$adm = new Admin();
+$admRecord = $adm->generate_password();
 
-while ($row = mysql_fetch_array($usrRecord)) {
+while ($row = mysql_fetch_array($admRecord)) {
     $password = $row['password'];
 	
-//$adm=new Admin();
-//$new_adm=$adm->updatePassword($pass);
-//$new_adm;
 }

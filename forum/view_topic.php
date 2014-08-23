@@ -7,6 +7,33 @@
 <link rel="stylesheet" type="text/css" href="../common/CSS/home.css">
 <link rel="stylesheet" type="text/css" href="../common/CSS/menu_bar.css">
 
+<script type="text/javascript">
+	function validate(){
+		var x=document.forms["form1"]["a_name"].value
+			if (x==null || x==""){
+  			alert("Please enter your name.");
+  			return false;
+  		}
+		var x=document.forms["form1"]["a_email"].value
+			if (x==null || x==""){
+  			alert("Please enter your email.");
+  			return false;
+  		}
+		var x=document.forms["form1"]["a_email"].value
+		var atpos=x.indexOf("@");
+		var dotpos=x.lastIndexOf(".");
+		if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length){
+  			alert("Not a valid e-mail address");
+  			return false;
+  		}
+		var x=document.forms["form1"]["a_answer"].value
+			if (x==null || x==""){
+  			alert("Please enter your answer.");
+  			return false;
+  		}
+		
+	}
+</script>
 </head>
 
 <body  bgcolor="#EAF3CF">
@@ -146,7 +173,7 @@
 <tr>
 <form name="form1" method="post" action="add_answer.php">
 <td>
-<table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
+<table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF" onSunbmit="return validate();">
 <tr>
 <td width="18%"><strong>Name</strong></td>
 <td width="3%">:</td>

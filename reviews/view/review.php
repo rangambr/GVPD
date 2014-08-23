@@ -1,3 +1,14 @@
+<?php
+require '../model/review.php';
+require '../../property/model/property.php';
+$property_id=$_REQUEST['id'];
+$property1=new Property();
+$result = $property1->getPropertyById($property_id);
+while ($row = mysql_fetch_array($result)) {
+    $property1 = $row;
+}
+
+?>
 <!doctype html>
 <html>
 <head>
@@ -10,7 +21,7 @@
 <link rel="stylesheet" type="text/css" href="../../common/CSS/button.css">
 <style type="text/css">
 	#footer_wrap{
-		position:fixed;
+		position:relative;
 		bottom:0;
 		}
 </style>
@@ -60,11 +71,12 @@
 					<th align="left">Rating  :</th>
 					<td>
                     	<select name="cmb_rate">
-                    		<option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
+                        	<option value="0">--Select--</option>
+                    		<option value="1">Excellent</option>
+                            <option value="2">Good</option>
+                            <option value="3">Fair</option>
+                            <option value="4">Poor</option>
+                            <option value="5">Very Poor</option>
                         </select>
                      </td>
 				</tr>

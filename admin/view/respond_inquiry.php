@@ -56,7 +56,7 @@
 
 <body  bgcolor="#E1E1FF">
 <div style="background-color:#000089; height:10%;padding:10px;padding-left:50px">
-	<h3 style="color:#FFFFFF">Manage Users</h3>
+	<h3 style="color:#FFFFFF">Reply Inquiries</h3>
 </div>
 <br/>
 <div class="admin_menu_bar" align="center" id="cssmenu">
@@ -71,27 +71,27 @@
               <li><a href='../../agreement/view/add_agreement1.php'><span>Agreements</span></a></li>
             </ul>
 </div>
-
-<div class="content">
-    <div class="CSSTableGenerator" >
-    <table class="user_table">
-        <tr>
-            <td>Username</td>
-            <td>User Type</td>
-            <td>Action</td>
-        </tr>
-      <?php
-        while($usr = mysql_fetch_array($all_users))
-          {
-          echo "<tr class='user_info'><td>".$usr['username']."</td>";
-          echo "<td class='user_info'>".$usr['type']."</td>";
-          echo "<td class='ac_link'><a  href='update_user.php?username=".$usr['username']."'><span class='edit_link'></span></a>";
-          echo " | <a  href='../controller/reset_password.php?username=".$usr['username']."'><span class='reset_pw'></span></a>";
-          echo " | <a  href='../controller/delete_users.php?username=".$usr['username']."'><span class='delete_link' ></span></a></td><tr>";
-          }
-      ?>
-    </table>
-    </div>
+<div>
+<br/><br/>
+	<form name="frm_repInquiry" method="post" action="">
+                <table align="center" width="418" cellspacing="3px" style="border: 1px groove #93AE13; padding-bottom: 2%; background-color: #F8F8F7; font-size: small;">
+                    <tr height="33px">
+                        <td colspan="2" width="310" align="center"><img src="../../common/images/icons/inquiry.png"/><span style="text-align: center; margin-bottom:5px; font-weight: bold; font-style: normal; font-size: 16px; color: #01015C;" > Reply Inquiry</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th align="left"><div align="left">Reply :</div></th>
+                        <td>
+                            <textarea name="txt_reply" cols="40" rows="7"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center" valign="middle">
+                            <input type="submit" value="send" class="myButton" name="submit" />
+                        </td>
+                    </tr>
+                </table>
+            </form>
 </div>
 </body>
 </html>
