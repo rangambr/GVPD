@@ -6,7 +6,7 @@ function query($sql){
     $db_handle=mysql_connect('localhost', 'root', '')or
                     die("could not connect to the server");
 	//Select a database to use
-    mysql_select_db('GVPD_NEW', $db_handle) or 
+    mysql_select_db('gvpd', $db_handle) or 
                     die ("could not select database");
 	//Perform database query 
     $result=mysql_query($sql) or die("could not execute the query");

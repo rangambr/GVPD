@@ -14,7 +14,7 @@ class Review {
 
   function getAllReviews() {
         $db = new Dbconnect();
-        $sql = "select review.id,review.rw_description,review.rating,property.name from review,property where review.property_id = property.id";
+        $sql = "select review.id,review.property_id,property.unit_price,property.address1,property.address2,property.type,property.description,review.rw_description,review.rating,property.name from review,property where review.property_id = property.id";
         $result = $db->query($sql);
         return $result;
     }
