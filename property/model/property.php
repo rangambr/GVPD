@@ -95,6 +95,15 @@ class Property {
         //KINT::dump($result);
         return $result;
     }
+    
+    function getPropertiesVisibleInHomePage() {
+        $db = new Dbconnect();
+        //KINT::dump($username,$name,$address1,$address2,$city,$province);
+        $sql = "select * from property where visible_home_page = 1";
+        $result = $db->query($sql);
+        //KINT::dump($result);
+        return $result;
+    }
 
     function updateProperty($status,$prop_id, $name, $address1, $address2, $city, $province, $extent, $unit_price, $description) {
         $db = new Dbconnect();

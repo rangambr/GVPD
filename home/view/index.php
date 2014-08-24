@@ -1,4 +1,7 @@
-<?php session_start(); ?>
+<?php
+session_start();
+require '../controller/home_properties.php';
+?>
 
 <!doctype html>
 <html>
@@ -105,10 +108,10 @@
                         <table class="login_tbl">
                             <form name="frm_login" method="post" action="../controller/login.php" onsubmit="return validateForm();"  >	
 
-                                <?php if (!isset($_SESSION['username'])) { ?>
+<?php if (!isset($_SESSION['username'])) { ?>
                                     <tr>
                                         <td colspan="2"><a href="../../customer/view/register.php" style="font-style: normal; font-size: small; padding:5px;">Register</a></td>
-                                        
+
                                     </tr>
                                     <tr>
                                         <td  style="font-style: normal; font-weight: bold; color: #0F2701; font-size: x-small;">
@@ -161,21 +164,21 @@
 <?php } ?> 
                                 <tr>
 
-                                    <?php if (isset($_SESSION['username']) && $_SESSION['active'] == 1) { ?> 
+<?php if (isset($_SESSION['username']) && $_SESSION['active'] == 1) { ?> 
                                         <td colspan="3" class="user_lgn_msg">
                                             <div style="width:95%;">
-                                            <?php echo '<a class="login_btn_gr" href="../../customer/view/display_profile.php"> Hi, ' . $_SESSION['username'] . '</a> '; ?>
-                                            <br/>
-                                            
+    <?php echo '<a class="login_btn_gr" href="../../customer/view/display_profile.php"> Hi, ' . $_SESSION['username'] . '</a> '; ?>
+                                                <br/>
+
                                                 <a class="login_btn_gr" style="font-size: small;" href="../controller/logout.php">
                                                     Logout
                                                 </a><br/>
-                                                <?php if(isset($_SESSION['user_type']) && $_SESSION['user_type'] == 'Admin'){ ?>
-                                                <a class="login_btn_gr" style="font-size: small;" href="../../admin/view/control_panel.php">Admin Panel</a>
-                                                <?php }?>
+                                                <?php if (isset($_SESSION['user_type']) && $_SESSION['user_type'] == 'Admin') { ?>
+                                                    <a class="login_btn_gr" style="font-size: small;" href="../../admin/view/control_panel.php">Admin Panel</a>
+    <?php } ?>
                                             </div>
                                         </td>      
-                                    <?php } ?> 
+<?php } ?> 
 
                                 </tr>
                             </form>
@@ -193,7 +196,7 @@
                 <li><a href='../../property/view/advaced_search_property.php'><span>Buying</span></a></li>
                 <li><a href='../../property/view/add_property.php'><span>Selling</span></a></li>
                 <li><a href='../view/hot_deals.php'><span>Hot Deals</span></a></li>
-				<li><a href='../../forum/main_forum.php'><span>Forum</span></a></li>
+                <li><a href='../../forum/main_forum.php'><span>Forum</span></a></li>
                 <li><a href='../../reviews/view/display_review.php'><span>Review</span></a></li>
                 <li class='last'><a href='../../contact_us/view/contact_us.php'><span>Contact us</span></a></li>
             </ul>
@@ -251,7 +254,7 @@
                                             <option>100,000</option>
                                             <option>150,000</option>
                                             <option>1,000,000</option>
-                                             <option>1,000,000</option>
+                                            <option>1,000,000</option>
                                         </select>
                                     </td> 
                                 </tr>
@@ -277,56 +280,22 @@
                     </td>
                 </tr>
             </table>
-</div>
+        </div>
 
         <div id="scroller" style="width: 900px; height: 500px; margin: 0 auto;">
             <div class="innerScrollArea">
                 <ul>
-                    <li><img src="../../common/images/pic/blocks1.jpg" width="366" height="330" />
-                        <p align="center">Price: 50,000/=<br/>
-                            No:200, kundasale.<br/>
-                            Listing #1002</p>
-                    </li>
-                    <li><img src="../../common/images/pic/2-sri-lanka-real-estate-property-kandy.jpg" width="366" height="330" />
-                        <p align="center">Price: 50,000/=<br/>
-                            No:200, kundasale.<br/>
-                            Listing #1002</p>
-                    </li>
-                    <li><img src="../../common/images/pic/119.jpg" width="366" height="330" />
-                        <p align="center">Price: 50,000/=<br/>
-                            No:200, kundasale.<br/>
-                            Listing #1002</p>
-                    </li>
-                    <li><img src="../../common/images/pic/DSC05099-2-sri-lanka-real-estate-property-kandy.jpg" width="366" height="330" />
-                        <p align="center">Price: 50,000/=<br/>
-                            No:200, kundasale.<br/>
-                            Listing #1002</p>
-                    </li>
-                    <li><img src="../../common/images/pic/Picture 005Kandy-Luxury-Villa-Sri-Lanka-Property-sale.jpg" width="366" height="330" />
-                        <p align="center">Price: 50,000/=<br/>
-                            No:200, kundasale.<br/>
-                            Listing #1002</p>
-                    </li>
-                    <li><img src="../../common/images/pic/cottage 02-Wattegama-Hunas-Falls-Sri-Lanka-Property.jpg" width="366" height="330" />
-                        <p align="center">Price: 50,000/=<br/>
-                            No:200, kundasale.<br/>
-                            Listing #1002</p>
-                    </li>
-                    <li><img src="../../common/images/pic/2-Kandy-Sri-Lanka-Property-Estate-Plantation.jpg" width="366" height="330" />
-                        <p align="center">Price: 50,000/=<br/>
-                            No:200, kundasale.<br/>
-                            Listing #1002</p>
-                    </li>
-                    <li><img src="../../common/images/pic/1-sri-lanka-real-estate-property-kandy.jpg" width="366" height="330" />
-                        <p align="center">Price: 90,000,000/=<br/>
-                             No:74, Kappetipola Mawatha, Kandy<br/>
-                            </p>
-                    </li>
-                    <li><img src="../../common/images/pic/DSC00037-Kandy-Hill-Country-Sri-Lanka-Property-Estate-Plantation.jpg" width="366" height="330" />
-                        <p align="center">Rs.120,000,000<br/>
-                          Kandy district<br/>
-                            Listing #1002</p>
-                    </li>
+                    <?php while ($row = mysql_fetch_array($propertiesVisibleInHome)) { ?>
+                        <li>
+                            
+                            <img src="../../property/photos/<?php getPhotoURLs($row['id']) ?>" width="366" height="330" />
+                            <p align="center">Price: <?php echo '' . $row['unit_price']; ?>/=<br/>
+                                <?php echo '' . $row['address1'] . ', ' . $row['address2']; ?><br/>
+                                <?php echo '' . $row['name']; ?></p>
+                        </li>                                
+                    <?php }
+                    ?>
+         
                 </ul>
             </div>
         </div>
@@ -335,7 +304,7 @@
 
         <div class="footer" id="footer_wrap">
             <ul>
-                 <li class='active'><a href='index.php'><span>Home</span></a></li>
+                <li class='active'><a href='index.php'><span>Home</span></a></li>
                 <li><a href='about_us.php'><span>About Us</span></a></li>
                 <li><a href='../../property/view/advaced_search_property.php'><span>Buying</span></a></li>
                 <li><a href='../../property/view/add_property.php'><span>Selling</span></a></li>

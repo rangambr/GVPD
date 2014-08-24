@@ -41,50 +41,72 @@ class Admin {
         $result = $db->query($sql);
         return $result;
     }
-    
-    function getAllUsers(){
+
+    function getAllUsers() {
         $db = new Dbconnect();
         $sql = "SELECT * FROM user ORDER BY type, username";
         $result = $db->query($sql);
         return $result;
     }
-	function addHotProperties($prop_id){
-		$db = new Dbconnect();
+
+    function addHotProperties($prop_id) {
+        $db = new Dbconnect();
         $sql = "UPDATE property SET is_hot_property='1' WHERE id='$prop_id' ";
         $result = $db->query($sql);
         return $result;
-		} 
-	 
-	 function deleteProperties($pro_id){
-		$db = new Dbconnect();
-
-        $sql = "DELETE FROM property WHERE id='" .$pro_id. "'";
+    }
+    
+    function removeHotProperties($prop_id) {
+        $db = new Dbconnect();
+        $sql = "UPDATE property SET is_hot_property='0' WHERE id='$prop_id' ";
         $result = $db->query($sql);
-	}
-	 
-	
-	 function generate_password($length = 8) {
-	  	$chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_-=+;:,.?";
-	  	$password = substr( str_shuffle( $chars ), 0, $length );
-		$password=md5($password);
-	  	return $password;
-		
-	  }
-	  
-	 function updatePassword($username,$pass) {
+        return $result;
+    }
+    
+    
+    function addHomepage($prop_id) {
+        $db = new Dbconnect();
+        $sql = "UPDATE property SET visible_home_page='1' WHERE id='$prop_id' ";
+        $result = $db->query($sql);
+        return $result;
+    }
+    
+    function removeHomepage($prop_id) {
+        $db = new Dbconnect();
+        $sql = "UPDATE property SET visible_home_page='0' WHERE id='$prop_id' ";
+        $result = $db->query($sql);
+        return $result;
+    }
+
+    function deleteProperties($pro_id) {
+        $db = new Dbconnect();
+
+        $sql = "DELETE FROM property WHERE id='" . $pro_id . "'";
+        $result = $db->query($sql);
+    }
+
+    function generate_password($length = 8) {
+        $chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_-=+;:,.?";
+        $password = substr(str_shuffle($chars), 0, $length);
+        $password = md5($password);
+        return $password;
+    }
+
+    function updatePassword($username, $pass) {
         $db = new Dbconnect();
 
         $query = "UPDATE user SET password='$pass' WHERE username='$username'";
         $result = $db->query($query);
         return true;
     }
-	
-	 function deleteReview($pro_id){
-		$db = new Dbconnect();
 
-        $sql = "DELETE FROM review WHERE id='" .$pro_id. "'";
+    function deleteReview($pro_id) {
+        $db = new Dbconnect();
+
+        $sql = "DELETE FROM review WHERE id='" . $pro_id . "'";
         $result = $db->query($sql);
-		} 
+    }
+
 }
 
 ?>
