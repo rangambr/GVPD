@@ -12,9 +12,16 @@ class Review {
         return true;
     }
 
-  function getAllReviews() {
+  function getAllGroupedReviews() {
         $db = new Dbconnect();
         $sql = "select review.id,review.property_id,property.unit_price,property.address1,property.address2,property.type,property.description, GROUP_CONCAT(rw_description), review.rw_description,review.rating,property.name from review,property where review.property_id = property.id group by property_id order by property_id";
+        $result = $db->query($sql);
+        return $result;
+    }
+    
+    function getAllReviews() {
+        $db = new Dbconnect();
+        $sql = "select review.id,review.property_id,property.unit_price,property.address1,property.address2,property.type,property.description, review.rw_description,review.rating,property.name from review,property where review.property_id = property.id order by property_id";
         $result = $db->query($sql);
         return $result;
     }

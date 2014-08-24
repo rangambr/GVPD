@@ -2,7 +2,7 @@
 require '../model/review.php';
 
 $review=new Review();
-$get_review=$review->getAllReviews();
+$get_review=$review->getAllGroupedReviews();
 
 function getPhotoURLs($property_id) {
         $db = new Dbconnect();
