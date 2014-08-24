@@ -70,7 +70,6 @@
                 <li><a href='../../forum/create_topic.php'><span>Forum</span></a></li>
                 <li><a href='../../reviews/view/review.php'><span>Review</span></a></li>
                 <li class='last'><a href='../../contact_us/view/contact_us.php'><span>Contact us</span></a></li>
-                <li><a href='../../forum/view/forum.php'><span>Forum</span></a></li>
             </ul>
 </div>
     <!-- demo -->

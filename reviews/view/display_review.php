@@ -75,7 +75,7 @@ require '../controller/display_review.php';
                             </td>
                         </tr>
                         <tr>
-                            <td><img src="../../property/photos/<?php getPhotoURLs($row['property_id']) ?>" height="50px" width="50 px" />
+                            <td><img src="../../property/photos/<?php getPhotoURLs($row['property_id']) ?>" height="150px" width="150px" />
                                 <br/>    <img src="../../common/images/camera_add.png" alt="photos" title="photos"/>
                             </td>
                             <td>
@@ -84,17 +84,17 @@ require '../controller/display_review.php';
 
                                         <?php echo $row['unit_price']; ?>
                                     </span></h3>
-                                <span style="font-style: normal"><br/>
+                                <span style="font-style: normal;font-weight: normal;"><br/>
                                     <span style="font-size: 14px"><?php echo $row['address1'] . ', ' . $row['address2']; ?>
                                         </p>
                                     </span></span>
-                                <p style="font-size: 14px">Property Type: <?php echo $row['type']; ?></p>
+                                <p style="font-size: 14px;font-weight: normal;"><b>Property Type:</b> <?php echo $row['type']; ?></p>
                                 <p>
                                     <?php echo $row['description']; ?>
                                 </p>
-                                <p>
-                                    <b>Reviews: </b>
-                                    <?php echo $row['GROUP_CONCAT(rw_description)']; ?>
+                                <p style="font-weight: normal;">
+                                    <b>Reviews: </b><br/>
+                                    <?php echo $row['GROUP_CONCAT(rw_description SEPARATOR "<br/>")']; ?>
 
                                     
                                    
