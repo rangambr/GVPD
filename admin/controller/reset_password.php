@@ -9,15 +9,13 @@ $username = '';
 //$password = '';
 //$pass=$_POST['txt_pass'];
 
-if (isset($_GET['username'])) {
+if (isset($_REQUEST['username'])) {
 	 //Kint::dump($username);
-    $username = $_GET['username'];
+    $username = $_REQUEST['username'];
 }
 
 $adm = new Admin();
 $admRecord = $adm->generate_password();
 
-while ($row = mysql_fetch_array($admRecord)) {
-    $password = $row['password'];
-	
-}
+$adm->updatePassword($username,$admRecord);	
+ header("location:../view/manage_users.php");

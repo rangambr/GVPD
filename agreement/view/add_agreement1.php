@@ -23,7 +23,8 @@
                 <li><a href='add_agreement1.php'><span>Agreements</span></a></li>
             </ul>
         </div>
-
+<br/>
+<br/>
 <div class="content" style="padding-top:0px;">
 	<form name="frm_agreement" action="../controller/agreement.php" method="post">
     	<table align="center" width="500px">
@@ -51,7 +52,8 @@
             	<td colspan="2">&nbsp;</td>
             </tr>
             <tr>
-            	<td colspan="2"><strong>AGREEMENNT TO SELL ON BEHALF OF OWNER NO.</strong><span><input type="text" name="txt_owner"/></span></td>
+            	<td colspan="2"><strong>AGREEMENT TO SELL ON BEHALF OF OWNER NO.</strong><span>
+            	<input type="text" name="txt_owner"/></span></td>
             </tr>
             <br/>
             <tr>

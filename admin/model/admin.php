@@ -66,21 +66,18 @@ class Admin {
 	 function generate_password($length = 8) {
 	  	$chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_-=+;:,.?";
 	  	$password = substr( str_shuffle( $chars ), 0, $length );
+		$password=md5($password);
 	  	return $password;
 		
-		$db = new Dbconnect();
-		$query = "UPDATE user SET password WHERE password='. $password .' ";
-        $result = $db->query($query);
-        return true;
 	  }
 	  
-	 //function updatePassword($pass) {
-//        $db = new Dbconnect();
-//
-//        $query = "UPDATE user SET password='". $pass. "' WHERE username=" . $username . " ";
-//        $result = $db->query($query);
-//        return true;
-//    }
+	 function updatePassword($username,$pass) {
+        $db = new Dbconnect();
+
+        $query = "UPDATE user SET password='$pass' WHERE username='$username'";
+        $result = $db->query($query);
+        return true;
+    }
 	
 	 function deleteReview($pro_id){
 		$db = new Dbconnect();

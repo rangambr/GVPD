@@ -106,7 +106,7 @@ require '../controller/display_review.php';
                                     }
                                     ?>
                                     <hr />
-                                    <a href="../controller/add_to_watchlist.php?id=<?php echo $row['property_id']; ?>"><img src="../../common/images/save.png" alt="save property" title="save property"/></a>
+                                    <a href="../../home/controller/add_to_watchlist.php"?id=<?php echo $row['property_id']; ?>"><img src="../../common/images/save.png" alt="save property" title="save property"/></a>
                                     <span style="margin-left:25px;" >
                                         <a href="../../reviews/view/review.php?id=<?php echo $row['property_id']; ?>"><img src="../../common/images/star_full.png" alt="rate property" title="rate property"/></a>
                                         <a href="../../reviews/view/review.php?id=<?php echo $row['property_id']; ?>"><img src="../../common/images/star_half.png" alt="rate property" title="rate property"/></a>&nbsp;

@@ -15,18 +15,6 @@
     <link rel="stylesheet" type="text/css" href="../../common/CSS/dropdown_menu.css">
     <link rel="stylesheet" type="text/css" href="../../common/CSS/manage_user_table.css">
      
-     <script type="text/javascript">
-     	function confirm_func() {
-	var answer = confirm("Are you sure you want to delete ?")
-	if (answer){
-		alert("Deleted!")
-		window.location = "manage_users.php";
-	}
-	else{
-		alert("Cancelled!")
-	}
-}
-     </script>
      <style type="text/css">
          .content{
              margin-top: 2% !important;

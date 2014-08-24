@@ -83,7 +83,7 @@ session_start();
     <body  bgcolor="#E1E1FF" onload="showAllReviews();">
 	
     <div style="background-color:#000089; height:10%;padding:10px; padding-left:50px" >
-		<h3 style="color:#FFFFFF">Manage reviews</h3>
+		<h3 style="color:#FFFFFF">Manage Reviews</h3>
 	</div>
 	<br/>
 <div class="admin_menu_bar" align="center" id="cssmenu">

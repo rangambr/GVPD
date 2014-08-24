@@ -69,23 +69,27 @@ require '../controller/update_property.php';
                     <td colspan="2" align="center"><h1 style="color: #FFFFFF; font-style: normal;"> Edit Property</h1></td>
                 </tr>
                 <tr>
-                                <th align="left">Status :</th>
-                                <td>
-                                    <?php 
-                                        if($status == 'Active'){
+                	
+                <?php if (isset($_SESSION['username']) && $_SESSION['active'] == 1 && $_SESSION['user_type'] == 'Admin') { ?> 
+                <th align="left">Status :</th>
+                	<td>
+                          <?php 
+                                        if($property['Status'] == 'Active'){
                                             echo '<input type="radio" name="status" value="Active" checked disabled="true"/> <span style="color: #275C0D">Active</span> ';
                                             echo '<input type="radio" name="status" value="Draft" disabled="true"/> <span style="color: #275C0D">Draft</span> ';
                                         }
 									?>
                                         
-                                    <?php 
-                                        if($status == 'Draft'){
+                            <?php 
+                                        if($property['Status'] == 'Draft'){
                                             echo '<input type="radio" name="status" value="Active" /> <span style="color: #275C0D">Active</span> ';
                                             echo '<input type="radio" name="status" value="Draft" checked/> <span style="color: #275C0D">Draft</span> ';
                                         }
                                     ?>
-                                    </td>
-                            </tr>           
+                          </td>
+                          <?php 
+						  	}?>
+                    </tr>           
                     <tr>
                         <th align="left"> Name : </th>
                         <td><label for="property_name">

@@ -15,7 +15,7 @@ while ($prp = mysql_fetch_array($all_properties)) {
     } else {
         echo "  <a  href='../controller/remove_hot_properties.php?propId=" . $prp['id'] . "'><span class='remove_hot'>Remove from hot properties</span></a>";
     }
-    echo "  <a  href='../controller/delete_properties.php?propId=" . $prp['id'] . "'><span class='delete_link'></a></span></td><tr>";
+    echo "  <a onClick=\"return confirm('Are you sure?')\" href='../controller/delete_properties.php?propId=" . $prp['id'] . "'><span class='delete_link'></a></span></td><tr>";
 }
 
 
