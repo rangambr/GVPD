@@ -9,5 +9,12 @@ class Agreement{
         $result = $db->query($sql);
         return true; 
     }
+	
+	//function getAllAgreements() {
+//        $db = new Dbconnect();
+//        $sql = "SELECT * FROM agreement ORDER BY type, username";
+//        $result = $db->query($sql);
+//        return $result;
+ //   }
 }
 ?>
