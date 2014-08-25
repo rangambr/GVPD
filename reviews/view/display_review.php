@@ -72,6 +72,11 @@ require '../controller/display_review.php';
                                 <?php
                                 echo $row['name'];
                                 ?>
+                                <span style="float: right;color: #124B0A;">
+                                    Rating: <?php 
+                                        echo getRating($row['AVG(rating)']);
+                                    ?>
+                                </span>
                             </td>
                         </tr>
                         <tr>
@@ -79,11 +84,11 @@ require '../controller/display_review.php';
                                 <br/>    <img src="../../common/images/camera_add.png" alt="photos" title="photos"/>
                             </td>
                             <td>
-                                <p><span style="font-style: normal; font-size: 16px;">Offered at:</span>
-                                <h3> <span style="font-style: normal; color: #ff0000; font-size: large;">
+                                <p><span style="font-style: normal; font-size: 16px;">Offered at: <span style="font-style: normal; color: #ff0000; font-size: large;">
 
                                         <?php echo $row['unit_price']; ?>
-                                    </span></h3>
+                                    </span></span>
+                                
                                 <span style="font-style: normal;font-weight: normal;"><br/>
                                     <span style="font-size: 14px"><?php echo $row['address1'] . ', ' . $row['address2']; ?>
                                         </p>
@@ -95,8 +100,7 @@ require '../controller/display_review.php';
                                 <p style="font-weight: normal;">
                                     <b>Reviews: </b><br/>
                                     <?php echo $row['GROUP_CONCAT(rw_description SEPARATOR "<br/>")']; ?>
-
-                                    
+                                   
                                    
                                 </p>
                                 <p> <a href="../../property/view/display_property.php?id=<?php echo $row['property_id']; ?>">More details>></a></p>

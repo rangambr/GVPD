@@ -2,7 +2,7 @@
 require '../model/review.php';
 require '../../property/model/property.php';
 //require '../../common/kint/Kint.class.php';
-$property_id=$_REQUEST['id'];
+$property_id=$_REQUEST['property_id'];
 //Kint::dump($property_id);
 $description=$_POST['txt_desc'];
 $rate=$_POST['cmb_rate'];
