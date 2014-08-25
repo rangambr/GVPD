@@ -62,18 +62,27 @@ class User {
         $result = $db->query("select * from user where username = '$username'");
         return $result;
     }
-    
-    function updateUser($username, $type, $status){
-         $db = new Dbconnect();
-       
-            $sql = "UPDATE user SET type ='$type', active ='$status' WHERE username = '$username'";
+
+    function updateUser($username, $type, $status) {
+        $db = new Dbconnect();
+
+        $sql = "UPDATE user SET type ='$type', active ='$status' WHERE username = '$username'";
+        $db->query($sql);
+        return true;
+    }
+
+    function saveWatchList($username, $property_id) {
+        $db = new Dbconnect();
+        $sql_select = "select * from watch_list where  property_id = '$property_id' and username = '$username'";
+        $result = $db->query($sql_select);
+        $count = mysql_num_rows($result);
+
+        if ($count == 0) {
+            $sql = "INSERT INTO watch_list (username,property_id) VALUES('$username','$property_id')";
             $db->query($sql);
             return true;
-	}
-     function saveWatchList($username,$property_id){
-		  $db = new Dbconnect();
-       	  $sql = "INSERT INTO watch_list (username,property_id) VALUES('$username','$property_id')";
-          $db->query($sql);
-          return true;
-		 }
+        }
+        return false;
+    }
+
 }

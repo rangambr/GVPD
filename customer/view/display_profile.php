@@ -174,10 +174,10 @@ require_once '../controller/display_profile.php';
                             <tr><th>Property</th><th>Location</th><th>Status</th><th>Action</th></tr>
                             <?php
                                 while($row=mysql_fetch_array($watch_list)){
-                                    echo '<tr><td class="wlist"> <a href="../../property/view/display_property.php?id='.$row['id'].'">'.$row['name'].'</a></td>';
+                                    echo '<tr><td class="wlist"> <a href="../../property/view/display_property.php?id='.$row['property_id'].'">'.$row['name'].'</a></td>';
                                     echo '<td class="wlist">'.$row['city'].'</td>';
                                     echo '<td class="wlist">'.$row['status'].'</td>';
-                                    echo '<td class="wlist"> <a href="../controller/remove_watch_list.php?id='.$row['id'].'">remove from watch list</a></td></tr>';
+                                    echo '<td class="wlist"> <a href="../controller/remove_watch_list.php?id='.$row['property_id'].'">remove from watch list</a></td></tr>';
                                 }
                             ?>
                                

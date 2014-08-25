@@ -82,7 +82,7 @@ require '../controller/hot_deals.php';
                             </td>
                         </tr>
                         <tr>
-                            <td><img src="../../property/photos/<?php getPhotoURLs($row['id']) ?>" height="50px" width="50 px" />
+                            <td><img src="../../property/photos/<?php getPhotoURLs($row['id']) ?>" height="150px" width="150px" />
                                 <br/>    <img src="../../common/images/camera_add.png" alt="photos" title="photos"/>
                             </td>
                             <td>
@@ -91,12 +91,12 @@ require '../controller/hot_deals.php';
 
                                         <?php echo $row['unit_price']; ?>
                                     </span></h3>
-                                <span style="font-style: normal"><br/>
+                                <span style="font-style: normal;font-weight: normal;"><br/>
                                     <span style="font-size: 14px"><?php echo $row['address1'].', '.$row['address2']; ?>
                                         </p>
                                     </span></span>
-                                <p style="font-size: 14px">Property Type: <?php echo $row['type']; ?></p>
-                                <p>
+                                <p style="font-size: 14px;font-weight: normal;"><b>Property Type:</b> <?php echo $row['type']; ?></p>
+                                <p style="font-weight: normal;">
                                     <?php echo $row['description']; ?>
                                 </p>
                                 <p> <a href="../../property/view/display_property.php?id=<?php echo $row['id']; ?>">More details>></a></p>
