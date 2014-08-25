@@ -14,7 +14,7 @@ class Review {
 
   function getAllGroupedReviews() {
         $db = new Dbconnect();
-        $sql = 'select review.id,review.property_id,property.unit_price,property.address1,property.address2,property.type,property.description, GROUP_CONCAT(rw_description SEPARATOR "<br/>"), review.rw_description,review.rating,property.name from review,property where review.property_id = property.id group by property_id order by property_id';
+        $sql = 'select review.id,review.property_id,property.unit_price,property.address1,property.address2,property.type,property.description, GROUP_CONCAT(rw_description SEPARATOR "<br/>"), AVG(rating) ,review.rw_description,review.rating,property.name from review,property where review.property_id = property.id group by property_id order by property_id';
         $result = $db->query($sql);
         return $result;
     }
