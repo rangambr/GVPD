@@ -99,6 +99,11 @@ class Admin {
         $result = $db->query($query);
         return true;
     }
+	//function: send email after reset the password by the admin
+    function reset_password_email($to, $subject, $body) {
+        mail($to, $subject, $body, 'From: postmaster@localhost');
+    }
+
 
     function deleteReview($pro_id) {
         $db = new Dbconnect();

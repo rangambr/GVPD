@@ -82,7 +82,7 @@ require_once '../controller/display_profile.php';
                 <li><a href='../../property/view/add_property.php'><span>Selling</span></a></li>
                 <li><a href="../../property/view/search_property.php"><span>Properties</span></a></li>
                 <li><a href='../view/hot_deals.php'><span>Hot Deals</span></a></li>
-                <li><a href='#'><span>Review</span></a></li>
+                <li><a href='../../reviews/view/display_review.php'><span>Review</span></a></li>
                 <li class='last'><a href='../view/contact_us.php'><span>Contact us</span></a></li>
             </ul>
         </div>

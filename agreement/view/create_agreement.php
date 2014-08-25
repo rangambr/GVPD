@@ -38,10 +38,6 @@
             	<td width="162"> Prior Registration:</td>
                 <td width="326"><input name="txt_reg" type="text" size="45"/></td>
             </tr>
-            <tr>	
-            	<td class="spacer">Agreement No.</td>
-                <td><input name="txt_no" type="text" size="45"/></td>
-            </tr>
             <tr>
             	<td>Lawyer's name:</td>
                 <td><input name="txt_lname" type="text" size="45"/></td>
@@ -58,10 +54,13 @@
             	<td colspan="2">&nbsp;</td>
             </tr>
             <tr>
-            	<td colspan="2"><strong>AGREEMENT TO SELL ON BEHALF OF OWNER NO.</strong><span>
-            	<input type="text" name="txt_owner"/></span></td>
+            	<td colspan="2"><strong>AGREEMENT TO SELL ON BEHALF OF OWNER NO.</strong></td>
             </tr>
             <br/>
+            <tr>
+            	<td>Agreement No :</td>
+            	<td><input name="txt_agr_no" type="text" size="45"/></td>
+
             <tr>
             	<td>Location :</td>
             	<td><input name="txt_location" type="text" size="45"/></td>
