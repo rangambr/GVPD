@@ -73,7 +73,7 @@
              <a href="../view/reports.php"><img src="../../common/images/icons/report.png"/>Reports</a>
          </td>
           <td>
-             <a href="../../agreement/view/add_agreement1.php"><img src="../../common/images/icons/agreement.png"/>Create agreements</a>
+             <a href="../../agreement/view/add_agreement1.php"><img src="../../common/images/icons/agreement.png"/>Agreements</a>
          </td>
      </tr>
      

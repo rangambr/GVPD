@@ -50,10 +50,10 @@ session_start();
                 padding-left: 10px;
             }
             .add_home{
-                content: url('../..//common/icons/add-icon-small.png');
+                content: url('../..//common/icons/picture-add-icon.png');
             }
             .remove_home{
-                content: url('../..//common/icons/close_icon_small.png');
+                content: url('../..//common/icons/picture-delete-icon.png');
             }
         </style>
         <script>

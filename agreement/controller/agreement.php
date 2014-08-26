@@ -1,5 +1,5 @@
 <?php
-require '../model/add_agreement.php';
+require '../model/agreement.php';
 
 $reg_no=$_POST["txt_reg"];
 $no=$_POST["txt_no"];
@@ -17,5 +17,7 @@ $address=$_POST["txt_address"];
 
 $add_aggr_data=new Agreement();
 $aggreemnt_data=$add_aggr_data->insertAggrData($reg_no,$no,$lawyer_name,$lawyer_address,$lawyer_tel,$owner,$location,$date,$month,$year,$land_owner,$NIC,$address);
-header("Location:../view/add_agreement1.php");
+header("Location:../view/create_agreement.php");
 ?>
+
+

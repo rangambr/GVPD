@@ -45,7 +45,7 @@ $(document).ready(function(){
         	<table border="0" align="center" width="100%">
             	<tr>
                 	<td style="margin-left:30px; padding-left:30px;">
-                        <div align="center"><br/>
+                        <div align="center"><img src="../../common/images/tr_banner.png"/><br/>
                             <span style="color: #3A6839; font-weight: bold; font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans', Verdana, sans-serif; font-style: italic; font-size: large;">We Make Your Dream Come True.</span>
                         </div>
            			<td align="center">             
@@ -61,7 +61,7 @@ $(document).ready(function(){
                 <li><a href='../../home/view/about_us.php'><span>About Us</span></a></li>
                 <li><a href='../../property/view/advaced_search_property.php'><span>Buying</span></a></li>
                 <li><a href='../../property/view/add_property.php'><span>Selling</span></a></li>
-                <li><a href='../../home/view/hot_deals.php'><span>Hot<img src="../../common/images/tr_banner.png"/> Deals</span></a></li>
+                <li><a href='../../home/view/hot_deals.php'><span>Hot Deals</span></a></li>
                 <li><a href='../../forum/create_topic.php'><span>Forum</span></a></li>
                 <li><a href='../../reviews/view/review.php'><span>Review</span></a></li>
                 <li class='last'><a href='contact_us.php'><span>Contact us</span></a></li>
