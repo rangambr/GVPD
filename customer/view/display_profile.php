@@ -146,6 +146,10 @@ require_once '../controller/display_profile.php';
                                 <td><input name="city" class="inputs" id="city2" placeholder="Please type your city here" size="20" value="<?php echo '' . $city; ?>" disabled="true" /></td>
                             </tr>
                             <tr>
+                                <th align="left">Province :</th>
+                                <td><input name="province" class="inputs" id="province" placeholder="Please type your province here" size="20" value="<?php echo '' . $province; ?>" disabled="true" /></td>
+                            </tr>
+                            <tr>
                                 <th align="left">Birthday :</th>
                                 <td><input type="text" id="Datepicker1" class="inputs" name="txtbday" placeholder="Enter your birthday here" size="20" value="<?php echo '' . $birthday; ?>" disabled="true" /></td>
                             </tr>
