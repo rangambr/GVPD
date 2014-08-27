@@ -14,4 +14,4 @@ while ($row = mysql_fetch_array($result)) {
 }
 $allPhotoURLs = $prop->getAllPhotoURLs($property['id']);
 
-
+?>

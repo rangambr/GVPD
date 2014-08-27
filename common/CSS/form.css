@@ -4,14 +4,14 @@
 	border-radius:10 px;
 	}
 tr,td{
-	font-size: small;
+	font-size: large;
 	font-style: normal;
 	font-weight: bold;
 	color: #000000;
 	}
 th{
 	padding-left: 20px;
-	color: #0F2701;
+	color: #132E06;
 	font-size: 12px;
 	font-style: normal;
 }

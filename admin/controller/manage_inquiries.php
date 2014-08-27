@@ -1,6 +1,6 @@
 <?php
 
-require '../../inquiry/model/inquiry.php';
+require '../../contact_us/model/contact.php';
 $inc = new Inquiry();
 $all_inc = $inc->getAllInquiries();
 

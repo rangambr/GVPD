@@ -52,12 +52,20 @@
      <tr>
          <th colspan="2" align="center"><h3 style="color:#120072;">Administration Tools</h3></th>
      </tr>
-     <tr>
+      <tr>
          <td>
-             <a href="../view/manage_users.php"><img src="../../common/images/icons/user.png"/>Manage users</a>
+             <a href="../../home/view/index.php"><img src="../../common/images/icons/home.png"/>Home</a>
          </td>
           <td >
-              <a href="../view/manage_properties.php"><img src="../../common/images/icons/property.png"/>Manage properties</a>
+             <a href="../view/manage_users.php"><img src="../../common/images/icons/user.png"/>Manage users</a>
+         </td>
+     </tr>
+     <tr>
+         <td>
+             <a href="../view/manage_properties.php"><img src="../../common/images/icons/property.png"/>Manage properties</a>
+         </td>
+          <td >
+              <a href="../view/manage_reviews.php"><img src="../../common/images/icons/review.png"/>Manage reviews</a>
          </td>
      </tr>
      <tr>
@@ -65,7 +73,7 @@
              <a href="../view/manage_inquiries.php"><img src="../../common/images/icons/inquiry.png"/>Manage inquiries</a>
          </td>
           <td>
-              <a href="../view/manage_reviews.php"><img src="../../common/images/icons/review.png"/>Manage reviews</a>
+               <a href="../../agreement/view/agreement_details.php"><img src="../../common/images/icons/agreement.png"/>Agreements</a>
          </td>
      </tr>
      <tr>
@@ -73,7 +81,7 @@
              <a href="../view/reports.php"><img src="../../common/images/icons/report.png"/>Reports</a>
          </td>
           <td>
-             <a href="../../agreement/view/add_agreement1.php"><img src="../../common/images/icons/agreement.png"/>Agreements</a>
+             <a href="../../agreement/view/agreement_details.php"><img src=""/></a>
          </td>
      </tr>
      

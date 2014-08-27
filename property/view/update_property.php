@@ -71,8 +71,8 @@ require '../controller/update_property.php';
                 <tr>
                 	
                 <?php if (isset($_SESSION['username']) && $_SESSION['active'] == 1 && $_SESSION['user_type'] == 'Admin') { ?> 
-                <th align="left">Status :</th>
-                	<td>
+                <th width="35%" align="left">Status :</th>
+                	<td width="65%">
                           <?php 
                                         if($property['Status'] == 'Active'){
                                             echo '<input type="radio" name="status" value="Active" checked disabled="true"/> <span style="color: #275C0D">Active</span> ';
@@ -150,7 +150,7 @@ require '../controller/update_property.php';
                                 $rw_count++;
                                 ?>
                                 <span class="img left">
-                                    <img src="../../property/photos/<?php echo '' . $rowpic['pic'] ?>" alt="" title=""/>
+                                    <img src="../../property/photos/<?php echo '' . $rowpic['pic'] ?>" alt="" title="" width="150px" height="150px"/>
                                     <?php echo '<input type="hidden" name="oldpic' . $rw_count . '" value="' . $rowpic['pic'] . '"/>'; ?>
                                 </span>
                             <?php } ?>

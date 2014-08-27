@@ -31,6 +31,7 @@
                 <li><a href='../property/view/advaced_search_property.php'><span>Buying</span></a></li>
                 <li><a href='../property/view/add_property.php'><span>Selling</span></a></li>
                 <li><a href='../home/view/hot_deals.php'><span>Hot Deals</span></a></li>
+                <li><a href='main_forum.php'><span>Forum</span></a></li>
                 <li><a href='../reviews/view/display_review.php'><span>Review</span></a></li>
                 <li class='last'><a href='../contact_us/view/contact_us.php'><span>Contact us</span></a></li>
             </ul>
@@ -49,18 +50,20 @@
 	if(!empty($_REQUEST['msg'])){
   		$error_code = $_REQUEST['msg'];
   			if($error_code == "3"){ ?>
-            	<div align="center" style="color: #10781F; font-size: 14px;"><b>Added the topic successfully!</b></div>
+            	<div align="center">
+<div align="center" style="border:solid #275C0D; width:300px; height:30px; padding:5px; background:#E3EFAF" ><img src="../common/images/icons/successful.png" width="16 px" height="16 px"/><span style="color:#368112; font-size:14px;" ><b>You haveadded the topic successfully!</b></span></div>
+</div>
                 <?php 
 				}
 	}?>
 <br/><br/>
 <table width="90%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
-<tr>
-<td width="6%" align="center" bgcolor="#E6E6E6"><strong>#</strong></td>
-<td width="53%" align="center" bgcolor="#E6E6E6"><strong>Topic</strong></td>
-<td width="15%" align="center" bgcolor="#E6E6E6"><strong>Views</strong></td>
-<td width="13%" align="center" bgcolor="#E6E6E6"><strong>Replies</strong></td>
-<td width="13%" align="center" bgcolor="#E6E6E6"><strong>Date/Time</strong></td>
+<tr bgcolor="#275C0D">
+<td width="6%" align="center" ><strong>#</strong></td>
+<td width="53%" align="center" ><strong style="color: #FFFFFF">Topic</strong></td>
+<td width="15%" align="center" ><strong style="color: #FFFFFF">Views</strong></td>
+<td width="13%" align="center" ><strong style="color: #FFFFFF">Replies</strong></td>
+<td width="13%" align="center" ><strong style="color: #FFFFFF">Date/Time</strong></td>
 </tr>
 
 		  <?php
@@ -84,7 +87,7 @@
           ?>
 
 <tr>
-<td colspan="5" align="right" bgcolor="#E6E6E6"><a href="create_topic.php"><strong>Create New Topic</strong> </a></td>
+<td colspan="5" align="right" bgcolor="#275C0D"><a href="create_topic.php"><strong style="color: #FFFFFF">Create New Topic</strong> </a></td>
 </tr>
 </table>
 <p>&nbsp;</p>

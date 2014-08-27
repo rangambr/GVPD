@@ -171,7 +171,7 @@ function validate(){
   <form name="register" method="post" action="../controller/register.php" onsubmit="return validate();">
   <table align="center" width="500" style="border: 1px groove #93AE13; font-style: normal;">
        	 <tr bgcolor="#005825">
-         		<td colspan="2" align="center" bgcolor="#005825"><h1 style="color: #FFFFFF; font-style: normal;">Customer Registration</h1></td>
+         		<td colspan="2" align="center" bgcolor="#005825"><h2 style="color: #FFFFFF; font-style: normal;">Customer Registration</h2></td>
          	</tr>
          		<tr>
 					<th align="left">First Name :</th>

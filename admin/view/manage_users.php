@@ -56,7 +56,7 @@
               <li><a href='manage_inquiries.php'><span>Inquiries</span></a></li>
               <li><a href='manage_reviews.php'><span>Reviews</span></a></li>
               <li><a href='reports.php'><span>Reports</span></a></li>
-              <li><a href='../../agreement/view/add_agreement1.php'><span>Agreements</span></a></li>
+              <li><a href='../../agreement/view/agreement_details.php'><span>Agreements</span></a></li>
             </ul>
 </div>
 
@@ -73,9 +73,9 @@
           {
           echo "<tr class='user_info'><td>".$usr['username']."</td>";
           echo "<td class='user_info'>".$usr['type']."</td>";
-          echo "<td class='ac_link'><a  href='update_user.php?username=".$usr['username']."'><span class='edit_link'></span></a>";
-          echo " | <a  href='../controller/reset_password.php?username=".$usr['username']."'><span class='reset_pw'></span></a>";
-          echo " | <a onClick=\"return confirm('Are you sure?')\" href='../controller/delete_users.php?username=".$usr['username']."'><span class='delete_link' ></span></a></td><tr>";
+          echo "<td class='ac_link'><a  href='update_user.php?username=".$usr['username']."'><span class='edit_link' title='Update User'></span></a>";
+          echo " | <a  href='../controller/reset_password.php?username=".$usr['username']."'><span class='reset_pw' title='Reset Password'></span></a>";
+          echo " | <a onClick=\"return confirm('Are you sure?')\" href='../controller/delete_users.php?username=".$usr['username']."'><span class='delete_link' title='Delete User'></span></a></td><tr>";
           }
       ?>
     </table>

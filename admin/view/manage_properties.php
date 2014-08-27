@@ -36,6 +36,7 @@ session_start();
             }
             .edit_link{
                 content: url('../..//common/icons/sites-pencil-icon-small.gif');
+				
             }
             .delete_link{
                 content: url('../..//common/icons/icon-delete-small.png');

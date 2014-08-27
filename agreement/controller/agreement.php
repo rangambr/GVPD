@@ -2,22 +2,35 @@
 require '../model/agreement.php';
 
 $reg_no=$_POST["txt_reg"];
-$no=$_POST["txt_no"];
-$lawyer_name=$_POST["txt_lname"];
-$lawyer_address=$_POST["txt_laddress"];
-$lawyer_tel=$_POST["txt_ltel"];
-$owner=$_POST["txt_owner"];
+$agr_no-$_POST["txt_agr_no"];
 $location=$_POST["txt_location"];
 $date=$_POST["txt_date"];
-$month=$_POST["txt_month"];
-$year=$_POST["txt_year"];
-$land_owner=$_POST["txt_land_owner"];
-$NIC=$_POST["txt_id"];
+$fullname=$_POST["txt_land_owner"];
+$nic=$_POST["txt_nic"];
 $address=$_POST["txt_address"];
+$price=$_POST["txt_price"];
+$valid_time=$_POST["txt_valid"];
+$description=$_POST["txt_description"];
+$wit1=$_POST["txt_wit1"];
+$wit2=$_POST["txt_wit2"];
+
+$l_name=$_POST["txt_lname"];
+$l_address=$_POST["txt_laddress"];
+$l_tel=$_POST["txt_ltel"];
+
+$sur=$_POST["txt_survey"];
+$adv=$_POST["txt_adv"];
+$dev=$_POST["txt_dev"];
+$other=$_POST["txt_other"];
+$elec=$_POST["txt_electricity"];
+$tot=$_POST["txt_total"];
 
 $add_aggr_data=new Agreement();
-$aggreemnt_data=$add_aggr_data->insertAggrData($reg_no,$no,$lawyer_name,$lawyer_address,$lawyer_tel,$owner,$location,$date,$month,$year,$land_owner,$NIC,$address);
-header("Location:../view/create_agreement.php");
+$add_aggr_data->insertToAgreement($reg_no,$agr_no,$location,$date,$fullname,$nic,$address,$price,$valid_time,$description,$wit1,$wit2);
+$add_aggr_data->insertToLawyer($l_name,$l_address,$l_tel);
+$add_aggr_data->insertToDev_cost($sur,$adv,$dev,$other,$elec,$tot);
+
+header("Location:../view/create_agreement.php?msg=10");
 ?>
 
 

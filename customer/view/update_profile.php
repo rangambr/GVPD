@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 require_once '../controller/display_profile.php';
 ?>
 <!doctype html>
@@ -10,11 +10,11 @@ require_once '../controller/display_profile.php';
 
         <link rel="stylesheet" type="text/css" href="../../common/CSS/home.css">
         <link rel="stylesheet" type="text/css" href="../../common/CSS/menu_bar.css">
-        <link rel="stylesheet" type="text/css" href="register.css">
+        <link rel="stylesheet" type="text/css" href="../../common/CSS/login_tbl.css">
         <link rel="stylesheet" type="text/css" href="../../common/CSS/form.css">
         <link rel="stylesheet" type="text/css" href="../../common/CSS/button.css">
-
-        <link href="../../common/jQueryAssets/jquery.ui.core.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="../../common/CSS/dropdown.css">
+        <link rel="stylesheet" type="text/css" href="../../common/CSS/dropdown_menu.css">
         <link href="../../common/jQueryAssets/jquery.ui.theme.min.css" rel="stylesheet" type="text/css">
         <style type="text/css">
             .sidebar {
@@ -57,35 +57,47 @@ require_once '../controller/display_profile.php';
                         </div>
 					</td>
                     <td align="center">
-               			<table class="login_tbl">
-                 			<tr>
-                    			<td class="user_lgn_msg">
-								  <?php if (isset($_SESSION['username']) && $_SESSION['active'] == 1) { ?> 
-                                  <?php echo 'Hi, <a href="../../customer/view/display_profile.php">' . $_SESSION['username'] . '</a> '; ?>
-                                      <span style="font-style: normal">
-                                          <a style="display: inline; font-size: small;" href="../controller/logout.php">Logout</a>
-                                     </span>      
-                        		<?php } ?>
-                    		  </td>
-               				</tr>
-             			</table>
-             	</td>
+               			<table style="border:2px solid rgb(181,194,179); border-radius:6px; font-size:small;">
+
+                           <tr>
+
+<?php if (isset($_SESSION['username']) && $_SESSION['active'] == 1) { ?> 
+                                        <td colspan="3" class="user_lgn_msg">
+                                            <div style="width:95%;">
+    <?php echo '<a class="login_btn_gr" href="display_profile.php"> Hi, ' . $_SESSION['username'] . '</a> '; ?>
+                                                <br/>
+
+                                                <a class="login_btn_gr" style="font-size: small;" href="../../home/controller/logout.php">
+                                                    Logout
+                                                </a><br/>
+                                                <?php if (isset($_SESSION['user_type']) && $_SESSION['user_type'] == 'Admin') { ?>
+                                                    <a class="login_btn_gr" style="font-size: small;" href="../../admin/view/control_panel.php">Admin Panel</a>
+    <?php } ?>
+                                            </div>
+                                        </td>      
+<?php } ?> 
+
+                                </tr>
+
+                        </table>
+             		</td>
              </tr>
          </table>
         </div>  		
 
          <div class="menu_bar" align="center" id="cssmenu">
             <ul>
-                <li class='active'><a href='index.php'><span>Home</span></a></li>
-                 <li><a href='about_us.php'><span>About Us</span></a></li>
-                <li><a href='../view/advanced_search.php'><span>Buying</span></a></li>
+                <li class='active'><a href='../../home/view/index.php'><span>Home</span></a></li>
+                <li><a href='../../home/view/about_us.php'><span>About Us</span></a></li>
+                <li><a href='../../property/view/advaced_search_property.php'><span>Buying</span></a></li>
                 <li><a href='../../property/view/add_property.php'><span>Selling</span></a></li>
-                <li><a href="../../property/view/search_property.php"><span>Properties</span></a></li>
-                <li><a href='../view/hot_deals.php'><span>Hot Deals</span></a></li>
+                <li><a href='../../home/view/hot_deals.php'><span>Hot Deals</span></a></li>
+                <li><a href='../../forum/main_forum.php'><span>Forum</span></a></li>
                 <li><a href='../../reviews/view/display_review.php'><span>Review</span></a></li>
                 <li class='last'><a href='../../contact_us/view/contact_us.php'><span>Contact us</span></a></li>
-            </ul>
-        </div>
+           </ul>
+</div>
+
         <div class="content">
             
             <div id="Tabs1">
@@ -167,7 +179,7 @@ require_once '../controller/display_profile.php';
 
                         <table align="center" width="500" style="border:1px groove #93AE13;">
                             <tr height="33px">
-                                <td align="center"><img src="../../common/images/icons/user_yellow_edit.png"/></td>
+                                <td align="center"><img src="../../common/images/icons/reset password.png"/></td>
                                 <td><p align="left" style="font-weight: bold; font-style: normal; font-size: 16px; color: #275C0D;"> Reset your Username & Password.</p>
                                 </td>
                             </tr>
@@ -194,7 +206,7 @@ require_once '../controller/display_profile.php';
             </div>
 
         </div>
-
+		<br/>
         <div class="footer" id="footer_wrap">
             <ul>
                 <li class='active'><a href='index.php'><span>Home</span></a></li>

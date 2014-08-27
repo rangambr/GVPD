@@ -6,12 +6,15 @@ require_once '../controller/display_profile.php';
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Registration</title>
+        <title>Display profile</title>
 
         <link rel="stylesheet" type="text/css" href="../../common/CSS/home.css">
         <link rel="stylesheet" type="text/css" href="../../common/CSS/menu_bar.css">
+        <link rel="stylesheet" type="text/css" href="../../common/CSS/login_tbl.css">
         <link rel="stylesheet" type="text/css" href="../../common/CSS/form.css">
         <link rel="stylesheet" type="text/css" href="../../common/CSS/button.css">
+        <link rel="stylesheet" type="text/css" href="../../common/CSS/dropdown.css">
+        <link rel="stylesheet" type="text/css" href="../../common/CSS/dropdown_menu.css">
 
         <link href="../../common/jQueryAssets/jquery.ui.core.min.css" rel="stylesheet" type="text/css">
         <link href="../../common/jQueryAssets/jquery.ui.theme.min.css" rel="stylesheet" type="text/css">
@@ -43,6 +46,7 @@ require_once '../controller/display_profile.php';
             }
             .wlist{
                 text-align: center;
+				font-size:12px;
             }
         </style>
         
@@ -58,34 +62,47 @@ require_once '../controller/display_profile.php';
                         </div>
 					</td>
                     <td align="center">
-               			<table class="login_tbl">
-                 			<tr>
-                    			<td class="user_lgn_msg">
-								  <?php if (isset($_SESSION['username']) && $_SESSION['active'] == 1) { ?> 
-                                  <?php echo 'Hi, <a href="../../customer/view/display_profile.php">' . $_SESSION['username'] . '</a> '; ?>
-                                      <span style="font-style: normal">
-                                          <a style="display: inline; font-size: small;" href="../../home/controller/logout.php">Logout</a>
-                                     </span>      
-                        		<?php } ?>
-                    		  </td>
-               				</tr>
-             			</table>
-             	</td>
-             </tr>
+               			<table style="border:2px solid rgb(181,194,179); border-radius:6px; font-size:small;">
+
+                           <tr>
+
+<?php if (isset($_SESSION['username']) && $_SESSION['active'] == 1) { ?> 
+                                        <td colspan="3" class="user_lgn_msg">
+                                            <div style="width:95%;">
+    <?php echo '<a class="login_btn_gr" href="display_profile.php"> Hi, ' . $_SESSION['username'] . '</a> '; ?>
+                                                <br/>
+
+                                                <a class="login_btn_gr" style="font-size: small;" href="../../home/controller/logout.php">
+                                                    Logout
+                                                </a><br/>
+                                                <?php if (isset($_SESSION['user_type']) && $_SESSION['user_type'] == 'Admin') { ?>
+                                                    <a class="login_btn_gr" style="font-size: small;" href="../../admin/view/control_panel.php">Admin Panel</a>
+    <?php } ?>
+                                            </div>
+                                        </td>      
+<?php } ?> 
+
+                                </tr>
+
+                        </table>	
+             		</td>
+             	</tr>
          </table>
         </div>   		
 
-        <div class="menu_bar" align="center" id="cssmenu">
+<div class="menu_bar" align="center" id="cssmenu">
             <ul>
-                 <li class='active'><a href='index.php'><span>Home</span></a></li>
-                <li><a href='../view/advanced_search.php'><span>Buying</span></a></li>
+                <li class='active'><a href='../../home/view/index.php'><span>Home</span></a></li>
+                <li><a href='../../home/view/about_us.php'><span>About Us</span></a></li>
+                <li><a href='../../property/view/advaced_search_property.php'><span>Buying</span></a></li>
                 <li><a href='../../property/view/add_property.php'><span>Selling</span></a></li>
-                <li><a href="../../property/view/search_property.php"><span>Properties</span></a></li>
-                <li><a href='../view/hot_deals.php'><span>Hot Deals</span></a></li>
+                <li><a href='../../home/view/hot_deals.php'><span>Hot Deals</span></a></li>
+                <li><a href='../../forum/main_forum.php'><span>Forum</span></a></li>
                 <li><a href='../../reviews/view/display_review.php'><span>Review</span></a></li>
-                <li class='last'><a href='../view/contact_us.php'><span>Contact us</span></a></li>
-            </ul>
-        </div>
+                <li class='last'><a href='../../contact_us/view/contact_us.php'><span>Contact us</span></a></li>
+           </ul>
+</div>
+
         <div class="content">
             
             <div id="Tabs1">
@@ -99,14 +116,14 @@ require_once '../controller/display_profile.php';
                         <?php } ?>
                     </div>
                     <form name="update_profile.php" method="post" action="../controller/update_profile.php">
-                        <table align="center" width="500" style="border:1px groove #93AE13;">
-                            <tr height="33px">
-                                <td align="center"><img src="../../common/images/icons/user_yellow_edit.png"/></td>
-                                <td><p align="left" style="font-weight: bold; font-style: normal; font-size: 16px; color: #275C0D;">Something Changed? &nbsp;&nbsp; Edit your profile.</p>
+                        <table align="center" width="600" style="border:1px groove #000089;" cellspacing="5px" >
+                            <tr bgcolor="#B5B5FF" height="40px">
+                                <td height="79" colspan="2" align="center"><img src="../../common/images/icons/user_yellow_edit.png"/>
+                                <span align="left" style="font-weight: bold; font-style: normal; font-size: 18px; color: #000089;">Something Changed?Edit your profile.</span>
                                 </td>
                             </tr>
                             <tr>
-                                <td colspan="2"><hr /></td>
+                                
                             </tr>
                             <tr>
                                 <th align="left">First Name :</th>
@@ -121,14 +138,14 @@ require_once '../controller/display_profile.php';
                                 <td>
                                     <?php 
                                         if($gender == 'Male'){
-                                            echo '<input type="radio" name="gender" value="Male" checked disabled="true"/> <span style="color: #275C0D">Male</span> ';
-                                            echo '<input type="radio" name="gender" value="Female" disabled="true"/> <span style="color: #275C0D">Female</span> ';
+                                            echo '<input type="radio" name="gender" value="Male" checked disabled="true"/> <span style="color: #132E06;">Male</span> ';
+                                            echo '<input type="radio" name="gender" value="Female" disabled="true"/> <span style="color: #132E06; font-size:12px;">Female</span> ';
                                         }?>
                                         
                                     <?php 
                                         if($gender == 'Female'){
-                                            echo '<input type="radio" name="gender" value="Male" /> <span style="color: #275C0D">Male</span> ';
-                                            echo '<input type="radio" name="gender" value="Female" checked/> <span style="color: #275C0D">Female</span> ';
+                                            echo '<input type="radio" name="gender" value="Male" /> <span style="font-size:12px;color: #132E06; ">Male</span> ';
+                                            echo '<input type="radio" name="gender" value="Female" checked/> <span style="font-size:12px; color: #132E06">Female</span> ';
                                         }
                                     ?>
                                     </td>
@@ -161,35 +178,39 @@ require_once '../controller/display_profile.php';
                             </tr>
                             
                             <tr>
-                                <td colspan="2" align="center" valign="middle"><input type="submit" value="Update" class="myButton" name="submit" /></td>
+                                <td colspan="2" align="center" valign="middle"><input type="submit" value="Update" class="myButton small_btn" name="submit" /></td>
                             </tr>
                         </table>
-                        
-                        <table align="center" width="500" style="border:1px groove #93AE13;">
-                            <tr height="33px">
-                                <td align="center"><img src="../../common/images/icons/user_yellow_edit.png"/></td>
-                                <td><p align="left" style="font-weight: bold; font-style: normal; font-size: 16px; color: #275C0D;">My watch list.</p>
+                        <br/>
+                        <table align="center" width="600" style="border: 1px groove #000089; font-size: 16px;" cellspacing="5px" >
+                            <tr bgcolor="#B5B5FF" height="79px">
+                                <td height="79" colspan="4" align="center"><img src="../../common/images/icons/watch__ List.png" width="64" height="64"/>
+                                <span align="left" style="font-weight: bold; font-style: normal; font-size: 18px; color: #000089;">My watch list</span>
                                 </td>
                             </tr>
-                            <tr><th>Property</th><th>Location</th><th>Status</th><th>Action</th></tr>
+                            <tr style="font-size:14px" height="40px">
+                            	<th width="281" style="color: #132E06; font-size: 14px; text-align: left; font-style: normal;"><u>Property</u></th><th width="83" style="color: #132E06; font-size: 14px; text-align: left;"><u>Location</u></th><th width="82" style="color: #132E06; font-size: 14px; text-align: left;"><u>Status</u></th><th width="134" style="color: #132E06; font-size: 14px; text-align: left;"><u>Action</u></th>
+                            </tr>
                             <?php
                                 while($row=mysql_fetch_array($watch_list)){
                                     echo '<tr><td class="wlist"> <a href="../../property/view/display_property.php?id='.$row['property_id'].'">'.$row['name'].'</a></td>';
-                                    echo '<td class="wlist">'.$row['city'].'</td>';
-                                    echo '<td class="wlist">'.$row['status'].'</td>';
+                                    echo '<td class="wlist" align="center" style="margin-left:5px;">'.$row['city'].'</td>';
+                                    echo '<td class="wlist" align="center">'.$row['status'].'</td>';
                                     echo '<td class="wlist"> <a href="../controller/remove_watch_list.php?id='.$row['property_id'].'">remove from watch list</a></td></tr>';
                                 }
                             ?>
                                
                         </table>
-                        
-                        <table align="center" width="500" style="border:1px groove #93AE13;">
-                            <tr height="33px">
-                                <td align="center"><img src="../../common/images/icons/user_yellow_edit.png"/></td>
-                                <td><p align="left" style="font-weight: bold; font-style: normal; font-size: 16px; color: #275C0D;">Properties Added by me</p>
+                         <br/>
+                      <table align="center" width="600" style="border: 1px groove #000089; color: #FF4F15;"  cellspacing="5px">
+                            <tr bgcolor="#B5B5FF" height="33px">
+                                <td height="79" colspan="4" align="center"><img src="../../common/images/icons/property.png"/>
+                              <span align="left" style="font-weight: bold; font-style: normal; font-size: 18px; color: #000089;">Properties Added By Me</span>
                                 </td>
                             </tr>
-                            <tr><th>Property</th><th>Location</th><th>Status</th><th>Action</th></tr>
+                            
+                            <tr style="font-size:14px;" height="40px">
+                          <th width="281" style="color: #132E06; font-size: 14px; text-align: left;">Property</th><th width="107" style="color: #132E06; font-size: 14px; text-align: left;">Location</th><th width="85" style="color: #132E06; font-size: 14px; text-align: left;">Status</th><th width="107" style="color:#132E06; font-size: 14px; text-align: left;">Action</th></tr>
                             <?php
                                 while($row=mysql_fetch_array($my_properties)){
                                     echo '<tr><td class="wlist"> <a href="../../property/view/display_property.php?id='.$row['id'].'">'.$row['name'].'</a></td>';
@@ -206,7 +227,7 @@ require_once '../controller/display_profile.php';
             </div>
 
         </div>
-
+<br/><br/><br/>
         <div class="footer" id="footer_wrap">
             <ul>
                 <li class='active'><a href='index.php'><span>Home</span></a></li>

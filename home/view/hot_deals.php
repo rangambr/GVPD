@@ -12,7 +12,6 @@ require '../controller/hot_deals.php';
         <link rel="stylesheet" type="text/css" href="../../common/CSS/home.css">
         <link rel="stylesheet" type="text/css" href="../../common/CSS/menu_bar.css">
         <link rel="stylesheet" type="text/css" href="../../common/CSS/login_tbl.css">
-        <link rel="stylesheet" type="text/css" href="../../common/CSS/slider.css">
         <link rel="stylesheet" type="text/css" href="../../common/CSS/form.css">
         <link rel="stylesheet" type="text/css" href="../../common/CSS/button.css">
         <link rel="stylesheet" type="text/css" href="../../common/CSS/dropdown.css">
@@ -32,20 +31,27 @@ require '../controller/hot_deals.php';
 
                     </td>
                     <td>
-                        <table >
+                        <table style="border:2px solid rgb(181,194,179); border-radius:6px; font-size:small;">
 
-                            <tr>
+                           <tr>
 
-                                <?php if (isset($_SESSION['username']) && $_SESSION['active'] == 1) { ?> 
-                                    <td colspan="3" class="user_lgn_msg">
-                                        <div style="width:95%;">
-                                            <?php echo '<a class="login_btn_gr" href="../../customer/view/display_profile.php"> Hi, ' . $_SESSION['username'] . '</a> '; ?>
+<?php if (isset($_SESSION['username']) && $_SESSION['active'] == 1) { ?> 
+                                        <td colspan="3" class="user_lgn_msg">
+                                            <div style="width:95%;">
+    <?php echo '<a class="login_btn_gr" href="../../customer/view/display_profile.php"> Hi, ' . $_SESSION['username'] . '</a> '; ?>
+                                                <br/>
 
-                                        </div>
-                                    </td>      
-                                <?php } ?> 
+                                                <a class="login_btn_gr" style="font-size: small;" href="../controller/logout.php">
+                                                    Logout
+                                                </a><br/>
+                                                <?php if (isset($_SESSION['user_type']) && $_SESSION['user_type'] == 'Admin') { ?>
+                                                    <a class="login_btn_gr" style="font-size: small;" href="../../admin/view/control_panel.php">Admin Panel</a>
+    <?php } ?>
+                                            </div>
+                                        </td>      
+<?php } ?> 
 
-                            </tr>
+                                </tr>
 
                         </table>
                     </td>

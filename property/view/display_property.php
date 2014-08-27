@@ -17,6 +17,7 @@
                 <style>
                     .ct_table th{
                         width: 33%;
+						font-size:12px;
                     }
                     
                 </style>        
