@@ -58,18 +58,29 @@
                         </div>
 					</td>
                     <td align="center">
-               			<table class="login_tbl">
-                 			<tr>
-                    			<td class="user_lgn_msg">
-								  <?php if (isset($_SESSION['username']) && $_SESSION['active'] == 1) { ?> 
-                                  <?php echo 'Hi, <a href="../../customer/view/display_profile.php">' . $_SESSION['username'] . '</a> '; ?>
-                                      <span style="font-style: normal">
-                                          <a style="display: inline; font-size: small;" href="../../home/controller/logout.php">Logout</a>
-                                     </span>      
-                        		<?php } ?>
-                    		  </td>
-               				</tr>
-             			</table>
+               			<table style="border:2px solid rgb(181,194,179); border-radius:6px; font-size:small;">
+
+                           <tr>
+
+<?php if (isset($_SESSION['username']) && $_SESSION['active'] == 1) { ?> 
+                                        <td colspan="3" class="user_lgn_msg">
+                                            <div style="width:95%;">
+    <?php echo '<a class="login_btn_gr" href="../../customer/view/display_profile.php"> Hi, ' . $_SESSION['username'] . '</a> '; ?>
+                                                <br/>
+
+                                                <a class="login_btn_gr" style="font-size: small;" href="../../home/controller/logout.php">
+                                                    Logout
+                                                </a><br/>
+                                                <?php if (isset($_SESSION['user_type']) && $_SESSION['user_type'] == 'Admin') { ?>
+                                                    <a class="login_btn_gr" style="font-size: small;" href="../../admin/view/control_panel.php">Admin Panel</a>
+    <?php } ?>
+                                            </div>
+                                        </td>      
+<?php } ?> 
+
+                                </tr>
+
+                        </table>
              	</td>
              </tr>
          </table>
@@ -95,31 +106,31 @@
         <form name="frm_add" method="post" onsubmit="return validateForm();" action="../controller/add_property.php" enctype="multipart/form-data" >
             <table class="ct_table" align="center" width="500" style="border:1px groove #93AE13;" >
             <tr bgcolor="#005825">
-              <td colspan="2" align="center"><h1 style="color: #FFFFFF; font-style: normal;">Add Property</h1></td>
+              <td colspan="2" align="center"><h2 style="color: #FFFFFF; font-style: normal;">Add your property information</h2></td>
             </tr>
             
             <tr>
               <th align="left"> Property Name : </th>
               <td><label for="property_name">
-                <input name="property_name" type="text" id="property_name" placeholder="Please type property name here" size="45" class="inputs" />
+                <input name="property_name" type="text" id="property_name"  size="45" class="inputs" />
               </label></td>
             </tr>
             <tr>
               <th align="left">Address Line 1 :</th>
               <td><label for="address1">
-                <input name="address1" class="inputs" id="txtaddress1" placeholder="Please type address here" size="45" cols="47" rows="5"/>
+                <input name="address1" class="inputs" id="txtaddress1" size="45" cols="47" rows="5"/>
               </label></td>
             </tr>
             <tr>
               <th align="left">Address Line 2 :</th>
               <td><label for="address2">
-                <input name="address2" class="inputs" id="address2" placeholder="Please type address here" size="45" cols="47" rows="5"/>
+                <input name="address2" class="inputs" id="address2" size="45" cols="47" rows="5"/>
               </label></td>
             </tr>
             <tr>
               <th align="left">City :</th>
               <td><label for="city">
-                <input name="city" class="inputs" id="city" placeholder="Please type city here" size="45" cols="47" rows="5"/>
+                <input name="city" class="inputs" id="city"  size="45" cols="47" rows="5"/>
               </label></td>
             </tr>
             <tr>
@@ -142,19 +153,19 @@
             <tr>
               <th align="left">Extent(no. of perches/acres) :</th>
               <td><label for="extent">
-                <input name="extent" type="text" id="extent" placeholder="Enter extent here" size="45" class="inputs"/>
+                <input name="extent" type="text" id="extent"  size="45" class="inputs"/>
               </label></td>
             </tr>
             <tr>
               <th align="left"> Price/Unit price :</th>
               <td><label for="unit_price">
-                <input name="unit_price" type="text" id="unit_price" placeholder="Enter price per perch here" size="45" class="inputs"/>
+                <input name="unit_price" type="text" id="unit_price" size="45" class="inputs"/>
               </label></td>
             </tr>
             <tr>
               <th align="left">Description :</th>
               <td><label for="description">
-                <textarea name="description" id="description" placeholder="Enter description of the land here" rows="5" cols="40" class="inputs"></textarea>
+                <textarea name="description" id="description"  rows="5" cols="40" class="inputs"></textarea>
               </label></td>
             </tr>
             <tr>

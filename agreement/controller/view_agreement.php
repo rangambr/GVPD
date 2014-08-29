@@ -1,8 +1,9 @@
 <?php 
 require '../model/agreement.php';
 
-//require '../../common/kint/Kint.class.php';
+require '../../common/kint/Kint.class.php';
 $agreementNo = $_REQUEST['agr_no'];
+//kint::dump($agreementNo);
 $agrmnt = new Agreement();
 
 $result = $agrmnt->getAgreementsById($agreementNo);
@@ -10,9 +11,11 @@ $result = $agrmnt->getAgreementsById($agreementNo);
 $agreement;
 
 while ($row = mysql_fetch_array($result)) {
+	
     $agreement = $row;
+	
 }
-
+//kint::dump($agreement);
 //header("Location:../view/view_agreement.php");
 
 

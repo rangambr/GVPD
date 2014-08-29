@@ -92,38 +92,52 @@ require '../controller/hot_deals.php';
                                 <br/>    <img src="../../common/images/camera_add.png" alt="photos" title="photos"/>
                             </td>
                             <td>
-                                <p><span style="font-style: normal; font-size: 16px;">Offered at:</span>
-                                <h3> <span style="font-style: normal; color: #ff0000; font-size: large;">
-
-                                        <?php echo $row['unit_price']; ?>
-                                    </span></h3>
-                                <span style="font-style: normal;font-weight: normal;"><br/>
-                                    <span style="font-size: 14px"><?php echo $row['address1'].', '.$row['address2']; ?>
-                                        </p>
-                                    </span></span>
-                                <p style="font-size: 14px;font-weight: normal;"><b>Property Type:</b> <?php echo $row['type']; ?></p>
-                                <p style="font-weight: normal;">
-                                    <?php echo $row['description']; ?>
-                                </p>
-                                <p> <a href="../../property/view/display_property.php?id=<?php echo $row['id']; ?>">More details>></a></p>
+                            
+                            	<table border="0" cellspacing="10px" bgcolor="#C3EAF5" style="border-radius:6px;" width="450px" >
+                                	<tr>
+                                    	<td style="font-size:14px">Offered At:</td>
+                                        <td  style="font-size:14px;color:#FF0000"><?php echo $row['unit_price']; ?></td>
+                                    </tr>
+                                    <tr>
+                                    	<td style="font-size:12px">Address:</td>
+                                        <td style="font-size:12px"><?php echo $row['address1'].', '.$row['address2']; ?></td>
+                                    </tr>
+                                    <tr>
+                                    	<td style="font-size:12px">Property type:</td>
+                                        <td style="font-size:12px"> <?php echo $row['type']; ?></td>
+                                    </tr>
+                                    <tr>
+                                    	<td style="font-size:12px">Description:</td>
+                                        <td style="font-size:12px;"><?php echo $row['description']; ?> </td>
+                                    </tr>
+                                    <tr>
+                                    	<td colspan="2" style="font-size:12px"><a href="../../property/view/display_property.php?id=<?php echo $row['id']; ?>">More details>></a></td>
+                                    </tr>
+                                </table>
+                               
                                 <?php if(isset($_SESSION['username']) && $_SESSION['active'] == 1) {{
             
        							 } ?>
-                                <hr />
-                                <a href="../controller/add_to_watchlist.php?id=<?php echo $row['id']; ?>"><img src="../../common/images/save.png" alt="save property" title="save property"/></a>
+                               <br/>
+                               <div style="margin-left:150px;">
+                                <a href="../controller/add_to_watchlist.php?id=<?php echo $row['id']; ?>"><img src="../../common/images/save.png" alt="save property" title="add to my watch list"/></a>
                                 <span style="margin-left:25px;" >
                                     <a href="../../reviews/view/review.php?id=<?php echo $row['id']; ?>"><img src="../../common/images/star_full.png" alt="rate property" title="rate property"/></a>
-                                    <a href="../../reviews/view/review.php?id=<?php echo $row['id']; ?>"><img src="../../common/images/star_half.png" alt="rate property" title="rate property"/></a>&nbsp;
-                                    <a href="../../reviews/view/review.php?id=<?php echo $row['id']; ?>"><img src="../../common/images/star_empty.png" alt="rate property" title="rate property"/></a>
+                                    <a href="../../reviews/view/review.php?id=<?php echo $row['id']; ?>"><img src="../../common/images/star_full.png" alt="rate property" title="rate property"/></a>
+                                    <a href="../../reviews/view/review.php?id=<?php echo $row['id']; ?>"><img src="../../common/images/star_full.png" alt="rate property" title="rate property"/></a>
+                                    <a href="../../reviews/view/review.php?id=<?php echo $row['id']; ?>"><img src="../../common/images/star_full.png" alt="rate property" title="rate property"/></a>&nbsp;
+                                    <a href="../../reviews/view/review.php?id=<?php echo $row['id']; ?>"><img src="../../common/images/star_full.png" alt="rate property" title="rate property"/></a>
                                 </span>
                                 <span style="margin-left:25px;" >
                                  <a href="../controller/email_property.php"><img src="../../common/images/email.png" alt="contact us" title="contact us"/></a>
                                 </span>
-                                <span style="margin-left:25px; float:right;" >
+                                </div>
+                                <span style="margin-left:25px; float:right; font-size:12px;" >
                                     <a href="../../inquiry/view/add_inquiry.php">
                                         Inquire about this
                                     </a>
                                 </span>
+                                
                                 <?php }
             						else{
        							 ?>

@@ -20,7 +20,7 @@
                 <li><a href='../../admin/view/manage_inquiries.php'><span>Inquiries</span></a></li>
                 <li><a href='../../admin/view/manage_reviews.php'><span>Reviews</span></a></li>
                 <li><a href='../../admin/view/reports.php'><span>Reports</span></a></li>
-                <li><a href='add_agreement1.php'><span>Agreements</span></a></li>
+                <li><a href='../../agreement/view/agreement_details.php'><span>Agreements</span></a></li>
             </ul>
         </div>
 <br/>

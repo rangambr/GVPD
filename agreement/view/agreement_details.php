@@ -16,6 +16,26 @@
     <link rel="stylesheet" type="text/css" href="../../common/CSS/manage_user_table.css">
      
      <style type="text/css">
+	 	 .left_box{
+             width: 50%;
+			 border-radius:6px;
+         }
+           
+            .left_box a:link, a:visited {
+                display: block;
+                font-weight: bold;
+                color: #FFFFFF;
+                background-color: #9fa393;
+                width: 220px;
+                text-align: center;
+                padding: 4px;
+                text-decoration: none;
+            }
+
+            .left_box a:hover, a:active {
+                background-color: #D1D3CB;
+            }
+			
          .content{
              margin-top: 2% !important;
              padding: 0px 0px 0px 0px !important;
@@ -31,11 +51,11 @@
                 text-align: center !important;
             }
 			 .create_link{
-                content: url('../..//common/icons/create.png');
+                content: url('../..//common/icons/pencil.gif');
 				
             }
             .view_link{
-                content: url('../..//common/icons/view.png');
+                content: url('../..//common/icons/eye.png');
             }
             .delete_link{
                 content: url('../..//common/icons/icon-delete-small.png' );
@@ -60,7 +80,14 @@
               <li><a href='agreement_details.php'><span>Agreements</span></a></li>
             </ul>
 </div>
-
+<br/>
+<?php if (!empty($_REQUEST['msg']) && $_REQUEST['msg'] == "10") { ?>
+<div align="center">
+<div align="center" style="border:solid #275C0D; width:300px; height:23px; padding:5px; background:#E3EFAF" ><img src="../../common/images/icons/successful.png" width="16px" height="16px"/><span style="color:#368112; font-size:14px;" ><b>You have entered information successfully!</b>
+</span></div>
+</div>
+<?php } ?>
+<br/>
 <div class="content">
     <div class="CSSTableGenerator" >
     <table class="user_table">
@@ -71,6 +98,9 @@
             <td>Agreed price:</td>
             <td>Action</td>
         </tr>
+        <tr bgcolor="#275C0D">
+      	<td colspan="5" style="margin-right:10px;"><img src="../../common/icons/add_small.png"/><a href="create_agreement.php"><b style="color: rgba(0,0,255,1)" >Create an agreement</b></a></td>
+      </tr>
       <?php
         while($agr = mysql_fetch_array($all_agrs))
           {
@@ -79,11 +109,12 @@
 		  echo "<td class='user_info'>".$agr['date']."</td>";
 		  echo "<td class='user_info'>".$agr['agreed_price']."</td>";
 		 
-          echo "<td class='ac_link'><a  href='create_agreement.php?agr_no=".$agr['agreement_no']."'><span class='create_link' title='Create Agreement'></span></a>";
+          echo "<td class='ac_link'><a  href='create_agreement.php?agr_no=".$agr['agreement_no']."'><span class='create_link' title='Edit Agreement'></span></a>";
          echo " | <a  href='view_agreement .php?agr_no=".$agr['agreement_no']."'><span class='view_link' title='View Agreement'></span></a>";
         echo " | <a onClick=\"return confirm('Are you sure?')\" href='../controller/delete_agreement.php?agr_no=".$agr['agreement_no']."'><span class='delete_link' title='Delete Agreement'></span></a></td><tr>";
           }
       ?>
+      
     </table>
     </div>
 </div>

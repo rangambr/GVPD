@@ -12,7 +12,7 @@ while ($inqu = mysql_fetch_array($all_rw)) {
     echo "<td class='user_info'>" . $inqu['rw_description'] . "</td>";
     echo "<td class='user_info'>" . $inqu['rating'] . "</td>";
     echo "<td class='ac_link'><a  href='move_review.php?rId=" . $inqu['id'] . "'><span class='add_top'></span></a>";
-    echo " | <a onClick=\"return confirm('Are you sure?')\"  href='../controller/delete_review.php?propId=" . $inqu['id'] . "'><span class='delete_link'></span></a></td><tr>";
+    echo " | <a onClick=\"return confirm('Are you sure?')\"  href='../controller/delete_review.php?propId=" . $inqu['id'] . "'><span class='delete_link' title='Delete review'></span></a></td><tr>";
 }
 
 

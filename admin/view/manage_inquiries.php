@@ -35,7 +35,7 @@ session_start();
                 font-family: Arial;
             }
             .resp_link{
-                 content:url(../..//common/icons/envelope_icon_small.gif);
+                 content:url(../..//common/icons/email.png);
             }
             .close_link{
                 content:url(../..//common/icons/tick-icon-small.png);
@@ -94,7 +94,7 @@ session_start();
                 <li><a href='manage_inquiries.php'><span>Inquiries</span></a></li>
                 <li><a href='manage_reviews.php'><span>Reviews</span></a></li>
                 <li><a href='reports.php'><span>Reports</span></a></li>
-                <li><a href='../../agreement/view/add_agreement1.php'><span>Agreements</span></a></li>
+                <li><a href='../../agreement/view/agreement_details.php'><span>Agreements</span></a></li>
             </ul>
 </div>
 

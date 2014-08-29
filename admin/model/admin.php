@@ -41,7 +41,7 @@ class Admin {
         $result = $db->query($sql);
         return $result;
     }
-
+	
     function getAllUsers() {
         $db = new Dbconnect();
         $sql = "SELECT * FROM user ORDER BY type, username";
@@ -99,6 +99,14 @@ class Admin {
         $result = $db->query($query);
         return true;
     }
+	function insertRespond($id,$res){
+		$db = new Dbconnect();
+
+        $query = "INSERT INTO inquiry_response(inquiry_id,response) VALUES ('$id','$res') ";
+        $result = $db->query($query);
+        return $result;
+		}
+	function emailRespond(){ }
 	//function: send email after reset the password by the admin
     function reset_password_email($to, $subject, $body) {
         mail($to, $subject, $body, 'From: postmaster@localhost');

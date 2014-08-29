@@ -1,5 +1,4 @@
 <?php
-
 require_once '../controller/display_profile.php';
 ?>
 <!doctype html>
@@ -133,15 +132,15 @@ require_once '../controller/display_profile.php';
                                 <td>
                                     <?php
                                     if ($gender == 'Male') {
-                                        echo '<input type="radio" name="gender" value="Male" checked /> <span style="color: #275C0D">Male</span> ';
-                                        echo '<input type="radio" name="gender" value="Female" /> <span style="color: #275C0D">Female</span> ';
+                                        echo '<input type="radio" name="gender" value="Male" checked /> <span style="color: #132E06; font-size:12px;">Male</span> ';
+                                        echo '<input type="radio" name="gender" value="Female" /> <span style="color: #132E06; font-size:12px;">Female</span> ';
                                     }
                                     ?>
 
                                     <?php
                                     if ($gender == 'Female') {
-                                        echo '<input type="radio" name="gender" value="Male" /> <span style="color: #275C0D">Male</span> ';
-                                        echo '<input type="radio" name="gender" value="Female" checked/> <span style="color: #275C0D">Female</span> ';
+                                        echo '<input type="radio" name="gender" value="Male" /> <span style="color: #132E06; font-size:12px;">Male</span> ';
+                                        echo '<input type="radio" name="gender" value="Female" checked/> <span style="color: #132E06;font-size:12px;">Female</span> ';
                                     }
                                     ?>
                             </tr>
@@ -156,6 +155,23 @@ require_once '../controller/display_profile.php';
                             <tr>
                                 <th align="left">City :</th>
                                 <td><input name="city" class="inputs" id="city2" placeholder="Please type your city here" size="20" value="<?php echo '' . $city; ?>"  /></td>
+                            </tr>
+                            <tr>
+                                <th align="left">Province :</th>
+                                <td>
+                                    
+                                    <select name="province" class="drpdown_list">
+                                        <option <?php if($province == "Central Province") echo 'selected'; ?>>Central Province </option>
+                                        <option <?php if($province == "Eastern Province") echo 'selected'; ?>>Eastern Province</option>
+                                        <option <?php if($province == "Northern Province") echo 'selected'; ?>>Northern Province</option>
+                                        <option <?php if($province == "Southern Province") echo 'selected'; ?>>Southern Province</option>
+                                        <option <?php if($province == "Western Province") echo 'selected'; ?>>Western Province</option>
+                                        <option <?php if($province == "North Western Province") echo 'selected'; ?>>North Western Province</option>
+                                        <option <?php if($province == "North Central Province") echo 'selected'; ?>>North Central Province</option>
+                                        <option <?php if($province == "Uva Province") echo 'selected'; ?>>Uva Province</option>
+                                        <option <?php if($province == "Sabaragamuwa Province") echo 'selected'; ?>>Sabaragamuwa Province</option>
+                                    </select>
+                                </td>
                             </tr>
                             <tr>
                                 <th height="39" align="left">Birthday :</th>

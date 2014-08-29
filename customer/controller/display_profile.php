@@ -10,8 +10,8 @@ if($username == null && isset($_GET['username'])){
 }
 $customer=new Customer();
 $result=$customer->getCustomer($username);
+//$province = '';
 
-//Kint::dump($result);
 while($row=mysql_fetch_array($result)){
 	$fname=$row['fname'];
 	//Kint::dump($fname);
@@ -20,13 +20,14 @@ while($row=mysql_fetch_array($result)){
         //KINT::dump($gender);
 	$address1 = $row["address1"];
 	$address2 = $row["address2"];
+        $province = $row["province"];
 	$city = $row["city"];
 	$birthday = $row["birthday"];
 	$email = $row["email"];
 	$contact_no1 = $row["contact_no_1"];
 	$contact_no2 = $row["contact_no_2"];
 	}
-        
+     //Kint::dump($province);   
 $watch_list = $customer->get_watchlist($username);  
 $prps = new Property();
 

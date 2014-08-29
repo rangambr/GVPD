@@ -10,6 +10,7 @@ $province = $_POST['province'];
 $extent = $_POST['extent'];
 $unit_price = $_POST['unit_price'];
 $description = $_POST['description'];
+$status=$_POST['status'];
 //$prop = new Property();
 
 $oldpic1 = '';
@@ -68,5 +69,6 @@ if ($_FILES["uploadedfile3"]["error"] == 0) {
     }
 }
 
-$property->updateProperty($prop_id, $name, $address1, $address2, $city, $province, $extent, $unit_price, $description);
+$property->updateProperty($status,$prop_id, $name, $address1, $address2, $city, $province, $extent, $unit_price, $description);
 header("location:../view/update_property.php?propId=".$prop_id);
+?>

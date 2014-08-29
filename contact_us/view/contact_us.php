@@ -9,19 +9,29 @@
 <link rel="stylesheet" type="text/css" href="../../common/CSS/form.css">
 <link rel="stylesheet" type="text/css" href="../../common/CSS/button.css">
 <style type="text/css">
+td{
+	font-size:12px;
+	padding:2px;
+	}
 .msg-error{
 	padding-left:380px;
 	}
 .side_bar{
 	position: absolute;
-	background-color: #E7E08E;
-	left: 10px;
+	background-color: #EAF3CF;
+	left: 20px;
 	bottom: 0px;
-	top: 205px;
+	top: 243px;
 	width: 300px;
-	height: 349px;
-	padding: 20px;
+	height: 300px;
+	padding: 0px;
+	margin-left: 30px;
+	background-color: #C3EAF5;
 	}
+body,td,th {
+	color: #000000;
+	font-size: 12px;
+}
 </style>
 <script type="text/javascript">
 	function validate(){
@@ -75,21 +85,23 @@
         </div>
 
 <div class="side_bar">
-
-  <span style="font-size: small; font-weight: bold;">We welcome and value your feedback about our real estate services. Please visit our <a href="FAQ.php">FAQs</a> – we may have answered your question already!<br/>
-If your question was not addressed in our <a href="FAQ.php">FAQs</a>!</span> 
-<table>
-	<tr><td colspan="2"><h2 style="color: #000089;">Please contact us</h2></td></tr>
-	<tr><td style="font-family: Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', serif">T<span style="font-style: normal">elephone:</span></td><td style="font-family: Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', serif">0812 490738 / 0777 031403</td></tr>
-    <tr><td colspan="2" style="font-family: Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', serif"><hr/></td></tr>
-    <tr><td style="font-family: Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', serif">Fax:</td><td style="font-family: Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', serif">0812 490738</td></tr>
-    <tr><td colspan="2" style="font-family: Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', serif"><hr/></td></tr>
-    <tr><td style="font-family: Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', serif">Email:</td><td style="font-family: Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', serif">greenvalley@gmail.com</td></tr>
-    <tr><td colspan="2" style="font-family: Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', serif"><hr/></td></tr>
-    <tr><td style="font-family: Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', serif">Office Address:</td><td style="font-family: Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', serif">Third floor,<br/>
-    Silverdale Complex,<br/>Yatinuwara Veediya,<br/>Kandy. OR<br/>No:77, Doranegama Road, Medawala(H:P).</td></tr>
+	<img src="../../common/images/contact_us.png" height="150px" width="301"/>
+  
+  <!--<div style="border-radius:5px; background-color:#C3EAF5; padding:10px;"><p style="font-size: small; font-weight: bold;">We welcome and value your feedback about our real estate services. Please visit our <a href="FAQ.php">FAQs</a> – we may have answered your question already!<br/>
+  If your question was not addressed in our <a href="FAQ.php">FAQs</a>!</div>--></p>
+  <table style=" border-radius:5px; background-color:#C3EAF5; padding:7px;">
+	<tr><td width="93" >Telephone:</span></td><td width="193">0812 490738 / 0777 031403</td></tr>
+    
+    <tr><td>Fax:</td><td>0812 490738</td></tr>
+    
+    <tr><td>Email:</td><td>greenvalley@gmail.com</td></tr>
+    
+    <tr><td>Office Address:</td><td>Thir<span style="font-size: 12px">d floor,<br/>
+    Silverdale Complex,<br/>Yatinuwar</span>a Veediya,<br/>
+    Kandy. OR<br/>No:77, Doranegama Road, Medawala(H:P)</span>.</td></tr>
 </table>
 </div>
+
 <div class="content">
 <?php 
 	if(!empty($_REQUEST['er'])){
@@ -102,7 +114,7 @@ If your question was not addressed in our <a href="FAQ.php">FAQs</a>!</span>
                         <td><strong style="color: #34AB0A">Inquiry saved successfully! We'll reply you as soon as possible!  </strong></td>
                     </tr>
                 </table>
-  				</div><?php 
+  </div><?php 
 				}
 	}?>
   <form name="frm_con" method="post" action="../controller/contact.php" onsubmit="return validate();">

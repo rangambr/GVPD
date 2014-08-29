@@ -1,5 +1,6 @@
 <?php session_start(); 
  require '../controller/manage_users.php';
+ 
 ?>
 
 <!doctype html>
@@ -56,15 +57,21 @@
               <li><a href='manage_inquiries.php'><span>Inquiries</span></a></li>
               <li><a href='manage_reviews.php'><span>Reviews</span></a></li>
               <li><a href='reports.php'><span>Reports</span></a></li>
-              <li><a href='../../agreement/view/add_agreement1.php'><span>Agreements</span></a></li>
+              <li><a href='../../agreement/view/agreement_details.php'><span>Agreements</span></a></li>
             </ul>
 </div>
 <div>
 <br/><br/>
-	<form name="frm_repInquiry" method="post" action="">
+	<form name="frm_repInquiry" method="post" action="../controller/respond_inquiry.php">
                 <table align="center" width="418" cellspacing="3px" style="border: 1px groove #93AE13; padding-bottom: 2%; background-color: #F8F8F7; font-size: small;">
                     <tr height="33px">
-                        <td colspan="2" width="310" align="center"><img src="../../common/images/icons/inquiry.png"/><span style="text-align: center; margin-bottom:5px; font-weight: bold; font-style: normal; font-size: 16px; color: #01015C;" > Reply Inquiry</span></p>
+                        <td colspan="2" align="center"><img src="../../common/images/icons/inquiry.png"/><span style="text-align: center; margin-bottom:5px; font-weight: bold; font-style: normal; font-size: 16px; color: #01015C;" > Reply Inquiry</span></p>
+                        </td>
+                    </tr>
+                     <tr>
+                        <th width="44" align="center"><div align="left">To :</div></th>
+                        <td width="359">
+                            <input type="text" name="txt_to" size=36 value="<?php echo '' . $res_inquiry['email']; ?>"/>
                         </td>
                     </tr>
                     <tr>
@@ -75,7 +82,7 @@
                     </tr>
                     <tr>
                         <td colspan="2" align="center" valign="middle">
-                            <input type="submit" value="send" class="myButton" name="submit" />
+                            <input type="submit" value="send" class="myButton small_btn" name="submit" />
                         </td>
                     </tr>
                 </table>

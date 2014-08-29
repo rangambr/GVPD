@@ -109,12 +109,29 @@ require_once '../controller/display_profile.php';
 
                 <div id="tabs-1">
                     <?php if (!empty($_REQUEST['er']) && $_REQUEST['er'] == "12") { ?>
-                        <div style="background-color: #CCFFCC; color: #275C0D; font-size: 14px; height: 30px; font-weight: normal;padding-top:10px" >
-                            We've successfully updated your details!
-                        </div>
-                        <div>
-                        <?php } ?>
+                        <div style="background-color: #CCFFCC; color: #275C0D; font-size: 14px; height: 30px; font-weight: normal;padding-top:10px" ><strong style="color: #275C0D">
+                            <img src="../../common/images/icons/success.gif" width="16px" height="16px"/>Successfully updated your details!</strong>
+               </div>
+               		<?php } ?>
+                    
+                  <div id="tabs-1">
+                    <?php if (!empty($_REQUEST['msg']) && $_REQUEST['msg'] == "5") { ?>
+                        <div style="background-color: #CCFFCC; color: #275C0D; font-size: 14px; height: 30px; font-weight: normal;padding-top:10px" ><strong style="color: #275C0D">
+                            <img src="../../common/images/icons/success.gif" width="16px" height="16px" />Successfully removed the property!</strong>
+               </div>
+               		<?php } ?>
+                        
                     </div>
+                    
+                    <div id="tabs-1">
+                    <?php if (!empty($_REQUEST['msg']) && $_REQUEST['msg'] == "7") { ?>
+                        <div style="background-color: #CCFFCC; color: #275C0D; font-size: 14px; height: 30px; font-weight: normal;padding-top:10px" ><strong style="color: #275C0D">
+                            <img src="../../common/images/icons/success.gif" width="16px" height="16px" />Successfully removed the property from watch list!</strong>
+               </div>
+               		<?php } ?>
+                        
+                    </div>
+               </div>
                     <form name="update_profile.php" method="post" action="../controller/update_profile.php">
                         <table align="center" width="600" style="border:1px groove #000089;" cellspacing="5px" >
                             <tr bgcolor="#B5B5FF" height="40px">
@@ -138,7 +155,7 @@ require_once '../controller/display_profile.php';
                                 <td>
                                     <?php 
                                         if($gender == 'Male'){
-                                            echo '<input type="radio" name="gender" value="Male" checked disabled="true"/> <span style="color: #132E06;">Male</span> ';
+                                            echo '<input type="radio" name="gender" value="Male" checked disabled="true"/> <span style="color: #132E06; font-size:12px;">Male</span> ';
                                             echo '<input type="radio" name="gender" value="Female" disabled="true"/> <span style="color: #132E06; font-size:12px;">Female</span> ';
                                         }?>
                                         
@@ -161,6 +178,10 @@ require_once '../controller/display_profile.php';
                             <tr>
                                 <th align="left">City :</th>
                                 <td><input name="city" class="inputs" id="city2" placeholder="Please type your city here" size="20" value="<?php echo '' . $city; ?>" disabled="true" /></td>
+                            </tr>
+                            <tr>
+                                <th align="left">Province :</th>
+                                <td><input name="province" class="inputs" id="province" placeholder="Please type your province here" size="20" value="<?php echo '' . $province; ?>" disabled="true" /></td>
                             </tr>
                             <tr>
                                 <th align="left">Birthday :</th>

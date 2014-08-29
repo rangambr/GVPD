@@ -2,7 +2,7 @@
 require '../model/agreement.php';
 
 $reg_no=$_POST["txt_reg"];
-$agr_no-$_POST["txt_agr_no"];
+$agr_no=$_POST["txt_agr_no"];
 $location=$_POST["txt_location"];
 $date=$_POST["txt_date"];
 $fullname=$_POST["txt_land_owner"];
@@ -23,14 +23,16 @@ $adv=$_POST["txt_adv"];
 $dev=$_POST["txt_dev"];
 $other=$_POST["txt_other"];
 $elec=$_POST["txt_electricity"];
-$tot=$_POST["txt_total"];
+//$tot=$_POST["txt_total"];
+$tot=$sur+$adv+$dev+$other+$elec;
 
 $add_aggr_data=new Agreement();
-$add_aggr_data->insertToAgreement($reg_no,$agr_no,$location,$date,$fullname,$nic,$address,$price,$valid_time,$description,$wit1,$wit2);
-$add_aggr_data->insertToLawyer($l_name,$l_address,$l_tel);
-$add_aggr_data->insertToDev_cost($sur,$adv,$dev,$other,$elec,$tot);
+$agreement_id=$add_aggr_data->insertToAgreement($reg_no,$agr_no,$location,$date,$fullname,$nic,$address,$price,$valid_time,$description,$wit1,$wit2);
 
-header("Location:../view/create_agreement.php?msg=10");
+$add_aggr_data->insertToLawyer($agreement_id,$l_name,$l_address,$l_tel);
+$add_aggr_data->insertToDev_cost($agreement_id,$sur,$adv,$dev,$other,$elec,$tot);
+
+header("Location:../view/agreement_details.php?msg=10");
 ?>
 
 

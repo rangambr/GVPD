@@ -36,6 +36,16 @@ class Customer{
         $result=$db->query($sql);
         return $result;  
     }
+	function removeProperty($property_id){
+		$db=new Dbconnect();
+		$sql = "DELETE FROM property WHERE id='" . $property_id . "'";
+        $result = $db->query($sql);
+		}
+	function removeFromWatchList($property_id){
+		$db=new Dbconnect();
+		$sql = "DELETE FROM watch_list WHERE property_id='" . $property_id . "'";
+        $result = $db->query($sql);
+		}
 }
 ?>
      

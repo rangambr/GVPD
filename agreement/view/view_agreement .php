@@ -6,7 +6,7 @@ require_once '../controller/view_agreement.php';
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Create agreement</title>
+	<title>View agreement</title>
     <link rel="stylesheet" type="text/css" href="../../common/CSS/admin_menu_bar.css">
     <style type="text/css">
 		
@@ -27,7 +27,7 @@ require_once '../controller/view_agreement.php';
                 <li><a href='../../admin/view/manage_inquiries.php'><span>Inquiries</span></a></li>
                 <li><a href='../../admin/view/manage_reviews.php'><span>Reviews</span></a></li>
                 <li><a href='../../admin/view/reports.php'><span>Reports</span></a></li>
-                <li><a href='add_agreement1.php'><span>Agreements</span></a></li>
+                <li><a href='agreement_details.php'><span>Agreements</span></a></li>
             </ul>
         </div>
 <br/>
@@ -41,20 +41,19 @@ require_once '../controller/view_agreement.php';
         	<tr>
             	<td width="162"> Prior Registration:</td>
                 <td width="326">
-                <input name="agreementno" value="<?php echo '' . $agreement['agreement_no']; ?>">
                 <input name="txt_reg" type="text" size="45" value="<?php echo '' . $agreement['reg_no']; ?>" disabled="true"/></td>
             </tr>
             <tr>
             	<td>Lawyer's name:</td>
-                <td><input name="txt_lname" type="text" size="45"value="<?php echo '' .$agreement['reg_no'] ; ?>" disabled="true"/></td>
+                <td><input name="txt_lname" type="text" size="45"value="<?php echo '' .$agreement['l_name'] ; ?>" disabled="true"/></td>
             </tr>
             <tr>
             	<td>Lawyer's address:</td>
-                <td><textarea name="txt_laddress" cols="43" rows="3" value="<?php echo '' .$agreement['reg_no'] ; ?>" disabled="true"></textarea></td>
+                <td><textarea name="txt_laddress" cols="43" rows="3" disabled="true"><?php echo '' .$agreement['l_address'] ; ?></textarea></td>
             </tr>
             <tr>
             	<td>Lawyer's tel no:</td>
-                <td><input name="txt_ltel" type="text" size="45" value="<?php echo '' .$agreement['reg_no'] ; ?>" disabled="true"/></td>
+                <td><input name="txt_ltel" type="text" size="45" value="<?php echo '' .$agreement['l_tel'] ; ?>" disabled="true"/></td>
             </tr>
             <tr>
             	<td colspan="2">&nbsp;</td>
@@ -65,79 +64,76 @@ require_once '../controller/view_agreement.php';
             <br/>
             <tr>
             	<td>Agreement No :</td>
-            	<td><input name="txt_agr_no" type="text" size="45" value="<?php echo '' .$agreement['reg_no'] ; ?>" disabled="true"/></td>
+            	<td><input name="txt_agr_no" type="text" size="45" value="<?php echo ''.$agreement['agreement_no'] ; ?>" disabled="true"/></td>
 
             <tr>
             	<td>Location :</td>
-            	<td><input name="txt_location" type="text" size="45" value="<?php echo '' .$agreement['reg_no']; ?>" disabled="true"/></td>
+            	<td><input name="txt_location" type="text" size="45" value="<?php echo '' .$agreement['location']; ?>" disabled="true"/></td>
             </tr>
             <tr>
             	<td>Date :</td>
-            	<td><input name="txt_date" type="text" size="45" value="<?php echo '' .$agreement['reg_no'] ; ?>" disabled="true"/></td>
+            	<td><input name="txt_date" type="text" size="45" value="<?php echo '' .$agreement['date'] ; ?>" disabled="true"/></td>
             </tr>
             <tr>
             	<td>Land owner's full name :</td>
-            	<td><input name="txt_land_owner" type="text" size="45" value="<?php echo '' .$agreement['reg_no'] ; ?>" disabled="true"/></td>
+            	<td><input name="txt_land_owner" type="text" size="45" value="<?php echo '' .$agreement['full_name'] ; ?>" disabled="true"/></td>
             </tr>
             <tr>
             	<td>Land owner's NIC :</td>
-            	<td><input name="txt_id" type="text" size="45" value="<?php echo '' .$agreement['reg_no'] ; ?>" disabled="true"/></td>
+            	<td><input name="txt_id" type="text" size="45" value="<?php echo '' .$agreement['NIC'] ; ?>" disabled="true"/></td>
             </tr>
             <tr>
             	<td>Land owner's address :</td>
-            	<td> <input name="txt_address" type="text" size="45" value="<?php echo '' .$agreement['reg_no'] ; ?>" disabled="true"/></td>
+            	<td><textarea name="txt_address" cols="43" rows="3" disabled="true"><?php echo '' .$agreement['address'] ; ?></textarea> 		</td>
             </tr>
             <tr>
             	<td>Agreed minimum price :</td>
-            	<td> <input name="txt_price" type="text" size="45" value="<?php echo '' .$agreement['reg_no'] ; ?>" disabled="true"/></td>
+            	<td> <input name="txt_price" type="text" size="45" value="<?php echo '' .$agreement['agreed_price'] ; ?>" disabled="true"/></td>
             </tr>
             <tr>
             	<td>Agreed valid period :</td>
-            	<td> <input name="txt_valid" type="text" size="45" value="<?php echo '' .$agreement['reg_no'] ; ?>" disabled="true"/></td>
+            	<td> <input name="txt_valid" type="text" size="45" value="<?php echo '' .$agreement['valid_period'] ; ?>" disabled="true"/></td>
             </tr>
             <tr>
             	<td colspan="2">Statement of approximate expenditure.</td>
                	<tr>
             	<td>Survey fees :</td>
-            	<td> <input name="txt_survey" type="text" size="45" value="<?php echo '' .$agreement['reg_no'] ; ?>" disabled="true"/></td>
+            	<td> <input name="txt_survey" type="text" size="45" value="<?php echo '' .$agreement['survey'] ; ?>" disabled="true"/></td>
             </tr>
             <tr>
             	<td>Advertising expenses :</td>
-            	<td> <input name="txt_adv" type="text" size="45" value="<?php echo '' .$agreement['reg_no'] ; ?>" disabled="true"/></td>
+            	<td> <input name="txt_adv" type="text" size="45" value="<?php echo '' .$agreement['advertising'] ; ?>" disabled="true"/></td>
             </tr>
             <tr>
             	<td>Development expenses :</td>
-            	<td> <input name="txt_dev" type="text" size="45" value="<?php echo '' .$agreement['reg_no'] ; ?>" disabled="true"/></td>
+            	<td> <input name="txt_dev" type="text" size="45" value="<?php echo '' .$agreement['development'] ; ?>" disabled="true"/></td>
             </tr>
             <tr>
             	<td>Other expenses :</td>
-            	<td> <input name="txt_other" type="text" size="45" value="<?php echo '' .$agreement['reg_no'] ; ?>" disabled="true"/></td>
+            	<td> <input name="txt_other" type="text" size="45" value="<?php echo '' .$agreement['other'] ; ?>" disabled="true"/></td>
             </tr>
             <tr>
             	<td>Electricity :</td>
-            	<td> <input name="txt_electricity" type="text"  size="45" value="<?php echo '' .$agreement['reg_no'] ; ?>" disabled="true"/></td>
+            	<td> <input name="txt_electricity" type="text"  size="45" value="<?php echo '' .$agreement['electricity'] ; ?>" disabled="true"/></td>
             </tr>
             <tr>
             	<td>Total :</td>
-            	<td> <input name="txt_total" type="text"  size="45" value="<?php echo '' .$agreement['reg_no'] ; ?>" disabled="true"/></td>
+            	<td> <input name="txt_total" type="text"  size="45" value="<?php echo '' .$agreement['total'] ; ?>" disabled="true"/></td>
             </tr>
             <tr>
             	<td colspan="2"><strong>THE SCHEDULE ABOVE REFFRRED TO</strong></td>
             </tr>
             <tr>
             	<td>Description :</td>
-            	<td> <textarea name="txt_description" cols="43" rows="10" value="<?php echo '' .$agreement['reg_no'] ; ?>" disabled="true"></textarea></td>
+            	<td> <textarea name="txt_description" cols="43" rows="10" disabled="true"><?php echo '' .$agreement['description'] ; ?></textarea></td>
             </tr>
              <tr>
             	<td>Witness name :</td>
-            	<td>1.<input name="txt_wit1" type="text" size="45" value="<?php echo '' .$agreement['reg_no'] ; ?>" disabled="true"/><br/>
-                2.<input name="txt_wit2" type="text"  size="45" value="<?php echo '' .$agreement['reg_no'] ; ?>" disabled="true"/></td>
+            	<td>1.<input name="txt_wit1" type="text" size="45" value="<?php echo '' .$agreement['witness1'] ; ?>" disabled="true"/><br/>
+                2.<input name="txt_wit2" type="text"  size="45" value="<?php echo '' .$agreement['witness2'] ; ?>" disabled="true"/></td>
             </tr>
             
             
-            <tr>
-            	<td colspan="2" align="center"><input type="submit" value="save" /></td>
-            </tr>
         </table>
 	</form>
 </div>
