@@ -1,5 +1,6 @@
 <?php
 require '../model/agreement.php';
+//$agrno = $_REQUEST['agr_no'];
 
 $reg_no=$_POST["txt_reg"];
 $agr_no=$_POST["txt_agr_no"];
@@ -27,4 +28,6 @@ $elec=$_POST["txt_electricity"];
 //$tot=$sur+$adv+$dev+$other+$elec;
 
 $add_aggr_data=new Agreement();
+$add_aggr_data->updateAgreementTable($reg_no,$agr_no ,$location,$date,$fullname,$nic,$address,$price,$valid_time,$description,$wit1,$wit2);
+header("location:../view/edit_agreement.php?agr_no=". $agr_no);
 ?>

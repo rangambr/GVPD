@@ -4,7 +4,6 @@ session_start();
 require '../model/property.php';
 require '../../common/kint/Kint.class.php';
 
-/* @var $_POST DOMAttr */
 $name = $_POST['property_name'];
 $address1 = $_POST['address1'];
 $address2 = $_POST['address2'];

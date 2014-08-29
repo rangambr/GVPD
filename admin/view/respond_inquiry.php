@@ -1,13 +1,12 @@
 <?php session_start(); 
  require '../controller/manage_users.php';
- 
 ?>
 
 <!doctype html>
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Manage users</title>
+	<title>Reply inquiry</title>
     
     <link rel="stylesheet" type="text/css" href="../../common/CSS/home.css">
 	<link rel="stylesheet" type="text/css" href="../../common/CSS/admin_menu_bar.css">

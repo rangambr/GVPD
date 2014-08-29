@@ -109,7 +109,7 @@
 		  echo "<td class='user_info'>".$agr['date']."</td>";
 		  echo "<td class='user_info'>".$agr['agreed_price']."</td>";
 		 
-          echo "<td class='ac_link'><a  href='create_agreement.php?agr_no=".$agr['agreement_no']."'><span class='create_link' title='Edit Agreement'></span></a>";
+          echo "<td class='ac_link'><a  href='edit_agreement .php?agr_no=".$agr['agreement_no']."'><span class='create_link' title='Edit Agreement'></span></a>";
          echo " | <a  href='view_agreement .php?agr_no=".$agr['agreement_no']."'><span class='view_link' title='View Agreement'></span></a>";
         echo " | <a onClick=\"return confirm('Are you sure?')\" href='../controller/delete_agreement.php?agr_no=".$agr['agreement_no']."'><span class='delete_link' title='Delete Agreement'></span></a></td><tr>";
           }

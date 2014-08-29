@@ -54,7 +54,7 @@
      </tr>
       <tr>
          <td>
-             <a href="../../home/view/index.php"><img src="../../common/images/icons/home.png"/>Home</a>
+             <a href="../../home/view/index.php"><img src="../../common/images/icons/home2.jpg"/>&nbsp;Home</a>
          </td>
           <td >
              <a href="../view/manage_users.php"><img src="../../common/images/icons/user.png"/>Manage users</a>
@@ -62,10 +62,10 @@
      </tr>
      <tr>
          <td>
-             <a href="../view/manage_properties.php"><img src="../../common/images/icons/property.png"/>Manage properties</a>
+             <a href="../view/manage_reviews.php"><img src="../../common/images/icons/review.png"/>Manage reviews</a>
          </td>
           <td >
-              <a href="../view/manage_reviews.php"><img src="../../common/images/icons/review.png"/>Manage reviews</a>
+          	<a href="../view/manage_properties.php"><img src="../../common/images/icons/property.png"/>Manage properties</a>
          </td>
      </tr>
      <tr>
@@ -73,7 +73,7 @@
              <a href="../view/manage_inquiries.php"><img src="../../common/images/icons/inquiry.png"/>Manage inquiries</a>
          </td>
           <td>
-               <a href="../../agreement/view/agreement_details.php"><img src="../../common/images/icons/agreement.png"/>Agreements</a>
+               <a href="../../agreement/view/agreement_details.php"><img src="../../common/images/icons/agreement2.png"/>Agreements</a>
          </td>
      </tr>
      <tr>
@@ -81,7 +81,7 @@
              <a href="../view/reports.php"><img src="../../common/images/icons/report.png"/>Reports</a>
          </td>
           <td>
-             <a href="../../agreement/view/agreement_details.php"><img src=""/></a>
+             <a href="../../agreement/view/agreement_details.php"><img src="../../common/images/icons/project proposal.png"/>Project proposals</a>
          </td>
      </tr>
      

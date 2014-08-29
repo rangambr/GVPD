@@ -88,11 +88,11 @@
 <tr>
 <td><table width="100%" border="0" cellpadding="3" cellspacing="1" bordercolor="1" bgcolor="#FFFFFF">
 <tr>
-<td bgcolor="#F8F7F1"><strong><? echo $rows['topic']; ?></strong></td>
+<td bgcolor="#F8F7F1"><? echo $rows['topic']; ?></td>
 </tr>
 
 <tr>
-<td bgcolor="#F8F7F1"><? echo $rows['detail']; ?></td>
+<td bgcolor="#F8F7F1"><span style="font-weight:300; font-style:italic;"><? echo $rows['detail']; ?></span></td>
 </tr>
 
 <tr>

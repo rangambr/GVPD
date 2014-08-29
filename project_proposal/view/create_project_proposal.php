@@ -6,26 +6,9 @@
     <link rel="stylesheet" type="text/css" href="../../common/CSS/admin_menu_bar.css">
     <style type="text/css">
 		td{
-			padding:4px;
+			padding:0px;
 			}
-    	.required {
-  			display: inline-block;
-		}
-		.required label {
-  		/* constrain the absolutely positioned pseudo */
-  			position: relative;
-  		/* create some space for the '*' */
-  			margin-right: .4em;
-		}
-		.required label:after {
-  			content:"*";
-  			display: block;
-			color:#FF0000;
-  			position: absolute;
-  			right: -.6em;
-  			top: -.1em;
-			}
-    </style>
+    	    </style>
     
 
 <link rel="stylesheet" type="text/css" href="../../common/datepicker/jquery.datepick.css">
@@ -153,126 +136,131 @@ var isDecimal_re     = /^\s*(\+|-)?((\d+(\.\d+)?)|(\.\d+))\s*$/;
 <br/>
 <div class="content" style="padding-top:0px; background-color:#FCFCFC" >
 	<form name="frm_agreement" action="../../agreement/controller/agreement.php" method="post" onsubmit="return validateForm()">
-    	<table align="center" style=" border: 1px groove #93AE13; padding:5px;" width="600px">
+    	<table align="center" width="500px">
         	<tr>
-            	<td colspan="2" align="center" style="padding:6px"><u><b>PROJECT PROPOSAL</b></u></td>
+            	<td colspan="2" align="center" style="padding:6px; font-size:16px;"><u><b>PROJECT PROPOSAL</b></u></td>
             </tr>
             <tr>
-            	<td width="162" >Client's  address:</td>
-                <td width="326" class="required"><label><textarea name="txt_caddress" cols="46" rows="3"></textarea></label></td>
+            	<td width="121" >Client's  address:</td>
+                <td width="314" class="required"><label><textarea name="txt_caddress" cols="42" rows="3"></textarea></label></td>
             </tr>
             <tr>
             	<td >Date :</td>
-            	<td class="required"><label><input type="text" id="Datepicker1" name="txt_date" size="45" /></label></td>
+            	<td class="required"><label><input type="text" id="Datepicker1" name="txt_date" size="40" readonly/></label></td>
             </tr>
             <tr>
-            	<td width="162" >Subject:</td>
-                <td width="326" class="required"><label><input type="text" id="Datepicker1" name="txt_date" size="45" /></label></td>
+            	<td width="121" >Subject:</td>
+                <td width="314" class="required"><label><input type="text" id="Datepicker1" name="txt_date" size="40" /></label></td>
             </tr>
-            <tr>
-            	<td colspan="2">&nbsp;</td>
+     </table>
+         <br/>   
+        <table align="center" width="500px">
+            <tr bgcolor="#BABAFF">
+            	<td width="359">Total Extent (perches):</td>
+                <td width="129" class="required"><label><input name="txt_extentl" type="text" size="20"/></label></td>
             </tr>
-            <tr>
-            <tr>
-            	<td>Total Extent:</td>
-                <td class="required"><label><input name="txt_extentl" type="text" size="45"/></label></td>
+            <tr bgcolor="#BABAFF">
+            	<td>Roadways (perches):</td>
+                <td class="required"><label><input name="txt_road" type="text" size="20"/></label></td>
             </tr>
-            <tr>
-            	<td>Roadways:</td>
-                <td class="required"><label><input name="txt_road" type="text" size="45"/></label></td>
+            <tr bgcolor="#C3EAF5">
+            	<td>Sellable Extent (perches):</td>
+                <td class="required"><label><input name="txt_road" type="text" size="20"/></label></td>
             </tr>
-            <tr>
-            	<td>Sellable Extent:</td>
-                <td class="required"><label><input name="txt_road" type="text" size="45"/></label></td>
-            </tr>
-            <tr>
-            	<td>Minimum selling price:</td>
-                <td class="required"><label><input name="txt_minsell" type="text" size="45"/></label></td>
-            </tr>
-            <tr>
-            	<td>Average selling price:</td>
-                <td class="required"><label><input name="txt_avgsell" type="text" size="45"/></label></td>
-            </tr>
-            <tr>
-            	<td>Total selling price:</td>
-                <td class="required"><label><input name="txt_totsell" type="text" size="45"/></label></td>
-            </tr>
-            <tr>
-            	<td colspan="2"><strong>AGREEMENT TO SELL ON BEHALF OF OWNER NO.</strong></td>
-            </tr>
-            <br/>
-            <tr>
-            	<td >Agreement No :</td>
-            	<td class="required"><label><input name="txt_agr_no" type="text" size="45"/></label></td>
-
-            <tr>
-            	<td>Location :</td>
-            	<td class="required"><label><input name="txt_location" type="text" size="45"/></label></td>
-            </tr>
+	</table>   
+     <br/>
+                <table align="center" width="500px">
+                    <tr>
+                      <th scope="col">&nbsp;</th>
+                      <th scope="col">Minimum selling price:</th>
+                      <th scope="col">Average selling price:</th>
+                    </tr>
+                    <tr bgcolor="#BABAFF">
+                      <td>&nbsp;</td>
+                      <td class="required"><label><input name="txt_minsell" type="text" size="20"/></label></td>
+                      <td class="required"><label><input name="txt_avgsell" type="text" size="20"/></label></td>
+                    </tr>
+                    <tr bgcolor="#BABAFF">
+                      <td>Total selling price:</td>
+                      <td class="required"><label><input name="txt_tot_minsell" type="text" size="20"/></label></td>
+                      <td class="required"><label><input name="txt_tot_avgsell" type="text" size="20"/></label></td>
+                    </tr>
+                    <tr bgcolor="#BABAFF">
+                      <td>Less 5% commission:</td>
+                      <td class="required"><label><input name="txt_min_comm" type="text" size="20"/></label></td>
+                      <td class="required"><label><input name="txt_avg_comm" type="text" size="20"/></label></td>
+                    </tr>
+                    <tr bgcolor="#C3EAF5">
+                      <td>&nbsp;</td>
+                      <td class="required"><label><input name="txt_ans1" type="text" size="20"/></label></td>
+                      <td class="required"><label><input name="txt_ans2" type="text" size="20"/></label></td>
+                    </tr>
+                    <tr bgcolor="#BABAFF">
+                      <td>Plus 50% of over &amp; above selling price:</td>
+                      <td class="required"><label><input name="txt_fif1" type="text" size="20"/></label></td>
+                      <td class="required"><label><input name="txt_fif2" type="text" size="20"/></label></td>
+                    </tr>
+                    <tr bgcolor="#C3EAF5">
+                      <td>&nbsp;</td>
+                      <td class="required"><label><input name="txt_answer1" type="text" size="20"/></label></td>
+                      <td class="required"><label><input name="txt_answer2" type="text" size="20"/></label></td>
+                    </tr>
+      </table>
+      
+      <br/>
+	<table align="center" width="500px">
+      <tr>
+            	<td colspan="3"><strong>Less development expenses.</strong></td>
+      </tr>
             
-            <tr>
-            	<td>Land owner's full name :</td>
-            	<td class="required"><label><input name="txt_land_owner" type="text" size="45"/></label></td>
+            
+            <tr bgcolor="#BABAFF">
+            	<td width="359">Surveyor Fees :</td>
+            	<td width="129"> <input name="txt_survey" id="txt_survey" type="text" size="20" placeholder="eg: 10000.00"/></td>
             </tr>
-            <tr>
-            	<td>Land owner's NIC :</td>
-            	<td class="required"><label><input name="txt_nic" id="txt_nic" type="text" size="45"/></label></td>
+            <tr bgcolor="#BABAFF">
+            	<td>Advertising :</td>
+            	<td> <input name="txt_adv" placeholder="eg: 10000.00" type="text" size="20"/></td>
             </tr>
-            <tr>
-            	<td >Land owner's address :</td>
-            	<td class="required"> <label><textarea name="txt_address" cols="46" rows="3"></textarea></label></td>
+            <tr bgcolor="#BABAFF">
+            	<td>Development Exps :</td>
+            	<td> <input name="txt_dev" placeholder="eg: 10000.00" type="text" size="20"/></td>
             </tr>
-            <tr>
-            	<td >Agreed minimum price :</td>
-            	<td class="required"><label> <input name="txt_price" type="text" size="45"/></label></td>
+            <tr bgcolor="#BABAFF">
+            	<td>Other Exps :</td>
+            	<td> <input name="txt_other" placeholder="eg: 10000.00" type="text" size="20"/></td>
             </tr>
-            <tr>
-            	<td>Agreed valid period :</td>
-            	<td class="required"> <label><input name="txt_valid" type="text" size="45"/></label></td>
-            </tr>
-            <tr>
-            	<td colspan="2">Statement of approximate expenditure.</td>
-               	<tr>
-            	<td>Survey fees :</td>
-            	<td> <input name="txt_survey" id="txt_survey" type="text" size="45" placeholder="eg: 10000.00"/></td>
-            </tr>
-            <tr>
-            	<td>Advertising expenses :</td>
-            	<td> <input name="txt_adv" placeholder="eg: 10000.00" type="text" size="45"/></td>
-            </tr>
-            <tr>
-            	<td>Development expenses :</td>
-            	<td> <input name="txt_dev" placeholder="eg: 10000.00" type="text" size="45"/></td>
-            </tr>
-            <tr>
-            	<td>Other expenses :</td>
-            	<td> <input name="txt_other" placeholder="eg: 10000.00" type="text" size="45"/></td>
-            </tr>
-            <tr>
+            <tr bgcolor="#BABAFF">
             	<td>Electricity :</td>
-            	<td> <input name="txt_electricity" placeholder="eg: 10000.00" type="text"  size="45"/></td>
+            	<td> <input name="txt_electricity" placeholder="eg: 10000.00" type="text"  size="20"/></td>
             </tr>
+            <tr bgcolor="#C3EAF5">
+            	<td>Total :</td>
+            	<td> <input name="txt_total" placeholder="eg: 10000.00" type="text"  size="20"/></td>
+            </tr>
+   </table>
+   <table align="center" width="500px">
+   		<tr bgcolor="#BABAFF">
+        	<td></td>
+            <td><input name="txt_tax" placeholder="eg: 10000.00" type="text"  size="20"/></td>
+            <td><input name="txt_tax" placeholder="eg: 10000.00" type="text"  size="20"/></td>
+        </tr>
+             <tr bgcolor="#BABAFF">
+            	<td>Less Sale Tax 1% :</td>
+            	<td> <input name="txt_tax" placeholder="eg: 10000.00" type="text"  size="20"/></td>
+                <td> <input name="txt_tax" placeholder="eg: 10000.00" type="text"  size="20"/></td>
+            </tr> 
+             <tr bgcolor="#C3EAF5">
+            	<td><strong style="font-size:14px;">Total realization for the owner :</strong></td>
+            	<td> <input name="txt_tax" placeholder="eg: 10000.00" type="text"  size="20"/></td>
+                <td> <input name="txt_tax" placeholder="eg: 10000.00" type="text"  size="20"/></td>
+            </tr>           
             <tr>
-            	<td colspan="2"><strong>THE SCHEDULE ABOVE REFFRRED TO</strong></td>
-            </tr>
-            <tr>
-            	<td>Description :</td>
-            	<td class="required"><label> <textarea name="txt_description" cols="46" rows="10"></textarea></label></td>
-            </tr>
-             <tr>
-            	<td>Witness name :</td>
-            	<td class="required">1.<label><input name="txt_wit1" type="text" size="45"/></label><br/>
-                2.<input name="txt_wit2" type="text"  size="45"/></td>
-            </tr>
-            
-            
-            <tr>
-            	<td colspan="2" align="center"><input type="submit" value="save" /></td>
+            	<td colspan="3" align="center"><input type="submit" value="save" /></td>
             </tr>
         </table>
 	</form>
     
 </div>
-
 </body>
 </html>
