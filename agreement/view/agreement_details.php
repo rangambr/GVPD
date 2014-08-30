@@ -6,7 +6,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Agreements </title>
+	<title> Agreements </title>
     
     <link rel="stylesheet" type="text/css" href="../../common/CSS/home.css">
 	<link rel="stylesheet" type="text/css" href="../../common/CSS/admin_menu_bar.css">
@@ -57,6 +57,9 @@
             .view_link{
                 content: url('../..//common/icons/eye.png');
             }
+			.print_link{
+				content: url('../..//common/icons/print-icon.png');
+				}
             .delete_link{
                 content: url('../..//common/icons/icon-delete-small.png' );
             }
@@ -111,10 +114,10 @@
 		 
           echo "<td class='ac_link'><a  href='edit_agreement .php?agr_no=".$agr['agreement_no']."'><span class='create_link' title='Edit Agreement'></span></a>";
          echo " | <a  href='view_agreement .php?agr_no=".$agr['agreement_no']."'><span class='view_link' title='View Agreement'></span></a>";
-        echo " | <a onClick=\"return confirm('Are you sure?')\" href='../controller/delete_agreement.php?agr_no=".$agr['agreement_no']."'><span class='delete_link' title='Delete Agreement'></span></a></td><tr>";
+		 echo " | <a  href='print_agreement.php?agr_no=".$agr['agreement_no']."'><span class='print_link' title='Print Agreement'></span></a>";
+        echo " | <a onClick=\"return confirm('Are you sure?')\" href='../controller/delete_agreement.php?agr_no=".$agr['agreement_no']."'><span class='delete_link' title='Delete Agreement'></span></a></td><tr>" ;
           }
-      ?>
-      
+      ?> 
     </table>
     </div>
 </div>

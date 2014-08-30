@@ -31,7 +31,7 @@
                 text-align: center !important;
             }
             .edit_link{
-                content: url('../..//common/icons/sites-pencil-icon-small.gif');
+                content: url('../..//common/icons/pencil.gif');
             }
             .reset_pw{
                 content: url('../..//common/icons/change_password.png');
