@@ -71,7 +71,7 @@
         <td><input type="text" name="txt_pno"/></td>
       </tr>
       <tr>
-        <td>Property Name:</td>
+        <td>Plan Name:</td>
         <td><input type="text" name="txt_pname"/></td>
       </tr>
       <tr>

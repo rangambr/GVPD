@@ -29,5 +29,5 @@ $elec=$_POST["txt_electricity"];
 
 $add_aggr_data=new Agreement();
 $add_aggr_data->updateAgreementTable($reg_no,$agr_no ,$location,$date,$fullname,$nic,$address,$price,$valid_time,$description,$wit1,$wit2);
-header("location:../view/edit_agreement.php?agr_no=". $agr_no);
+header("location:../view/view_agreement .php?agr_no=". $agr_no);
 ?>

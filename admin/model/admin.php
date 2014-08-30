@@ -41,6 +41,12 @@ class Admin {
         $result = $db->query($sql);
         return $result;
     }
+	function getAllInquiryById($inq_id) {
+        $db = new Dbconnect();
+        $sql = "SELECT * FROM inquiry WHERE inquiry_id=".$inq_id." ";
+        $result = $db->query($sql);
+        return $result;
+    }
 	
     function getAllUsers() {
         $db = new Dbconnect();
@@ -99,10 +105,10 @@ class Admin {
         $result = $db->query($query);
         return true;
     }
-	function insertRespond($id,$res){
+	function insertRespond($res){
 		$db = new Dbconnect();
 
-        $query = "INSERT INTO inquiry_response(inquiry_id,response) VALUES ('$id','$res') ";
+        $query = "INSERT INTO inquiry_response(response) VALUES ('$res') ";
         $result = $db->query($query);
         return $result;
 		}

@@ -1,5 +1,5 @@
 <?php session_start(); 
- require '../controller/manage_users.php';
+ require '../controller/handle_inquiry.php';
 ?>
 
 <!doctype html>
@@ -70,13 +70,17 @@
                      <tr>
                         <th width="44" align="center"><div align="left">To :</div></th>
                         <td width="359">
-                            <input type="text" name="txt_to" size=36 value="<?php echo '' . $res_inquiry['email']; ?>"/>
+                           <input type="hidden" name="inquiry_id" value="<?php echo '' . $newinquiry['inquiry_id']; ?>" /> <input type="text" name="txt_to" size=40 value="<?php echo '' . $newinquiry['email']; ?>" readonly/>
                         </td>
+                    </tr>
+                    <tr>
+                    	<th>Subject:</th>
+                        <td> <input name="txt_sub" type="text" size="40" value="<?php echo 'Reply for the subject : ' . $newinquiry['subject']; ?>" /></td>
                     </tr>
                     <tr>
                         <th align="left"><div align="left">Reply :</div></th>
                         <td>
-                            <textarea name="txt_reply" cols="40" rows="7"></textarea>
+                            <textarea name="txt_reply" cols="41" rows="7"></textarea>
                         </td>
                     </tr>
                     <tr>

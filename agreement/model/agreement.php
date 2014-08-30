@@ -49,14 +49,14 @@ class Agreement{
         return $result;
     }
 	
-	function updateLawyerTable($l_name,$l_address,$l_tel){
+	function updateLawyerTable($agrno,$l_name,$l_address,$l_tel){
 		$db = new Dbconnect();
         $sql = "UPDATE lawyer SET reg_no='$reg_no',location = '$location',date = '$date',full_name = '$fullname',NIC = '$nic',address = '$address',agreed_price='$price',valid_period='$valid_time',description='$description',witness1='$wit1',witness2='$wit2' where  agreement_no='" . $agrno . "' ";
         $result = $db->query($sql);
         //KINT::dump($result);
         return $result;
     }
-	function updateDev_costTable($sur,$adv,$dev,$other,$elec, $tot){
+	function updateDev_costTable($agrno,$sur,$adv,$dev,$other,$elec, $tot){
 		$db = new Dbconnect();
         $sql = "UPDATE dev_cost SET reg_no='$reg_no',location = '$location',date = '$date',full_name = '$fullname',NIC = '$nic',address = '$address',agreed_price='$price',valid_period='$valid_time',description='$description',witness1='$wit1',witness2='$wit2' where  agreement_no='" . $agrno . "' ";
         $result = $db->query($sql);
