@@ -1,9 +1,9 @@
 <?php
 //session_start();
 require '../model/agreement.php';
-$agrno = $_REQUEST['agr_no'];
+$agrid = $_REQUEST['agr_id'];
  
 $agreement = new Agreement();
-$agreement->deleteAgreement($agrno);
+$agreement->deleteAgreement($agrid);
 header("location:../view/agreement_details.php");  
 ?>

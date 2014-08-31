@@ -65,7 +65,9 @@ require_once '../controller/view_agreement.php';
             <br/>
             <tr>
             	<td>Agreement No :</td>
-            	<td><input name="txt_agr_no" type="text" size="45" value="<?php echo ''.$agreement['agreement_no'] ; ?>" disabled="true"/></td>
+            	<td><input name="txt_agr_no" type="text" size="45" value="<?php echo ''.$agreement['agreement_no'] ; ?>" disabled="true"/>
+                    <input  name="txt_agr_id" type="hidden" size="45" value="<?php echo ''.$agreement['id'] ; ?>" disabled="true"/>
+                </td>
 
             <tr>
             	<td>Location :</td>

@@ -1,12 +1,12 @@
 <?php 
 require '../model/agreement.php';
 
-require '../../common/kint/Kint.class.php';
-$agreementNo = $_REQUEST['agr_no'];
-//kint::dump($agreementNo);
+//require '../../common/kint/Kint.class.php';
+$agreementId = $_REQUEST['agr_id'];
+//kint::dump($agreementId);
 $agrmnt = new Agreement();
 
-$result = $agrmnt->getAgreementsById($agreementNo);
+$result = $agrmnt->getAgreementsById($agreementId);
 //kint::dump($result);
 $agreement;
 
