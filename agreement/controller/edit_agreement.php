@@ -27,7 +27,14 @@ $elec=$_POST["txt_electricity"];
 //$tot=$_POST["txt_total"];
 //$tot=$sur+$adv+$dev+$other+$elec;
 
+//update agreement table
 $add_aggr_data=new Agreement();
 $add_aggr_data->updateAgreementTable($reg_no,$agr_no ,$location,$date,$fullname,$nic,$address,$price,$valid_time,$description,$wit1,$wit2);
-header("location:../view/view_agreement .php?agr_no=". $agr_no);
+
+//update lawyer table
+$add_aggr_data->updateLawyerTable($agr_no,$l_name,$l_address,$l_tel);
+
+//update dev_cost table
+$add_aggr_data->updateDev_costTable($agr_no,$sur,$adv,$dev,$other,$elec, $tot);
+header("location:../view/agreement_details.php?agr_no=". $agr_no);
 ?>

@@ -157,7 +157,7 @@ var isDecimal_re     = /^\s*(\+|-)?((\d+(\.\d+)?)|(\.\d+))\s*$/;
         <table align="center" width="500px">
             <tr bgcolor="#BABAFF">
             	<td width="359">Total Extent (perches):</td>
-                <td width="129" class="required"><label><input name="txt_extentl" type="text" size="20"/></label></td>
+                <td width="129" class="required"><label><input name="txt_extenttot" type="text" size="20"/></label></td>
             </tr>
             <tr bgcolor="#BABAFF">
             	<td>Roadways (perches):</td>
@@ -165,7 +165,7 @@ var isDecimal_re     = /^\s*(\+|-)?((\d+(\.\d+)?)|(\.\d+))\s*$/;
             </tr>
             <tr bgcolor="#C3EAF5">
             	<td>Sellable Extent (perches):</td>
-                <td class="required"><label><input name="txt_road" type="text" size="20"/></label></td>
+                <td class="required"><label><input name="txt_extentsell" type="text" size="20"/></label></td>
             </tr>
 	</table>   
      <br/>
@@ -242,18 +242,18 @@ var isDecimal_re     = /^\s*(\+|-)?((\d+(\.\d+)?)|(\.\d+))\s*$/;
    <table align="center" width="500px">
    		<tr bgcolor="#BABAFF">
         	<td></td>
-            <td><input name="txt_tax" placeholder="eg: 10000.00" type="text"  size="20"/></td>
-            <td><input name="txt_tax" placeholder="eg: 10000.00" type="text"  size="20"/></td>
+            <td><input name="txt_tax" type="text"  size="20"/></td>
+            <td><input name="txt_tax" type="text"  size="20"/></td>
         </tr>
              <tr bgcolor="#BABAFF">
             	<td>Less Sale Tax 1% :</td>
-            	<td> <input name="txt_tax" placeholder="eg: 10000.00" type="text"  size="20"/></td>
-                <td> <input name="txt_tax" placeholder="eg: 10000.00" type="text"  size="20"/></td>
+            	<td> <input name="txt_owner_tax" type="text"  size="20"/></td>
+                <td> <input name="txt_com_tax" type="text" size="20"/></td>
             </tr> 
              <tr bgcolor="#C3EAF5">
             	<td><strong style="font-size:14px;">Total realization for the owner :</strong></td>
-            	<td> <input name="txt_tax" placeholder="eg: 10000.00" type="text"  size="20"/></td>
-                <td> <input name="txt_tax" placeholder="eg: 10000.00" type="text"  size="20"/></td>
+            	<td> <input name="txt_owner" placeholder="eg: 10000.00" type="text"  size="20"/></td>
+                <td> <input name="txt_com" placeholder="eg: 10000.00" type="text"  size="20"/></td>
             </tr>           
             <tr>
             	<td colspan="3" align="center"><input type="submit" value="save" /></td>

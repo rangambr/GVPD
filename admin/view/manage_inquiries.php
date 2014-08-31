@@ -97,6 +97,8 @@ session_start();
                 <li><a href='manage_reviews.php'><span>Reviews</span></a></li>
                 <li><a href='reports.php'><span>Reports</span></a></li>
                 <li><a href='../../agreement/view/agreement_details.php'><span>Agreements</span></a></li>
+                <li><a href=''><span>Project proposals</span></a></li>
+                <li><a href=''><span>Property plans</span></a></li>
             </ul>
 </div>
 
