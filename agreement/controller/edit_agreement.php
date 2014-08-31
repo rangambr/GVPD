@@ -37,14 +37,9 @@ $add_aggr_data->updateAgreementTable($reg_no, $agr_id, $agr_no, $location, $date
 $add_aggr_data->updateLawyerTable($agr_id, $l_name, $l_address, $l_tel);
 
 //update dev_cost table
-<<<<<<< HEAD
-$add_aggr_data->updateDev_costTable($agr_no,$sur,$adv,$dev,$other,$elec, $tot);
 
-
-header("location:../view/agreement_details.php?agr_no=". $agr_no);
-=======
 $tot=$sur+$adv+$dev+$other+$elec;
 $add_aggr_data->updateDev_costTable($agr_id, $sur, $adv, $dev, $other, $elec, $tot);
 header("location:../view/agreement_details.php?agr_no=" . $agr_no);
->>>>>>> df88000619ab2641c7779eaa11af6d08dc2c4806
+
 ?>

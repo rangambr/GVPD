@@ -74,7 +74,6 @@ require '../controller/agreement_info.php';
         <br/>
         <div class="admin_menu_bar" align="center" id="cssmenu">
             <ul>
-<<<<<<< HEAD
               <li class='active'><a href='../../home/view/index.php'>Home</a></li>
               <li><a href='../../admin/view/control_panel.php'><span>Admin panel</span></a></li>
               <li><a href='../../admin/view/manage_users.php'><span>Users</span></a></li>
@@ -85,16 +84,6 @@ require '../controller/agreement_info.php';
               <li><a href='agreement_details.php'><span>Agreements</span></a></li>
               <li><a href='../../plan/view/view_plans.php'><span>Property plans</span></a></li>
                 <li><a href='../../project_proposal/view/proposal_main_page.php'><span>Project proposals</span></a></li>
-=======
-                <li class='active'><a href='../../home/view/index.php'>Home</a></li>
-                <li><a href='../../admin/view/control_panel.php'><span>Admin panel</span></a></li>
-                <li><a href='../../admin/view/manage_users.php'><span>Users</span></a></li>
-                <li><a href='../../admin/view/manage_properties.php'><span>Properties</span></a></li>
-                <li><a href='../../admin/view/manage_inquiries.php'><span>Inquiries</span></a></li>
-                <li><a href='../../admin/view/manage_reviews.php'><span>Reviews</span></a></li>
-                <li><a href='../../admin/view/reports.php'><span>Reports</span></a></li>
-                <li><a href='agreement_details.php'><span>Agreements</span></a></li>
->>>>>>> df88000619ab2641c7779eaa11af6d08dc2c4806
             </ul>
         </div>
         <br/>
