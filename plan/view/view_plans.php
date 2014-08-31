@@ -75,7 +75,7 @@
     <body  bgcolor="#E1E1FF">
 	
     	<div style="background-color:#000089; height:10%;padding:10px;padding-left:50px">
-			<h3 style="color:#FFFFFF">Plans</h3>
+			<h3 style="color:#FFFFFF">View Plans</h3>
 		</div>
 		<br/>
 		<div class="admin_menu_bar" align="center" id="cssmenu">
@@ -95,7 +95,7 @@
 <form name="frm_plan" action="../controller/add_plan.php" method="post" enctype="multipart/form-data" onsubmit="return validate();" >
 	<table width="428"  style="border:#000089 1px thin solid;" align="center" cellpadding="5" cellspacing="5" bgcolor="#F8F8F7" >
     	<tr align="center">
-        <td colspan="2"><h2><span style="color:#000089">Add Property Plans</span></h2></td>
+        <td colspan="2"><h2><span style="color:#000089"> Property Plans</span></h2></td>
       </tr>
       <tr>
         <td width="130"><strong>&nbsp;&nbsp;&nbsp;&nbsp;Plan No.</strong></td>

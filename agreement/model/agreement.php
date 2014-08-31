@@ -1,5 +1,6 @@
 <?php
 require_once '../../common/conn.php'; 
+//require '../../common/kint/Kint.class.php'; 
 
 class Agreement{
     
@@ -50,16 +51,19 @@ class Agreement{
     }
 	
 	function updateLawyerTable($agrno,$l_name,$l_address,$l_tel){
+		
 		$db = new Dbconnect();
-        $sql = "UPDATE lawyer SET l_name='$l_name',l_address = '$l_address',l_tel = '$l_te' WHERE agreement_no='" . $agrno . "' ";
+        $sql = "UPDATE lawyer SET l_name='$l_name',l_address = '$l_address',l_tel = '$l_tel' WHERE agreement_no='$agrno' ";
+		kint::dump($sql);
         $result = $db->query($sql);
-        //KINT::dump($result);
+       
         return $result;
     }
 	
 	function updateDev_costTable($agrno,$sur,$adv,$dev,$other,$elec, $tot){
 		$db = new Dbconnect();
-        $sql = "UPDATE dev_cost SET survey='$sur',advertising = '$adv',development = '$dev',other= '$other',electricity= '$elec',tot= '$tot' WHERE  agreement_no='" . $agrno . "' ";
+        $sql = "UPDATE dev_cost SET survey='$sur',advertising = '$adv',development = '$dev',other= '$other',electricity= '$elec',tot= '$tot' WHERE  agreement_no='$agrno' ";
+		
         $result = $db->query($sql);
         //KINT::dump($result);
         return $result;

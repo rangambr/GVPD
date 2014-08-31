@@ -47,11 +47,11 @@
         ?>
         
             <form name="frm_ViewInquiry" method="post" >
-               <table width="500" align="center" style="border:1px groove #000089; padding:5px; background-color:#F8F8F7;">
+               <table width="500" align="center" style=" padding:5px; background-color:#F8F8F7;">
                		<tr>
                       <td width="120">Name</td>
                       <td width="10">:</td>
-                      <td width="354"><?php echo '' . $newvinq_1['name']; ?></td>
+                      <td width="354"><?php echo '' . $newvinq_1['title']." "; ?><?php echo '' . $newvinq_1['name']; ?></td>
                     <tr>
                       <td width="120">From</td>
                       <td width="10">:</td>
@@ -61,6 +61,9 @@
                       <td>Date/Time</td>
                       <td>:</td>
                       <td><?php echo '' . $newvinq_1['datetime']; ?></td>
+                    </tr>
+                    <tr>
+                    	<td colspan="3">&nbsp;</td>
                     </tr>
                     <tr>
                       <td>Subject</td>
@@ -73,15 +76,26 @@
                       <td><?php echo '' . $newvinq_1['message']; ?></td>
                     </tr>
                     <tr>
-                      <td>Response</td>
-                      <td>:</td>
-                      <td><?php echo '' . $newvinq_2['response']; ?></td>
+                    	<td colspan="3">&nbsp;</td>
                     </tr>
+                    <?php
+                    // Start looping table row
+                     while ($row = mysql_fetch_array($result2)) { ?>
                     <tr>
-                      <td>Date/Time</td>
+                      <td rowspan="2">Response &amp; Date/Time</td>
                       <td>:</td>
-                      <td><?php echo '' . $newvinq_2['datetime']; ?></td>
+                      <td rowspan="2"><? echo $row['response']; ?><br/>
+                      				  <?php echo '' . $row['datetime']; ?>
+                      		
+   </td>
                     </tr>
+                    
+                    <tr>
+                      <td>:</td>
+                    </tr>
+                     <?php
+          // Exit looping and close connection 
+          } ?>
 				</table>  
             </form>
         </div>

@@ -184,7 +184,7 @@ var isDecimal_re     = /^\s*(\+|-)?((\d+(\.\d+)?)|(\.\d+))\s*$/;
             </tr>
             <tr>
             	<td >Date :</td>
-            	<td class="required"><label><input name="txt_date" type="text" id="Datepicker1" size="45" readonly="readonly" /></label></td>
+            	<td class="required"><label><input name="txt_date" type="text" id="Datepicker1" size="45"  /></label></td>
             </tr>
             <tr>
             	<td>Land owner's full name :</td>
@@ -237,7 +237,7 @@ var isDecimal_re     = /^\s*(\+|-)?((\d+(\.\d+)?)|(\.\d+))\s*$/;
             </tr>
              <tr>
             	<td>Witness name :</td>
-            	<td class="required">1.<label><input name="txt_wit1" type="text" size="45"/></label><br/>
+            	<td>1.<label><input name="txt_wit1" type="text" size="45"/></label><br/>
                 2.<input name="txt_wit2" type="text"  size="45"/></td>
             </tr>
             

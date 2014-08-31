@@ -14,9 +14,7 @@ while ($row = mysql_fetch_array($result1)) {
 $result2 = $view_inq->getAllResponseById($vinquiry);
 $newvinq_2;
 
-while ($row = mysql_fetch_array($result2)) {	
-    $newvinq_2 = $row;	
-}
-header("location:../view/view_inquiry.php?inqId=". $vinquiry);
+
+//header("location:../view/view_inquiry.php?inqId=". $vinquiry);
 ?>	
 	

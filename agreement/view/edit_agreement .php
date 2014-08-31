@@ -80,7 +80,7 @@ require_once '../controller/view_agreement.php';
             </tr>
             <tr>
             	<td>Land owner's NIC :</td>
-            	<td><input name="txt_id" type="text" size="45" value="<?php echo '' .$agreement['NIC'] ; ?>"/></td>
+            	<td><input name="txt_nic" type="text" size="45" value="<?php echo '' .$agreement['NIC'] ; ?>"/></td>
             </tr>
             <tr>
             	<td>Land owner's address :</td>

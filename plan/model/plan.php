@@ -17,5 +17,11 @@ class Plan {
         //KINT::dump($result);
         return true;
     }
+	 function getAllPlans() {
+        $db = new Dbconnect();
+        $sql = "SELECT * FROM plan";
+        $result = $db->query($sql);
+        return true;
+    }
 }	
 ?>	

@@ -10,7 +10,7 @@
     
      <style type="text/css">
          .left_box{
-             width: 50%;
+             width: 40%;
          }
             .left_box td{
                 padding-left: 9%;
@@ -50,41 +50,42 @@
  
  <table class="left_box" align="center">
      <tr>
-         <th colspan="2" align="center"><h3 style="color:#120072;">Administration Tools</h3></th>
+         <th colspan="3"><h3 style="color:#120072; margin-left:100px;">Administration Tools</h3></th>
      </tr>
       <tr>
          <td>
              <a href="../../home/view/index.php"><img src="../../common/images/icons/home2.jpg"/>&nbsp;Home</a>
          </td>
-          <td >
+         <td>
              <a href="../view/manage_users.php"><img src="../../common/images/icons/user.png"/>Manage users</a>
          </td>
+         <td >
+             <a href="../view/manage_properties.php"><img src="../../common/images/icons/property.png"/>Manage properties</a>
+         </td>
      </tr>
-     <tr>
-         <td>
+      <tr>
+        <td>
              <a href="../view/manage_reviews.php"><img src="../../common/images/icons/review.png"/>Manage reviews</a>
-         </td>
-          <td >
-          	<a href="../view/manage_properties.php"><img src="../../common/images/icons/property.png"/>Manage properties</a>
-         </td>
-     </tr>
-     <tr>
-         <td>
-             <a href="../view/manage_inquiries.php"><img src="../../common/images/icons/inquiry.png"/>Manage inquiries</a>
-         </td>
-          <td>
-               <a href="../../agreement/view/agreement_details.php"><img src="../../common/images/icons/agreement2.png"/>Agreements</a>
-         </td>
-     </tr>
-     <tr>
-         <td>
+        </td>
+        <td >
+          	<a href="../view/manage_inquiries.php"><img src="../../common/images/icons/inquiry.png"/>Manage inquiries</a>
+        </td>
+        <td>
              <a href="../view/reports.php"><img src="../../common/images/icons/report.png"/>Reports</a>
-         </td>
-          <td>
-             <a href="../../agreement/view/agreement_details.php"><img src="../../common/images/icons/project proposal.png"/>Project proposals</a>
-         </td>
+         </td>  
      </tr>
      
+     <tr>
+       	<td>
+          <a href="../../agreement/view/agreement_details.php"><img src="../../common/images/icons/agreement2.png"/>Agreements</a>
+        </td>
+        <td>
+             <a href="../../agreement/view/agreement_details.php"><img src="../../common/images/icons/project proposal.png"/>Project proposals</a>
+        </td>  
+        <td>
+             <a href="../../plan/view/plan_details.php"><img src="../../common/images/icons/map-icon.png"/>Propery plans</a>
+         </td> 
+     </tr>
  </table>
     
 </div>
