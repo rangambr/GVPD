@@ -1,7 +1,6 @@
 <?php
 session_start();
 ?>
-
 <!doctype html>
 <html>
     <head>
@@ -37,6 +36,9 @@ session_start();
             .resp_link{
                  content:url(../..//common/icons/email.png);
             }
+			.view_link{
+				content:url(../..//common/icons/eye.png);
+			}
             .close_link{
                 content:url(../..//common/icons/tick-icon-small.png);
             }

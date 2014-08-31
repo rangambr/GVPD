@@ -22,6 +22,6 @@ while ($row = mysql_fetch_array($usrRecord)) {
     $userStatus = $row['active'];
 }
 
-//include '../view/update_user.php';
+//include '../view/view_inquiry.php';
 //kint::dump($userType);
 

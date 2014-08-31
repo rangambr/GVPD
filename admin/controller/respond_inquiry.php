@@ -5,9 +5,10 @@ $inquiry=$_REQUEST['inquiry_id'];
 $res=$_POST["txt_reply"];
 $sub=$_POST['txt_sub'];
 $email=$_POST['txt_to'];
+$datetime=date("d/m/y H:i:s");
 
 $inquiry_obj=new Admin();
-$inquiry_obj->insertRespond($res);
+$inquiry_obj->insertRespond($inquiry,$res,$datetime);
 
 $inquiry_obj->emailRespond($email,$sub,$res);
 //
@@ -15,9 +16,7 @@ $inquiry_obj->emailRespond($email,$sub,$res);
 //	
 //    header("Location:../../home/view/index.php");
 
-
-
-header("Location:../view/respond_inquiry?er=4");
+header("Location:../view/manage_inquiries.php?er=4" );
 
 
 

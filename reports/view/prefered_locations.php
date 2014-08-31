@@ -13,7 +13,7 @@ require '../controller/get_search_preferences.php';
             google.setOnLoadCallback(drawChart);
             function drawChart() {
                 var data = google.visualization.arrayToDataTable([
-                    ['Price Range', 'Number of hits'],
+                    ['City', 'Number of hits'],
                     <?php
                     while ($row = mysql_fetch_array($search_pref_by_city_chart)) {
                         echo '[ "' . $row['city'] . '",'.$row['COUNT(id)'].'],';

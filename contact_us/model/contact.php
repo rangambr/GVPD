@@ -3,9 +3,9 @@ require_once '../../common/conn.php';
 
 class Inquiry{
     
-    function addInquiry($title,$name,$email,$telephone,$subject,$message){
+    function addInquiry($title,$name,$email,$telephone,$subject,$message,$datetime){
         $db=new Dbconnect();
-        $sql="insert into inquiry (title,name,email,contact_no,subject,message) values ('$title','$name','$email','$telephone','$subject','$message')";    
+        $sql="insert into inquiry (title,name,email,contact_no,subject,message,datetime) values ('$title','$name','$email','$telephone','$subject','$message','$datetime')";    
         $result = $db->query($sql);
         return true; 
     }

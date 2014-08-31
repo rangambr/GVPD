@@ -1,6 +1,5 @@
 <?php
 require_once '../controller/view_agreement.php';
-
 ?>
 <!doctype html>
 <html>
@@ -121,7 +120,7 @@ require_once '../controller/view_agreement.php';
             	<td> <input name="txt_total" type="text"  size="45" value="<?php echo '' .$agreement['total'] ; ?>" disabled="true"/></td>
             </tr>
             <tr>
-            	<td colspan="2"><strong>THE SCHEDULE ABOVE REFFRRED TO</strong></td>
+            	<td colspan="2"><strong>THE SCHEDULE ABOVE REFFRRED TO</strong> </td>
             </tr>
             <tr>
             	<td>Description :</td>
