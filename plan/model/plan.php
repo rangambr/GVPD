@@ -21,7 +21,7 @@ class Plan {
         $db = new Dbconnect();
         $sql = "SELECT * FROM plan";
         $result = $db->query($sql);
-        return true;
+        return $result;
     }
 }	
 ?>	

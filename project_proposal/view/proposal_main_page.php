@@ -80,9 +80,7 @@
               <li><a href='../../admin/view/manage_inquiries.php'><span>Inquiries</span></a></li>
               <li><a href='../../admin/view/manage_reviews.php'><span>Reviews</span></a></li>
               <li><a href='../../admin/view/reports.php'><span>Reports</span></a></li>
-              <li><a href='agreement_details.php'><span>Agreements</span></a></li>
-              <li><a href='../../plan/view/view_plans.php'><span>Property plans</span></a></li>
-                <li><a href='../../project_proposal/view/proposal_main_page.php'><span>Project proposals</span></a></li>
+              <li><a href='proposal_main_page.php'><span>Agreements</span></a></li>
             </ul>
 </div>
 <br/>

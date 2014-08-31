@@ -141,6 +141,8 @@ var isDecimal_re     = /^\s*(\+|-)?((\d+(\.\d+)?)|(\.\d+))\s*$/;
                 <li><a href='../../admin/view/manage_reviews.php'><span>Reviews</span></a></li>
                 <li><a href='../../admin/view/reports.php'><span>Reports</span></a></li>
                 <li><a href='agreement_details.php'><span>Agreements</span></a></li>
+                <li><a href='../../plan/view/plan_details.php'><span>Property plans</span></a></li>
+                <li><a href='../../project_proposal/view/proposal_main_page.php'><span>Project proposals</span></a></li>
             </ul>
         </div>
 <br/>

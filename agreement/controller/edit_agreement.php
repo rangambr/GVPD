@@ -36,5 +36,7 @@ $add_aggr_data->updateLawyerTable($agr_no,$l_name,$l_address,$l_tel);
 
 //update dev_cost table
 $add_aggr_data->updateDev_costTable($agr_no,$sur,$adv,$dev,$other,$elec, $tot);
+
+
 header("location:../view/agreement_details.php?agr_no=". $agr_no);
 ?>

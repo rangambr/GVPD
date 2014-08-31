@@ -65,10 +65,11 @@
      </tr>
       <tr>
         <td>
-             <a href="../view/manage_reviews.php"><img src="../../common/images/icons/review.png"/>Manage reviews</a>
+        	<a href="../view/manage_inquiries.php"><img src="../../common/images/icons/inquiry.png"/>Manage inquiries</a>
+             
         </td>
         <td >
-          	<a href="../view/manage_inquiries.php"><img src="../../common/images/icons/inquiry.png"/>Manage inquiries</a>
+          	<a href="../view/manage_reviews.php"><img src="../../common/images/icons/review.png"/>Manage reviews</a>
         </td>
         <td>
              <a href="../view/reports.php"><img src="../../common/images/icons/report.png"/>Reports</a>
@@ -80,10 +81,10 @@
           <a href="../../agreement/view/agreement_details.php"><img src="../../common/images/icons/agreement2.png"/>Agreements</a>
         </td>
         <td>
-             <a href="../../agreement/view/agreement_details.php"><img src="../../common/images/icons/project proposal.png"/>Project proposals</a>
+        	 <a href="../../plan/view/plan_details.php"><img src="../../common/images/icons/map-icon.png"/>Propery plans</a>
         </td>  
         <td>
-             <a href="../../plan/view/plan_details.php"><img src="../../common/images/icons/map-icon.png"/>Propery plans</a>
+            <a href="../../agreement/view/agreement_details.php"><img src="../../common/images/icons/project proposal.png"/>Project proposals</a>
          </td> 
      </tr>
  </table>

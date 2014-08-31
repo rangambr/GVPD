@@ -38,7 +38,7 @@ class Agreement{
 	 function deleteAgreement($agrno) {
         $db = new Dbconnect();
 
-        $sql = "DELETE FROM agreement WHERE agreement_no='" . $agrno . "'";
+        $sql = "DELETE FROM agreement WHERE agreement_id='" . $agrno . "'";
         $result = $db->query($sql);
     }
 	
@@ -53,16 +53,16 @@ class Agreement{
 	function updateLawyerTable($agrno,$l_name,$l_address,$l_tel){
 		
 		$db = new Dbconnect();
-        $sql = "UPDATE lawyer SET l_name='$l_name',l_address = '$l_address',l_tel = '$l_tel' WHERE agreement_no='$agrno' ";
-		kint::dump($sql);
+        $sql = "UPDATE lawyer SET l_name='$l_name',l_address = '$l_address',l_tel = '$l_tel' WHERE agreement_id='$agrno' ";
+		
         $result = $db->query($sql);
-       
+       //kint::dump($result);
         return $result;
     }
 	
 	function updateDev_costTable($agrno,$sur,$adv,$dev,$other,$elec, $tot){
 		$db = new Dbconnect();
-        $sql = "UPDATE dev_cost SET survey='$sur',advertising = '$adv',development = '$dev',other= '$other',electricity= '$elec',tot= '$tot' WHERE  agreement_no='$agrno' ";
+        $sql = "UPDATE dev_cost SET survey='$sur',advertising = '$adv',development = '$dev',other= '$other',electricity= '$elec',tot= '$tot' WHERE  agreement_id='$agrno' ";
 		
         $result = $db->query($sql);
         //KINT::dump($result);
