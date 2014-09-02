@@ -90,8 +90,8 @@
             <ul>
                 <li class='active'><a href='../../home/view/index.php'><span>Home</span></a></li>
                 <li><a href='../../home/view/about_us.php'><span>About Us</span></a></li>
-                <li><a href='advaced_search_property.php'><span>Buying</span></a></li>
-                <li><a href='add_property.php'><span>Selling</span></a></li>
+                
+                <li><a href='add_property.php'><span>Sell your property</span></a></li>
                 <li><a href='../../home/view/hot_deals.php'><span>Hot Deals</span></a></li>
                 <li><a href='../../forum/create_topic.php'><span>Forum</span></a></li>
                 <li><a href='../../reviews/view/display_review.php'><span>Review</span></a></li>
@@ -157,7 +157,21 @@
               </label></td>
             </tr>
             <tr>
-              <th align="left"> Price/Unit price :</th>
+                    	<th align="left">Property type :</th>
+                        <td><label for="type">
+                    		<select name="type" class="inputs">
+                                <option></option>
+                                <option>Lots and Lands</option>
+                                <option>Estate and Plantation</option>
+                                <option>Commercial</option>
+                                <option>Rentals</option>
+                                <option>Residential</option>
+                            </select>
+                            </label>
+                  </td>
+              </tr>
+            <tr>
+              <th align="left"> Price / Unit price :</th>
               <td><label for="unit_price">
                 <input name="unit_price" type="text" id="unit_price" size="45" class="inputs"/>
               </label></td>

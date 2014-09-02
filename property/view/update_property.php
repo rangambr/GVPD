@@ -64,15 +64,14 @@ require '../controller/update_property.php';
             <ul>
                 <li class='active'><a href='../../home/view/index.php'><span>Home</span></a></li>
                 <li><a href='../../home/view/about_us.php'><span>About Us</span></a></li>
-                <li><a href='advaced_search_property.php'><span>Buying</span></a></li>
-                <li><a href='add_property.php'><span>Selling</span></a></li>
+                <li><a href='add_property.php'><span>Sell your property</span></a></li>
                 <li><a href='../../home/view/hot_deals.php'><span>Hot Deals</span></a></li>
                 <li><a href='../../forum/create_topic.php'><span>Forum</span></a></li>
                 <li><a href='../../reviews/view/display_review.php'><span>Review</span></a></li>
                 <li class='last'><a href='../../contact_us/view/contact_us.php'><span>Contact us</span></a></li>
             </ul>
         </div>
-
+	
         <div class="content">
              <form name="edit_form" action="../controller/edit_property.php" method="post" enctype="multipart/form-data">
             <table class="ct_table" align="center" width="500" style="border:1px groove #93AE13;" >
@@ -130,13 +129,34 @@ require '../controller/update_property.php';
                             </label></td>
                     </tr>
                     <tr>
-                        <th align="left">Extent(no. of perches) :</th>
+                        <th align="left">Extent(no. of perches/ acres) :</th>
                         <td><label for="extent">
                                 <input name="extent" type="text" id="extent" value="<?php echo '' . $property['extent'] ?>" size="45" class="inputs"/>
                             </label></td>
                     </tr>
+                   <!-- <tr>
+                        <th align="left">Property type :</th>
+                        <td><label for="type">
+                                <input name="type" type="text" id="type" value="<?php echo '' . $property['type'] ?>" size="45" class="inputs"/>
+                            </label></td>
+                    </tr>-->
                     <tr>
-                        <th align="left">Unit Price :</th>
+                    	<th align="left">Property type :</th>
+                        <td><label for="type">
+                    		<select name="type" class="inputs">
+                                <option value="<?php echo '' . $property['type'] ?>"><?php echo '' . $property['type'] ?></option>
+                                <option value="Lots and Lands">Lots and Lands</option>
+                                <option value="Estate and Plantation">Estate and Plantation</option>
+                                <option value="Commercial">Commercial</option>
+                                <option value="Rentals">Rentals</option>
+                                <option value="Residential">Residential</option>
+                            </select>
+                            </label>
+                      </td>
+                    </tr>
+
+                    <tr>
+                        <th align="left">Price/Unit Price :</th>
                         <td><label for="unit_price">
                                 <input name="unit_price" type="text" id="unit_price" value="<?php echo '' . $property['unit_price'] ?>" size="45" class="inputs"/>
                             </label></td>
@@ -179,9 +199,12 @@ require '../controller/update_property.php';
 
                     </tr>
                     <tr>
-                        <td colspan="2" align="center" valign="middle">
+                        <td align="center" valign="middle" colspan="2">
                             <input type="submit" value="Update Property" class="myButton" name="submit" />
+                            <br/>
+                            <div align="right"><a href="../../admin/view/manage_properties.php">Back to Manage Properties</a></div>
                         </td>
+                        
                     </tr>
               
             </table>

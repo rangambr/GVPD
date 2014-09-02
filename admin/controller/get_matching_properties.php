@@ -13,11 +13,12 @@ else{
 }
 
 
-echo '<tr><td>Property Name</td><td>Property Status</td><td>Action</td></tr>';
+echo '<tr><td>Property Name</td><td>Property Status</td><td>Type</td><td>Action</td></tr>';
 while ($prp = mysql_fetch_array($result)) {
     
     echo "<tr class='user_info'><td>" . $prp['name'] . "</td>";
     echo "<td class='user_info'>" . $prp['Status'] . "</td>";
+	echo "<td class='user_info'>" . $prp['type'] . "</td>";
    echo "<td class='ac_link'><a  href='../../property/view/update_property.php?propId=" . $prp['id'] . "'><span class='edit_link'></span></a>";
     if ($prp['is_hot_property'] == 0) {
         echo "  <a  href='../controller/add_hot_properties.php?propId=" . $prp['id'] . "'><span class='add_hot'>Add to hot properties</span></a>";

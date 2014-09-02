@@ -10,7 +10,8 @@ $max_val = $_POST['max_val'];
 
 //KINT::dump($location);
 //KINT::dump($property_type);
-$min_val = str_replace(',', '',$min_val);
+// search for the string "$min_val", find the value "," and then replace the value with " ".
+$min_val = str_replace(',', '',$min_val);//28,000 will changed into 28 000
 $max_val = str_replace(',', '',$max_val);
 
 $min_val_dec = 0;
@@ -21,6 +22,7 @@ $no_max = false;
 $no_type = false;
 $no_location = false;
 
+//find the position of the first occurrence of 'No min' inside the string $min_val
 if(strpos($min_val, 'No min') !== false){
     $no_min = true;
 }

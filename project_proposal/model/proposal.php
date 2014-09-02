@@ -8,5 +8,11 @@ class PProposal{
 //		$result=$db-> query($sql);
 //		return $result;
 		}
+	function getAllFrmProposal(){
+		$db=new Dbconnect();
+		$sql="SELECT * FROM proposal" ;
+		$result=$db-> query($sql);
+		return $result;
+		}
 	}
 ?>

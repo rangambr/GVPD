@@ -10,13 +10,15 @@ $address2 = $_POST['address2'];
 $city = $_POST['city'];
 $province = $_POST['province'];
 $extent = $_POST['extent'];
+$type=$_POST['type'];
 $unit_price = $_POST['unit_price'];
 $description = $_POST['description'];
+$date=date('Y-m-d');
 
 $username = $_SESSION['username'];
 
 $property = new Property();
-$property_id = $property->registerProperty($username, $name, $address1, $address2, $city, $province, $extent, $unit_price, $description);
+$property_id = $property->registerProperty($username, $name, $address1, $address2, $city, $province, $extent,$type,$unit_price, $description,$date);
 
 //upload file
 if ($_FILES["uploadedfile1"]["error"] == 0) {

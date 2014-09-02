@@ -64,8 +64,8 @@
 	<ul>
             <li class='active'><a href='../view/index.php'><span>Home</span></a></li>
                 <li><a href='../view/about_us.php'><span>About Us</span></a></li>
-                <li><a href='../../property/view/advaced_search_property.php'><span>Buying</span></a></li>
-                <li><a href='../../property/view/add_property.php'><span>Selling</span></a></li>
+                
+                <li><a href='../../property/view/add_property.php'><span>Sell your property</span></a></li>
                 <li><a href='../view/hot_deals.php'><span>Hot Deals</span></a></li>
                 <li><a href='../../forum/create_topic.php'><span>Forum</span></a></li>
                 <li><a href='../../reviews/view/review.php'><span>Review</span></a></li>

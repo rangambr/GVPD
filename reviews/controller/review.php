@@ -20,5 +20,3 @@ header("Location: ../../home/view/hot_deals.php");
 ?>
 
 
-
-

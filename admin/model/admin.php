@@ -46,6 +46,13 @@ class Admin {
         $result = $db->query($sql);
         return $result;
     }
+	function closeInquiryById($inq_id){
+		$db = new Dbconnect();
+        $sql = "UPDATE inquiry SET status='Closed' WHERE inquiry_id='$inq_id' ";
+        $result = $db->query($sql);
+        return true;
+		
+		}
 	function getAllResponseById($inq_id){
 		$db = new Dbconnect();
         $sql = "SELECT * FROM inquiry_response WHERE inquiry_id=".$inq_id." ";

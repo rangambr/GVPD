@@ -89,7 +89,7 @@ session_start();
 	<br/>
 <div class="admin_menu_bar" align="center" id="cssmenu">
            <ul>
-               <li class='active'><a href='../../home/view/index.php'>Home</a></li>
+               <li><a href='../../home/view/index.php'>Home</a></li>
                <li><a href='control_panel.php'><span>Admin panel</span></a></li>
                 <li><a href='manage_users.php'><span>Users</span></a></li>
                 <li><a href='manage_properties.php'><span>Properties</span></a></li>

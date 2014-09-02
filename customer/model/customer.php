@@ -46,6 +46,23 @@ class Customer{
 		$sql = "DELETE FROM watch_list WHERE property_id='" . $property_id . "'";
         $result = $db->query($sql);
 		}
+	function updatePassword($username,$password,$email_code){
+		 $db=new Dbconnect();
+		$sql="UPDATE user SET  password='$password', email_code='$email_code' WHERE username = '$username' ";     
+        $result = $db->query($sql);
+        //KINT::dump($result);
+        return true;
+		}
+	function getEmailByUsername($username,$email){
+		$db=new Dbconnect();
+		$sql="SELECT email FROM customer WHERE username = '$username' ";     
+        $result = $db->query($sql);
+        //KINT::dump($result);
+        return $result;
+		}
+	function emailResetPassword($to, $subject, $body) {
+       mail($to, $subject, $body,'From: postmaster@localhost');
+    }
 }
 ?>
      

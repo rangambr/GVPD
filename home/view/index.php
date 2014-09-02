@@ -193,8 +193,7 @@ require '../controller/home_properties.php';
             <ul>
                 <li class='active'><a href='index.php'><span>Home</span></a></li>
                 <li><a href='about_us.php'><span>About Us</span></a></li>
-                <li><a href='../../property/view/advaced_search_property.php'><span>Buying</span></a></li>
-                <li><a href='../../property/view/add_property.php'><span>Selling</span></a></li>
+                <li><a href='../../property/view/add_property.php'><span>Sell your property</span></a></li>
                 <li><a href='../view/hot_deals.php'><span>Hot Deals</span></a></li>
                 <li><a href='../../forum/main_forum.php'><span>Forum</span></a></li>
                 <li><a href='../../reviews/view/display_review.php'><span>Review</span></a></li>
@@ -262,7 +261,7 @@ require '../controller/home_properties.php';
                                     <td height="125" align="center" colspan="2">
                                         <input name="q_search"class="myButton" type="submit" value="Search" />
                                         <br/><br/>
-                                        <a href="../../property/view/advaced_search_property.php" style="font-style: normal">Advanced Search</a>
+                                        
                                     </td>
                                 </tr>
                             </table>

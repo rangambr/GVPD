@@ -62,7 +62,7 @@
 #cssmenu li {
   float: left;
   border-right: 1px solid #b2c58b;
-  width: 12%;
+  width: 14%;
 }
 #cssmenu li:hover {
   background: #9cb369 url(../images/pattern.png) top left repeat;

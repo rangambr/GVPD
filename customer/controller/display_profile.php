@@ -32,7 +32,6 @@ $watch_list = $customer->get_watchlist($username);
 $prps = new Property();
 
 $my_properties = $prps->getPropertiesByUsername($username);
-//$customer->updateCustomer($fname,$lname,$gender,$address1,$address2,$city,$birthday,$email,$contact_no1,$contact_no2);
-//Kint::dump($fname);
+
 
 ?>

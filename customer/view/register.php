@@ -21,119 +21,121 @@
 
             });
 
-            function validate() {
-                if ($("#txtfname").val() == '') {
-                    alert('Please enter your first name.');
-                    $("#txtfname").focus();
-                    return false;
-                }
-                if ($("#txtlname").val() == '') {
-                    alert('Please enter your last name.');
-                    $("#txtlname").focus();
-                    return false;
-                }
-                if ($("#gender_male").val() == '' && $("#gender_female").val() == '') {
-                    alert('Please enter your gender.');
-                    $("#gender").focus();
-                    return false;
-                }
-                if ($("#txtaddress1").val() == '') {
-                    alert('Please enter your house number.');
-                    $("#txtaddress1").focus();
-                    return false;
-                }
-                if ($("#txtaddress2").val() == '') {
-                    alert('Please enter your address  .');
-                    $("#txtaddress2").focus();
-                    return false;
-                }
-                if ($("#Datepicker1").val() == '') {
-                    alert('Please select your birthday.');
-                    $("#Datepicker1").focus();
-                    return false;
-                }
-                if ($("#txtemail").val() == '') {
-                    alert('Please enter your email address.');
-                    $("#txtemail").focus();
-                    return false;
-                }
-               
-                if ($("#txttp1").val() == '') {
-                    alert('Please your contact number.');
-                    $("#txttp1").focus();
-                    return false;
-                }
-                if ($("#username").val() == '') {
-                    alert('Please enter an username.');
-                    $("#username").focus();
-                    return false;
-                }
-                if ($("#txtpass").val() == '') {
-                    alert('Please pick a password.');
-                    $("#txtpass").focus();
-                    return false;
-                }
-                if ($("#txtpass2").val() == '') {
-                    alert('Please enter matching password.');
-                    $("#txtpass2").focus();
-                    return false;
-                }
-                if (!validatePasswords()) {
-                    return false;
-                }
-
+            function validate(){
+				if($("#txtfname").val() == ''){
+				alert('Please enter your first name.');
+				$("#txtfname").focus();
+				return false;
+				}
+				if($("#txtlname").val() == ''){
+					alert('Please enter your last name.');
+					$("#txtlname").focus();
+					return false;
+				}
+				if($("#gender_male").val() == '' && $("#gender_female").val() == ''){
+					alert('Please enter your gender.');
+					$("#gender").focus();
+					return false;
+				}
+				if($("#txtaddress1").val() == ''){
+					alert('Please enter your house number.');
+					$("#txtaddress1").focus();
+					return false;
+				}
+				if($("#txtaddress2").val() == ''){
+					alert('Please enter your address  .');
+					$("#txtaddress2").focus();
+					return false;
+				}
+				 if($("#Datepicker1").val() == ''){
+					alert('Please select your birthday.');
+					$("#Datepicker1").focus();
+					return false;
+				}
+				if($("#txtemail").val() == ''){
+					alert('Please enter your email address.');
+					$("#txtemail").focus();
+					return false;
+				}
+				if(! validateEmail($("#txtemail").val())){
+					alert('Please enter a valid email address.');
+					return false;
+				}
+				if($("#txttp1").val() == ''){
+					alert('Please your contact number.');
+					$("#txttp1").focus();
+					return false;
+				}
+				if($("#username").val() == ''){
+					alert('Please enter an username.');
+					$("#username").focus();
+					return false;
+				}
+				if($("#txtpass").val() == ''){
+					alert('Please pick a password.');
+					$("#txtpass").focus();
+					return false;
+				}
+				if($("#txtpass2").val() == ''){
+					alert('Please enter matching password.');
+					$("#txtpass2").focus();
+					return false;
+				}
+				if(! validatePasswords()){
+					return false;
+				}
+				
+			}
+    
+    	function validateEmail(email) { 
+        	var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        	return re.test(email);
+    	}
+    
+	/*function validateConNo(TP){
+		if($("#txttp1").val().length>10 && $("#txttp1").val().length<10 )
+			alert("Your contact number must contain 10 numbers");
+              $("#txttp1").focus();
+              return false;
+		}*/
+    function validatePasswords(){
+         //if($("#txtpass").val() != "" && $("#txtpass").val() == $("#txtpass2").val()) {
+            if($("#txtpass").val().length < 6) {
+              alert("Error: Password must contain at least six characters!");
+              $("#txtpass1").focus();
+              return false;
             }
-
-            function validateEmail(email) {
-                var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-                return re.test(email);
+            if($("#txtpass").val() === $("#username").val()) {
+              alert("Error: Password must be different from Username!");
+              $("#txtpass1").focus();
+              return false;
             }
-
-            /*function validateConNo(TP){
-             if($("#txttp1").val().length>10 && $("#txttp1").val().length<10 )
-             alert("Your contact number must contain 10 numbers");
-             $("#txttp1").focus();
-             return false;
-             }*/
-            function validatePasswords() {
-                //if($("#txtpass").val() != "" && $("#txtpass").val() == $("#txtpass2").val()) {
-                if ($("#txtpass").val().length < 6) {
-                    alert("Error: Password must contain at least six characters!");
-                    $("#txtpass1").focus();
-                    return false;
-                }
-                if ($("#txtpass").val() === $("#username").val()) {
-                    alert("Error: Password must be different from Username!");
-                    $("#txtpass1").focus();
-                    return false;
-                }
-                re = /[0-9]/;
-                if (!re.test($("#txtpass").val())) {
-                    alert("Error: password must contain at least one number (0-9)!");
-                    $("#txtpass1").focus();
-                    return false;
-                }
-                re = /[a-z]/;
-                if (!re.test($("#txtpass").val())) {
-                    alert("Error: password must contain at least one lowercase letter (a-z)!");
-                    $("#txtpass1").focus();
-                    return false;
-                }
-                re = /[A-Z]/;
-                if (!re.test($("#txtpass").val())) {
-                    alert("Error: password must contain at least one uppercase letter (A-Z)!");
-                    $("#txtpass1").focus();
-                    return false;
-                }
-                return true;
-            } //else {
+            re = /[0-9]/;
+            if(!re.test($("#txtpass").val())) {
+              alert("Error: password must contain at least one number (0-9)!");
+              $("#txtpass1").focus();
+              return false;
+            }
+            re = /[a-z]/;
+            if(!re.test($("#txtpass").val())) {
+              alert("Error: password must contain at least one lowercase letter (a-z)!");
+              $("#txtpass1").focus();
+              return false;
+            }
+            re = /[A-Z]/;
+            if(!re.test($("#txtpass").val())) {
+              alert("Error: password must contain at least one uppercase letter (A-Z)!");
+              $("#txtpass1").focus();
+              return false;
+            }
+            return true;
+          } //else {
             //alert("Error: Please check that you've entered and confirmed your password!");
             //$("#txtpass1").focus();
             //return false;
-            // }
+         // }
 
-
-        </script>
+    </script>
 
     </head>
 
@@ -156,8 +158,8 @@
             <ul>
                 <li class='active'><a href='../../home/view/index.php'><span>Home</span></a></li>
                 <li><a href='../../home/view/about_us.php'><span>About Us</span></a></li>
-                <li><a href='../../property/view/advaced_search_property.php'><span>Buying</span></a></li>
-                <li><a href='../../property/view/add_property.php'><span>Selling</span></a></li>
+               
+                <li><a href='../../property/view/add_property.php'><span>Sell your property</span></a></li>
                 <li><a href='../../home/view/hot_deals.php'><span>Hot Deals</span></a></li>
                 <li><a href='../../reviews/view/display_review.php'><span>Review</span></a></li>
                 <li class='last'><a href='../../contact_us/view/contact_us.php'><span>Contact us</span></a></li>

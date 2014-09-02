@@ -51,7 +51,7 @@
 		<br/>
 		<div class="admin_menu_bar" align="center" id="cssmenu">
             <ul>
-              <li class='active'><a href='../../home/view/index.php'>Home</a></li>
+              <li><a href='../../home/view/index.php'>Home</a></li>
               	<li><a href='control_panel.php'><span>Admin panel</span></a></li>
                 <li><a href='manage_users.php'><span>Users</span></a></li>
                 <li><a href='manage_properties.php'><span>Properties</span></a></li>
@@ -82,6 +82,11 @@
         <tr>
             <td>
                 <a href="../../reports/view/prefered_price_ranges.php"><img src="../../common/images/icons/price report.png"/>Most Popular Price Ranges</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="../../agreement/view/agreement_details.php"><img src="../../common/images/icons - Copy/agreement.png"/>Agreements</a>
             </td>
         </tr>
      </table>

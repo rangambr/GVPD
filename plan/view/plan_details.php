@@ -1,4 +1,4 @@
-<?php session_start(); 
+<?php 
  require '../controller/plan_details.php';
 ?>
 
@@ -98,19 +98,15 @@
             <td>Action</td>
         </tr>
         <tr bgcolor="#275C0D">
-      	<td colspan="5" style="margin-right:10px;"><img src="../../common/icons/add_small.png"/><a href="add_plans.php"><b style="color: rgba(0,0,255,1)" >Add  property plan </b></a></td>
+      	<td colspan="5" style="margin-right:10px;"><img src="../../common/icons/add_small.png"/><a href="add_plans.php"><b style="color: rgba(0,0,255,1)" ><u>Add  property plan</u> </b></a></td>
       </tr>
       <?php
         while($plans = mysql_fetch_array($newplan))
           {
           echo "<tr class='user_info'><td>".$plans['plan_no']."</td>";
           echo "<td class='user_info'>".$plans['plan_name']."</td>";
-		  
-		 
-          echo "<td class='ac_link'><a  href='view_plans .php?pId=".$plans['id']."'><span class='view_link' title='View Plan Info'></span></a> </td></tr>";
+          echo "<td class='ac_link'><a  href='view_plans.php?pId=".$plans['id']."'><span class='view_link' title='View Plan Info'></span></a> </td></tr>";
         
-		 //echo " | <a  href='print_agreement.php?agr_no=".$agr['agreement_no']."'><span class='print_link' title='Print Agreement'></span></a>";
-       // echo " | <a onClick=\"return confirm('Are you sure?')\" href='../controller/delete_agreement.php?agr_no=".$agr['agreement_no']."'><span class='delete_link' title='Delete Agreement'></span></a></td><tr>" ;
           }
       ?> 
     </table>

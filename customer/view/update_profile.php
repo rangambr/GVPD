@@ -12,7 +12,7 @@ require_once '../controller/display_profile.php';
         <link rel="stylesheet" type="text/css" href="../../common/CSS/login_tbl.css">
         <link rel="stylesheet" type="text/css" href="../../common/CSS/form.css">
         <link rel="stylesheet" type="text/css" href="../../common/CSS/button.css">
-        <link rel="stylesheet" type="text/css" href="../../common/CSS/dropdown.css">
+        
         <link rel="stylesheet" type="text/css" href="../../common/CSS/dropdown_menu.css">
         <link href="../../common/jQueryAssets/jquery.ui.theme.min.css" rel="stylesheet" type="text/css">
         <style type="text/css">
@@ -88,8 +88,7 @@ require_once '../controller/display_profile.php';
             <ul>
                 <li class='active'><a href='../../home/view/index.php'><span>Home</span></a></li>
                 <li><a href='../../home/view/about_us.php'><span>About Us</span></a></li>
-                <li><a href='../../property/view/advaced_search_property.php'><span>Buying</span></a></li>
-                <li><a href='../../property/view/add_property.php'><span>Selling</span></a></li>
+                                <li><a href='../../property/view/add_property.php'><span>Sell your property</span></a></li>
                 <li><a href='../../home/view/hot_deals.php'><span>Hot Deals</span></a></li>
                 <li><a href='../../forum/main_forum.php'><span>Forum</span></a></li>
                 <li><a href='../../reviews/view/display_review.php'><span>Review</span></a></li>
@@ -110,7 +109,7 @@ require_once '../controller/display_profile.php';
                         <?php } ?>
                     </div>
                     <form name="update_profile.php" method="post" action="../controller/save_profile.php">
-                        <table align="center" width="500" style="border:1px groove #93AE13;">
+                        <table align="center" width="350" style="border:1px groove #93AE13;">
                             <tr height="33px">
                                 <td align="center"><img src="../../common/images/icons/user_yellow_edit.png"/></td>
                                 <td><p align="left" style="font-weight: bold; font-style: normal; font-size: 16px; color: #275C0D;">Something Changed? &nbsp;&nbsp; Edit your profile.</p>
@@ -121,11 +120,11 @@ require_once '../controller/display_profile.php';
                             </tr>
                             <tr>
                                 <th align="left">First Name :</th>
-                                <td><input name="txtfname" type="text" id="txtfname" placeholder="Please type your first  name here" size="20" class="inputs" value="<?php echo '' . $fname; ?>" /></td>
+                                <td><input name="txtfname" type="text" id="txtfname" placeholder="Please type your first  name here" size="20"  value="<?php echo '' . $fname; ?>" /></td>
                             </tr>
                             <tr>
                                 <th align="left">Last Name :</th>
-                                <td><input name="txtlname" type="text" id="txtlname" placeholder="Please type your last name here" size="20" class="inputs" value="<?php echo '' . $lname; ?>"  /></td>
+                                <td><input name="txtlname" type="text" id="txtlname" placeholder="Please type your last name here" size="20"  value="<?php echo '' . $lname; ?>"  /></td>
                             </tr>
                             <tr>
                                 <th align="left">Gender :</th>
@@ -146,21 +145,21 @@ require_once '../controller/display_profile.php';
                             </tr>
                             <tr>
                                 <th align="left">House Number/ Name :</th>
-                                <td><input name="txtaddress1" class="inputs" id="txtaddress1" placeholder="Please type your home number here" size="20" value="<?php echo '' . $address1; ?>" /></td>
+                                <td><input name="txtaddress1"  id="txtaddress1" placeholder="Please type your home number here" size="20" value="<?php echo '' . $address1; ?>" /></td>
                             </tr>
                             <tr>
                                 <th align="left">Street :</th>
-                                <td><input name="txtaddress2" class="inputs" id="txtaddress2" placeholder="Please type your street name here" size="20" value="<?php echo '' . $address2; ?>"  /></td>
+                                <td><input name="txtaddress2"  id="txtaddress2" placeholder="Please type your street name here" size="20" value="<?php echo '' . $address2; ?>"  /></td>
                             </tr>
                             <tr>
                                 <th align="left">City :</th>
-                                <td><input name="city" class="inputs" id="city2" placeholder="Please type your city here" size="20" value="<?php echo '' . $city; ?>"  /></td>
+                                <td><input name="city"  id="city2" placeholder="Please type your city here" size="20" value="<?php echo '' . $city; ?>"  /></td>
                             </tr>
                             <tr>
                                 <th align="left">Province :</th>
                                 <td>
                                     
-                                    <select name="province" class="drpdown_list">
+                                    <select name="province" >
                                         <option <?php if($province == "Central Province") echo 'selected'; ?>>Central Province </option>
                                         <option <?php if($province == "Eastern Province") echo 'selected'; ?>>Eastern Province</option>
                                         <option <?php if($province == "Northern Province") echo 'selected'; ?>>Northern Province</option>
@@ -175,48 +174,54 @@ require_once '../controller/display_profile.php';
                             </tr>
                             <tr>
                                 <th height="39" align="left">Birthday :</th>
-                              <td><input type="text" id="Datepicker1" class="inputs" name="txtbday" placeholder="Enter your birthday here" size="20" value="<?php echo '' . $birthday; ?>"  /></td>
+                              <td><input type="text" id="Datepicker1"  name="txtbday" placeholder="Enter your birthday here" size="20" value="<?php echo '' . $birthday; ?>"  /></td>
                             </tr>
                             <tr>
                                 <th align="left">Email :</th>
-                                <td><input name="txtemail" type="text" id="txtemail" placeholder="Enter your valid email address here" size="20" class="inputs" value="<?php echo '' . $email; ?>" /></td>
+                                <td><input name="txtemail" type="text" id="txtemail" placeholder="Enter your valid email address here" size="20"  value="<?php echo '' . $email; ?>" /></td>
                             </tr>
                             <tr>
                                 <th align="left">Contact Numbers :</th> 
-                                <td><input name="txttp1" type="text" id="txttp1" placeholder="Enter your mobile number here" size="20" class="inputs" value="<?php echo '' . $contact_no1; ?>" />
+                                <td><input name="txttp1" type="text" id="txttp1" placeholder="Enter your mobile number here" size="20"  value="<?php echo '' . $contact_no1; ?>" />
                                     <br/>
-                                    <input name="txttp2" type="text" id="txttp2" placeholder="Enter your telephone number here" size="20" class="inputs" value="<?php echo '' . $contact_no2; ?>" /></td>
+                                    <input name="txttp2" type="text" id="txttp2" placeholder="Enter your telephone number here" size="20"  value="<?php echo '' . $contact_no2; ?>" /></td>
                             </tr>
 
                             <tr>
-                                <td colspan="2" align="center" valign="middle"><input type="submit" value="Update" class="myButton" name="submit" /></td>
+                                <td colspan="2" align="center" valign="middle"><input type="submit" value="Update" class="myButton small_btn" name="submit" /></td>
                             </tr>
-                        </table>
+                            
+                       </table></form>
 
-                        <table align="center" width="500" style="border:1px groove #93AE13;">
-                            <tr height="33px">
-                                <td align="center"><img src="../../common/images/icons/reset password.png"/></td>
-                                <td><p align="left" style="font-weight: bold; font-style: normal; font-size: 16px; color: #275C0D;"> Reset your Username & Password.</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="2"><hr /></td>
-                            </tr>
 
-                            <tr>
-                                <th align="left">User name :</th>
-                                <td><input name="txtusername" type="text" id="username" placeholder="Enter your username" size="20" class="inputs" /></td>
-                            </tr>
-                            <tr>
-                                <th align="left">Password :</th>
-                                <td><input name="txtpass" type="password" id="txtpass" placeholder="Enter your password" size="20" class="inputs"/></td>
-                            </tr>
-                            <tr>
-                                <th align="left">Confirm Password :</th>
-                                <td><input name="txtpass2" type="password" id="txtpass2" placeholder="Re-enter your password" size="20" class="inputs" /></td>
-                            </tr>
-                        </table>
-                    </form>
+<form name="frm_reset" action="../controller/reset_username_password.php" method="post">
+     <table align="center" width="350" style="border:1px groove #93AE13;">
+        <tr height="33px">
+            <td align="center"><img src="../../common/images/icons/reset password.png"/></td>
+            <td><p align="left" style="font-weight: bold; font-style: normal; font-size: 16px; color: #275C0D;"> Reset your Username & Password.</p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"><hr /></td>
+        </tr>
+
+        <tr>
+            <th align="left">User name :</th>
+            <td><input name="txtusername" type="text" id="username"  size="20" value="<?php echo '' . $username; ?>" disabled /></td>
+        </tr>
+        <tr>
+            <th align="left">New Password :</th>
+            <td><input name="txtpass" type="password" id="txtpass" size="20" /></td>
+        </tr>
+        <tr>
+            <th align="left">Confirm Password :</th>
+            <td><input name="txtpass2" type="password" id="txtpass2" placeholder="Re-enter your password" size="20"  /></td>
+        </tr>
+        <tr>
+            <th colspan="2"><input type="submit" value="Reset password" name="submit" class="myButton small_btn" /></th>
+        </tr>
+    </table>
+</form>
                 </div>
 
             </div>

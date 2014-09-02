@@ -1,5 +1,5 @@
 <?php session_start(); 
- require '../controller/agreement_info.php';
+ require '../controller/proposal_main_page.php';
 ?>
 
 <!doctype html>
@@ -80,7 +80,9 @@
               <li><a href='../../admin/view/manage_inquiries.php'><span>Inquiries</span></a></li>
               <li><a href='../../admin/view/manage_reviews.php'><span>Reviews</span></a></li>
               <li><a href='../../admin/view/reports.php'><span>Reports</span></a></li>
-              <li><a href='proposal_main_page.php'><span>Agreements</span></a></li>
+              <li><a href='../../agreement/view/agreement_details.php'><span>Agreements</span></a></li>
+              <li><a href='../../plan/view/plan_details.php'><span>Property plans</span></a></li>
+                <li><a href='proposal_main_page.php'><span>Project proposals</span></a></li>
             </ul>
 </div>
 <br/>
@@ -95,22 +97,20 @@
     <div class="CSSTableGenerator" >
     <table class="user_table">
         <tr>
-            <td height="30">Registration No:</td>
-            <td height="30">Agreement No:</td>
-            <td>Date </td>
-            <td>Agreed price:</td>
-            <td>Action</td>
+            <td height="30">Client:</td>
+            <td height="30">Realization(owner):</td>
+            <td>Realization(company): </td>
+             <td>&nbsp; </td>
         </tr>
         <tr bgcolor="#275C0D">
-      	<td colspan="5" style="margin-right:10px;"><img src="../../common/icons/add_small.png"/><a href="create_agreement.php"><b style="color: rgba(0,0,255,1)" >Create an agreement</b></a></td>
+      	<td colspan="5" style="margin-right:10px;"><img src="../../common/icons/add_small.png"/><a href="create_project_proposal.php"><u><b style="color: rgba(0,0,255,1)" >Create  project proposal</b></u></a></td>
       </tr>
       <?php
-        while($agr = mysql_fetch_array($all_agrs))
+        while($pid = mysql_fetch_array($prop))
           {
-          echo "<tr class='user_info'><td>".$agr['reg_no']."</td>";
-          echo "<td class='user_info'>".$agr['agreement_no']."</td>";
-		  echo "<td class='user_info'>".$agr['date']."</td>";
-		  echo "<td class='user_info'>".$agr['agreed_price']."</td>";
+          echo "<tr class='user_info'><td>".$pid['name']."</td>";
+          echo "<td class='user_info'>".$pid['tot_owner']."</td>";
+		  echo "<td class='user_info'>".$pid['tot_company']."</td>";
 		 
           echo "<td class='ac_link'><a  href='edit_agreement .php?agr_no=".$agr['agreement_no']."'><span class='create_link' title='Edit Agreement'></span></a>";
          echo " | <a  href='view_agreement .php?agr_no=".$agr['agreement_no']."'><span class='view_link' title='View Agreement'></span></a>";

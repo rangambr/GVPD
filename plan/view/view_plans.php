@@ -1,3 +1,6 @@
+<?php
+require '../controller/view_plan.php';
+?>
 <!doctype html>
 <html>
     <head>
@@ -9,7 +12,38 @@
         <link rel="stylesheet" type="text/css" href="../../common/CSS/button.css">
         <link rel="stylesheet" type="text/css" href="../../common/CSS/dropdown.css">
         <link rel="stylesheet" type="text/css" href="../../common/CSS/dropdown_menu.css">
+        <style type="text/css">
+        	img {
+    			height: auto;
+    			max-width: 200px;
+    			-moz-transition: all 1s;
+    			-ms-transition: all 1s;
+    			-o-transition: all 1s;
+    			-webkit-transition: all 1s;
+    			transition: all 1s;
+				}
+			img.expanded {
+    			max-width: 500px;
+				}
+        </style>
+        
 		<script src="../../common/JS/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript">
+        	$(document).ready(function() {
+        		var imageLinks = $('a[href$=".png"], a[href$=".jpg"], a[href$=".gif"], a[href$=".bmp"]');
+        		if (imageLinks.children('img').length) {
+            		imageLinks.children('img').each(function() {
+                var currentTitle = $(this).attr('title');
+                $(this).attr('title', currentTitle + ' (click to enlarge image)');
+            	});
+            imageLinks.click(function(e) {
+                e.preventDefault();
+                $(this).children('img').toggleClass('expanded');
+            });
+        }
+    });
+        </script>
+        
         <script type="text/javascript">
         	function validate(){
 				if ($("#txt_pno").val() == '') {
@@ -94,34 +128,30 @@
         </div>
 <br/><br/>        
 <div class="content" style="padding-top:0px;">
-<form name="frm_plan" action="../controller/add_plan.php" method="post" enctype="multipart/form-data" onsubmit="return validate();" >
-	<table width="428"  style="border:#000089 1px thin solid;" align="center" cellpadding="5" cellspacing="5" bgcolor="#F8F8F7" >
+
+	<table width="500px"  style="border:#000089 1px thin solid;" align="center" cellpadding="5" cellspacing="5" bgcolor="#F8F8F7" >
     	<tr align="center">
         <td colspan="2"><h2><span style="color:#000089"> Property Plans</span></h2></td>
       </tr>
       <tr>
-        <td width="130"><strong>&nbsp;&nbsp;&nbsp;&nbsp;Plan No.</strong></td>
-        <td width="261"><input type="text" name="txt_pno" id="txt_pno" /></td>
+        <td colspan="3" align="center" style="font-size:18px;"><strong>&nbsp;&nbsp;&nbsp;&nbsp;Plan No.</strong><span>
+        <?php echo '' .$plan_data['plan_no']; ?></span>
+        <strong>&nbsp;&nbsp;&nbsp;&nbsp;Plan Name:</strong>
+       <span> <?php echo '' .$plan_data['plan_name']; ?></span></td>
       </tr>
-      <tr>
-        <td><strong>&nbsp;&nbsp;&nbsp;&nbsp;Plan Name:</strong></td>
-        <td><input type="text" name="txt_pname" id="txt_pname" /></td>
-      </tr>
-      <tr>
-        <td><strong>&nbsp;&nbsp;&nbsp;&nbsp;Upload Plans:</strong></td>
-        <td><input type="file" name="img_plan1" id="file1" /><br/>
-        	<input type="file" name="img_plan2" id="file2"/><br/>
-            <input type="file" name="img_plan3" id="file3"/>
-<br/>
-<div id="divUploadCheckError" class="divError"></div>
 
-        </td>
-      </tr>
       <tr>
-        <td colspan="2" align="center"><input type="submit" name="sbmit" value="save" onclick='check_image_upload()' /></td>
+      <?php while ($rowimg = mysql_fetch_array($allPhotos)) { ?>
+        <td align="center">
+        	<span>
+                  <a href="../plans/photos/<?php echo ''.$rowimg['plan_img'] ?>" >      
+                <img src="../plans/photos/<?php echo ''.$rowimg['plan_img'] ?>" alt="" title=""  /></a>
+                    </span>
+        </td>
+        <?php } ?>
       </tr>
 	</table>
-</form>
+
 </div>
 </body>
 </html>

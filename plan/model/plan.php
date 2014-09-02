@@ -27,7 +27,18 @@ class Plan {
         $result = $db->query($sql);
         return $result;
     }
-
+	function getPlanById($planid){
+		$db = new Dbconnect();
+        $sql = "select * from plan where id = '$planid'";
+        $result = $db->query($sql);
+        return $result;
+	}
+	function getAllPhotoURLs($planid){
+		$db = new Dbconnect();
+        $sql = "select * from plan_photo where plan_id='$planid'";
+        $result = $db->query($sql);
+        return $result;
+		}
 }
 
 ?>	

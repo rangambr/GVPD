@@ -5,10 +5,10 @@ require_once '../../common/conn.php';
 
 class Property {
 
-    function registerProperty($username, $name, $address1, $address2, $city, $province, $extent, $unit_price, $description) {
+    function registerProperty($username, $name, $address1, $address2, $city, $province, $extent,$type , $unit_price, $description,$date) {
         $db = new Dbconnect();
         //KINT::dump($username,$name,$address1,$address2,$city,$province);
-        $sql = "insert into property (username,name,address1,address2,city,province,extent,unit_price,description) values ('$username','$name','$address1','$address2','$city','$province','$extent','$unit_price','$description')";
+        $sql = "insert into property (username,name,address1,address2,city,province,extent,type,unit_price,description,date_added) values ('$username','$name','$address1','$address2','$city','$province','$extent','$type','$unit_price','$description','$date')";
         $result = $db->query_last_id($sql);
         //KINT::dump($result);
         return $result;
@@ -105,10 +105,10 @@ class Property {
         return $result;
     }
 
-    function updateProperty($status,$prop_id, $name, $address1, $address2, $city, $province, $extent, $unit_price, $description) {
+    function updateProperty($status,$prop_id, $name, $address1, $address2, $city, $province, $extent,$type , $unit_price, $description) {
         $db = new Dbconnect();
         //KINT::dump($username,$name,$address1,$address2,$city,$province);
-        $sql = "update property set Status='$status', name = '$name',address1 = '$address1',address2 = '$address2',city = '$city',province = '$province',extent='$extent',unit_price='$unit_price',description='$description' where  id='$prop_id' ";
+        $sql = "update property set Status='$status', name = '$name',address1 = '$address1',address2 = '$address2',city = '$city',province = '$province',extent='$extent',type='$type',unit_price='$unit_price',description='$description' where  id='$prop_id' ";
         $result = $db->query($sql);
         //KINT::dump($result);
         return $result;
