@@ -102,6 +102,15 @@ session_start();
             </ul>
 </div>
 
+<div>
+<?php if (!empty($_REQUEST['er']) && $_REQUEST['er'] == "4") { ?>
+            <div align="center">
+                <div align="center" style="border:solid #275C0D; width:300px; height:23px; padding:5px; background:#E3EFAF" ><img src="../../common/images/icons/successful.png" width="16px" height="16px"/><span style="color:#368112; font-size:14px;" ><b>You have send the response successfully!</b>
+                    </span></div>
+            </div>
+<?php } ?>
+</div>
+
 <div class="content">
 
     <div class="CSSTableGenerator" >

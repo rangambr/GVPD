@@ -13,7 +13,7 @@ $name = $_POST['txtname'];
 $email = $_POST['txtemail'];
 
 $feedback = new Feedback();
-$newfdbk=$feedback->insertInfo($visited,$often_visited,$access,$available,$look_and_feel,$impression,$topic,$feedback,$name,$email);
+$feedback->insertInfo($visited,$often_visited ,$access,$available,$look_and_feel,$impression,$topic,$feedback,$name,$email);
 
 header("location:../view/feedback.php");  
 ?>

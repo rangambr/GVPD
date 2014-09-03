@@ -26,7 +26,7 @@
 			return b;
 			var b=document.frm_proposal.txt_min_comm.value ;
 		}	
-       
+      
         </script>
 
         
@@ -115,7 +115,7 @@
                     </tr>
                     <tr bgcolor="#BABAFF">
                       <td>Less 5% commission:</td>
-                      <td class="required"><label><input name="txt_min_comm" type="text" size="20"/></label></td>
+                      <td class="required"><label><input name="txt_min_comm" id="txt_min_comm" type="text" size="20"/></label></td>
                       <td class="required"><label><input name="txt_avg_comm" type="text" size="20"/></label></td>
                     </tr>
                     <tr bgcolor="#C3EAF5">
