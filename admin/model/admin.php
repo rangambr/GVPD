@@ -106,7 +106,7 @@ class Admin {
     function generate_password($length = 8) {
         $chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_-=+;:,.?";
         $password = substr(str_shuffle($chars), 0, $length);
-        $password = md5($password);
+        //$password = md5($password);
         return $password;
     }
 
@@ -127,6 +127,13 @@ class Admin {
 	function emailRespond($to, $subject, $body){ 
 		mail($to, $subject, $body, 'From: greenvalleypvt@gmail.com');
 	}
+	
+	function getEmailByUsername($username,$email){
+		$db=new Dbconnect();
+		$sql="SELECT email FROM customer WHERE username = '$username' ";     
+        $result = $db->query($sql);
+        return $result;
+		}
 	//function: send email after reset the password by the admin
     function reset_password_email($to, $subject, $body) {
         mail($to, $subject, $body, 'From: postmaster@localhost');

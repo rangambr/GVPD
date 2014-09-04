@@ -84,7 +84,7 @@
         	 <a href="../../plan/view/plan_details.php"><img src="../../common/images/icons/map-icon.png"/>Propery plans</a>
         </td>  
         <td>
-            <a href="../../agreement/view/agreement_details.php"><img src="../../common/images/icons/project proposal.png"/>Project proposals</a>
+            <a href="../../project_proposal/view/proposal_main_page.php"><img src="../../common/images/icons/project proposal.png"/>Project proposals</a>
          </td> 
      </tr>
  </table>

@@ -98,6 +98,18 @@
               $("#txttp1").focus();
               return false;
 		}*/
+	function validateContactNo(){
+		if($("#txttp1").val().length <10) {
+              alert("Error:Missing any numbers, Contact no should contain 10 numbers!");
+              $("#txtpass1").focus();
+              return false;
+            }
+		if($("#txttp1").val().length >10) {
+              alert("Error: Contact no should contain 10 numbers!");
+              $("#txtpass1").focus();
+              return false;
+            }
+		}
     function validatePasswords(){
          //if($("#txtpass").val() != "" && $("#txtpass").val() == $("#txtpass2").val()) {
             if($("#txtpass").val().length < 6) {

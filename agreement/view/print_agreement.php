@@ -5,22 +5,25 @@ require_once '../controller/view_agreement.php';
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>--</title>
-    <link rel="stylesheet" type="text/css" href="../../common/CSS/admin_menu_bar.css">
-    <script>
-		function myFunction() {
-    	window.print();
-}
-</script>
     <style type="text/css">
-		
+		td{
+			padding:2px;
+			}
+		p{
+			padding:3px;
+			}
 	</style>
+    <link rel="stylesheet" href="../../common/CSS/print.css"
+type="text/css" media="print" />
 </head>
 
 <body  bgcolor="#E1E1FF">
+	<div class="print" style="background-color:#000089; height:3%; padding:3px; ">
+		<h1 style="color:#FFFFFF" align="center">Green Valley Property Development (PVT) Ltd.</h1></div>
+	<hr/>
 	
-	<p>&nbsp;</p>
 <div class="content" style="padding-top:0px; background-color:#FCFCFC" >
+<div class="print">
 	<form name="frm_agreement" action="../controller/agreement_info.php" method="post">
     	<table align="center" style="padding:5px;" width="600px">
         	<tr>
@@ -96,8 +99,8 @@ The Seller has agreed with the Company to have his property sold subject to the 
                 </td>
             </tr>
             <tr>
-           	  <td width="144">(a) Survey fees :</td>
-           	  <td width="444">Rs. <?php echo '' .$agreement['survey'] ; ?></td>
+           	  <td width="208">(a) Survey fees :</td>
+           	  <td width="373">Rs. <?php echo '' .$agreement['survey'] ; ?></td>
             </tr>
             <tr>
             	<td>(b) Advertising expenses :</td>
@@ -116,7 +119,7 @@ The Seller has agreed with the Company to have his property sold subject to the 
             	<td><u>Rs. <?php echo '' .$agreement['electricity'] ; ?></u></td>
             </tr>
             <tr>
-            	<td>Total :</td>
+            	<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Total :</td>
             	<td><u>Rs. <?php echo '' .$agreement['total'] ; ?></u></td>
             </tr>
             <tr>
@@ -191,7 +194,7 @@ The Seller has agreed with the Company to have his property sold subject to the 
                         </div>
                     </p>	
                 </td>
-                <td>&nbsp;</td>
+                <td width="3">&nbsp;</td>
             </tr>
              <tr>
             	<td colspan="2"><p>1.<?php echo '' .$agreement['witness1'] ; ?></p><p> 2.<?php echo '' .$agreement['witness2'] ; ?></p></td>
@@ -201,11 +204,12 @@ The Seller has agreed with the Company to have his property sold subject to the 
             	<td>&nbsp;</td>
             	<td align="right">Notary Public.</td>
             </tr>
-            <tr>
-           	  <td colspan="2" align="center"><input type="submit" value="Print" onclick="myFunction()"/></td>
-            </tr>
+            
         </table>
 	</form>
+    </div>
 </div>
+<div align="center"><input type="button" value=" Print this page "
+onclick="window.print();return false;" /></div>
 </body>
 </html>

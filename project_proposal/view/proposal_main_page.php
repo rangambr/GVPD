@@ -68,7 +68,7 @@
 
 <body  bgcolor="#E1E1FF">
 <div style="background-color:#000089; height:10%;padding:10px;padding-left:50px">
-	<h3 style="color:#FFFFFF">Agreements</h3>
+	<h3 style="color:#FFFFFF">Project proposal</h3>
 </div>
 <br/>
 <div class="admin_menu_bar" align="center" id="cssmenu">
@@ -86,38 +86,32 @@
             </ul>
 </div>
 <br/>
-<?php if (!empty($_REQUEST['msg']) && $_REQUEST['msg'] == "10") { ?>
-<div align="center">
-<div align="center" style="border:solid #275C0D; width:300px; height:23px; padding:5px; background:#E3EFAF" ><img src="../../common/images/icons/successful.png" width="16px" height="16px"/><span style="color:#368112; font-size:14px;" ><b>You have entered information successfully!</b>
-</span></div>
-</div>
-<?php } ?>
+
 <br/>
 <div class="content">
     <div class="CSSTableGenerator" >
     <table class="user_table">
         <tr>
-            <td height="30">Client:</td>
-            <td height="30">Realization(owner):</td>
-            <td>Realization(company): </td>
-             <td>&nbsp; </td>
+            <td width="27%" height="30">Client:</td>
+            <td width="52%" height="30">Realization(owner):</td>
+            <td>Action:</td>
         </tr>
         <tr bgcolor="#275C0D">
       	<td colspan="5" style="margin-right:10px;"><img src="../../common/icons/add_small.png"/><a href="create_project_proposal.php"><u><b style="color: rgba(0,0,255,1)" >Create  project proposal</b></u></a></td>
       </tr>
       <?php
-        while($pid = mysql_fetch_array($prop))
+        while($row=mysql_fetch_array($allprop))
           {
-          echo "<tr class='user_info'><td>".$pid['name']."</td>";
-          echo "<td class='user_info'>".$pid['tot_owner']."</td>";
-		  echo "<td class='user_info'>".$pid['tot_company']."</td>";
-		 
-          echo "<td class='ac_link'><a  href='edit_agreement .php?agr_no=".$agr['agreement_no']."'><span class='create_link' title='Edit Agreement'></span></a>";
-         echo " | <a  href='view_agreement .php?agr_no=".$agr['agreement_no']."'><span class='view_link' title='View Agreement'></span></a>";
-		 echo " | <a  href='print_agreement.php?agr_no=".$agr['agreement_no']."'><span class='print_link' title='Print Agreement'></span></a>";
-        echo " | <a onClick=\"return confirm('Are you sure?')\" href='../controller/delete_agreement.php?agr_no=".$agr['agreement_no']."'><span class='delete_link' title='Delete Agreement'></span></a></td><tr>" ;
+          echo "<tr class='user_info'><td>".$row['name']."</td>";
+          echo "<td class='user_info'>".$row['tot_owner']."</td>";
+
+         echo "<td class='ac_link'>  <a  href='view_proposal.php?propId=".$row['id']."'><span class='view_link' title='View Proposal'></span></a>";
+		 echo " | <a  href='print_proposal.php?propId=".$row['id']."'><span class='print_link' title='Print Agreement'></span></a>";
+        echo " | <a onClick=\"return confirm('Are you sure?')\" href='../controller/delete_proposal.php?propId=".$row['id']."'><span class='delete_link' title='Delete Proposal'></span></a></td>" ;
+          
           }
       ?> 
+     
     </table>
     </div>
 </div>

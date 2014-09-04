@@ -9,6 +9,7 @@ require '../controller/get_search_preferences.php';
         <title>Most Popular Locations</title>
         <script type="text/javascript" src="../../common/JS/jsapi.js"></script>
         <script type="text/javascript">
+		
             google.load("visualization", "1", {packages: ["corechart"]});
             google.setOnLoadCallback(drawChart);
             function drawChart() {

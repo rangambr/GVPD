@@ -68,6 +68,9 @@
                     	<td colspan="3">&nbsp;</td>
                     </tr>
                     <tr>
+                    	<td colspan="3"><a  href='respond_inquiry.php?inqId="<?php echo ''.$newvinq_1['inquiry_id'];?>"'><span >Repond Inquiry</span></a></td>
+                    </tr>
+                    <tr>
                       <td>Subject</td>
                       <td>:</td>
                       <td><?php echo '' . $newvinq_1['subject']; ?></td>
@@ -77,9 +80,7 @@
                       <td>:</td>
                       <td><?php echo '' . $newvinq_1['message']; ?></td>
                     </tr>
-                    <tr>
-                    	<td colspan="3">&nbsp;</td>
-                    </tr>
+                    
                     <?php
                     // Start looping table row
                      while ($row = mysql_fetch_array($result2)) { ?>
@@ -94,6 +95,7 @@
                     <tr>
                       <td>:</td>
                     </tr>
+                    
                      <?php
           // Exit looping and close connection 
           } ?>

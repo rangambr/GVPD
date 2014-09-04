@@ -8,25 +8,73 @@
     
     <style type="text/css">
 		td{
-			padding:0px;
+			padding:4px;
 			}
     </style>
     <script src="../../common/JS/jquery-2.1.1.min.js"></script>
     <script type="text/javascript">
     	function updatesum(){
-        	document.frm_proposal.txt_extentsell.value = (document.frm_proposal.txt_extenttot.value -0) + (document.frm_proposal.txt_road.value -0);
+        	document.frm_proposal.txt_extentsell.value = (document.frm_proposal.txt_extenttot.value -0) - (document.frm_proposal.txt_road.value -0);
 		}	
 		function totalSellingPriceMin(){
 			document.frm_proposal.txt_tot_minsell.value = (document.frm_proposal.txt_extentsell.value -0) * (document.frm_proposal.txt_minsell.value -0);
-			document.frm_proposal.txt_tot_avgsell.value = (document.frm_proposal.txt_extentsell.value -0) * (document.frm_proposal.txt_avgsell.value -0);
+			
 			}
 		function fivePrecent(){
         	var a=document.frm_proposal.txt_tot_minsell.value;
 			var b=a*0.05;
-			return b;
-			var b=document.frm_proposal.txt_min_comm.value ;
+			document.frm_proposal.txt_min_comm.value= b ;
 		}	
-      
+      function minusComission(){
+		  var a=document.frm_proposal.txt_tot_minsell.value;
+			//alert(a);
+		  var b=document.frm_proposal.txt_min_comm.value;
+		  var c=(a-b);
+		  document.frm_proposal.txt_ans1.value= c ;
+		  
+		  var aa=document.frm_proposal.txt_ans1.value;
+		  var bb=document.frm_proposal.txt_fif1.value;
+		  var cc=(aa+bb);
+		  document.frm_proposal.txt_answer1.value= cc ;
+
+		  }
+		  function minusSum(){
+			  document.frm_proposal.txt_min_tax.value = (document.frm_proposal.txt_answer1.value -0) - (document.frm_proposal.txt_total.value -0);
+			  
+			  }
+		  function Sum(){
+			  document.frm_proposal.txt_total.value = (document.frm_proposal.txt_survey.value -0) + 
+			  											(document.frm_proposal.txt_adv.value -0) +
+														(document.frm_proposal.txt_dev.value -0)+
+														(document.frm_proposal.txt_other.value -0)+
+														(document.frm_proposal.txt_electricity.value -0);
+			  }
+		function sumup(){
+			var a=document.frm_proposal.txt_ans1.value;
+			var b=document.frm_proposal.txt_fif1.value;
+			var c=(a+b);
+			document.frm_proposal.txt_answer1.value=c;
+			}
+		function lessExpenses(){
+			var a=document.frm_proposal.txt_answer1.value;
+			var b=document.frm_proposal.txt_total.value;
+			var c=(a-b);
+			document.frm_proposal.txt_min_tax.value=c;
+			}
+		function tax(){
+        	var a=document.frm_proposal.txt_tot_minsell.value;
+			var b=a*0.01;
+			document.frm_proposal.txt_owner_tax.value= b ;
+			
+		}	
+		
+		function last(){
+			var pp=document.frm_proposal.txt_min_tax.value;
+			var qq=document.frm_proposal.txt_owner_tax.value;
+			var rr=(pp-qq);
+			document.frm_proposal.txt_owner.value=rr;
+			
+		}
         </script>
 
         
@@ -52,16 +100,11 @@
             </ul>
         </div>
 <br/>
-<?php if (!empty($_REQUEST['msg']) && $_REQUEST['msg'] == "10") { ?>
-<div align="center">
-<div align="center" style="border:solid #275C0D; width:300px; height:40px; padding:5px; background:#E3EFAF" ><img src="../../common/images/icons/successful.png" width="16px" height="16px"/><span style="color:#368112; font-size:14px;" ><b>You have entered information successfully!</b><br/>
-<a href="../../agreement/view/view_agreement .php"><b>View your agreement</b></a></span></div>
-</div>
-<?php } ?>
+
 <br/>
 <div class="content" style="padding-top:0px; background-color:#FCFCFC" >
 	<form name="frm_proposal" action="../controller/create_project_proposal.php" method="post" onsubmit="return validateForm()">
-    	<table align="center" width="500px">
+    	<table align="center" width="600px">
         	<tr>
             	<td colspan="2" align="center" style="padding:6px; font-size:16px;"><u><b>PROJECT PROPOSAL</b></u></td>
             </tr>
@@ -70,118 +113,104 @@
             	<td class="required"><label><input type="text" id="cname" name="txt_cname" size="40" /></label></td>
             </tr>
             <tr>
-            	<td width="121" >Client's  address:</td>
-                <td width="314" class="required"><label><textarea name="txt_caddress" cols="42" rows="3"></textarea></label></td>
+            	<td width="213" >Client's  address:</td>
+                <td width="275" class="required"><label><textarea name="txt_caddress" cols="42" rows="3"></textarea></label></td>
             </tr>
             
             <tr>
-            	<td width="121" >Subject:</td>
-                <td width="314" class="required"><label><input type="text"  name="txt_sub" id="txt_sub"  size="40" /></label></td>
+            	<td width="213" >Subject:</td>
+                <td width="275" class="required"><label><input type="text"  name="txt_sub" id="txt_sub"  size="40" /></label></td>
             </tr>
-     </table>
-         <br/>   
-        <table align="center" width="500px">
+    
             <tr bgcolor="#BABAFF">
-            	<td width="359">Total Extent (perches):</td>
-                <td width="129" class="required"><label><input name="txt_extenttot" id="txt_extenttot" type="text" size="20" onChange="updatesum()"/></label></td>
+            	<td width="213">Total Extent (perches):</td>
+                <td width="275" align="center"><label><input name="txt_extenttot" id="txt_extenttot" type="text" size="20" onChange="updatesum()"/></label></td>
             </tr>
             <tr bgcolor="#BABAFF">
             	<td>Roadways (perches):</td>
-                <td class="required"><label><input name="txt_road" id="txt_road" type="text" size="20" onChange="updatesum()"/></label></td>
+                <td align="center"><label><input name="txt_road" id="txt_road" type="text" size="20" onChange="updatesum()"/></label></td>
             </tr>
             <tr bgcolor="#C3EAF5">
             	<td>Sellable Extent (perches):</td>
-                <td class="required"><label><input name="txt_extentsell" id="txt_extentsell" type="text" size="20"  readonly style="border:0px;" onChange="totalSellingPriceMin()"/></label>
+                <td align="center"><label><input name="txt_extentsell" id="txt_extentsell" type="text" size="20"  readonly style="border:0px;" onChange="totalSellingPriceMin()"/></label>
                 
 </td>
             </tr>
-	</table>   
-     <br/>
-                <table align="center" width="500px">
+	
                     <tr>
-                      <th scope="col">&nbsp;</th>
-                      <th scope="col">Minimum selling price:</th>
-                      <th scope="col">Average selling price:</th>
+                      <th width="213" scope="col">&nbsp;</th>
+                      <th width="275" scope="col">Minimum selling price:</th>
                     </tr>
                     <tr bgcolor="#BABAFF">
                       <td>&nbsp;</td>
-                      <td class="required"><label><input name="txt_minsell" type="text" size="20" onChange="totalSellingPriceMin()"/></label></td>
-                      <td class="required"><label><input name="txt_avgsell" type="text" size="20" onChange="totalSellingPriceMin()"/></label></td>
+                      <td align="center"><label><input name="txt_minsell" type="text" size="20" onChange="totalSellingPriceMin()" /></label></td>
+                     
                     </tr>
                     <tr bgcolor="#BABAFF">
                       <td>Total selling price:</td>
-                      <td class="required"><label><input name="txt_tot_minsell" type="text" size="20" onChange="fivePrecent()"/></label></td>
-                      <td class="required"><label><input name="txt_tot_avgsell" type="text" size="20" onChange="fivePrecent()"/></label></td>
-                    </tr>
+                      <td align="center"><label><input name="txt_tot_minsell" type="text" size="20" readonly="readonly" /></label></td>
+                      
                     <tr bgcolor="#BABAFF">
                       <td>Less 5% commission:</td>
-                      <td class="required"><label><input name="txt_min_comm" id="txt_min_comm" type="text" size="20"/></label></td>
-                      <td class="required"><label><input name="txt_avg_comm" type="text" size="20"/></label></td>
+                      <td align="center"><label><input name="txt_min_comm" type="text" id="txt_min_comm" onClick="fivePrecent()" size="20" readonly="readonly"/></label></td>
                     </tr>
                     <tr bgcolor="#C3EAF5">
                       <td>&nbsp;</td>
-                      <td class="required"><label><input name="txt_ans1" type="text" size="20"/></label></td>
-                      <td class="required"><label><input name="txt_ans2" type="text" size="20"/></label></td>
+                      <td align="center"><label><input name="txt_ans1" type="text" onClick="minusComission()" size="20" readonly="readonly"/></label></td>
                     </tr>
                     <tr bgcolor="#BABAFF">
                       <td>Plus 50% of over &amp; above selling price:</td>
-                      <td class="required"><label><input name="txt_fif1" type="text" size="20"/></label></td>
-                      <td class="required"><label><input name="txt_fif2" type="text" size="20"/></label></td>
+                      <td align="center"><label><input name="txt_fif1" type="text" placeholder="Nil" size="20" readonly="readonly"/></label></td>
                     </tr>
                     <tr bgcolor="#C3EAF5">
                       <td>&nbsp;</td>
-                      <td class="required"><label><input name="txt_answer1" type="text" size="20"/></label></td>
-                      <td class="required"><label><input name="txt_answer2" type="text" size="20"/></label></td>
+                      <td align="center"><label><input name="txt_answer1" type="text" onClick="sumup()" size="20" readonly="readonly"/></label></td>
                     </tr>
-      </table>
       
-      <br/>
-	<table align="center" width="500px">
       <tr>
             	<td colspan="3"><strong>Less development expenses.</strong></td>
       </tr>
             
             
             <tr bgcolor="#BABAFF">
-            	<td width="359">Surveyor Fees :</td>
-            	<td width="129"> <input name="txt_survey" id="txt_survey" type="text" size="20" placeholder="eg: 10000.00"/></td>
+            	<td width="213">Surveyor Fees :</td>
+            	<td align="center"> <input name="txt_survey" id="txt_survey" type="text" size="20"  onChange="Sum()"/></td>
             </tr>
             <tr bgcolor="#BABAFF">
             	<td>Advertising :</td>
-            	<td> <input name="txt_adv" placeholder="eg: 10000.00" type="text" size="20"/></td>
+            	<td align="center"> <input name="txt_adv"  type="text" size="20" onChange="Sum()"/></td>
             </tr>
             <tr bgcolor="#BABAFF">
             	<td>Development Exps :</td>
-            	<td> <input name="txt_dev" placeholder="eg: 10000.00" type="text" size="20"/></td>
+            	<td align="center"> <input name="txt_dev"  type="text" size="20" onChange="Sum()"/></td>
             </tr>
             <tr bgcolor="#BABAFF">
             	<td>Other Exps :</td>
-            	<td> <input name="txt_other" placeholder="eg: 10000.00" type="text" size="20"/></td>
+            	<td align="center"> <input name="txt_other"  type="text" size="20" onChange="Sum()"/></td>
             </tr>
             <tr bgcolor="#BABAFF">
             	<td>Electricity :</td>
-            	<td> <input name="txt_electricity" placeholder="eg: 10000.00" type="text"  size="20"/></td>
+            	<td align="center"> <input name="txt_electricity"  type="text"  size="20" onChange="Sum()"/></td>
             </tr>
             <tr bgcolor="#C3EAF5">
             	<td>Total :</td>
-            	<td> <input name="txt_total" placeholder="eg: 10000.00" type="text"  size="20"/></td>
+            	<td align="center"> <input name="txt_total"  type="text" onChange="minusSum()"  size="20" readonly="readonly"/></td>
             </tr>
-   </table>
-   <table align="center" width="500px">
+  
    		<tr bgcolor="#BABAFF">
-        	<td></td>
-            <td><input name="txt_min_tax" type="text"  size="20"/></td>
-            <td><input name="txt_avg_tax" type="text"  size="20"/></td>
+        	<td width="213"></td>
+            <td align="center"><input name="txt_min_tax" type="text" onClick="lessExpenses()"  size="20" readonly="readonly"/></td>
+           
         </tr>
              <tr bgcolor="#BABAFF">
             	<td>Less Sale Tax 1% :</td>
-            	<td> <input name="txt_owner_tax" type="text"  size="20"/></td>
-                <td> <input name="txt_com_tax" type="text" size="20"/></td>
+            	<td align="center"> <input name="txt_owner_tax" type="text" onClick="tax()"  size="20" readonly="readonly"/></td>
+                
             </tr> 
              <tr bgcolor="#C3EAF5">
             	<td><strong style="font-size:14px;">Total realization for the owner :</strong></td>
-            	<td> <input name="txt_owner" placeholder="eg: 10000.00" type="text"  size="20"/></td>
-                <td> <input name="txt_com" placeholder="eg: 10000.00" type="text"  size="20"/></td>
+            	<td align="center"> <input name="txt_owner"  type="text" onClick="last()"  size="20" readonly="readonly"/></td>
+                
             </tr>           
             <tr>
             	<td colspan="3" align="center"><input type="submit" value="save" /></td>

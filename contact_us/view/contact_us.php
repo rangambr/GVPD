@@ -33,6 +33,7 @@ body,td,th {
 	font-size: 12px;
 }
 </style>
+<script src="../../common/JS/jquery-2.1.1.min.js"></script>
 <script type="text/javascript">
 	function validate(){
 			var x=document.forms["frm_con"]["txtname"].value
@@ -40,6 +41,12 @@ body,td,th {
   				alert("Please enter your name.");
   				return false;
  			 }
+			 var x=document.forms["frm_con"]["txtemail"].value
+			if (x==null || x==""){
+  				alert("Please enter your email address.");
+  				return false;
+ 			 }
+			 
 			 var x=document.forms["frm_con"]["txtemail"].value
 			 var atpos=x.indexOf("@");
 			 var dotpos=x.lastIndexOf(".");
@@ -52,6 +59,9 @@ body,td,th {
   				alert("Please enter the message.");
   				return false;
  			 }
+			 
+			 
+			 
 	}
 </script>
 </head>

@@ -111,8 +111,8 @@ require_once '../controller/display_profile.php';
                     <form name="update_profile.php" method="post" action="../controller/save_profile.php">
                         <table align="center" width="350" style="border:1px groove #93AE13;">
                             <tr height="33px">
-                                <td align="center"><img src="../../common/images/icons/user_yellow_edit.png"/></td>
-                                <td><p align="left" style="font-weight: bold; font-style: normal; font-size: 16px; color: #275C0D;">Something Changed? &nbsp;&nbsp; Edit your profile.</p>
+                                <td width="116" align="center"><img src="../../common/images/icons/user_yellow_edit.png"/></td>
+                                <td width="222"><p align="left" style="font-weight: bold; font-style: normal; font-size: 16px; color: #275C0D;">Something Changed? &nbsp;&nbsp; Edit your profile.</p>
                                 </td>
                             </tr>
                             <tr>
@@ -197,8 +197,8 @@ require_once '../controller/display_profile.php';
 <form name="frm_reset" action="../controller/reset_username_password.php" method="post">
      <table align="center" width="350" style="border:1px groove #93AE13;">
         <tr height="33px">
-            <td align="center"><img src="../../common/images/icons/reset password.png"/></td>
-            <td><p align="left" style="font-weight: bold; font-style: normal; font-size: 16px; color: #275C0D;"> Reset your Username & Password.</p>
+            <td width="124" align="center"><img src="../../common/images/icons/reset password.png"/></td>
+            <td width="214"><p align="left" style="font-weight: bold; font-style: normal; font-size: 16px; color: #275C0D;"> Reset your Username & Password.</p>
             </td>
         </tr>
         <tr>
@@ -215,7 +215,7 @@ require_once '../controller/display_profile.php';
         </tr>
         <tr>
             <th align="left">Confirm Password :</th>
-            <td><input name="txtpass2" type="password" id="txtpass2" placeholder="Re-enter your password" size="20"  /></td>
+            <td><input name="txtpass2" type="password" id="txtpass2" size="20"  /></td>
         </tr>
         <tr>
             <th colspan="2"><input type="submit" value="Reset password" name="submit" class="myButton small_btn" /></th>

@@ -110,7 +110,7 @@ require '../controller/home_properties.php';
 
 <?php if (!isset($_SESSION['username'])) { ?>
                                     <tr>
-                                        <td colspan="2"><a href="../../customer/view/register.php" style="font-style: normal; font-size: small; padding:5px;">Register</a></td>
+                                        <td colspan="2"></td>
 
                                     </tr>
                                     <tr>
@@ -121,8 +121,8 @@ require '../controller/home_properties.php';
                                             <input name="username" class="textbox1" type="text" size="20" />
                                         </td>
                                         <td>
-                                            <input type="checkbox" name="checkbox" id="checkbox">
-                                            <label for="checkbox" style="color: #0F2701; font-style: normal; font-size: x-small;">Remember me.</label>
+                                            
+                                            <label for="checkbox" style="color: #0F2701; font-style: normal; font-size: x-small;"><span style="margin-left:25px;"><a href="../../customer/view/register.php" style="font-style: normal; font-size: small; padding:5px;">Register</a></span></label>
                                         </td>
                                     </tr>
 
@@ -134,7 +134,7 @@ require '../controller/home_properties.php';
                                             <input name="password" class="textbox2" type="password" size="20" />
                                         </td>
                                         <td class="lng_btn_td">
-                                            <input name="login" type="submit" value="Login" class="myButton small_btn" /><?php ?>
+                                            <input name="login" type="submit" value="Login" class="myButton small_btn" />
                                         </td>
                                     </tr>
 
